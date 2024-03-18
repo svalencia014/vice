@@ -41,6 +41,7 @@ Handoffs should be ∆ (~ on your keyboard) + subset + TCP ID. For example, a ha
   - CLANG, GIIBS, SNKPT – 5R/23L
 
 ## Final procedures
+Simultaneous independent approaches are authorized. One runway shall be dedicated as the "high side" to ensure vertical seperation until established on the localizer.
 
 ## Satellites 
 Satellite operations have not been programmed in yet. 
