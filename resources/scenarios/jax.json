@@ -427,7 +427,7 @@
       "approaches": {
         "R4": {
           "runway": "4",
-          "tower_controller": "JAX_N_APP",
+          "tower_controller": "JAX_S_APP",
           "type": "RNAV",
           "waypoints": [
             "WILNA/a2100-6000 SHOAT/a1800"
@@ -500,7 +500,7 @@
             "cleared_altitude": 2000,
             "waypoints": "KGNV-29/h110"
           },
-          "OMNNI": {
+          "OMMNI": {
             "cleared_altitude": 2000,
             "waypoints": "KGNV-29/h110"
           },
@@ -953,7 +953,7 @@
       ]
     },
     "volumes": {
-      "JAX_N_APP": [
+      "JAX_S_APP": [
         {
           "boundaries": [
             "JAXN"
@@ -1757,14 +1757,14 @@
     "MCO_E_APP": {
       "frequency": 124800,
       "full_name": "Orlando approach",
-      "scope_char": "E",
+      "scope_char": "1",
       "sector_id": "1E",
-      "facility_id": "2"
+      "facility_id": "1"
     },
     "DAB_N_APP": {
       "frequency": 125800,
       "full_name": "Daytona Beach approach",
-      "scope_char": "N",
+      "scope_char": "3",
       "sector_id": "1N",
       "facility_id": "3"
     },
@@ -1855,7 +1855,7 @@
     "TPA_E_APP": {
       "frequency": 118150,
       "full_name": "Tampa approach",
-      "scope_char": "E",
+      "scope_char": "2",
       "sector_id": "1E",
       "facility_id": "2"
     }
@@ -1880,7 +1880,7 @@
   "scenarios": {
     "JAX East, Sat Northeast": {
       "approach_airspace": [
-        "JAX_N_APP"
+        "JAX_S_APP"
       ],
       "arrival_runways": [
         {
@@ -1962,7 +1962,7 @@
       "solo_controller": "JAX_S_APP",
       "multi_controllers": {
           "default" : {
-              "JAX_S_APP": {"primary": true, "departures": ["KCRG", "KJAX/EXBOX2, KJAX/SAWGY3, KJAX/JETIN2"]},
+              "JAX_S_APP": {"primary": true, "departures": ["KCRG", "KJAX/EXBOX2", "KJAX/SAWGY3", "KJAX/JETIN2"]},
               "JAX_N_APP": {"backup": "JAX_S_APP", "arrivals": ["LUNNI1", "SSI", "GOTBE"], "departures": ["KJAX/BRSTL1", "KJAX/CROSB2", "KFHB"]},
               "JAX_E_APP": {"backup": "JAX_S_APP", "arrivals": ["HOTAR1"]},
               "JAX_W_APP": {"backup": "JAX_E_APP", "arrivals": ["TEBOW1", "QUBEN1", "POGIE2", "TEBOW"]},
@@ -1993,7 +1993,7 @@
       ],
       "default_maps": [ "EAST FLOW" ],
       "departure_airspace": [
-        "JAX_N_APP"
+        "JAX_S_APP"
       ],
       "departure_runways": [
         {
@@ -2030,7 +2030,7 @@
     },
     "JAX West, Sat Southwest": {
       "approach_airspace": [
-        "JAX_N_APP"
+        "JAX_S_APP"
       ],
       "arrival_runways": [
         {
@@ -2115,7 +2115,7 @@
               "JAX_S_APP": {"primary": true, "departures": ["KCRG"]},
               "JAX_N_APP": {"backup": "JAX_S_APP", "arrivals": ["LUNNI1", "SSI", "GOTBE"], "departures": ["KFHB"]},
               "JAX_E_APP": {"backup": "JAX_S_APP", "arrivals": ["HOTAR1"]},
-              "JAX_W_APP": {"backup": "JAX_E_APP", "arrivals": ["TEBOW1", "QUBEN1", "POGIE2", "TEBOW"], "departures": ["KJAX/EXBOX2, KJAX/SAWGY3, KJAX/JETIN2"]},
+              "JAX_W_APP": {"backup": "JAX_E_APP", "arrivals": ["TEBOW1", "QUBEN1", "POGIE2", "TEBOW"], "departures": ["KJAX/EXBOX2", "KJAX/SAWGY3", "KJAX/JETIN2"]},
               "JAX_R_APP": {"backup": "JAX_N_APP", "arrivals": ["MARQO2", "OHDEA1", "MONIA", "ALCRN1"], "departures": ["KJAX/BRSTL1", "KJAX/CROSB2"]},
               "JAX_J_APP": {"backup": "JAX_N_APP"},
               "JAX_V_APP": {"backup": "JAX_W_APP", "departures": ["KOCF"]},
@@ -2143,7 +2143,7 @@
       ],
       "default_maps": [ "EAST FLOW" ],
       "departure_airspace": [
-        "JAX_N_APP"
+        "JAX_S_APP"
       ],
       "departure_runways": [
         {
@@ -2180,7 +2180,7 @@
     },
     "KJAX East": {
       "approach_airspace": [
-        "JAX_N_APP"
+        "JAX_S_APP"
       ],
       "arrival_runways": [
         {
@@ -2212,7 +2212,7 @@
       "solo_controller": "JAX_S_APP",
       "multi_controllers": {
           "default" : {
-            "JAX_S_APP": {"primary": true, "departures": ["KJAX/EXBOX2, KJAX/SAWGY3, KJAX/JETIN2"]},
+            "JAX_S_APP": {"primary": true, "departures": ["KJAX/EXBOX2", "KJAX/SAWGY3", "KJAX/JETIN2"]},
             "JAX_N_APP": {"backup": "JAX_S_APP", "arrivals": ["LUNNI1"], "departures": ["KJAX/BRSTL1", "KJAX/CROSB2"]},
             "JAX_E_APP": {"backup": "JAX_S_APP"},
             "JAX_W_APP": {"backup": "JAX_E_APP", "arrivals": ["TEBOW1", "QUBEN1"]},
@@ -2239,7 +2239,7 @@
       ],
       "default_maps": [ "EAST FLOW" ],
       "departure_airspace": [
-        "JAX_N_APP"
+        "JAX_S_APP"
       ],
       "departure_runways": [
         {
@@ -2256,7 +2256,7 @@
     },
     "KJAX West": {
       "approach_airspace": [
-        "JAX_N_APP"
+        "JAX_S_APP"
       ],
       "arrival_runways": [
         {
@@ -2288,7 +2288,7 @@
       "solo_controller": "JAX_N_APP",
       "multi_controllers": {
           "default" : {
-            "JAX_S_APP": {"primary": true, "departures": ["KJAX/EXBOX2, KJAX/SAWGY3, KJAX/JETIN2"]},
+            "JAX_S_APP": {"primary": true, "departures": ["KJAX/EXBOX2", "KJAX/SAWGY3", "KJAX/JETIN2"]},
             "JAX_N_APP": {"backup": "JAX_S_APP", "arrivals": ["LUNNI1"], "departures": ["KJAX/BRSTL1", "KJAX/CROSB2"]},
             "JAX_E_APP": {"backup": "JAX_S_APP"},
             "JAX_W_APP": {"backup": "JAX_E_APP", "arrivals": ["TEBOW1", "QUBEN1"]},
@@ -2315,7 +2315,7 @@
       ],
       "default_maps": [ "WEST FLOW" ],
       "departure_airspace": [
-        "JAX_N_APP"
+        "JAX_S_APP"
       ],
       "departure_runways": [
         {
@@ -2404,10 +2404,11 @@
           "BAXLY"
         ],
         "altitude_range": [
-          5000,
-          35000
+          0,
+          0
         ],
-        "receiving_controller": "C79"
+        "receiving_controller": "C79",
+        "to_center": true
       },
       {
         "fixes": [
@@ -2417,9 +2418,10 @@
         ],
         "altitude_range": [
           0,
-          4000
+          0
         ],
-        "receiving_controller": "C29"
+        "receiving_controller": "C29",
+        "to_center": true
       },
       {
         "fixes": [
@@ -2427,10 +2429,11 @@
           "WISPR"
         ],
         "altitude_range": [
-          5000,
-          35000
+          0,
+          0
         ],
-        "receiving_controller": "C79"
+        "receiving_controller": "C79",
+        "to_center": true
       },
       {
         "fixes": [
@@ -2441,18 +2444,20 @@
           0,
           4000
         ],
-        "receiving_controller": "C29"
+        "receiving_controller": "C29",
+        "to_center": true
       },
       {
         "fixes": [
-          "EBXOX",
+          "EXBOX",
           "OMN",
           "SAWGY"
         ],
         "altitude_range": [
           0, 0
         ],
-        "receiving_controller": "C58"
+        "receiving_controller": "C58",
+        "to_center": true
       },
       {
         "fixes": [
@@ -2463,7 +2468,8 @@
         "altitude_range": [
           0, 0
         ],
-        "receiving_controller": "C77"
+        "receiving_controller": "C77",
+        "to_center": true
       },
       {
         "fixes": [
@@ -2472,7 +2478,8 @@
         "altitude_range": [
           0, 0
         ],
-        "receiving_controller": "C14"
+        "receiving_controller": "C14",
+        "to_center": true
       }
     ],
     "center": "KJAX",
