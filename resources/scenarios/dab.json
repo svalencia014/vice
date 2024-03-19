@@ -481,77 +481,87 @@
     ]
   },
   "control_positions": {
-    "JAX_30_CTR": {
-      "frequency": 135925,
+    "JAX_57_CTR": {
+      "frequency": 134050,
       "full_name": "Jacksonville center",
       "scope_char": "C",
-      "sector_id": "30"
+      "sector_id": "C57",
+      "eram_facility": true
+    },
+    "JAX_58_CTR": {
+      "frequency": 126350,
+      "full_name": "Jacksonville Center",
+      "scope_char": "C",
+      "sector_id": "C58",
+      "eram_facility": true
     },
     "DAB_H_APP": {
       "frequency": 125725,
       "full_name": "Daytona Beach approach",
       "scope_char": "H",
-      "sector_id": "5H"
+      "sector_id": "1H"
     },
     "DAB_M_APP": {
       "frequency": 118850,
       "full_name": "Daytona Beach approach",
       "scope_char": "M",
-      "sector_id": "5M"
+      "sector_id": "1M"
     },
     "DAB_L_APP": {
       "frequency": 127075,
       "full_name": "Daytona Beach approach",
       "scope_char": "L",
-      "sector_id": "5L"
+      "sector_id": "1L"
     },
     "DAB_N_APP": {
       "frequency": 125800,
       "full_name": "Daytona Beach approach",
       "scope_char": "N",
-      "sector_id": "5N"
+      "sector_id": "1N"
     },
     "DAB_S_APP": {
       "frequency": 125350,
       "full_name": "Daytona Beach approach",
       "scope_char": "S",
-      "sector_id": "5S"
+      "sector_id": "1S"
     },
     "DAB_E_APP": {
       "frequency": 123900,
       "full_name": "Daytona Beach approach",
       "scope_char": "E",
-      "sector_id": "5E"
+      "sector_id": "1E"
     },
     "DAB_W_APP": {
       "frequency": 126550,
       "full_name": "Daytona Beach approach",
       "scope_char": "W",
-      "sector_id": "5W"
+      "sector_id": "1W"
     },
     "MCO_B_APP": {
       "frequency": 128375,
       "full_name": "Orlando approach",
       "scope_char": "B",
-      "sector_id": "4B"
+      "sector_id": "1B",
+      "facility_id": "4"
     },
     "JAX_N_APP": {
       "frequency": 127000,
       "full_name": "Jacksonville approach",
       "scope_char": "N",
-      "sector_id": "3N"
+      "sector_id": "1N",
+      "facility_id": "3"
     },
     "DAB_N_TWR": {
       "frequency": 120700,
       "full_name": "Daytona Beach tower",
       "scope_char": "T",
-      "sector_id": "5NT"
+      "sector_id": "5T"
     },
     "DAB_S_TWR": {
       "frequency": 118100,
       "full_name": "Daytona Beach tower",
       "scope_char": "T",
-      "sector_id": "5ST"
+      "sector_id": "5Z"
     }
   },
   "default_scenario": "KDAB Depart 7L/R Land 7L/R",
@@ -576,7 +586,8 @@
       "approach_airspace": [
         "DAB_H_APP"
       ],
-      "arrival_runways": [
+      "arrival_runways": [
+
         {
           "airport": "KDAB",
           "runway": "7L"
@@ -603,23 +614,23 @@
           "KDAB": 10
         }
       },
-      "solo_controller": "DAB_H_APP",
+      "solo_controller": "DAB_N_APP",
       "multi_controllers": {
           "default" : {
-              "DAB_H_APP": {"primary": true, "arrivals": ["TTHOR3", "FONEX", "FOLUT", "KIZER", "DOMES"]},
+              "DAB_N_APP": {"primary": true},
               "DAB_M_APP": {"backup": "DAB_H_APP"},
               "DAB_L_APP": {"backup": "DAB_H_APP"},
-              "DAB_N_APP": {"backup": "DAB_H_APP"},
+              "DAB_H_APP": {"backup": "DAB_M_APP", "arrivals": ["TTHOR3", "FONEX", "FOLUT", "KIZER", "DOMES"]},
               "DAB_S_APP": {"backup": "DAB_H_APP"},
               "DAB_E_APP": {"backup": "DAB_H_APP", "departures": ["KDAB"]},
               "DAB_W_APP": {"backup": "DAB_H_APP"}
           }
       },
       "controllers": [
-        "DAB_H_APP",
         "DAB_N_TWR",
         "DAB_S_TWR",
-        "JAX_30_CTR",
+        "JAX_57_CTR",
+        "JAX_58_CTR",
         "MCO_B_APP",
         "JAX_N_APP"
       ],
@@ -673,20 +684,20 @@
       "solo_controller": "DAB_H_APP",
       "multi_controllers": {
           "default" : {
-              "DAB_H_APP": {"primary": true, "arrivals": ["TTHOR3", "FONEX", "FOLUT", "KIZER", "DOMES"]},
+              "DAB_N_APP": {"primary": true},
               "DAB_M_APP": {"backup": "DAB_H_APP"},
               "DAB_L_APP": {"backup": "DAB_H_APP"},
-              "DAB_N_APP": {"backup": "DAB_H_APP"},
+              "DAB_H_APP": {"backup": "DAB_M_APP", "arrivals": ["TTHOR3", "FONEX", "FOLUT", "KIZER", "DOMES"]},
               "DAB_S_APP": {"backup": "DAB_H_APP"},
               "DAB_E_APP": {"backup": "DAB_H_APP"},
               "DAB_W_APP": {"backup": "DAB_H_APP", "departures": ["KDAB"]}
           }
       },
       "controllers": [
-        "DAB_H_APP",
         "DAB_N_TWR",
         "DAB_S_TWR",
-        "JAX_30_CTR",
+        "JAX_57_CTR",
+        "JAX_58_CTR",
         "MCO_B_APP",
         "JAX_N_APP"
       ],
@@ -708,6 +719,25 @@
     }
   },
   "stars_config": {
+    "allow_long_scratchpad": [
+      false, 
+      false
+    ],
+    "force_ql_self": true, 
+    "airspace_awareness": [
+      {
+        "fixes": [
+          "CRG",
+          "ROYES"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "C57",
+        "to_center": true
+      }
+    ],
   "center": "KDAB",
   "radar_sites": {
     "DAB": {
