@@ -441,6 +441,77 @@
         "GIPPL": "ALL"
       },
       "tower_list": 1
+    },
+    "KHXD": {
+      "approaches": {
+        "R21": {"cifp_id": "R21"},
+        "R3": {"cifp_id": "R3"}
+      },
+      "departure_routes": {
+        "21": {
+          "GIPPL": {
+            "cleared_altitude": 2000,
+            "waypoints": "KHXD-3/h210"
+          },
+          "JROSS": {
+            "cleared_altitude": 2000,
+            "waypoints": "KHXD-3/h210"
+          },
+          "SMALZ": {
+            "cleared_altitude": 2000,
+            "waypoints": "KHXD-3/h210"
+          }
+      },
+      "3": {
+          "GIPPL": {
+            "cleared_altitude": 2000,
+            "waypoints": "KHXD-21/h40"
+          },
+          "JROSS": {
+            "cleared_altitude": 2000,
+            "waypoints": "KHXD-21/h40"
+          },
+          "SMALZ": {
+            "cleared_altitude": 2000,
+            "waypoints": "KHXD-21/h40"
+          }
+      }
+      },
+      "departures": [
+        {
+          "airlines": [
+            {
+              "icao": "ENY"
+            }
+          ],
+          "destination": "KSAV",
+          "exit": "JROSS",
+          "altitude": 21000,
+          "route": "JROSS CHS STOCR3"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "RPA"
+            }
+          ],
+          "destination": "KDCA",
+          "exit": "JROSS",
+          "altitude": 31000,
+          "route": "JROSS CEELY Q113 AARNN WAVES CAPSS3"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "EDV"
+            }
+          ],
+          "destination": "KATL",
+          "altitude": 32000,
+          "exit": "SMALZ",
+          "route": "SMALZ TYFTR JJEDI3"
+        }
+      ]
     }
   },
   "airspace": {
@@ -613,12 +684,22 @@
               "airport": "KHPN",
               "icao": "MXY"
             }
+          ],
+          "KHXD": [
+            {
+              "airport": "KLGA",
+              "icao": "EDV"
+            },
+            {
+              "airport": "KPHL",
+              "icao": "ENY"
+            }
           ]
         },
         "cruise_altitude": 38000,
         "assigned_altitude": 11000,
         "initial_altitude": 12000,
-        "initial_controller": "JAX_30_CTR",
+        "initial_controller": "JAX_73_CTR",
         "initial_speed": 250,
         "route": "/. SOOOP",
         "waypoints": "MEECH SOOOP/ho/h252 "
@@ -668,12 +749,22 @@
               "airport": "KGRR",
               "icao": "AAY"
             }
+          ],
+          "KHXD": [
+            {
+              "airport": "KATL",
+              "icao": "EDV"
+            },
+            {
+              "airport": "KCLT",
+              "icao": "ENY"
+            }
           ]
         },
         "assigned_altitude": 11000,
         "cruise_altitude": 36000,
         "initial_altitude": 11000,
-        "initial_controller": "JAX_30_CTR",
+        "initial_controller": "JAX_73_CTR",
         "initial_speed": 250,
         "route": "/. PLZZZ",
         "waypoints": "LUCNE PLZZZ/ho/h184"
@@ -725,7 +816,7 @@
         "assigned_altitude": 11000,
         "cruise_altitude": 33000,
         "initial_altitude": 12000,
-        "initial_controller": "JAX_30_CTR",
+        "initial_controller": "JAX_54_CTR",
         "initial_speed": 250,
         "route": "/. LOTTS",
         "waypoints": "EHEJO JAMEB/ho LOTTS/h115"
@@ -752,7 +843,7 @@
         "assigned_altitude": 11000,
         "cruise_altitude": 31000,
         "initial_altitude": 12000,
-        "initial_controller": "JAX_30_CTR",
+        "initial_controller": "JAX_54_CTR",
         "initial_speed": 250,
         "route": "/. VIYAP",
         "waypoints": "HUDES VIYAP/ho/h018"
@@ -760,35 +851,56 @@
     ]
   },
   "control_positions": {
-    "JAX_30_CTR": {
-      "frequency": 135925,
+    "JAX_73_CTR": {
+      "frequency": 132925,
       "full_name": "Jacksonville Center",
       "scope_char": "C",
-      "sector_id": "30"
+      "sector_id": "C73",
+      "eram_facility": true
+    },
+    "JAX_54_CTR": {
+      "frequency": 124675,
+      "full_name": "Jacksonville Center",
+      "scope_char": "C",
+      "sector_id": "C54",
+      "eram_facility": true
+    },
+    "JAX_53_CTR": {
+      "frequency": 126750,
+      "full_name": "Jacksonville Center",
+      "scope_char": "C",
+      "sector_id": "C53",
+      "eram_facility": true
     },
     "SAV_N_APP": {
       "frequency": 125300,
       "full_name": "Savannah Approach",
       "scope_char": "N",
-      "sector_id": "6N"
+      "sector_id": "1N"
     },
     "SAV_W_APP": {
       "frequency": 118400,
       "full_name": "Savannah Approach",
       "scope_char": "W",
-      "sector_id": "6W"
+      "sector_id": "1W"
     },
     "SAV_S_APP": {
       "frequency": 120400,
       "full_name": "Savannah Approach",
       "scope_char": "S",
-      "sector_id": "6S"
+      "sector_id": "1S"
     },
     "SAV_TWR": {
       "frequency": 125975,
       "full_name": "Savannah Tower",
       "scope_char": "T",
-      "sector_id": "6ST"
+      "sector_id": "1T"
+    },
+    "HXD_TWR": {
+      "frequency": 121100,
+      "full_name": "Hilton Head Tower",
+      "scope_char": "T",
+      "sector_id": "1H"
     }
   },
   "default_scenario": "KSAV Depart 10/1 Land 10/1",
@@ -846,9 +958,11 @@
           }
       },
       "controllers": [
-        "SAV_N_APP",
-        "JAX_30_CTR",
-        "SAV_TWR"
+        "SAV_TWR",
+        "JAX_73_CTR",
+        "JAX_53_CTR",
+        "JAX_54_CTR",
+        "HXD_TWR"
       ],
       "default_maps": [ "RADAR MAP" ],
       "departure_airspace": [
@@ -903,9 +1017,11 @@
           }
       },
       "controllers": [
-        "SAV_N_APP",
-        "JAX_30_CTR",
-        "SAV_TWR"
+        "SAV_TWR",
+        "JAX_73_CTR",
+        "JAX_53_CTR",
+        "JAX_54_CTR",
+        "HXD_TWR"
       ],
       "default_maps": [ "RADAR MAP" ],
       "departure_airspace": [
@@ -925,6 +1041,34 @@
     }
   },
   "stars_config": {
+    "allow_long_scratchpad": [
+      false, 
+      false
+    ],
+    "force_ql_self": true,
+    "airspace_awareness": [
+      {
+        "fixes": [
+          "JROSS",
+          "SMALZZ"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "C73"
+      },
+      {
+        "fixes": [
+          "GIPPL"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "C54"
+      }
+    ],
   "center": "KSAV",
   "radar_sites": {
     "SAV": {

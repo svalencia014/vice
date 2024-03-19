@@ -481,6 +481,427 @@
         "SSI": "ALL"
       },
       "tower_list": 0
+    },
+    "KGNV": {
+      "approaches": {
+        "I29": {"cifp_id": "I29"},
+        "R11": {"cifp_id": "R11"},
+        "R25": {"cifp_id": "R25"},
+        "R29": {"cifp_id": "R29"},
+        "R7":  {"cifp_id": "R7"}
+      },
+      "departure_routes": {
+        "11": {
+          "GNV": {
+            "cleared_altitude": 2000,
+            "waypoints": "KGNV-29/h110"
+          },
+          "MMKAY": {
+            "cleared_altitude": 2000,
+            "waypoints": "KGNV-29/h110"
+          },
+          "OMNNI": {
+            "cleared_altitude": 2000,
+            "waypoints": "KGNV-29/h110"
+          },
+          "LEESE": {
+            "cleared_altitude": 2000,
+            "waypoints": "KGNV-29/h110"
+          }
+        },
+        "29": {
+          "GNV": {
+            "cleared_altitude": 2000,
+            "waypoints": "KGNV-11/h290"
+          },
+          "MMKAY": {
+            "cleared_altitude": 2000,
+            "waypoints": "KGNV-11/h290"
+          },
+          "OMMNI": {
+            "cleared_altitude": 2000,
+            "waypoints": "KGNV-11/h290"
+          },
+          "LEESE": {
+            "cleared_altitude": 2000,
+            "waypoints": "KGNV-11/h290"
+          }
+        }
+      },
+      "departures": [
+        {
+          "airlines": [
+            {
+              "icao": "EDV"
+            },
+            {
+              "fleet": "short",
+              "icao" : "DAL"
+            }
+          ],
+          "destination": "KATL",
+          "altitude": 27000,
+          "exit": "GNV",
+          "route": "GNV TAY LAIRI LARZZ JJEDI3"
+        },
+        {
+          "airlines": [
+            {
+              "icao" : "MXY"
+            }
+          ],
+          "destination": "KMSY",
+          "altitude": 32000,
+          "exit": "GNV",
+          "route": "GNV OTK SZW CEW J2 SJI MNSTR1"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "PDT"
+            },
+            {
+              "icao": "JIA"
+            }
+          ],
+          "destination": "KCLT",
+          "altitude": 31000,
+          "exit": "GNV",
+          "route": "GNV TAY TWINS PONZE BANKR4"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "lightGA",
+              "icao": "N"
+            },
+            {
+              "icao": "ERU"
+            }
+          ],
+          "destination": "KDAB",
+          "altitude": 6000,
+          "exit": "MMKAY",
+          "route": "MMKAY WALEE"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "ENY"
+            }
+          ],
+          "destination": "KDFW",
+          "altitude": 36000,
+          "exit": "GNV",
+          "route": "GNV SZW MEI MLU YUYUN WHINY4"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJA"
+            }
+          ],
+          "destination": "KSNA",
+          "altitude": 43000,
+          "exit": "GNV",
+          "route": "GNV MSSTY MCGEE DOBIS BATIK PVW CNX J74 MAXXO CHEKR BXK EMLLD DSNEE5"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "SIL"
+            }
+          ],
+          "destination": "KFLL",
+          "altitude": 17000,
+          "exit": "OMMNI",
+          "route": "OMMNI LAL RSW FORTL9"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "ENY"
+            }
+          ],
+          "destination": "KMIA",
+          "altitude": 23000,
+          "exit": "OMMNI",
+          "route": "OMMNI LAL KLEET FROGZ4"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "lightGA",
+              "icao": "N"
+            }
+          ],
+          "destination": "KSRQ",
+          "altitude": 8000,
+          "exit": "OMMNI",
+          "route": "OMMNI PIE"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "lightGA",
+              "icao": "N"
+            }
+          ],
+          "destination": "KORL",
+          "altitude": 7000,
+          "exit": "LEESE",
+          "route": "LEESE LEESE3"
+        }
+      ]
+    },
+    "KOCF": {
+      "approaches": {
+        "I36": {"cifp_id": "I36"},
+        "R18": {"cifp_id": "R18"},
+        "R36": {"cifp_id": "R36"}
+      },
+      "departure_routes": {
+        "36": {
+          "GNV": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-18/h360"
+          },
+          "MMKAY": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-18/h360"
+          },
+          "OMMNI": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-18/h360"
+          },
+          "LEESE": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-18/h360"
+          },
+          "ILBOC": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-18/h360"
+          }
+        },
+        "18": {
+          "GNV": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-36/h180"
+          },
+          "MMKAY": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-36/h180"
+          },
+          "OMMNI": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-36/h180"
+          },
+          "LEESE": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-36/h180"
+          },
+          "ILBOC": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-36/h180"
+          }
+        }
+      },
+      "departures": [
+        {
+          "airlines": [
+            {
+              "fleet": "lightGA",
+              "icao": "N"
+            }
+          ],
+          "destination": "KORL",
+          "altitude": 7000,
+          "exit": "LEESE",
+          "route": "LEESE LEESE3"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "lightGA",
+              "icao": "N"
+            }
+          ],
+          "destination": "KSRQ",
+          "altitude": 8000,
+          "exit": "OMMNI",
+          "route": "OMMNI PIE"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJA"
+            }
+          ],
+          "destination": "KSNA",
+          "altitude": 43000,
+          "exit": "GNV",
+          "route": "GNV MSSTY MCGEE DOBIS BATIK PVW CNX J74 MAXXO CHEKR BXK EMLLD DSNEE5"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "lightGA",
+              "icao": "N"
+            },
+            {
+              "icao": "ERU"
+            }
+          ],
+          "destination": "KDAB",
+          "altitude": 6000,
+          "exit": "ILBOC",
+          "route": "ILBOC HANAV KDAB"
+        }
+      ]
+    },
+    "KCRG": {
+      "approaches": {
+        "I32": {"cifp_id": "I32"},
+        "R14": {"cifp_id": "R14"},
+        "R32": {"cifp_id": "R32"}
+      },
+      "departure_routes": {
+        "14": {
+          "GNV": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-32/h140"
+          },
+          "MMKAY": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-32/h140"
+          },
+          "OMMNI": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-32/h140"
+          },
+          "LEESE": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-32/h140"
+          },
+          "ILBOC": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-32/h140"
+          },
+          "FOLUT": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-32/h140"
+          },
+          "BRSTL": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-32/h140"
+          }
+        },
+        "32": {
+          "GNV": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-14/h320"
+          },
+          "MMKAY": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-14/h320"
+          },
+          "OMMNI": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-14/h320"
+          },
+          "LEESE": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-14/h320"
+          },
+          "ILBOC": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-14/h320"
+          },
+          "FOLUT": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-14/h320"
+          },
+          "BRSTL": {
+            "cleared_altitude": 2000,
+            "waypoints": "KCRG-14/h320"
+          }
+        }
+      },
+       "departures": [
+        {
+          "airlines": [
+            {
+              "fleet": "lightGA",
+              "icao": "N"
+            }
+          ],
+          "destination": "KORL",
+          "altitude": 7000,
+          "exit": "FOLUT",
+          "route": "FOLUT BITHO"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "lightGA",
+              "icao": "N"
+            }
+          ],
+          "destination": "KSRQ",
+          "altitude": 8000,
+          "exit": "OMMNI",
+          "route": "OMMNI PIE"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJA"
+            }
+          ],
+          "destination": "KSNA",
+          "altitude": 43000,
+          "exit": "GNV",
+          "route": "GNV MSSTY MCGEE DOBIS BATIK PVW CNX J74 MAXXO CHEKR BXK EMLLD DSNEE5"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJA"
+            }
+          ],
+          "destination": "KPDK",
+          "altitude": 23000,
+          "exit": "BRSTL",
+          "route": "BRSTL BAXLY KERLY SHRLT WRGNZ3"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "lightGA",
+              "icao": "N"
+            },
+            {
+              "icao": "ERU"
+            }
+          ],
+          "destination": "KDAB",
+          "altitude": 6000,
+          "exit": "FOLUT",
+          "route": "FOLUT"
+        }
+      ]
     }
   },
   "airspace": {
@@ -551,6 +972,238 @@
     }
   },
   "arrival_groups": {
+    "ALCRN1": [
+      {
+        "airlines": {
+          "KCRG": [
+            {
+              "airport": "KPDK",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KPDK",
+              "icao": "LXJ"
+            },
+            {
+              "airport": "KLOU",
+              "icao": "EJA"
+            }
+          ]
+        },
+        "initial_altitude": 18000,
+        "initial_controller": "JAX_79_CTR",
+        "initial_speed": 280,
+        "star": "ALCRN1",
+        "waypoints": "ALLMA/a23000-/ho ALCRN/a12000-14000 SNKEM/a4000+/h141"
+      }
+    ],
+    "TAY": [
+      {
+        "airlines": {
+          "KGNV": [
+            {
+              "airport": "KDFW",
+              "icao" :"ENY"
+            },
+            {
+              "airport": "KATL",
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "airport": "KATL",
+              "icao": "EDV"
+            }
+          ],
+          "KOCF": [
+            {
+              "airport": "KVLD",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KACT",
+              "icao": "LXJ"
+            }
+          ]
+        },
+        "initial_altitude": 15000,
+        "assigned_altitude": 5000,
+        "initial_controller": "JAX_77_CTR",
+        "initial_speed": 250,
+        "star": "TAY",
+        "waypoints": "TAY/ho KOZYA/h200/a5000"
+      }
+    ],
+    "GOTBE": [
+      {
+        "airlines": {
+          "KGNV": [
+            {
+              "airport": "KCLT",
+              "icao" :"PDT"
+            },
+            {
+              "airport": "KATL",
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "airport": "KCLT",
+              "icao": "JIA"
+            }
+          ],
+          "KOCF": [
+            {
+              "airport": "KISP",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KFRG",
+              "icao": "LXJ"
+            }
+          ]
+        },
+        "initial_altitude": 15000,
+        "assigned_altitude": 11000,
+        "initial_controller": "JAX_54_CTR",
+        "initial_speed": 250,
+        "star": "GOTBE",
+        "waypoints": "STARY/ho GOTBE/a1100/h245"
+      }
+    ],
+    "CAMDT": [
+      {
+        "airlines": {
+          "KGNV": [
+            {
+              "airport": "KDFW",
+              "icao" :"ENY"
+            },
+            {
+              "airport": "KATL",
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "airport": "KATL",
+              "icao": "EDV"
+            }
+          ],
+          "KOCF": [
+            {
+              "airport": "KVLD",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KACT",
+              "icao": "LXJ"
+            }
+          ]
+        },
+        "initial_altitude": 13000,
+        "assigned_altitude": 9000,
+        "initial_controller": "TPA_E_APP",
+        "initial_speed": 250,
+        "star": "CAMDT",
+        "waypoints": "JKBAL/ho CAMDT"
+      }
+    ],
+    "SSI": [
+      {
+        "airlines": {
+          "KFHB": [
+            {
+              "airport": "KCMH",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KJZI",
+              "icao": "LXJ"
+            }
+          ]
+        },
+        "initial_altitude": 6000,
+        "assigned_altitude": 3000,
+        "initial_controller": "JAX_53_CTR",
+        "initial_speed": 220,
+        "star": "SSI",
+        "waypoints": "VIYAP/ho SSI/h180"
+      }
+    ],
+    "TEBOW": [
+      {
+        "airlines": {
+          "KFHB": [
+            {
+              "airport": "KLAL",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KTPA",
+              "icao": "LXJ"
+            }
+          ]
+        },
+        "initial_altitude": 13000,
+        "assigned_altitude": 11000,
+        "initial_controller": "JAX_15_CTR",
+        "initial_speed": 220,
+        "star": "SSI",
+        "waypoints": "FUTSY/ho TEBOW/a1100/h030"
+      }
+    ],
+    "HOTAR1": [
+      {
+        "airlines": {
+          "KCRG": [
+            {
+              "airport": "KFRG",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KTTN",
+              "icao": "LXJ"
+            },
+            {
+              "airport": "KJZI",
+              "icao": "EJA"
+            }
+          ]
+        },
+        "initial_altitude": 13000,
+        "assigned_altitude": 10000,
+        "initial_controller": "JAX_54_CTR",
+        "initial_speed": 250,
+        "star": "HOTAR1",
+        "waypoints": "WYTOK JABOR/ho HOTAR/a10000 YEJWO/h362"
+      }
+    ],
+    "POGIE2": [
+      {
+        "airlines": {
+          "KCRG": [
+            {
+              "airport": "KTMB",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KFXE",
+              "icao": "LXJ"
+            },
+            {
+              "airport": "KTMB",
+              "icao": "EJA"
+            }
+          ]
+        },
+        "initial_altitude": 16000,
+        "assigned_altitude": 13000,
+        "initial_controller": "JAX_57_CTR",
+        "initial_speed": 250,
+        "star": "POGIE2",
+        "waypoints": "SHINR/ho BASSS/a13000/s250 POGIE MOSEL/a5000 CRG/h015"
+      }
+    ],
     "LUNNI1": [
       {
         "airlines": {
@@ -589,15 +1242,15 @@
           ]
         },
         "initial_altitude": 15000,
-        "initial_controller": "JAX_30_CTR",
+        "initial_controller": "JAX_54_CTR",
         "initial_speed": 250,
         "star": "LUNNI1",
         "runway_waypoints": {
           "KJAX": {
-              "8": "LUNNI/a8000-12000/s250 SAVAE/a6000-7000 PENSE/a4000/s210 RUMEE/h257",
-              "14": "LUNNI/a8000-12000/s250 WADIG/a5000-6000/s230 DEDDA/a3000/s210",
-              "26": "LUNNI/a8000-12000/s250 LAYON/a3000/s210",
-              "32": "LUNNI/a8000-12000/s250 SSAWW/a6000-7000/s230 ZAXIT/a4000/s210 PALSY PEPIE/h137"
+          "8": "LUNNI/a8000-12000/s250 SAVAE/a6000-7000 PENSE/a4000/s210 RUMEE/h257",
+          "14": "LUNNI/a8000-12000/s250 WADIG/a5000-6000/s230 DEDDA/a3000/s210",
+          "26": "LUNNI/a8000-12000/s250 LAYON/a3000/s210",
+          "32": "LUNNI/a8000-12000/s250 SSAWW/a6000-7000/s230 ZAXIT/a4000/s210 PALSY PEPIE/h137"
           }
         },
         "waypoints": "GOTBE/ho LUNNI/a8000-12000/s250"
@@ -696,15 +1349,15 @@
           ]
         },
         "initial_altitude": 12000,
-        "initial_controller": "JAX_30_CTR",
+        "initial_controller": "JAX_77_CTR",
         "initial_speed": 250,
         "star": "MARQO2",
         "runway_waypoints": {
           "KJAX": {
-              "8": "COROE/a9000-12000/s250 NATII/a5000-6000/s230 GUTTY/a3000/s210/h103",
-              "14": "COROE/a9000-12000/s250 TASCH/a5000-6000 DIPDE/a3000/s210",
-              "26": "COROE/a9000-12000/s250 GWIIZ/a5000-6000 EGAGE/a4000/s210 NOMTE OLEKE/h077",
-              "32": "COROE/a9000-12000/s250 GWIIZ/a5000-6000 HITTS ACENE/a4000/s210 CALIM PEPIE/h137"
+          "8": "COROE/a9000-12000/s250 NATII/a5000-6000/s230 GUTTY/a3000/s210/h103",
+          "14": "COROE/a9000-12000/s250 TASCH/a5000-6000 DIPDE/a3000/s210",
+          "26": "COROE/a9000-12000/s250 GWIIZ/a5000-6000 EGAGE/a4000/s210 NOMTE OLEKE/h077",
+          "32": "COROE/a9000-12000/s250 GWIIZ/a5000-6000 HITTS ACENE/a4000/s210 CALIM PEPIE/h137"
           }
         },
         "waypoints": "MARQO/ho COROE/a9000-12000/s250"
@@ -786,7 +1439,7 @@
         },
           "assigned_altitude": 8000,
           "initial_altitude": 10000,
-          "initial_controller": "JAX_30_CTR",
+          "initial_controller": "JAX_77_CTR",
           "initial_speed": 250,
           "route": "/. MONIA",
           "waypoints": "CAMJO MARQO/ho MONIA"
@@ -839,15 +1492,15 @@
           ]
         },
         "initial_altitude": 12000,
-        "initial_controller": "JAX_30_CTR",
+        "initial_controller": "JAX_79_CTR",
         "initial_speed": 250,
         "star": "OHDEA1",
         "runway_waypoints": {
           "KJAX": {
-              "8": "KIPLE/a7000-10000/s250 KITZO/a5000-6000/s230 CEDOT/a3000/s210/h150",
-              "14": "KIPLE/a7000-10000/s250 MAHKA/a5000-6000/s230 ORTAR/a3000/s210/h145",
-              "26": "KIPLE/a7000-10000/s250 MATLL/a6000-7000/s230 NANAA/a4000/s210 NOMTE OLEKE/h077",
-              "32": "KIPLE/a7000-10000/s250 NAMPE/a6000-7000/s230 ACENE/a4000/s230 CALIM PEPIE/h137"
+          "8": "KIPLE/a7000-10000/s250 KITZO/a5000-6000/s230 CEDOT/a3000/s210/h150",
+          "14": "KIPLE/a7000-10000/s250 MAHKA/a5000-6000/s230 ORTAR/a3000/s210/h145",
+          "26": "KIPLE/a7000-10000/s250 MATLL/a6000-7000/s230 NANAA/a4000/s210 NOMTE OLEKE/h077",
+          "32": "KIPLE/a7000-10000/s250 NAMPE/a6000-7000/s230 ACENE/a4000/s230 CALIM PEPIE/h137"
           }
         },
         "waypoints": "FORMB/a10000-13000/ho OHDEA KIPLE/a7000-11000/s250"
@@ -927,15 +1580,15 @@
           ]
         },
         "initial_altitude": 16000,
-        "initial_controller": "JAX_30_CTR",
+        "initial_controller": "JAX_57_CTR",
         "initial_speed": 250,
         "star": "QUBEN1",
         "runway_waypoints": {
           "KJAX": {
-              "8": "BETLE/a5000+/s230 PLANK WADOR/a3000/s210/h346",
-              "14": "BETLE/a5000+/s230 PLANK EYLND/a4000/s210 KRISO/a3000 DUNTE JAKRU/h317",
-              "26": "BETLE/a5000+/s230 GUTNE/a4000/s210 CLART/h084",
-              "32": "BETLE/a5000+/s230 GURDE/a3000/s210/h023"
+          "8": "BETLE/a5000+/s230 PLANK WADOR/a3000/s210/h346",
+          "14": "BETLE/a5000+/s230 PLANK EYLND/a4000/s210 KRISO/a3000 DUNTE JAKRU/h317",
+          "26": "BETLE/a5000+/s230 GUTNE/a4000/s210 CLART/h084",
+          "32": "BETLE/a5000+/s230 GURDE/a3000/s210/h023"
           }
         },
         "waypoints": "SHINR/a16000-19000/ho BASSS POGIE/a12000-14000 QUBEN/a9000-12000/s250 BETLE/a5000+/s230"
@@ -991,15 +1644,15 @@
           ]
         },
         "initial_altitude": 17000,
-        "initial_controller": "JAX_30_CTR",
+        "initial_controller": "JAX_15_CTR",
         "initial_speed": 250,
         "star": "TEBOW1",
         "runway_waypoints": {
           "KJAX": {
-              "8": "TEBOW/a9000-12000/s250 JERZI/a5000+/s230 FAROT/a3000/s210/h038",
-              "14": "TEBOW/a9000-12000/s250 GRRAS/a5000+ KAYEM/a4000/s210 DUNTE JAKRU/h317",
-              "26": "TEBOW/a9000-12000/s250 BETLE/a5000+/s230 GUTNE/a4000/s210 CLART/h084",
-              "32": "TEBOW/a9000-12000/s250 BETLE/a5000+/s230 GURDE/a3000/s210/h023"
+          "8": "TEBOW/a9000-12000/s250 JERZI/a5000+/s230 FAROT/a3000/s210/h038",
+          "14": "TEBOW/a9000-12000/s250 GRRAS/a5000+ KAYEM/a4000/s210 DUNTE JAKRU/h317",
+          "26": "TEBOW/a9000-12000/s250 BETLE/a5000+/s230 GUTNE/a4000/s210 CLART/h084",
+          "32": "TEBOW/a9000-12000/s250 BETLE/a5000+/s230 GURDE/a3000/s210/h023"
           }
         },
         "waypoints": "HILIS/a17000+/s280 FABES/a12000-15000/ho TEBOW/a9000-12000/s250"
@@ -1038,77 +1691,173 @@
     ]
   },
   "control_positions": {
-    "JAX_30_CTR": {
-      "frequency": 135925,
+    "JAX_29_CTR": {
+      "frequency": 127575,
       "full_name": "Jacksonville center",
       "scope_char": "C",
-      "sector_id": "30"
+      "sector_id": "C29",
+      "eram_facility": true
+    },
+    "JAX_79_CTR": {
+      "frequency": 133700,
+      "full_name": "Jacksonville center",
+      "scope_char": "C",
+      "sector_id": "C79",
+      "eram_facility": true
+    },
+    "JAX_53_CTR": {
+      "frequency": 126750,
+      "full_name": "Jacksonville Center",
+      "scope_char": "C",
+      "sector_id": "C53",
+      "eram_facility": true
+    },
+    "JAX_54_CTR": {
+      "frequency": 124675,
+      "full_name": "Jacksonville Center",
+      "scope_char": "C",
+      "sector_id": "C54",
+      "eram_facility": true
+    },
+    "JAX_15_CTR": {
+      "frequency": 133325,
+      "full_name": "Jacksonville Center",
+      "scope_char": "C",
+      "sector_id": "C15",
+      "eram_facility": true
+    },
+    "JAX_14_CTR": {
+      "frequency": 135750,
+      "full_name": "Jacksonville Center",
+      "scope_char": "C",
+      "sector_id": "C14",
+      "eram_facility": true
+    },
+    "JAX_77_CTR": {
+      "frequency": 125375,
+      "full_name": "Jacksonville Center",
+      "scope_char": "C",
+      "sector_id": "C77",
+      "eram_facility": true
+    },
+    "JAX_58_CTR": {
+      "frequency": 126350,
+      "full_name": "Jacksonville Center",
+      "scope_char": "C",
+      "sector_id": "C58",
+      "eram_facility": true
+    },
+    "JAX_57_CTR": {
+      "frequency": 134000,
+      "full_name": "Jacksonville Center",
+      "scope_char": "C",
+      "sector_id": "C57",
+      "eram_facility": true
     },
     "MCO_E_APP": {
       "frequency": 124800,
       "full_name": "Orlando approach",
       "scope_char": "E",
-      "sector_id": "4E"
+      "sector_id": "1E",
+      "facility_id": "2"
     },
-    "DAB_H_APP": {
-      "frequency": 125725,
+    "DAB_N_APP": {
+      "frequency": 125800,
       "full_name": "Daytona Beach approach",
-      "scope_char": "H",
-      "sector_id": "5H"
+      "scope_char": "N",
+      "sector_id": "1N",
+      "facility_id": "3"
     },
     "JAX_N_APP": {
       "frequency": 127000,
       "full_name": "Jacksonville approach",
       "scope_char": "N",
-      "sector_id": "3N"
+      "sector_id": "1N"
     },
     "JAX_W_APP": {
       "frequency": 127775,
       "full_name": "Jacksonville approach",
       "scope_char": "W",
-      "sector_id": "3W"
+      "sector_id": "1W"
     },
     "JAX_E_APP": {
       "frequency": 132775,
       "full_name": "Jacksonville approach",
       "scope_char": "E",
-      "sector_id": "3E"
+      "sector_id": "1E"
     },
     "JAX_R_APP": {
       "frequency": 119000,
       "full_name": "Jacksonville approach",
       "scope_char": "R",
-      "sector_id": "3R"
+      "sector_id": "1R"
     },
     "JAX_J_APP": {
       "frequency": 119850,
       "full_name": "Jacksonville approach",
       "scope_char": "J",
-      "sector_id": "3J"
+      "sector_id": "1J"
     },
     "JAX_S_APP": {
       "frequency": 120750,
       "full_name": "Jacksonville approach",
       "scope_char": "S",
-      "sector_id": "3S"
+      "sector_id": "1S"
     },
     "JAX_V_APP": {
       "frequency": 118600,
       "full_name": "Jacksonville approach",
       "scope_char": "V",
-      "sector_id": "3V"
+      "sector_id": "1V"
+    },
+    "JAX_A_APP": {
+      "frequency": 121300,
+      "full_name": "Jacksonville approach",
+      "scope_char": "A",
+      "sector_id": "1A"
+    },
+    "JAX_G_APP": {
+      "frequency": 118175,
+      "full_name": "Jacksonville approach",
+      "scope_char": "G",
+      "sector_id": "1G"
+    },
+    "JAX_D_APP": {
+      "frequency": 128675,
+      "full_name": "Jacksonville approach",
+      "scope_char": "D",
+      "sector_id": "1D"
     },
     "JAX_TWR": {
       "frequency": 118300,
       "full_name": "Jacksonville tower",
       "scope_char": "T",
-      "sector_id": "3JT"
+      "sector_id": "1T"
     },
-    "FHB_TWR": {
-      "frequency": 118300,
-      "full_name": "Jacksonville tower",
+    "GNV_TWR": {
+      "frequency": 119550,
+      "full_name": "Gainsville Tower",
       "scope_char": "T",
-      "sector_id": "3JT"
+      "sector_id": "1U"
+    },
+    "CRG_TWR": {
+      "frequency": 132100,
+      "full_name": "Craig Tower",
+      "scope_char": "T",
+      "sector_id": "1C"
+    },
+    "OCF_TWR": {
+      "frequency": 119250,
+      "full_name": "Ocala Tower",
+      "scope_char": "T",
+      "sector_id": "1O"
+    },
+    "TPA_E_APP": {
+      "frequency": 118150,
+      "full_name": "Tampa approach",
+      "scope_char": "E",
+      "sector_id": "1E",
+      "facility_id": "2"
     }
   },
   "default_scenario": "KJAX East",
@@ -1129,6 +1878,306 @@
   "name": "KJAX",
   "primary_airport": "KJAX",
   "scenarios": {
+    "JAX East, Sat Northeast": {
+      "approach_airspace": [
+        "JAX_N_APP"
+      ],
+      "arrival_runways": [
+        {
+          "airport": "KJAX",
+          "runway": "8"
+        },
+        {
+          "airport": "KJAX",
+          "runway": "14"
+        },
+        {
+          "airport": "KGNV",
+          "runway": "7"
+        },
+        {
+          "airport": "KGNV",
+          "runway": "11"
+        },
+        {
+          "airport": "KCRG",
+          "runway": "32"
+        },
+        {
+          "airport": "KOCF",
+          "runway": "36"
+        },
+        {
+          "airport": "KFHB",
+          "runway": "4"
+        }
+      ],
+      "arrivals": {
+        "LUNNI1": {
+          "KJAX": 10
+        },
+        "MARQO2": {
+          "KJAX": 4
+        },
+        "OHDEA1": {
+          "KJAX": 10
+        },
+        "QUBEN1": {
+          "KJAX": 2
+        },
+        "TEBOW1": {
+          "KJAX": 5
+        },
+        "POGIE2": {
+          "KCRG": 2
+        },
+        "HOTAR1": {
+          "KCRG": 3
+        },
+        "ALCRN1": {
+          "KCRG": 4
+        },
+        "MONIA": {
+          "KFHB": 2
+        },
+        "SSI": {
+          "KFHB": 2
+        },
+        "TEBOW": {
+          "KFHB": 2
+        },
+        "TAY": {
+          "KGNV": 3,
+          "KOCF": 2
+        },
+        "CAMDT": {
+          "KGNV": 3,
+          "KOCF": 2
+        },
+        "GOTBE": {
+          "KGNV": 3,
+          "KOCF": 2
+        }
+      },
+      "solo_controller": "JAX_S_APP",
+      "multi_controllers": {
+          "default" : {
+              "JAX_S_APP": {"primary": true, "departures": ["KCRG", "KJAX/EXBOX2, KJAX/SAWGY3, KJAX/JETIN2"]},
+              "JAX_N_APP": {"backup": "JAX_S_APP", "arrivals": ["LUNNI1", "SSI", "GOTBE"], "departures": ["KJAX/BRSTL1", "KJAX/CROSB2", "KFHB"]},
+              "JAX_E_APP": {"backup": "JAX_S_APP", "arrivals": ["HOTAR1"]},
+              "JAX_W_APP": {"backup": "JAX_E_APP", "arrivals": ["TEBOW1", "QUBEN1", "POGIE2", "TEBOW"]},
+              "JAX_R_APP": {"backup": "JAX_N_APP", "arrivals": ["MARQO2", "OHDEA1", "MONIA", "ALCRN1"]},
+              "JAX_J_APP": {"backup": "JAX_R_APP"},
+              "JAX_V_APP": {"backup": "JAX_W_APP", "departures": ["KOCF"]},
+              "JAX_D_APP": {"backup": "JAX_V_APP", "arrivals": ["CAMDT"]},
+              "JAX_G_APP": {"backup": "JAX_V_APP", "departures": ["KGNV"]},
+              "JAX_A_APP": {"backup": "JAX_G_APP", "arrivals": ["TAY"]}
+          }
+      },
+      "controllers": [
+        "JAX_TWR",
+        "GNV_TWR",
+        "OCF_TWR",
+        "CRG_TWR",
+        "JAX_54_CTR",
+        "JAX_53_CTR",
+        "JAX_29_CTR",
+        "JAX_79_CTR",
+        "JAX_15_CTR",
+        "JAX_14_CTR",
+        "JAX_77_CTR",
+        "JAX_58_CTR",
+        "MCO_E_APP",
+        "DAB_N_APP",
+        "TPA_E_APP"
+      ],
+      "default_maps": [ "EAST FLOW" ],
+      "departure_airspace": [
+        "JAX_N_APP"
+      ],
+      "departure_runways": [
+        {
+          "airport": "KJAX",
+          "rate": 30,
+          "runway": "8"
+        },
+        {
+          "airport": "KFHB",
+          "rate": 4,
+          "runway": "4"
+        },
+        {
+          "airport": "KGNV",
+          "rate": 8,
+          "runway": "11"
+        },
+        {
+          "airport": "KCRG",
+          "rate": 5,
+          "runway": "32"
+        },
+        {
+          "airport": "KOCF",
+          "rate": 5,
+          "runway": "36"
+        }
+      ],
+      "wind": {
+        "direction": 30,
+        "gust": 10,
+        "speed": 5
+      }
+    },
+    "JAX West, Sat Southwest": {
+      "approach_airspace": [
+        "JAX_N_APP"
+      ],
+      "arrival_runways": [
+        {
+          "airport": "KJAX",
+          "runway": "26"
+        },
+        {
+          "airport": "KJAX",
+          "runway": "32"
+        },
+        {
+          "airport": "KGNV",
+          "runway": "25"
+        },
+        {
+          "airport": "KGNV",
+          "runway": "29"
+        },
+        {
+          "airport": "KCRG",
+          "runway": "14"
+        },
+        {
+          "airport": "KOCF",
+          "runway": "18"
+        },
+        {
+          "airport": "KFHB",
+          "runway": "4"
+        }
+      ],
+      "arrivals": {
+        "LUNNI1": {
+          "KJAX": 10
+        },
+        "MARQO2": {
+          "KJAX": 4
+        },
+        "OHDEA1": {
+          "KJAX": 10
+        },
+        "QUBEN1": {
+          "KJAX": 2
+        },
+        "TEBOW1": {
+          "KJAX": 5
+        },
+        "POGIE2": {
+          "KCRG": 2
+        },
+        "HOTAR1": {
+          "KCRG": 3
+        },
+        "ALCRN1": {
+          "KCRG": 4
+        },
+        "MONIA": {
+          "KFHB": 2
+        },
+        "SSI": {
+          "KFHB": 2
+        },
+        "TEBOW": {
+          "KFHB": 2
+        },
+        "TAY": {
+          "KGNV": 3,
+          "KOCF": 2
+        },
+        "CAMDT": {
+          "KGNV": 3,
+          "KOCF": 2
+        },
+        "GOTBE": {
+          "KGNV": 3,
+          "KOCF": 2
+        }
+      },
+      "solo_controller": "JAX_S_APP",
+      "multi_controllers": {
+          "default" : {
+              "JAX_S_APP": {"primary": true, "departures": ["KCRG"]},
+              "JAX_N_APP": {"backup": "JAX_S_APP", "arrivals": ["LUNNI1", "SSI", "GOTBE"], "departures": ["KFHB"]},
+              "JAX_E_APP": {"backup": "JAX_S_APP", "arrivals": ["HOTAR1"]},
+              "JAX_W_APP": {"backup": "JAX_E_APP", "arrivals": ["TEBOW1", "QUBEN1", "POGIE2", "TEBOW"], "departures": ["KJAX/EXBOX2, KJAX/SAWGY3, KJAX/JETIN2"]},
+              "JAX_R_APP": {"backup": "JAX_N_APP", "arrivals": ["MARQO2", "OHDEA1", "MONIA", "ALCRN1"], "departures": ["KJAX/BRSTL1", "KJAX/CROSB2"]},
+              "JAX_J_APP": {"backup": "JAX_N_APP"},
+              "JAX_V_APP": {"backup": "JAX_W_APP", "departures": ["KOCF"]},
+              "JAX_D_APP": {"backup": "JAX_V_APP", "arrivals": ["CAMDT"]},
+              "JAX_G_APP": {"backup": "JAX_V_APP", "departures": ["KGNV"]},
+              "JAX_A_APP": {"backup": "JAX_G_APP", "arrivals": ["TAY"]}
+          }
+      },
+      "controllers": [
+        "JAX_TWR",
+        "GNV_TWR",
+        "OCF_TWR",
+        "CRG_TWR",
+        "JAX_54_CTR",
+        "JAX_53_CTR",
+        "JAX_29_CTR",
+        "JAX_79_CTR",
+        "JAX_15_CTR",
+        "JAX_14_CTR",
+        "JAX_77_CTR",
+        "JAX_58_CTR",
+        "MCO_E_APP",
+        "DAB_N_APP",
+        "TPA_E_APP"
+      ],
+      "default_maps": [ "EAST FLOW" ],
+      "departure_airspace": [
+        "JAX_N_APP"
+      ],
+      "departure_runways": [
+        {
+          "airport": "KJAX",
+          "rate": 30,
+          "runway": "26"
+        },
+        {
+          "airport": "KFHB",
+          "rate": 4,
+          "runway": "4"
+        },
+        {
+          "airport": "KGNV",
+          "rate": 8,
+          "runway": "29"
+        },
+        {
+          "airport": "KCRG",
+          "rate": 5,
+          "runway": "14"
+        },
+        {
+          "airport": "KOCF",
+          "rate": 5,
+          "runway": "18"
+        }
+      ],
+      "wind": {
+        "direction": 210,
+        "gust": 10,
+        "speed": 5
+      }
+    },
     "KJAX East": {
       "approach_airspace": [
         "JAX_N_APP"
@@ -1160,51 +2209,33 @@
           "KJAX": 5
         }
       },
-      "solo_controller": "JAX_N_APP",
+      "solo_controller": "JAX_S_APP",
       "multi_controllers": {
           "default" : {
-              "JAX_N_APP": {
-                  "primary": true,
-                  "departures": ["KJAX"],
-                  "arrivals": [
-                      "LUNNI1"
-                  ]
-              },
-              "JAX_J_APP": {
-                  "backup": "JAX_R_APP"
-              },
-              "JAX_R_APP": {
-                  "backup": "JAX_N_APP",
-                  "arrivals": [
-                      "MARQO2",
-                      "OHDEA1"
-                  ]
-              },
-              "JAX_W_APP": {
-                  "backup": "JAX_R_APP",
-                  "arrivals": [
-                      "TEBOW1"
-                  ]
-              },
-              "JAX_V_APP": {
-                  "backup": "JAX_W_APP"
-              },
-              "JAX_E_APP": {
-                  "backup": "JAX_N_APP",
-                  "arrivals": [
-                      "QUBEN1"
-                  ]
-              },
-              "JAX_S_APP": {
-                  "backup": "JAX_E_APP"
-              }
+            "JAX_S_APP": {"primary": true, "departures": ["KJAX/EXBOX2, KJAX/SAWGY3, KJAX/JETIN2"]},
+            "JAX_N_APP": {"backup": "JAX_S_APP", "arrivals": ["LUNNI1"], "departures": ["KJAX/BRSTL1", "KJAX/CROSB2"]},
+            "JAX_E_APP": {"backup": "JAX_S_APP"},
+            "JAX_W_APP": {"backup": "JAX_E_APP", "arrivals": ["TEBOW1", "QUBEN1"]},
+            "JAX_R_APP": {"backup": "JAX_N_APP", "arrivals": ["MARQO2", "OHDEA1"]},
+            "JAX_J_APP": {"backup": "JAX_R_APP"}
           }
       },
       "controllers": [
-        "JAX_30_CTR",
-        "DAB_H_APP",
+        "JAX_TWR",
+        "GNV_TWR",
+        "OCF_TWR",
+        "CRG_TWR",
+        "JAX_54_CTR",
+        "JAX_53_CTR",
+        "JAX_29_CTR",
+        "JAX_79_CTR",
+        "JAX_15_CTR",
+        "JAX_14_CTR",
+        "JAX_77_CTR",
+        "JAX_58_CTR",
         "MCO_E_APP",
-        "JAX_TWR"
+        "DAB_N_APP",
+        "TPA_E_APP"
       ],
       "default_maps": [ "EAST FLOW" ],
       "departure_airspace": [
@@ -1215,113 +2246,6 @@
           "airport": "KJAX",
           "rate": 15,
           "runway": "8"
-        }
-      ],
-      "wind": {
-        "direction": 90,
-        "gust": 10,
-        "speed": 5
-      }
-    },
-    "KJAX East with Sat": {
-      "approach_airspace": [
-        "JAX_N_APP"
-      ],
-      "arrival_runways": [
-        {
-          "airport": "KJAX",
-          "runway": "8"
-        },
-        {
-          "airport": "KJAX",
-          "runway": "14"
-        },
-        {
-          "airport": "KFHB",
-          "runway": "4"
-        }
-      ],
-      "arrivals": {
-        "LUNNI1": {
-          "KJAX": 10
-        },
-        "MARQO2": {
-          "KJAX": 4
-        },
-        "OHDEA1": {
-          "KJAX": 10
-        },
-        "QUBEN1": {
-          "KJAX": 2
-        },
-        "TEBOW1": {
-          "KJAX": 5
-        },
-        "MONIA": {
-          "KFHB": 2
-        }
-      },
-      "solo_controller": "JAX_N_APP",
-      "multi_controllers": {
-          "default" : {
-              "JAX_N_APP": {
-                  "primary": true,
-                  "departures": ["KJAX", "KFHB"],
-                  "arrivals": [
-                      "LUNNI1"
-                  ]
-              },
-              "JAX_J_APP": {
-                  "backup": "JAX_R_APP"
-              },
-              "JAX_R_APP": {
-                  "backup": "JAX_N_APP",
-                  "arrivals": [
-                      "MARQO2",
-                      "OHDEA1",
-                      "MONIA"
-                  ]
-              },
-              "JAX_W_APP": {
-                  "backup": "JAX_R_APP",
-                  "arrivals": [
-                      "TEBOW1"
-                  ]
-              },
-              "JAX_V_APP": {
-                  "backup": "JAX_W_APP"
-              },
-              "JAX_E_APP": {
-                  "backup": "JAX_N_APP",
-                  "arrivals": [
-                      "QUBEN1"
-                  ]
-              },
-              "JAX_S_APP": {
-                  "backup": "JAX_E_APP"
-              }
-          }
-      },
-      "controllers": [
-        "JAX_30_CTR",
-        "DAB_H_APP",
-        "MCO_E_APP",
-        "JAX_TWR"
-      ],
-      "default_maps": [ "EAST FLOW" ],
-      "departure_airspace": [
-        "JAX_N_APP"
-      ],
-      "departure_runways": [
-        {
-          "airport": "KJAX",
-          "rate": 15,
-          "runway": "8"
-        },
-        {
-          "airport": "KFHB",
-          "rate": 2,
-          "runway": "4"
         }
       ],
       "wind": {
@@ -1342,10 +2266,6 @@
         {
           "airport": "KJAX",
           "runway": "32"
-        },
-        {
-          "airport": "KFHB",
-          "runway": "4"
         }
       ],
       "arrivals": {
@@ -1368,46 +2288,30 @@
       "solo_controller": "JAX_N_APP",
       "multi_controllers": {
           "default" : {
-              "JAX_N_APP": {
-                  "primary": true,
-                  "departures": ["KJAX"],
-                  "arrivals": [
-                      "LUNNI1",
-                      "OHDEA1",
-                      "MARQO2"
-                  ]
-              },
-              "JAX_J_APP": {
-                  "backup": "JAX_R_APP"
-              },
-              "JAX_R_APP": {
-                  "backup": "JAX_N_APP"
-              },
-              "JAX_W_APP": {
-                  "backup": "JAX_N_APP",
-                  "arrivals": [
-                      "TEBOW1"
-                  ]
-              },
-              "JAX_V_APP": {
-                  "backup": "JAX_W_APP"
-              },
-              "JAX_E_APP": {
-                  "backup": "JAX_N_APP",
-                  "arrivals": [
-                      "QUBEN1"
-                  ]
-              },
-              "JAX_S_APP": {
-                  "backup": "JAX_E_APP"
-              }
+            "JAX_S_APP": {"primary": true, "departures": ["KJAX/EXBOX2, KJAX/SAWGY3, KJAX/JETIN2"]},
+            "JAX_N_APP": {"backup": "JAX_S_APP", "arrivals": ["LUNNI1"], "departures": ["KJAX/BRSTL1", "KJAX/CROSB2"]},
+            "JAX_E_APP": {"backup": "JAX_S_APP"},
+            "JAX_W_APP": {"backup": "JAX_E_APP", "arrivals": ["TEBOW1", "QUBEN1"]},
+            "JAX_R_APP": {"backup": "JAX_N_APP", "arrivals": ["MARQO2", "OHDEA1"]},
+            "JAX_J_APP": {"backup": "JAX_R_APP"}
           }
       },
       "controllers": [
-        "JAX_30_CTR",
-        "DAB_H_APP",
+        "JAX_TWR",
+        "GNV_TWR",
+        "OCF_TWR",
+        "CRG_TWR",
+        "JAX_54_CTR",
+        "JAX_53_CTR",
+        "JAX_29_CTR",
+        "JAX_79_CTR",
+        "JAX_15_CTR",
+        "JAX_14_CTR",
+        "JAX_77_CTR",
+        "JAX_58_CTR",
         "MCO_E_APP",
-        "JAX_TWR"
+        "DAB_N_APP",
+        "TPA_E_APP"
       ],
       "default_maps": [ "WEST FLOW" ],
       "departure_airspace": [
@@ -1462,7 +2366,20 @@
         "JAX_S_APP",
         "JAX_E_APP",
         "JAX_V_APP",
-        "JAX_30_CTR",
+        "GNV_TWR",
+        "OCF_TWR",
+        "CRG_TWR",
+        "JAX_54_CTR",
+        "JAX_53_CTR",
+        "JAX_29_CTR",
+        "JAX_79_CTR",
+        "JAX_15_CTR",
+        "JAX_14_CTR",
+        "JAX_77_CTR",
+        "JAX_58_CTR",
+        "MCO_E_APP",
+        "DAB_N_APP",
+        "TPA_E_APP",
         "JAX_TWR"
       ],
       "default_maps": [ "EAST FLOW" ],
@@ -1474,147 +2391,248 @@
     }
   },
   "stars_config": {
-  "center": "KJAX",
-  "radar_sites": {
-    "JAX": {
-      "char": "J",
-      "position": "30.49333,-81.69267",
-      "elevation": 140,
-      "primary_range": 60,
-      "secondary_range": 60,
-      "slope_angle": 0.175,
-      "silence_angle": 15
+    "allow_long_scratchpad": [
+      false, 
+      false
+    ],
+    "force_ql_self": true, 
+    "airspace_awareness": [
+      {
+        "fixes": [
+          "BRSTL",
+          "ALLMA",
+          "BAXLY"
+        ],
+        "altitude_range": [
+          5000,
+          35000
+        ],
+        "receiving_controller": "C79"
+      },
+      {
+        "fixes": [
+          "BRSTL",
+          "ALLMA",
+          "BAXLY"
+        ],
+        "altitude_range": [
+          0,
+          4000
+        ],
+        "receiving_controller": "C29"
+      },
+      {
+        "fixes": [
+          "SSI",
+          "WISPR"
+        ],
+        "altitude_range": [
+          5000,
+          35000
+        ],
+        "receiving_controller": "C79"
+      },
+      {
+        "fixes": [
+          "SSI",
+          "WISPR"
+        ],
+        "altitude_range": [
+          0,
+          4000
+        ],
+        "receiving_controller": "C29"
+      },
+      {
+        "fixes": [
+          "EBXOX",
+          "OMN",
+          "SAWGY"
+        ],
+        "altitude_range": [
+          0, 0
+        ],
+        "receiving_controller": "C58"
+      },
+      {
+        "fixes": [
+          "JAYJA",
+          "CAPPS",
+          "GNV"
+        ],
+        "altitude_range": [
+          0, 0
+        ],
+        "receiving_controller": "C77"
+      },
+      {
+        "fixes": [
+          "OMMNI"
+        ],
+        "altitude_range": [
+          0, 0
+        ],
+        "receiving_controller": "C14"
+      }
+    ],
+    "center": "KJAX",
+    "inhibit_ca_volumes": [
+      {
+        "name": "JAX CA SUPPRESSION",
+        "type": "circle",
+        "floor": 0,
+        "ceiling": 3000,
+        "center": "KJAX",
+        "radius": 5
+      }
+    ],
+    "radar_sites": {
+      "JAX": {
+        "char": "J",
+        "position": "30.49333,-81.69267",
+        "elevation": 140,
+        "primary_range": 60,
+        "secondary_range": 60,
+        "slope_angle": 0.175,
+        "silence_angle": 15
+      },
+      "GNV": {
+        "char": "G",
+        "position": "29.41514,-82.23247",
+        "elevation": 155,
+        "primary_range": 60,
+        "secondary_range": 60,
+        "slope_angle": 0.175,
+        "silence_angle": 15
+      },
+      "ZNEN": {
+        "char": "N",
+        "position": "30.34600,-81.87397",
+        "elevation": 125,
+        "primary_range": 250,
+        "secondary_range": 250,
+        "slope_angle": 0.175,
+        "silence_angle": 15
+      },
+      "ZCTY": {
+        "char": "C",
+        "position": "29.74403,-83.00106",
+        "elevation": 150,
+        "primary_range": 250,
+        "secondary_range": 250,
+        "slope_angle": 0.175,
+        "silence_angle": 15
+      },
+      "DAB": {
+        "char": "D",
+        "position": "29.17267,-81.19224",
+        "elevation": 150,
+        "primary_range": 60,
+        "secondary_range": 60,
+        "slope_angle": 0.175,
+        "silence_angle": 15
+      }
     },
-    "GNV": {
-      "char": "G",
-      "position": "29.41514,-82.23247",
-      "elevation": 155,
-      "primary_range": 60,
-      "secondary_range": 60,
-      "slope_angle": 0.175,
-      "silence_angle": 15
+    "scratchpads": {
+      "ALLMA": "BRS",
+      "BAXLY": "BRS",
+      "BRSTL": "BRS",
+      "WISPR": "CRO",
+      "EXBOX": "EXB",
+      "OMN": "EXB",
+      "CAPPS": "JET",
+      "JAYJA": "JET",
+      "SAWGY": "SAW",
+      "SSI": "SSI",
+      "GNV": null,
+      "MMKAY": null,
+      "OMMNI": null,
+      "LEESE": null,
+      "ILBOC": null,
+      "FOLUT": null
     },
-    "ZNEN": {
-      "char": "N",
-      "position": "30.34600,-81.87397",
-      "elevation": 125,
-      "primary_range": 250,
-      "secondary_range": 250,
-      "slope_angle": 0.175,
-      "silence_angle": 15
-    },
-    "ZCTY": {
-      "char": "C",
-      "position": "29.74403,-83.00106",
-      "elevation": 150,
-      "primary_range": 250,
-      "secondary_range": 250,
-      "slope_angle": 0.175,
-      "silence_angle": 15
-    },
-    "DAB": {
-      "char": "D",
-      "position": "29.17267,-81.19224",
-      "elevation": 150,
-      "primary_range": 60,
-      "secondary_range": 60,
-      "slope_angle": 0.175,
-      "silence_angle": 15
-    }
-  },
-  "scratchpads": {
-    "ALLMA": "BRS",
-    "BAXLY": "BRS",
-    "WISPR": "CRO",
-    "EXBOX": "EXB",
-    "OMN": "EXB",
-    "CAPPS": "JET",
-    "JAYJA": "JET",
-    "SAWGY": "SAW",
-    "SSI": "SSI"
-  },
-  "stars_maps": [
-    {
-      "group": 0,
-      "label": "EAST",
-      "name": "EAST FLOW"
-    },
-    {
-      "group": 0,
-      "label": "WEST",
-      "name": "WEST FLOW"
-    },
-    {
-    "group": 1,
-    "label": "CLASS C",
-    "name": "CLASS C AIRSPACE"
-    },
-    {
+    "stars_maps": [
+      {
+        "group": 0,
+        "label": "EAST",
+        "name": "EAST FLOW"
+      },
+      {
+        "group": 0,
+        "label": "WEST",
+        "name": "WEST FLOW"
+      },
+      {
       "group": 1,
-      "label": "CLASS D",
-      "name": "CLASS D AIRSPACE"
-    },
-    {
-      "group": 0,
-      "label": "GPS",
-      "name": "GPS APPROACHES"
-    },
-    {
-      "group": 1,
-      "label": "MVA",
-      "name": "MULTI MVA"
-    },
-    {
-      "group": 1,
-      "label": "SIDWAY",
-      "name": "SID WAYPOINTS (JAX)"
-    },
-    {
-      "group": 1,
-      "label": "LUNNI",
-      "name": "LUNNI STAR"
-    },
-    {
-      "group": 1,
-      "label": "MARQO",
-      "name": "MARQO STAR"
-    },
-    {
-      "group": 1,
-      "label": "OHDEA",
-      "name": "OHDEA STAR"
-    },
-    {
-      "group": 1,
-      "label": "QUBEN",
-      "name": "QUBEN STAR"
-   },
-   {
-       "group": 1,
-       "label": "TEBOW",
-       "name": "TEBOW STAR"
-   },
-   {
-    "group": 1,
-    "label": "RNAVS14",
-    "name": "RNAV STARS RWY 14"
-    },
-    {
+      "label": "CLASS C",
+      "name": "CLASS C AIRSPACE"
+      },
+      {
         "group": 1,
-        "label": "RNAVS26",
-        "name": "RNAV STARS RWY 26"
-    },
-    {
+        "label": "CLASS D",
+        "name": "CLASS D AIRSPACE"
+      },
+      {
+        "group": 0,
+        "label": "GPS",
+        "name": "GPS APPROACHES"
+      },
+      {
         "group": 1,
-        "label": "RNAVS08",
-        "name": "RNAV STARS RWY 08"
-    },
-    {
+        "label": "MVA",
+        "name": "MULTI MVA"
+      },
+      {
+        "group": 1,
+        "label": "SIDWAY",
+        "name": "SID WAYPOINTS (JAX)"
+      },
+      {
+        "group": 1,
+        "label": "LUNNI",
+        "name": "LUNNI STAR"
+      },
+      {
+        "group": 1,
+        "label": "MARQO",
+        "name": "MARQO STAR"
+      },
+      {
+        "group": 1,
+        "label": "OHDEA",
+        "name": "OHDEA STAR"
+      },
+      {
+        "group": 1,
+        "label": "QUBEN",
+        "name": "QUBEN STAR"
+     },
+     {
+         "group": 1,
+         "label": "TEBOW",
+         "name": "TEBOW STAR"
+     },
+     {
       "group": 1,
-      "label": "RNAVS32",
-      "name": "RNAV STARS RWY 32"
-   }
-  ],
-  "video_map_file": "videomaps/ZJX-videomaps.json.zst"
+      "label": "RNAVS14",
+      "name": "RNAV STARS RWY 14"
+      },
+      {
+          "group": 1,
+          "label": "RNAVS26",
+          "name": "RNAV STARS RWY 26"
+      },
+      {
+          "group": 1,
+          "label": "RNAVS08",
+          "name": "RNAV STARS RWY 08"
+      },
+      {
+        "group": 1,
+        "label": "RNAVS32",
+        "name": "RNAV STARS RWY 32"
+     }
+    ],
+    "video_map_file": "videomaps/ZJX-videomaps.json.zst"
   }
 }
