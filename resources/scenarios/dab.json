@@ -333,6 +333,32 @@
               "airport": "KILG",
               "icao": "VXP"
             }
+          ],
+          "KSFB": [
+            {
+              "airport": "KABE",
+              "icao": "AAY"
+            },
+            {
+              "airport": "KTYS",
+              "icao": "AAY"
+            },
+            {
+              "airport": "KBGR",
+              "icao": "AAY"
+            },
+            {
+              "airport": "KISP",
+              "icao": "AAY"
+            },
+            {
+              "airport": "KBNA",
+              "icao": "AAY"
+            },
+            {
+              "airport": "CYYZ",
+              "icao": "FLE"
+            }
           ]
         },
         "cruise_altitude": 36000,
@@ -340,7 +366,21 @@
         "initial_controller": "JAX_30_CTR",
         "initial_speed": 250,
         "star": "TTHOR3",
-        "waypoints": "WEEEK/a16000 TTHOR/a12000/ho BIKEZ/a12000/h165"
+        "runway_waypoints": {
+          "KDAB": {
+            "7L":  "TTHOR/a12000 BIKEZ/a12000/h165",
+            "7R":  "TTHOR/a12000 BIKEZ/a12000/h165",
+            "25L": "TTHOR/a12000 BIKEZ/a12000/h165",
+            "25R": "TTHOR/a12000 BIKEZ/a12000/h165"
+          },
+          "KSFB": {
+            "9L": "TTHOR/a12000 OWEDN/a800-11000/s250 THANO/a7000-9000 RAGNR/a7000- LOKII/a5000 MUNKZ/a5000/s210/h201",
+            "9R": "TTHOR/a12000 OWEDN/a800-11000/s250 THANO/a7000-9000 RAGNR/a7000- LOKII/a5000 MUNKZ/a5000/s210/h201",
+            "27L": "TTHOR/a12000 OWEDN/a800-11000/s250 THANO/a7000-9000 RAGNR/a7000- LOKII/a5000 MUNKZ/a5000/s210/h201",
+            "27R": "TTHOR/a12000 OWEDN/a800-11000/s250 THANO/a7000-9000 RAGNR/a7000- LOKII/a5000 MUNKZ/a5000/s210/h201"
+          }
+        },
+        "waypoints": "WEEEK/a16000/ho TTHOR/a12000"
       }
     ],
     "FONEX": [
