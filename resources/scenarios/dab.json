@@ -333,37 +333,11 @@
               "airport": "KILG",
               "icao": "VXP"
             }
-          ],
-          "KSFB": [
-            {
-              "airport": "KABE",
-              "icao": "AAY"
-            },
-            {
-              "airport": "KTYS",
-              "icao": "AAY"
-            },
-            {
-              "airport": "KBGR",
-              "icao": "AAY"
-            },
-            {
-              "airport": "KISP",
-              "icao": "AAY"
-            },
-            {
-              "airport": "KBNA",
-              "icao": "AAY"
-            },
-            {
-              "airport": "CYYZ",
-              "icao": "FLE"
-            }
           ]
         },
         "cruise_altitude": 36000,
         "initial_altitude": 17000,
-        "initial_controller": "JAX_30_CTR",
+        "initial_controller": "JAX_57_CTR",
         "initial_speed": 250,
         "star": "TTHOR3",
         "runway_waypoints": {
@@ -372,12 +346,6 @@
             "7R":  "TTHOR/a12000 BIKEZ/a12000/h165",
             "25L": "TTHOR/a12000 BIKEZ/a12000/h165",
             "25R": "TTHOR/a12000 BIKEZ/a12000/h165"
-          },
-          "KSFB": {
-            "9L": "TTHOR/a12000 OWEDN/a800-11000/s250 THANO/a7000-9000 RAGNR/a7000- LOKII/a5000 MUNKZ/a5000/s210/h201",
-            "9R": "TTHOR/a12000 OWEDN/a800-11000/s250 THANO/a7000-9000 RAGNR/a7000- LOKII/a5000 MUNKZ/a5000/s210/h201",
-            "27L": "TTHOR/a12000 OWEDN/a800-11000/s250 THANO/a7000-9000 RAGNR/a7000- LOKII/a5000 MUNKZ/a5000/s210/h201",
-            "27R": "TTHOR/a12000 OWEDN/a800-11000/s250 THANO/a7000-9000 RAGNR/a7000- LOKII/a5000 MUNKZ/a5000/s210/h201"
           }
         },
         "waypoints": "WEEEK/a16000/ho TTHOR/a12000"
@@ -580,16 +548,16 @@
     "MCO_B_APP": {
       "frequency": 128375,
       "full_name": "Orlando approach",
-      "scope_char": "B",
+      "scope_char": "1",
       "sector_id": "1B",
-      "facility_id": "4"
+      "facility_id": "1"
     },
     "JAX_N_APP": {
       "frequency": 127000,
       "full_name": "Jacksonville approach",
-      "scope_char": "N",
+      "scope_char": "2",
       "sector_id": "1N",
-      "facility_id": "3"
+      "facility_id": "2"
     },
     "DAB_N_TWR": {
       "frequency": 120700,
@@ -658,7 +626,7 @@
       "multi_controllers": {
           "default" : {
               "DAB_N_APP": {"primary": true},
-              "DAB_M_APP": {"backup": "DAB_H_APP"},
+              "DAB_M_APP": {"backup": "DAB_N_APP"},
               "DAB_L_APP": {"backup": "DAB_H_APP"},
               "DAB_H_APP": {"backup": "DAB_M_APP", "arrivals": ["TTHOR3", "FONEX", "FOLUT", "KIZER", "DOMES"]},
               "DAB_S_APP": {"backup": "DAB_H_APP"},
@@ -725,7 +693,7 @@
       "multi_controllers": {
           "default" : {
               "DAB_N_APP": {"primary": true},
-              "DAB_M_APP": {"backup": "DAB_H_APP"},
+              "DAB_M_APP": {"backup": "DAB_N_APP"},
               "DAB_L_APP": {"backup": "DAB_H_APP"},
               "DAB_H_APP": {"backup": "DAB_M_APP", "arrivals": ["TTHOR3", "FONEX", "FOLUT", "KIZER", "DOMES"]},
               "DAB_S_APP": {"backup": "DAB_H_APP"},
