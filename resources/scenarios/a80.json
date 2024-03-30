@@ -1129,7 +1129,7 @@
           ]
         },
         "initial_altitude": 15000,
-        "initial_controller" : "ATL_CTR",
+        "initial_controller" : "ATL_05_CTR",
         "initial_speed": 290,
         "star": "CHPPR1",
           "runway_waypoints": {
@@ -1218,7 +1218,7 @@
         ]
       },
       "initial_altitude": 15000,
-      "initial_controller" : "ATL_CTR",
+      "initial_controller" : "ATL_05_CTR",
       "initial_speed": 290,
       "star": "CHPPR1",
         "runway_waypoints": {
@@ -1384,7 +1384,7 @@
         ]
       },
       "initial_altitude": 15000,
-      "initial_controller": "ATL_CTR",
+      "initial_controller": "ATL_05_CTR",
       "initial_speed": 290,
       "star": "GLAVN1",
       "runway_waypoints": {
@@ -1472,7 +1472,7 @@
         ]
       },
       "initial_altitude": 15000,
-      "initial_controller": "ATL_CTR",
+      "initial_controller": "ATL_05_CTR",
       "initial_speed": 290,
       "star": "GLAVN1",
       "runway_waypoints": {
@@ -1548,7 +1548,7 @@
         ]
       },
       "initial_altitude": 13000,
-      "initial_controller": "ATL_CTR",
+      "initial_controller": "ATL_09_CTR",
       "initial_speed": 290,
       "star": "GNDLF2",
       "waypoints": "SMAWG/ho GNDLF/a11000/s250 HALRR/a10000/s250 SHULR/a8000 JNGLE QUBIT/h005",
@@ -1610,7 +1610,7 @@
         ]
       },
       "initial_altitude": 17000,
-      "initial_controller": "ATL_CTR",
+      "initial_controller": "ATL_09_CTR",
       "initial_speed": 290,
       "star": "HOBTT2",
       "runway_waypoints": {
@@ -1833,7 +1833,7 @@
         ]
       },
       "initial_altitude": 14000,
-      "initial_controller": "ATL_CTR",
+      "initial_controller": "ATL_19_CTR",
       "initial_speed": 290,
       "star": "JJEDI3",
       "speed_restriction": 250,
@@ -2067,7 +2067,7 @@
         ]
       },
       "initial_altitude": 15000,
-      "initial_controller": "ATL_CTR",
+      "initial_controller": "ATL_49_CTR",
       "initial_speed": 290,
       "star": "ONDRE1",
       "runway_waypoints": {
@@ -2144,7 +2144,7 @@
         ]
       },
       "initial_altitude": 15000,
-      "initial_controller": "ATL_CTR",
+      "initial_controller": "ATL_49_CTR",
       "initial_speed": 290,
       "star": "ONDRE1",
       "runway_waypoints": {
@@ -2278,7 +2278,7 @@
         ]
       },
       "initial_altitude": 15000,
-      "initial_controller": "ATL_CTR",
+      "initial_controller": "ATL_49_CTR",
       "initial_speed": 290,
       "star": "OZZZI1",
       "runway_waypoints": {
@@ -2350,7 +2350,7 @@
         ]
       },
       "initial_altitude": 15000,
-      "initial_controller": "ATL_CTR",
+      "initial_controller": "ATL_49_CTR",
       "initial_speed": 290,
       "star": "OZZZI1",
       "runway_waypoints": {
@@ -2508,7 +2508,7 @@
         ]
       },
       "initial_altitude": 15000,
-      "initial_controller": "ATL_CTR",
+      "initial_controller": "ATL_49_CTR",
       "initial_speed": 290,
       "star": "SITTH2",
       "runway_waypoints": {
@@ -2620,60 +2620,263 @@
     "airspace_awareness": [
       {
         "fixes": [
-          "BNA",
-          "CEASE",
-          "EMAHH",
-          "JAACE",
-          "BOBBD",
-          "BURGG",
-          "CHOOK",
+          "LUCKK"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_21_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "HANKO"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_04_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "SARGE"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_21_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "KELLN"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_16_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "STNGA"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_04_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
           "VUZ",
           "YAALL",
-          "GLAZR",
-          "RESPE",
-          "GRGIA",
-          "STEIT",
-          "HANKO",
-          "HRTWL",
-          "IRQ",
-          "KELLN",
-          "LUCKK",
-          "NOKIE",
+          "CHOOK"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_04_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
           "RAFTN",
-          "SMTTH",
-          "SARGE",
-          "STNGA",
+          "SMTTH"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_38_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "JAACE",
+          "BNA",
+          "CEASE",
+          "EMAHH"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_38_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "HRTWL"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_16_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "BURGG"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_16_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "STEIT",
+          "GRGIA"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_04_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "BOBBD"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_38_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
           "WALET"
         ],
         "altitude_range": [
           0,
           0
         ],
-        "receiving_controller": "ATL_CTR",
+        "receiving_controller": "ATL_21_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "RESPE",
+          "GLAZR"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_38_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "NOKIE"
+        ],
+        "altitude_range": [
+          0,
+          0
+        ],
+        "receiving_controller": "ATL_21_CTR",
         "to_center": true
       }
     ]
 	},
   "control_positions": {
-    "ATL_CTR": {
-        "frequency": 132975,
-        "full_name": "Atlanta Center",
-        "scope_char": "C",
-        "sector_id": "C43",
-        "facility_id": "C",
-        "eram_facility": true
-    },
-    "ATL_APP" : {
-      "frequency": 127900,
+    "ATL_O_APP": {
+      "frequency": 124600,
       "full_name": "Atlanta Approach",
-      "scope_char": "H",
-      "sector_id": "1H"
+      "scope_char": "O",
+      "sector_id": "1O"
+    },
+    "ATL_N_DEP": {
+      "frequency": 133475,
+      "full_name": "Atlanta Departure",
+      "scope_char": "N",
+      "sector_id": "1N"
+    },
+    "ATL_P_APP": {
+      "frequency": 126975,
+      "full_name": "Atlanta Departure",
+      "scope_char": "P",
+      "sector_id": "1P"
     },
     "ATL_H_APP": {
       "frequency": 127900,
       "full_name": "Atlanta Approach",
       "scope_char": "H",
       "sector_id": "1H"
+    },
+    "ATL_A_APP": {
+      "frequency": 135375,
+      "full_name": "Atlanta Approach",
+      "scope_char": "A",
+      "sector_id": "1A"
+    },
+    "ATL_V_APP": {
+      "frequency": 127250,
+      "full_name": "Atlanta Approach",
+      "scope_char": "V",
+      "sector_id": "1V"
+    },
+    "AHN_E_APP": {
+      "frequency": 127900,
+      "full_name": "Atlanta Approach",
+      "scope_char": "E",
+      "sector_id": "1E"
+    },
+    "AHN_3E_APP": {
+      "frequency": 119875,
+      "full_name": "Atlanta Approach",
+      "scope_char": "E",
+      "sector_id": "3E"
+    },
+    "ATL_I_DEP": {
+      "frequency": 127250,
+      "full_name": "Atlanta Departure",
+      "scope_char": "I",
+      "sector_id": "1I"
+    },
+    "ATL_S_DEP": {
+      "frequency": 125650,
+      "full_name": "Atlanta Departure",
+      "scope_char": "S",
+      "sector_id": "1S"
+    },
+    "ATL_Q_APP": {
+      "frequency": 124300,
+      "full_name": "Atlanta Approach",
+      "scope_char": "Q",
+      "sector_id": "1Q"
+    },
+    "ATL_F_APP": {
+      "frequency": 121000,
+      "full_name": "Atlanta Approach",
+      "scope_char": "F",
+      "sector_id": "1F"
+    },
+    "ATL_G_APP": {
+      "frequency": 128575,
+      "full_name": "Atlanta Approach",
+      "scope_char": "G",
+      "sector_id": "1G"
+    },
+    "ATL_X_APP": {
+      "frequency": 119800,
+      "full_name": "Atlanta Approach",
+      "scope_char": "X",
+      "sector_id": "1X"
     },
     "ATL_D_APP": {
       "frequency": 128000,
@@ -2683,7 +2886,7 @@
     },
     "ATL_L_APP": {
       "frequency": 128525,
-      "full_name":"Atlanta Approach",
+      "full_name": "Atlanta Approach",
       "scope_char": "L",
       "sector_id": "1L"
     },
@@ -2693,71 +2896,93 @@
       "scope_char": "Y",
       "sector_id": "1Y"
     },
-    "ATL_O_APP": {
-      "frequency": 124600,
+    "CSG_R_APP": {
+      "frequency": 126550,
       "full_name": "Atlanta Approach",
-      "scope_char": "O",
-      "sector_id": "1O"
+      "scope_char": "R",
+      "sector_id": "1R"
     },
-    "ATL_V_APP": {
-      "frequency": 127250,
+    "CSG_Z_APP": {
+      "frequency": 125000,
       "full_name": "Atlanta Approach",
-      "scope_char": "V",
-      "sector_id": "1V"
+      "scope_char": "R",
+      "sector_id": "1R"
     },
-    "ATL_A_APP": {
-      "frequency": 135375,
+    "MCN_W_APP": {
+      "frequency": 119600,
       "full_name": "Atlanta Approach",
-      "scope_char": "A",
-      "sector_id": "1A"
+      "scope_char": "W",
+      "sector_id": "1W"
     },
-    "ATL_N_DEP": {
-      "frequency": 125200,
-      "full_name": "Atlanta Departure",
-      "scope_char": "N",
-      "sector_id": "1N"
-    },
-    "ATL_S_DEP": {
-      "frequency": 125200,
-      "full_name": "Atlanta Departure",
-      "scope_char": "S",
-      "sector_id": "1S"
-    },
-    "ATL_I_DEP": {
-      "frequency": 125200,
-      "full_name": "Atlanta Departure",
-      "scope_char": "I",
-      "sector_id": "1I"
-    },
-    "ATL_P_APP": {
-      "frequency": 126975,
+    "MCN_M_APP": {
+      "frequency": 124200,
       "full_name": "Atlanta Approach",
-      "scope_char": "P",
-      "sector_id": "1P"
+      "scope_char": "M",
+      "sector_id": "1M"
     },
-    "ATL_F_APP": {
-      "frequency": 121000,
-      "full_name": "Atlanta Approach",
-      "scope_char": "F",
-      "sector_id": "1F"
+    "ATL_04_CTR": {
+      "frequency": 134950,
+      "full_name": "Atlanta Center",
+      "scope_char": "C",
+      "sector_id": "04",
+      "eram_facility": true,
+      "facility_id": "C"
     },
-    "ATL_X_APP": {
-      "frequency": 119800,
-      "full_name": "Atlanta Approach",
-      "scope_char": "X",
-      "sector_id": "1X"
+    "ATL_05_CTR": {
+      "frequency": 132050,
+      "full_name": "Atlanta Center",
+      "scope_char": "C",
+      "sector_id": "05",
+      "eram_facility": true,
+      "facility_id": "C"
     },
-    "ATL_G_APP": {
-      "frequency": 128575,
-      "full_name": "Atlanta Approach",
-      "scope_char": "G",
-      "sector_id": "1G"
+    "ATL_09_CTR": {
+      "frequency": 120450,
+      "full_name": "Atlanta Center",
+      "scope_char": "C",
+      "sector_id": "09",
+      "eram_facility": true,
+      "facility_id": "C"
     },
-    "ATL_Q_APP": {
-      "frequency": 124300,
-      "full_name": "Atlanta Approach",
-      "scope_char": "Q",
-      "sector_id": "1Q"
+    "ATL_16_CTR": {
+      "frequency": 134200,
+      "full_name": "Atlanta Center",
+      "scope_char": "C",
+      "sector_id": "16",
+      "eram_facility": true,
+      "facility_id": "C"
+    },
+    "ATL_19_CTR": {
+      "frequency": 123950,
+      "full_name": "Atlanta Center",
+      "scope_char": "C",
+      "sector_id": "19",
+      "eram_facility": true,
+      "facility_id": "C"
+    },
+    "ATL_21_CTR": {
+      "frequency": 134500,
+      "full_name": "Atlanta Center",
+      "scope_char": "C",
+      "sector_id": "21",
+      "eram_facility": true,
+      "facility_id": "C"
+    },
+    "ATL_38_CTR": {
+      "frequency": 133100,
+      "full_name": "Atlanta Center",
+      "scope_char": "C",
+      "sector_id": "38",
+      "eram_facility": true,
+      "facility_id": "C"
+    },
+    "ATL_49_CTR": {
+      "frequency": 121350,
+      "full_name": "Atlanta Center",
+      "scope_char": "C",
+      "sector_id": "49",
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "ATL_1_TWR": {
       "frequency": 119100,
@@ -2846,7 +3071,7 @@
           "KATL": 10
         }
         },
-        "solo_controller": "ATL_APP",
+        "solo_controller": "ATL_N_DEP",
         "multi_controllers": {
             "default" : {
                 "ATL_H_APP": {"primary": true, "arrivals": ["JJEDI3"]},
@@ -2868,7 +3093,14 @@
         },
         "controllers": [
           "ATL_1_TWR",
-          "ATL_CTR",
+          "ATL_04_CTR",
+          "ATL_05_CTR",
+          "ATL_09_CTR",
+          "ATL_16_CTR",
+          "ATL_19_CTR",
+          "ATL_21_CTR",
+          "ATL_38_CTR",
+          "ATL_49_CTR",
           "ATL_2_TWR",
           "ATL_3_TWR",
           "ATL_4_TWR",
@@ -2948,7 +3180,7 @@
               "KATL": 10
             }
             },
-            "solo_controller": "ATL_APP",
+            "solo_controller": "ATL_N_DEP",
             "multi_controllers": {
                 "default" : {
                     "ATL_H_APP": {"primary": true, "arrivals": ["SITTH2"]}, 
@@ -2969,8 +3201,15 @@
                 }
             },
             "controllers": [
+              "ATL_04_CTR",
+              "ATL_05_CTR",
+              "ATL_09_CTR",
+              "ATL_16_CTR",
+              "ATL_19_CTR",
+              "ATL_21_CTR",
+              "ATL_38_CTR",
+              "ATL_49_CTR",
               "ATL_1_TWR",
-              "ATL_CTR",
               "ATL_2_TWR",
               "ATL_3_TWR",
               "ATL_4_TWR",
@@ -3060,7 +3299,14 @@
                 "ATL_3_TWR",
                 "ATL_4_TWR",
                 "ATL_5_TWR",
-                "ATL_CTR"
+                "ATL_04_CTR",
+                "ATL_05_CTR",
+                "ATL_09_CTR",
+                "ATL_16_CTR",
+                "ATL_19_CTR",
+                "ATL_21_CTR",
+                "ATL_38_CTR",
+                "ATL_49_CTR"
               ],
               "default_maps": [ "ARRIVAL RADAR WEST TRIPLES" ],
               "wind": {
@@ -3112,7 +3358,14 @@
                 "ATL_3_TWR",
                 "ATL_4_TWR",
                 "ATL_5_TWR",
-                "ATL_CTR"
+                "ATL_04_CTR",
+                "ATL_05_CTR",
+                "ATL_09_CTR",
+                "ATL_16_CTR",
+                "ATL_19_CTR",
+                "ATL_21_CTR",
+                "ATL_38_CTR",
+                "ATL_49_CTR"
               ],
               "default_maps": [ "ARRIVAL RADAR WEST DUALS" ],
               "wind": {
