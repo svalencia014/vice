@@ -811,36 +811,41 @@
       "frequency": 124525,
       "full_name": "Indianapolis Center",
       "scope_char": "C",
-      "sector_id": "C33",
-      "eram_facility": true
+      "sector_id": "33",
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "IND_34_CTR": {
       "frequency": 119550,
       "full_name": "Indianapolis Center",
       "scope_char": "C",
-      "sector_id": "C34",
-      "eram_facility": true
+      "sector_id": "34",
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "IND_35_CTR": {
       "frequency": 132200,
       "full_name": "Indianapolis Center",
       "scope_char": "C",
-      "sector_id": "C35",
-      "eram_facility": true
+      "sector_id": "35",
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "CHI_35_CTR": {
       "frequency": 134875,
       "full_name": "Chicago Center",
       "scope_char": "C",
-      "sector_id": "Z35",
-      "eram_facility": true
+      "sector_id": "35",
+      "eram_facility": true,
+      "facility_id": "Z"
     },
     "CHI_51_CTR": {
       "frequency": 133150,
       "full_name": "Chicago Center",
       "scope_char": "C",
-      "sector_id": "Z51",
-      "eram_facility": true
+      "sector_id": "51",
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "IND_E_APP": {
       "frequency": 124950,
@@ -1398,7 +1403,7 @@
           0,
           0
         ],
-        "receiving_controller": "C33",
+        "receiving_controller": "IND_33_CTR",
         "to_center": true
       }, 
       {
@@ -1411,7 +1416,7 @@
           0,
           0
         ],
-        "receiving_controller": "C34",
+        "receiving_controller": "IND_34_CTR",
         "to_center": true
       },
       {
@@ -1423,7 +1428,7 @@
           0,
           0
         ],
-        "receiving_controller": "C35",
+        "receiving_controller": "IND_35_CTR",
         "to_center": true
       },
       {
@@ -1437,7 +1442,7 @@
           0,
           0
         ],
-        "receiving_controller": "Z35",
+        "receiving_controller": "CHI_35_CTR",
         "to_center": true
       },
       {
@@ -1450,7 +1455,7 @@
           0,
           0
         ],
-        "receiving_controller": "C35",
+        "receiving_controller": "IND_35_CTR",
         "to_center": true
       }
     ],

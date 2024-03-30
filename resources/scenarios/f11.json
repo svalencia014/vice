@@ -8938,63 +8938,71 @@
       "frequency": 135175,
       "full_name": "Miami center",
       "scope_char": "C",
-      "sector_id": "R46",
-      "eram_facility": true
+      "sector_id": "46",
+      "eram_facility": true,
+      "facility_id": "R"
     },
     "MIA_66_CTR": {
       "frequency": 134550,
       "full_name": "Miami center",
       "scope_char": "C",
-      "sector_id": "R66",
-      "eram_facility": true
+      "sector_id": "66",
+      "eram_facility": true,
+      "facility_id": "R"
     },
     "MIA_67_CTR": {
       "frequency": 127200,
       "full_name": "Miami center",
       "scope_char": "C",
-      "sector_id": "R67",
-      "eram_facility": true
+      "sector_id": "67",
+      "eram_facility": true,
+      "facility_id": "R"
     },
     "MIA_23_CTR": {
       "frequency": 126950,
       "full_name": "Miami Center",
-      "sector_id": "R23",
-      "scope_char": "C"
+      "sector_id": "23",
+      "scope_char": "R"
     },
     "JAX_30_CTR": {
       "frequency": 135925,
       "full_name": "Jacksonville center",
       "scope_char": "C",
-      "sector_id": "C30",
-      "eram_facility": true
+      "sector_id": "30",
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "JAX_15_CTR": {
       "frequency": 133325,
       "full_name": "Jacksonville center",
       "scope_char": "C",
-      "sector_id": "C15",
-      "eram_facility": true
+      "sector_id": "15",
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "JAX_14_CTR": {
       "frequency": 133750,
       "full_name": "Jacksonville center",
       "scope_char": "C",
-      "sector_id": "C14",
-      "eram_facility": true
+      "sector_id": "14",
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "JAX_57_CTR": {
       "frequency": 134050,
       "full_name": "Jacksonville center",
-      "sector_id": "C57",
+      "sector_id": "57",
       "scope_char": "C",
-      "eram_facility": true
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "JAX_58_CTR": {
       "frequency": 126350,
       "full_name": "Jacksonville center",
-      "sector_id": "C58",
+      "sector_id": "58",
       "scope_char": "C",
-      "eram_facility": true
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "MCO_E_APP": {
       "frequency": 124800,
@@ -10459,7 +10467,7 @@
           0, 
           0
         ],
-        "receiving_controller": "C57",
+        "receiving_controller": "JAX_57_CTR",
         "to_center": true
       },
       {
@@ -10475,7 +10483,7 @@
           0, 
           0
         ],
-        "receiving_controller": "C14",
+        "receiving_controller": "JAX_14_CTR",
         "to_center": true
       },
       {
@@ -10487,7 +10495,7 @@
           0, 
           0
         ],
-        "receiving_controller": "R66",
+        "receiving_controller": "MIA_66_CTR",
         "to_center": true
       },
       {
@@ -10506,7 +10514,7 @@
           0, 
           0
         ],
-        "receiving_controller": "R23",
+        "receiving_controller": "MIA_23_CTR",
         "to_center": true
       },
       {
@@ -10516,7 +10524,7 @@
         "altitude_range": [
           0,11000
         ],
-        "receiving_controller": "5H",
+        "receiving_controller": "DAB_N_APP",
         "to_center": false
       },
       {
@@ -10526,7 +10534,7 @@
         "altitude_range": [
           12000,39000
         ],
-        "receiving_controller": "C57",
+        "receiving_controller": "JAX_57_CTR",
         "to_center": true
       }
     ],

@@ -855,22 +855,25 @@
       "frequency": 132925,
       "full_name": "Jacksonville Center",
       "scope_char": "C",
-      "sector_id": "C73",
-      "eram_facility": true
+      "sector_id": "73",
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "JAX_54_CTR": {
       "frequency": 124675,
       "full_name": "Jacksonville Center",
       "scope_char": "C",
-      "sector_id": "C54",
-      "eram_facility": true
+      "sector_id": "54",
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "JAX_53_CTR": {
       "frequency": 126750,
       "full_name": "Jacksonville Center",
       "scope_char": "C",
-      "sector_id": "C53",
-      "eram_facility": true
+      "sector_id": "53",
+      "eram_facility": true,
+      "facility_id": "C"
     },
     "SAV_N_APP": {
       "frequency": 125300,
@@ -1050,13 +1053,13 @@
       {
         "fixes": [
           "JROSS",
-          "SMALZZ"
+          "SMALZ"
         ],
         "altitude_range": [
           0,
           0
         ],
-        "receiving_controller": "C73"
+        "receiving_controller": "JAX_73_CTR"
       },
       {
         "fixes": [
@@ -1066,7 +1069,7 @@
           0,
           0
         ],
-        "receiving_controller": "C54"
+        "receiving_controller": "JAX_54_CTR"
       }
     ],
   "center": "KSAV",
