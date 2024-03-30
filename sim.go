@@ -2009,7 +2009,13 @@ func (s *Sim) SetGlobalLeaderLine(token, callsign string, dir *CardinalOrdinalDi
 			return nil
 		},
 		func(ctrl *Controller, ac *Aircraft) []RadioTransmission {
-			ac.GlobalLinePosition = dir
+			ac.GlobalLeaderLineDirection = dir
+			s.eventStream.Post(Event{
+				Type:                SetGlobalLeaderLineEvent,
+				Callsign:            ac.Callsign,
+				FromController:      callsign,
+				LeaderLineDirection: dir,
+			})
 			return nil
 		})
 }
@@ -2361,6 +2367,17 @@ func (s *Sim) RejectPointOut(token, callsign string) error {
 			})
 
 			delete(s.PointOuts[callsign], ctrl.Callsign)
+			return nil
+		})
+}
+
+func (s *Sim) ToggleSPCOverride(token, callsign, spc string) error {
+	s.mu.Lock(s.lg)
+	defer s.mu.Unlock(s.lg)
+
+	return s.dispatchTrackingCommand(token, callsign,
+		func(ctrl *Controller, ac *Aircraft) []RadioTransmission {
+			ac.ToggleSPCOverride(spc)
 			return nil
 		})
 }

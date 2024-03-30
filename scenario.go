@@ -207,6 +207,13 @@ func (s *Scenario) PostDeserialize(sg *ScenarioGroup, e *ErrorLogger) {
 		}
 	}
 
+	// Make sure all of the controllers used in airspace awareness will be there.
+	for _, aa := range sg.STARSFacilityAdaptation.AirspaceAwareness {
+		if !slices.Contains(s.VirtualControllers, aa.ReceivingController) {
+			s.VirtualControllers = append(s.VirtualControllers, aa.ReceivingController)
+		}
+	}
+
 	sort.Slice(s.ArrivalRunways, func(i, j int) bool {
 		if s.ArrivalRunways[i].Airport == s.ArrivalRunways[j].Airport {
 			return s.ArrivalRunways[i].Runway < s.ArrivalRunways[j].Runway
@@ -214,11 +221,15 @@ func (s *Scenario) PostDeserialize(sg *ScenarioGroup, e *ErrorLogger) {
 		return s.ArrivalRunways[i].Airport < s.ArrivalRunways[j].Airport
 	})
 
+	activeAirports := make(map[*Airport]interface{}) // all airports with departures or arrivals
 	for _, rwy := range s.ArrivalRunways {
 		e.Push("Arrival runway " + rwy.Airport + " " + rwy.Runway)
+
 		if ap, ok := sg.Airports[rwy.Airport]; !ok {
 			e.ErrorString("airport not found")
 		} else {
+			activeAirports[ap] = nil
+
 			found := false
 			for _, appr := range ap.Approaches {
 				if appr.Runway == rwy.Runway {
@@ -246,23 +257,67 @@ func (s *Scenario) PostDeserialize(sg *ScenarioGroup, e *ErrorLogger) {
 	activeAirportSIDs := make(map[string]map[string]interface{})
 	activeAirportRunways := make(map[string]map[string]interface{})
 	for _, rwy := range s.DepartureRunways {
-		if ap, ok := sg.Airports[rwy.Airport]; ok && ap.DepartureController != "" {
-			// If a virtual controller will take the initial track then
-			// we don't need a human-controller to be covering it.
-			continue
+		e.Push("departure runway " + rwy.Runway)
+
+		ap, ok := sg.Airports[rwy.Airport]
+		if !ok {
+			e.ErrorString("%s: airport unknown", rwy.Airport)
 		}
 
-		ap := sg.Airports[rwy.Airport]
-		for fix, route := range rwy.ExitRoutes {
-			if rwy.Category == "" || ap.ExitCategories[fix] == rwy.Category {
-				if activeAirportSIDs[rwy.Airport] == nil {
-					activeAirportSIDs[rwy.Airport] = make(map[string]interface{})
+		activeAirports[ap] = nil
+
+		if ap.DepartureController == "" {
+			// Only check for a human controller to be covering the track if there isn't
+			// a virtual controller assigned to it.
+			for fix, route := range rwy.ExitRoutes {
+				if rwy.Category == "" || ap.ExitCategories[fix] == rwy.Category {
+					if activeAirportSIDs[rwy.Airport] == nil {
+						activeAirportSIDs[rwy.Airport] = make(map[string]interface{})
+					}
+					if activeAirportRunways[rwy.Airport] == nil {
+						activeAirportRunways[rwy.Airport] = make(map[string]interface{})
+					}
+					activeAirportSIDs[rwy.Airport][route.SID] = nil
+					activeAirportRunways[rwy.Airport][rwy.Runway] = nil
 				}
-				if activeAirportRunways[rwy.Airport] == nil {
-					activeAirportRunways[rwy.Airport] = make(map[string]interface{})
+			}
+		}
+
+		e.Pop()
+	}
+
+	// Do any active airports have CRDA?
+	haveCRDA := false
+	for ap := range activeAirports {
+		if len(ap.ConvergingRunways) > 0 {
+			haveCRDA = true
+			break
+		}
+	}
+	if haveCRDA {
+		// Make sure all of the controllers involved have a valid default airport
+		check := func(ctrl *Controller) {
+			if ctrl.DefaultAirport == "" {
+				if ap, _, ok := strings.Cut(ctrl.Callsign, "_"); ok { // see if the first part of the callsign is an airport
+					if _, ok := sg.Airports["K"+ap]; ok {
+						ctrl.DefaultAirport = "K" + ap
+					} else {
+						e.ErrorString("%s: controller must have \"default_airport\" specified (required for CRDA).", ctrl.Callsign)
+						return
+					}
 				}
-				activeAirportSIDs[rwy.Airport][route.SID] = nil
-				activeAirportRunways[rwy.Airport][rwy.Runway] = nil
+			}
+			if _, ok := sg.Airports[ctrl.DefaultAirport]; !ok {
+				e.ErrorString("%s: controller's \"default_airport\" \"%s\" is unknown", ctrl.Callsign, ctrl.DefaultAirport)
+			}
+		}
+
+		if ctrl, ok := sg.ControlPositions[s.SoloController]; ok {
+			check(ctrl)
+		}
+		for _, callsign := range s.SplitConfigurations.Splits() {
+			if ctrl, ok := sg.ControlPositions[callsign]; ok {
+				check(ctrl)
 			}
 		}
 	}
@@ -295,6 +350,10 @@ func (s *Scenario) PostDeserialize(sg *ScenarioGroup, e *ErrorLogger) {
 				} else {
 					primaryController = callsign
 				}
+			}
+
+			if _, ok := sg.ControlPositions[callsign]; !ok {
+				e.ErrorString("controller \"%s\" not defined in the scenario group's \"control_positions\"", callsign)
 			}
 
 			// Make sure any airports claimed for departures are valid
@@ -625,26 +684,20 @@ func (sg *ScenarioGroup) PostDeserialize(e *ErrorLogger, simConfigurations map[s
 	for _, aa := range sg.STARSFacilityAdaptation.AirspaceAwareness {
 		e.Push("stars_adaptation")
 
-		// FIXME: disabled for now due to some errors in lib.json
-		/*
-			for _, fix := range aa.Fix {
-				if _, ok := sg.locate(fix); !ok {
-					e.ErrorString(fix + ": fix unknown")
-				}
+		for _, fix := range aa.Fix {
+			if _, ok := sg.locate(fix); !ok {
+				e.ErrorString(fix + ": fix unknown")
 			}
-		*/
+		}
 
 		if aa.AltitudeRange[0] > aa.AltitudeRange[1] {
 			e.ErrorString("lower end of \"altitude_range\" %d above upper end %d",
 				aa.AltitudeRange[0], aa.AltitudeRange[1])
 		}
 
-		// FIXME: disabled pending resolving sector id vs controller callsign
-		/*
-			if _, ok := sg.ControlPositions[aa.ReceivingController]; !ok {
-				e.ErrorString(aa.ReceivingController + ": controller unknown")
-			}
-		*/
+		if _, ok := sg.ControlPositions[aa.ReceivingController]; !ok {
+			e.ErrorString(aa.ReceivingController + ": controller unknown")
+		}
 
 		for _, t := range aa.AircraftType {
 			if t != "J" && t != "T" && t != "P" {
