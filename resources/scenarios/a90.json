@@ -15,9 +15,7 @@
           "runway": "4L",
           "tower_controller": "BOS_W_TWR",
           "type": "RNAV",
-          "waypoints": [
-            "AAALL/iaf/a4000 LVRON/if/a3000 MTAPN/faf/a1700"
-          ]
+          "waypoints": ["AAALL/iaf/a4000 LVRON/if/a3000 MTAPN/faf/a1700"]
         },
         "I5R": {
           "runway": "15R",
@@ -32,9 +30,7 @@
           "runway": "22L",
           "tower_controller": "BOS_E_TWR",
           "type": "ILS",
-          "waypoints": [
-            "NOLEY/if/a4000 WYANE/a3000 VOCUS/faf/a1700 ZUMOL/a700"
-          ]
+          "waypoints": ["NOLEY/if/a4000 WYANE/a3000 VOCUS/faf/a1700 ZUMOL/a700"]
         },
         "I27": {
           "runway": "27",
@@ -48,59 +44,50 @@
           "runway": "33L",
           "tower_controller": "BOS_E_TWR",
           "type": "ILS",
-          "waypoints": [
-            "BENNN/if/a4000 COHAS/a3000 NIMOY/faf/a1500 RDUKE/a700"
-          ]
+          "waypoints": ["BENNN/if/a4000 COHAS/a3000 NIMOY/faf/a1500 RDUKE/a700"]
         }
       },
       "approach_regions": {
-          "22L": {
-              "heading_tolerance": 90,
-              "near_distance": 1,
-              "near_half_width": 3,
-              "far_half_width": 6,
-               "region_length": 30,
-              "descent_distance": 5.1,
-              "descent_altitude": 1700,
-              "above_altitude_tolerance": 6000,
-              "below_altitude_tolerance": 1000,
-              "reference_point": "N042.22.36.523,W070.59.56.786",
-              "reference_heading": 219,
-              "reference_length": 30,
-              "reference_altitude": 0
-          },
-          "27": {
-              "heading_tolerance": 90,
-              "near_distance": 1,
-              "near_half_width": 3,
-              "far_half_width": 6,
-               "region_length": 30,
-              "descent_distance": 5.1,
-              "descent_altitude": 1700,
-              "above_altitude_tolerance": 6000,
-              "below_altitude_tolerance": 1000,
-              "reference_point": "N042.21.37.210,W070.59.17.537",
-              "reference_heading": 272,
-              "reference_length": 30,
-              "reference_altitude": 0
-          }  
-
+        "22L": {
+          "heading_tolerance": 90,
+          "near_distance": 1,
+          "near_half_width": 3,
+          "far_half_width": 6,
+          "region_length": 30,
+          "descent_distance": 5.1,
+          "descent_altitude": 1700,
+          "above_altitude_tolerance": 6000,
+          "below_altitude_tolerance": 1000,
+          "reference_point": "N042.22.36.523,W070.59.56.786",
+          "reference_heading": 219,
+          "reference_length": 30,
+          "reference_altitude": 0
+        },
+        "27": {
+          "heading_tolerance": 90,
+          "near_distance": 1,
+          "near_half_width": 3,
+          "far_half_width": 6,
+          "region_length": 30,
+          "descent_distance": 5.1,
+          "descent_altitude": 1700,
+          "above_altitude_tolerance": 6000,
+          "below_altitude_tolerance": 1000,
+          "reference_point": "N042.21.37.210,W070.59.17.537",
+          "reference_heading": 272,
+          "reference_length": 30,
+          "reference_altitude": 0
+        }
       },
       "converging_runways": [
-          {
-              "runways": [
-                  "27",
-                  "22L"
-              ],
-              "leader_directions": [
-                  "W",
-                  "SW"
-              ],
-              
-              "tie_symbol": "/",
-        "stagger_symbol": "0",
-        "tie_offset": 2
-          }
+        {
+          "runways": ["27", "22L"],
+          "leader_directions": ["W", "SW"],
+
+          "tie_symbol": "/",
+          "stagger_symbol": "0",
+          "tie_offset": 2
+        }
       ],
       "departure_routes": {
         "9": {
@@ -170,7 +157,7 @@
             "cleared_altitude": 5000,
             "sid": "LBSTA7",
             "waypoints": "TASKT BOATT/s250 HEARR SHAUN"
-          }, 
+          },
           "PATSS": {
             "cleared_altitude": 5000,
             "sid": "PATSS6",
@@ -628,7 +615,7 @@
           "route": "HYLND CAM Q822 GONZZ DONEO TPGUN2"
         },
         {
-          "airlines":[
+          "airlines": [
             {
               "icao": "JBU"
             },
@@ -672,7 +659,7 @@
           ],
           "destination": "KMDT",
           "exit": "REVSS",
-          "route" : "REVSS CTR DNY T291 LAAYK V93 DUMMR V162 HWANG"
+          "route": "REVSS CTR DNY T291 LAAYK V93 DUMMR V162 HWANG"
         },
         {
           "airlines": [
@@ -729,8 +716,7 @@
           "route": "SSOXS Q167 RIFLE HEADI Q97 SAWED GUILD Q409 SESUE ESENT LUNNI1"
         },
         {
-          "airlines": 
-          [
+          "airlines": [
             {
               "fleet": "short",
               "icao": "DAL"
@@ -1020,7 +1006,7 @@
           "route": "HYLND NOVON KENPA CESNA FOSIG DDY MLD J32 LLC ANAHO SLMMR5"
         },
         {
-          "airlines" : [
+          "airlines": [
             {
               "icao": "JBU"
             },
@@ -1031,7 +1017,7 @@
           ],
           "destination": "KSLC",
           "exit": "HYLND",
-          "route": "HYLND CAM GONZZ ROC YXU BAE MCW J16 ONTIJ KP78C KD78Y DDY NORDK6" 
+          "route": "HYLND CAM GONZZ ROC YXU BAE MCW J16 ONTIJ KP78C KD78Y DDY NORDK6"
         },
         {
           "airlines": [
@@ -1105,7 +1091,7 @@
           "route": "PATSS NELIE BIZEX Q75 SLOJO Q103 PUPYY KYYUU LUBBR3"
         },
         {
-          "airlines"  : [
+          "airlines": [
             {
               "icao": "JBU"
             },
@@ -1153,7 +1139,7 @@
         {
           "airlines": [
             {
-              "icao" : "PDT"
+              "icao": "PDT"
             },
             {
               "icao": "RPA"
@@ -1238,7 +1224,7 @@
               "icao": "ENY"
             },
             {
-              "icao" : "ENY"
+              "icao": "ENY"
             }
           ],
           "destination": "KILM",
@@ -1289,7 +1275,7 @@
           ],
           "destination": "TBPB",
           "exit": "BRUWN",
-          "route":  "BRUWN BORQE Y578 JENYY Y578 KAYYT DASER BALTN MEGGG L456 HANCY L456 THANK ELOPO UB520 ANU UA632 BGI"
+          "route": "BRUWN BORQE Y578 JENYY Y578 KAYYT DASER BALTN MEGGG L456 HANCY L456 THANK ELOPO UB520 ANU UA632 BGI"
         },
         {
           "airlines": [
@@ -1424,10 +1410,10 @@
         "N42.37.01.214,W70.30.58.367"
       ],
       "BOSAPP80100": [
-       "N42.42.00.053,W71.16.01.329",
-       "N42.51.30.146,W71.06.38.978",
-       "N42.42.30.270,W71.23.58.644",
-       "N42.42.00.460,W71.15.59.902"
+        "N42.42.00.053,W71.16.01.329",
+        "N42.51.30.146,W71.06.38.978",
+        "N42.42.30.270,W71.23.58.644",
+        "N42.42.00.460,W71.15.59.902"
       ],
       "BOSAPP80140": [
         "N42.42.00.222,W71.15.59.168",
@@ -1436,13 +1422,13 @@
         "N42.41.59.990,W71.15.59.591"
       ],
       "BOSAPP050": [
-       "N42.25.40.152,W71.32.29.622",
-       "N42.29.58.667,W71.29.00.474",
-       "N42.39.46.544,W71.25.05.014",
-       "N42.32.56.969,W71.52.25.177",
-       "N42.26.59.200,W71.49.58.607",
-       "N42.26.00.748,W71.43.55.121",
-       "N42.25.41.029,W71.32.36.032"
+        "N42.25.40.152,W71.32.29.622",
+        "N42.29.58.667,W71.29.00.474",
+        "N42.39.46.544,W71.25.05.014",
+        "N42.32.56.969,W71.52.25.177",
+        "N42.26.59.200,W71.49.58.607",
+        "N42.26.00.748,W71.43.55.121",
+        "N42.25.41.029,W71.32.36.032"
       ],
       "BOSAPP0100": [
         "N42.22.00.880,W71.34.59.134",
@@ -1522,146 +1508,106 @@
     "volumes": {
       "BOS_APP": [
         {
-          "boundaries": [
-            "BOSAPP0140"
-          ],
+          "boundaries": ["BOSAPP0140"],
           "lower": 0,
           "upper": 14000
         },
         {
-          "boundaries": [
-            "BOSAPP090"
-          ],
+          "boundaries": ["BOSAPP090"],
           "lower": 0,
           "upper": 9000
         },
         {
-          "boundaries": [
-            "BOSAPP80100"
-          ],
+          "boundaries": ["BOSAPP80100"],
           "lower": 8000,
           "upper": 10000
         },
         {
-          "boundaries": [
-            "BOSAPP050"
-          ],
+          "boundaries": ["BOSAPP050"],
           "lower": 0,
           "upper": 5000
         },
         {
-          "boundaries": [
-            "BOSAPP0100"
-          ],
+          "boundaries": ["BOSAPP0100"],
           "lower": 0,
           "upper": 10000
         },
         {
-          "boundaries": [
-            "BOSAPP60100"
-          ],
+          "boundaries": ["BOSAPP60100"],
           "lower": 6000,
           "upper": 10000
         },
         {
-          "boundaries": [
-            "BOSAPP80110"
-          ],
+          "boundaries": ["BOSAPP80110"],
           "lower": 8000,
           "upper": 11000
         }
       ],
       "BOS_APP4R": [
         {
-          "boundaries": [
-            "BOSAPP0140"
-          ],
+          "boundaries": ["BOSAPP0140"],
           "lower": 0,
           "upper": 14000
         },
         {
-          "boundaries": [
-            "BOSAPP090"
-          ],
+          "boundaries": ["BOSAPP090"],
           "lower": 0,
           "upper": 9000
         },
         {
-          "boundaries": [
-            "BOSAPP80100"
-          ],
+          "boundaries": ["BOSAPP80100"],
           "lower": 8000,
           "upper": 10000
         },
         {
-          "boundaries": [
-            "BOSAPP050"
-          ],
+          "boundaries": ["BOSAPP050"],
           "lower": 0,
           "upper": 5000
         },
         {
-          "boundaries": [
-            "BOSAPP0100"
-          ],
+          "boundaries": ["BOSAPP0100"],
           "lower": 0,
           "upper": 10000
         },
         {
-          "boundaries": [
-            "BOSAPP60100"
-          ],
+          "boundaries": ["BOSAPP60100"],
           "lower": 6000,
           "upper": 10000
         },
         {
-          "boundaries": [
-            "BOSAPP80110"
-          ],
+          "boundaries": ["BOSAPP80110"],
           "lower": 8000,
           "upper": 11000
         },
         {
-          "boundaries": [
-           "BOSAPP801104R"
-          ],
+          "boundaries": ["BOSAPP801104R"],
           "lower": 8000,
           "upper": 11000
         },
         {
-          "boundaries": [
-            "BOSAPP901004R"
-          ],
+          "boundaries": ["BOSAPP901004R"],
           "lower": 9000,
           "upper": 10000
         },
         {
-          "boundaries": [
-            "BOSAPP801004R"
-          ],
+          "boundaries": ["BOSAPP801004R"],
           "lower": 8000,
           "upper": 10000
         },
         {
-          "boundaries": [
-            "BOSAPP701004R"
-          ],
+          "boundaries": ["BOSAPP701004R"],
           "lower": 7000,
           "upper": 10000
         }
       ],
       "BOS_F_APP4R": [
         {
-          "boundaries": [
-            "BOSFAPP4050"
-          ],
+          "boundaries": ["BOSFAPP4050"],
           "lower": 0,
           "upper": 5000
         },
         {
-          "boundaries": [
-            "BOSFAPP4060"
-          ],
+          "boundaries": ["BOSFAPP4060"],
           "lower": 0,
           "upper": 6000
         }
@@ -1738,17 +1684,17 @@
           ]
         },
         "initial_altitude": 17000,
-        "initial_controller": "BOS_CTR",
+        "initial_controller": "BOS_36_CTR",
         "initial_speed": 290,
         "star": "JFUND2",
         "runway_waypoints": {
           "KBOS": {
-              "15R": "JFUND BADCA/a9000+/s250 WACHU/a7000/s210 SSAAM AADMS/h148",
-              "22L": "JFUND AUTUM/a11000-12000/s270 WINTA/a8000-10000/s250 HRRIS ISLAY/a6000/s220 LWLND/a6000/s210/h035",
-              "4R": "JFUND AUTUM/a11000-12000/s270 WINTA/a8000-10000/s250 HRRIS SPYSD/a7000/s220 GRIFI GGABE/a6000/s220 JOBEE/a6000/s210/h213",
-              "4L": "JFUND AUTUM/a11000-12000/s270 WINTA/a8000-10000/s250 HRRIS SPYSD/a7000/s220 GRIFI GGABE/a6000/s220 JOBEE/a6000/s210/h213",
-              "27": "JFUND AUTUM/a11000-12000/s270 WINTA/a8000-10000/s250 HRRIS SPYSD/a7000/s220 REVER SEHAG/a6000/s210/h093",
-              "33L": "JFUND AUTUM/a11000-12000/s270 WINTA/a8000-10000/s250 HRRIS SPYSD/a7000/s210 BRODI/a6000 BECHH/a5000/s220 SCITU/a5000/s210/h150"
+            "15R": "JFUND BADCA/a9000+/s250 WACHU/a7000/s210 SSAAM AADMS/h148",
+            "22L": "JFUND AUTUM/a11000-12000/s270 WINTA/a8000-10000/s250 HRRIS ISLAY/a6000/s220 LWLND/a6000/s210/h035",
+            "4R": "JFUND AUTUM/a11000-12000/s270 WINTA/a8000-10000/s250 HRRIS SPYSD/a7000/s220 GRIFI GGABE/a6000/s220 JOBEE/a6000/s210/h213",
+            "4L": "JFUND AUTUM/a11000-12000/s270 WINTA/a8000-10000/s250 HRRIS SPYSD/a7000/s220 GRIFI GGABE/a6000/s220 JOBEE/a6000/s210/h213",
+            "27": "JFUND AUTUM/a11000-12000/s270 WINTA/a8000-10000/s250 HRRIS SPYSD/a7000/s220 REVER SEHAG/a6000/s210/h093",
+            "33L": "JFUND AUTUM/a11000-12000/s270 WINTA/a8000-10000/s250 HRRIS SPYSD/a7000/s210 BRODI/a6000 BECHH/a5000/s220 SCITU/a5000/s210/h150"
           }
         },
         "speed_restriction": 270,
@@ -2059,17 +2005,17 @@
           ]
         },
         "initial_altitude": 17000,
-        "initial_controller": "BOS_CTR",
+        "initial_controller": "BOS_16_CTR",
         "initial_speed": 290,
         "star": "OOSHN5",
         "runway_waypoints": {
           "KBOS": {
-              "4R": "OOSHN/a9000-14000/s250/ho TTERI/a9000+/s250 WAATR FLUTI/a9000+ GRIFI GGABE/a6000/s220 JOBEE/a6000/s210/h213",
-              "4L": "OOSHN/a9000-14000/s250/ho TTERI/a9000+/s250 WAATR FLUTI/a9000+ GRIFI GGABE/a6000/s220 JOBEE/a6000/s210/h213",
-              "15R": "OOSHN/a9000-14000/s250/ho GRGIO/a9000- BRGIT/a7000 HNOVR/a5000/s220 RDHOK/a5000/s210 TKMAN/a5000/s210/h329",
-              "22L": "OOSHN/a9000-14000/s250/ho GRGIO/a9000- BRGIT/a7000 ADDDA/a6000/s220 LEEZI/a6000/s210/h035",
-              "27": "OOSHN/a9000-14000/s250/ho PUDJJ AYBEE/a6000/s210/h272",
-              "33L": "OOSHN/a9000-14000/s250/ho TTERI/a9000+/s250 WAATR PLGRM BECHH/a5000/s220 SCITU/a5000/s210/h150"
+            "4R": "OOSHN/a9000-14000/s250/ho TTERI/a9000+/s250 WAATR FLUTI/a9000+ GRIFI GGABE/a6000/s220 JOBEE/a6000/s210/h213",
+            "4L": "OOSHN/a9000-14000/s250/ho TTERI/a9000+/s250 WAATR FLUTI/a9000+ GRIFI GGABE/a6000/s220 JOBEE/a6000/s210/h213",
+            "15R": "OOSHN/a9000-14000/s250/ho GRGIO/a9000- BRGIT/a7000 HNOVR/a5000/s220 RDHOK/a5000/s210 TKMAN/a5000/s210/h329",
+            "22L": "OOSHN/a9000-14000/s250/ho GRGIO/a9000- BRGIT/a7000 ADDDA/a6000/s220 LEEZI/a6000/s210/h035",
+            "27": "OOSHN/a9000-14000/s250/ho PUDJJ AYBEE/a6000/s210/h272",
+            "33L": "OOSHN/a9000-14000/s250/ho TTERI/a9000+/s250 WAATR PLGRM BECHH/a5000/s220 SCITU/a5000/s210/h150"
           }
         },
         "speed_restriction": 250,
@@ -2162,17 +2108,17 @@
           ]
         },
         "initial_altitude": 17000,
-        "initial_controller": "BOS_CTR",
+        "initial_controller": "BOS_34_CTR",
         "initial_speed": 290,
         "star": "ROBUC3",
         "runway_waypoints": {
           "KBOS": {
-              "4R": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY SOFEE/a9000-10000/s220 ERNEI/a7000-8000 GOSHI/a6000/s210/h035",
-              "4L": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY SOFEE/a9000-10000/s220 ERNEI/a7000-8000 GOSHI/a6000/s210/h035",
-              "27": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY KRANN/a11000-12000/s250 CRADL/a8000-10000 KLEBB HOKDU/a5000/s210/h024",
-              "22L": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY KRANN/a11000-12000/s250 CRADL/a8000-10000 KLEBB/a8000/s250 ETHYN/a5000/s250 PTRIK/a5000/s220 TAALE/a5000/s210/h035",
-              "15R": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY JAYNA/a11000/s250 BOXRS/a8000/s250 CHERS/a6000/s220 RDHOK/a6000/s210 TKMAN/a6000/s210/h329",
-              "33L": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY JAYNA/a11000/s250 ANSLY/a8000/s240 BEREI/a6000-7000/s220 BBOGG/a6000/s210/h060"
+            "4R": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY SOFEE/a9000-10000/s220 ERNEI/a7000-8000 GOSHI/a6000/s210/h035",
+            "4L": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY SOFEE/a9000-10000/s220 ERNEI/a7000-8000 GOSHI/a6000/s210/h035",
+            "27": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY KRANN/a11000-12000/s250 CRADL/a8000-10000 KLEBB HOKDU/a5000/s210/h024",
+            "22L": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY KRANN/a11000-12000/s250 CRADL/a8000-10000 KLEBB/a8000/s250 ETHYN/a5000/s250 PTRIK/a5000/s220 TAALE/a5000/s210/h035",
+            "15R": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY JAYNA/a11000/s250 BOXRS/a8000/s250 CHERS/a6000/s220 RDHOK/a6000/s210 TKMAN/a6000/s210/h329",
+            "33L": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY JAYNA/a11000/s250 ANSLY/a8000/s240 BEREI/a6000-7000/s220 BBOGG/a6000/s210/h060"
           }
         },
         "speed_restriction": 260,
@@ -2277,41 +2223,11 @@
     ]
   },
   "control_positions": {
-    "BOS_E_TWR": {
-      "frequency": 132225,
-      "full_name": "Boston Tower",
-      "scope_char": "T",
-      "sector_id": "1G"
-    },
-    "BOS_W_TWR": {
-      "frequency": 128800,
-      "full_name": "Boston Tower",
-      "scope_char": "T",
-      "sector_id": "1T"
-    },
-    "BOS_APP": {
-      "frequency": 133000,
+    "BOS_B_APP": {
+      "frequency": 124400,
       "full_name": "Boston Approach",
-      "scope_char": "D",
-      "sector_id": "1D"
-    },
-    "BOS_DEP": {
-      "frequency": 133000,
-      "full_name": "Boston Departure",
-      "scope_char": "D",
-      "sector_id": "1D"
-    },
-    "BOS_N_APP": {
-      "frequency": 118250,
-      "full_name": "Boston Approach",
-      "scope_char": "N",
-      "sector_id": "1N"
-    },
-    "BOS_S_APP": {
-      "frequency": 120600,
-      "full_name": "Boston Approach",
-      "scope_char": "S",
-      "sector_id": "1S"
+      "scope_char": "B",
+      "sector_id": "1B"
     },
     "BOS_F_APP": {
       "frequency": 126500,
@@ -2325,12 +2241,6 @@
       "scope_char": "I",
       "sector_id": "1I"
     },
-    "BOS_B_APP": {
-      "frequency": 124400,
-      "full_name": "Boston Approach",
-      "scope_char": "B",
-      "sector_id": "1B"
-    },
     "BOS_U_APP": {
       "frequency": 127200,
       "full_name": "Boston Approach",
@@ -2343,17 +2253,95 @@
       "scope_char": "L",
       "sector_id": "1L"
     },
-    "BOS_CTR": {
+    "BOS_S_APP": {
+      "frequency": 120600,
+      "full_name": "Boston Approach",
+      "scope_char": "M",
+      "sector_id": "1M"
+    },
+    "BOS_N_APP": {
+      "frequency": 118250,
+      "full_name": "Boston Approach",
+      "scope_char": "R",
+      "sector_id": "1R"
+    },
+    "BOS_DEP": {
+      "frequency": 133000,
+      "full_name": "Boston Departure",
+      "scope_char": "D",
+      "sector_id": "1D"
+    },
+    "BOS_W_TWR": {
+      "frequency": 128800,
+      "full_name": "Boston Tower",
+      "scope_char": "T",
+      "sector_id": "1T"
+    },
+    "BOS_E_TWR": {
+      "frequency": 132225,
+      "full_name": "Boston Tower",
+      "scope_char": "G",
+      "sector_id": "1G"
+    },
+    "BOS_16_CTR": {
+      "frequency": 128200,
+      "full_name": "Boston Center",
+      "scope_char": "C",
+      "sector_id": "16",
+      "eram_facility": true,
+      "facility_id": "C"
+    },
+    "BOS_17_CTR": {
+      "frequency": 133450,
+      "full_name": "Boston Center",
+      "scope_char": "C",
+      "sector_id": "17",
+      "eram_facility": true,
+      "facility_id": "C"
+    },
+    "BOS_18_CTR": {
+      "frequency": 128750,
+      "full_name": "Boston Center",
+      "scope_char": "C",
+      "sector_id": "18",
+      "eram_facility": true,
+      "facility_id": "C"
+    },
+    "BOS_34_CTR": {
+      "frequency": 124850,
+      "full_name": "Boston Center",
+      "scope_char": "C",
+      "sector_id": "34",
+      "eram_facility": true,
+      "facility_id": "C"
+    },
+    "BOS_36_CTR": {
+      "frequency": 123750,
+      "full_name": "Boston Center",
+      "scope_char": "C",
+      "sector_id": "36",
+      "eram_facility": true,
+      "facility_id": "C"
+    },
+    "BOS_37_CTR": {
       "frequency": 134700,
       "full_name": "Boston Center",
       "scope_char": "C",
-      "sector_id": "C37",
-      "facility_id": "C",
-      "eram_facility": true
+      "sector_id": "37",
+      "eram_facility": true,
+      "facility_id": "C"
+    },
+    "BOS_47_CTR": {
+      "frequency": 133420,
+      "full_name": "Boston Center",
+      "scope_char": "C",
+      "sector_id": "47",
+      "eram_facility": true,
+      "facility_id": "C"
     }
-   },
-   "default_scenario": "KBOS Land 4R/L Depart 9",
-   "fixes": {
+  },
+  "default_scenario": "KBOS Land 4R/L Depart 9",
+  "fixes": {
     "_BOS_4L": "N42.21.28.758,W71.00.51.518",
     "_BOS_4R": "N42.21.14.449,W71.00.37.024",
     "_BOS_9": "N42.21.20.707,W71.00.46.390",
@@ -2366,14 +2354,12 @@
     "_BOS_33R": "N42.22.05.650,W71.00.07.110",
     "KBOS": "N42.21.52.065,W71.00.58.712",
     "BOS": "N42.21.52.065,W71.00.58.712"
-   },
-   "name": "KBOS",
-   "primary_airport": "KBOS",
-   "scenarios": {
+  },
+  "name": "KBOS",
+  "primary_airport": "KBOS",
+  "scenarios": {
     "KBOS Land 4R/L Depart 9": {
-      "approach_airspace": [
-        "BOS_APP4R"
-      ],
+      "approach_airspace": ["BOS_APP4R"],
       "arrival_runways": [
         {
           "airport": "KBOS",
@@ -2395,28 +2381,35 @@
           "KBOS": 10
         }
       },
-      "solo_controller": "BOS_APP",
-        "multi_controllers": {
-            "default" : {
-                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3"]},
-                "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP"},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"}
-            }
-        },
+      "solo_controller": "BOS_DEP",
+      "multi_controllers": {
+        "default": {
+          "BOS_DEP": { "departures": ["KBOS"], "primary": true },
+          "BOS_N_APP": {
+            "backup": "BOS_DEP",
+            "arrivals": ["JFUND2", "OOSHN5"]
+          },
+          "BOS_S_APP": { "backup": "BOS_N_APP", "arrivals": ["ROBUC3"] },
+          "BOS_F_APP": { "backup": "BOS_N_APP" },
+          "BOS_I_APP": { "backup": "BOS_F_APP" },
+          "BOS_B_APP": { "backup": "BOS_N_APP" },
+          "BOS_U_APP": { "backup": "BOS_B_APP" },
+          "BOS_L_APP": { "backup": "BOS_U_APP" }
+        }
+      },
       "controllers": [
-        "BOS_E_TWR",
-        "BOS_W_TWR",
-        "BOS_CTR"
+        "BOS_E_TWR", 
+        "BOS_W_TWR", 
+        "BOS_16_CTR",
+        "BOS_17_CTR",
+        "BOS_18_CTR",
+        "BOS_34_CTR",
+        "BOS_36_CTR",
+        "BOS_37_CTR",
+        "BOS_47_CTR"
       ],
-      "default_maps": [ "BOS A90 MAIN" ],
-      "departure_airspace": [
-        "BOS_APP4R"
-      ],
+      "default_maps": ["BOS A90 MAIN"],
+      "departure_airspace": ["BOS_APP4R"],
       "departure_runways": [
         {
           "airport": "KBOS",
@@ -2431,9 +2424,7 @@
       }
     },
     "KBOS Land 27/22L Depart 22R": {
-      "approach_airspace": [
-        "BOS_APP"
-      ],
+      "approach_airspace": ["BOS_APP"],
       "arrival_runways": [
         {
           "airport": "KBOS",
@@ -2455,28 +2446,35 @@
           "KBOS": 10
         }
       },
-      "solo_controller": "BOS_APP",
-        "multi_controllers": {
-            "default" : {
-                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3"]},
-                "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP"},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"}
-            }
-        },
+      "solo_controller": "BOS_DEP",
+      "multi_controllers": {
+        "default": {
+          "BOS_DEP": { "departures": ["KBOS"], "primary": true },
+          "BOS_N_APP": {
+            "backup": "BOS_DEP",
+            "arrivals": ["JFUND2", "OOSHN5"]
+          },
+          "BOS_S_APP": { "backup": "BOS_N_APP", "arrivals": ["ROBUC3"] },
+          "BOS_F_APP": { "backup": "BOS_N_APP" },
+          "BOS_I_APP": { "backup": "BOS_F_APP" },
+          "BOS_B_APP": { "backup": "BOS_N_APP" },
+          "BOS_U_APP": { "backup": "BOS_B_APP" },
+          "BOS_L_APP": { "backup": "BOS_U_APP" }
+        }
+      },
       "controllers": [
-        "BOS_E_TWR",
-        "BOS_W_TWR",
-        "BOS_CTR"
+        "BOS_E_TWR", 
+        "BOS_W_TWR", 
+        "BOS_16_CTR",
+        "BOS_17_CTR",
+        "BOS_18_CTR",
+        "BOS_34_CTR",
+        "BOS_36_CTR",
+        "BOS_37_CTR",
+        "BOS_47_CTR"
       ],
-      "default_maps": [ "BOS A90 MAIN" ],
-      "departure_airspace": [
-        "BOS_APP"
-      ],
+      "default_maps": ["BOS A90 MAIN"],
+      "departure_airspace": ["BOS_APP"],
       "departure_runways": [
         {
           "airport": "KBOS",
@@ -2491,9 +2489,7 @@
       }
     },
     "KBOS Land 27 Depart 33L": {
-      "approach_airspace": [
-        "BOS_APP"
-      ],
+      "approach_airspace": ["BOS_APP"],
       "arrival_runways": [
         {
           "airport": "KBOS",
@@ -2511,28 +2507,34 @@
           "KBOS": 10
         }
       },
-      "solo_controller": "BOS_APP",
-        "multi_controllers": {
-            "default" : {
-                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3"]},
-                "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP"},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"}
-            }
-        },
+      "solo_controller": "BOS_DEP",
+      "multi_controllers": {
+        "default": {
+          "BOS_DEP": { "departures": ["KBOS"], "primary": true },
+          "BOS_N_APP": {
+            "backup": "BOS_DEP",
+            "arrivals": ["JFUND2", "OOSHN5"]
+          },
+          "BOS_S_APP": { "backup": "BOS_N_APP", "arrivals": ["ROBUC3"] },
+          "BOS_F_APP": { "backup": "BOS_N_APP" },
+          "BOS_I_APP": { "backup": "BOS_F_APP" },
+          "BOS_B_APP": { "backup": "BOS_N_APP" },
+          "BOS_U_APP": { "backup": "BOS_B_APP" },
+          "BOS_L_APP": { "backup": "BOS_U_APP" }
+        }
+      },
       "controllers": [
-        "BOS_E_TWR",
-        "BOS_W_TWR",
-        "BOS_CTR"
+        "BOS_W_TWR", 
+        "BOS_16_CTR",
+        "BOS_17_CTR",
+        "BOS_18_CTR",
+        "BOS_34_CTR",
+        "BOS_36_CTR",
+        "BOS_37_CTR",
+        "BOS_47_CTR"
       ],
-      "default_maps": [ "BOS A90 MAIN" ],
-      "departure_airspace": [
-        "BOS_APP"
-      ],
+      "default_maps": ["BOS A90 MAIN"],
+      "departure_airspace": ["BOS_APP"],
       "departure_runways": [
         {
           "airport": "KBOS",
@@ -2547,9 +2549,7 @@
       }
     },
     "KBOS Land 15R Depart 15R": {
-      "approach_airspace": [
-        "BOS_APP"
-      ],
+      "approach_airspace": ["BOS_APP"],
       "arrival_runways": [
         {
           "airport": "KBOS",
@@ -2567,28 +2567,35 @@
           "KBOS": 10
         }
       },
-      "solo_controller": "BOS_APP",
-        "multi_controllers": {
-            "default" : {
-                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3"]},
-                "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP"},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"}
-            }
-        },
+      "solo_controller": "BOS_DEP",
+      "multi_controllers": {
+        "default": {
+          "BOS_DEP": { "departures": ["KBOS"], "primary": true },
+          "BOS_N_APP": {
+            "backup": "BOS_DEP",
+            "arrivals": ["JFUND2", "OOSHN5"]
+          },
+          "BOS_S_APP": { "backup": "BOS_N_APP", "arrivals": ["ROBUC3"] },
+          "BOS_F_APP": { "backup": "BOS_N_APP" },
+          "BOS_I_APP": { "backup": "BOS_F_APP" },
+          "BOS_B_APP": { "backup": "BOS_N_APP" },
+          "BOS_U_APP": { "backup": "BOS_B_APP" },
+          "BOS_L_APP": { "backup": "BOS_U_APP" }
+        }
+      },
       "controllers": [
-        "BOS_E_TWR",
-        "BOS_W_TWR",
-        "BOS_CTR"
+        "BOS_E_TWR", 
+        "BOS_W_TWR", 
+        "BOS_16_CTR",
+        "BOS_17_CTR",
+        "BOS_18_CTR",
+        "BOS_34_CTR",
+        "BOS_36_CTR",
+        "BOS_37_CTR",
+        "BOS_47_CTR"
       ],
-      "default_maps": [ "BOS A90 MAIN" ],
-      "departure_airspace": [
-        "BOS_APP"
-      ],
+      "default_maps": ["BOS A90 MAIN"],
+      "departure_airspace": ["BOS_APP"],
       "departure_runways": [
         {
           "airport": "KBOS",
@@ -2603,9 +2610,7 @@
       }
     },
     "KBOS 4R/L Final": {
-      "approach_airspace": [
-        "BOS_F_APP4R"
-      ],
+      "approach_airspace": ["BOS_F_APP4R"],
       "arrival_runways": [
         {
           "airport": "KBOS",
@@ -2629,199 +2634,222 @@
       "controllers": [
         "BOS_E_TWR",
         "BOS_W_TWR",
-        "BOS_CTR",
+        "BOS_16_CTR",
+        "BOS_17_CTR",
+        "BOS_18_CTR",
+        "BOS_34_CTR",
+        "BOS_36_CTR",
+        "BOS_37_CTR",
+        "BOS_47_CTR",
         "BOS_N_APP",
         "BOS_S_APP"
       ],
-      "default_maps": [ "BOS 4R/L" ],
+      "default_maps": ["BOS 4R/L"],
       "wind": {
         "direction": 70,
         "speed": 10
       }
     }
-   },
+  },
   "stars_config": {
     "center": "KBOS",
-   "inhibit_ca_volumes": [
-    {
-      "name": "BOS NO CA",
-      "type": "circle",
-      "floor": 0,
-      "ceiling": 2000,
-      "radius": 7,
-      "center": "N042.23.05.581,W071.00.43.615"
-    }
-   ],
-   "radar_sites": {
-     "KMLB": {
-       "char": "B",
-       "position": "KBOS",
-       "elevation": 150,
-       "primary_range": 60,
-       "secondary_range": 120,
-       "slope_angle": 0.175
-     }
-   },
+    "inhibit_ca_volumes": [
+      {
+        "name": "BOS NO CA",
+        "type": "circle",
+        "floor": 0,
+        "ceiling": 2000,
+        "radius": 7,
+        "center": "N042.23.05.581,W071.00.43.615"
+      }
+    ],
+    "radar_sites": {
+      "KMLB": {
+        "char": "B",
+        "position": "KBOS",
+        "elevation": 150,
+        "primary_range": 60,
+        "secondary_range": 120,
+        "slope_angle": 0.175
+      }
+    },
     "allow_long_scratchpad": [false, false],
     "force_ql_self": true,
     "airspace_awareness": [
       {
         "fixes": [
-          "BLZZR",
-          "BRUWN",
-          "CELTK",
-          "HYLND",
           "LBSTA",
-          "PATSS",
-          "REVSS",
+          "CELTK"
+        ],
+        "altitude_range": [0, 0],
+        "receiving_controller": "BOS_16_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "HYLND"
+        ],
+        "altitude_range": [0, 0],
+        "receiving_controller": "BOS_36_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "BRUWN",
           "SSOXS"
         ],
-        "altitude_range": [
-          0,
-          0
+        "altitude_range": [0, 0],
+        "receiving_controller": "BOS_18_CTR",
+        "to_center": true
+      },
+      {
+        "fixes": [
+          "BLZZR",
+          "PATSS",
+          "REVSS"
         ],
-        "receiving_controller": "BOS_CTR",
+        "altitude_range": [0, 0],
+        "receiving_controller": "BOS_47_CTR",
         "to_center": true
       }
     ],
-   "scratchpads": {
-    "BLZZR": "BLZ",
-    "BRUWN": "BRU",
-    "CELTK": "CEL",
-    "HYLND": "HYL",
-    "LBSTA": "LBS",
-    "PATSS": "PAT",
-    "REVSS": "REV",
-    "SSOXS": "SSO"
-   },
-   "stars_maps": [
-    {
-      "group": 0,
-      "label": "MAIN",
-      "name": "BOS A90 MAIN"
+    "scratchpads": {
+      "BLZZR": "BLZ",
+      "BRUWN": "BRU",
+      "CELTK": "CEL",
+      "HYLND": "HYL",
+      "LBSTA": "LBS",
+      "PATSS": "PAT",
+      "REVSS": "REV",
+      "SSOXS": "SSO"
     },
-    {
-      "group": 0,
-      "label": "4R/L",
-      "name": "BOS 4R/L"
-    },
-    {
-      "group": 0,
-      "label": "4R/15R",
-      "name": "BOS 4R/15R"
-    },
-    {
-      "group": 0,
-      "label": "15R",
-      "name": "BOS 15R"
-    },
-    {
-      "group": 0,
-      "label": "15R/9",
-      "name": "BOS 15R/9"
-    },
-    {
-      "group": 0,
-      "label": "22L",
-      "name": "BOS 22L"
-    },
-    {
-      "group": 0,
-      "label": "27",
-      "name": "BOS 27"
-    },
-    {
-      "group": 0,
-      "label": "27/22",
-      "name": "BOS 27/22"
-    },
-    {
-      "group": 0,
-      "label": "27/32",
-      "name": "BOS 27/32"
-    },
-    {
-      "group": 0,
-      "label": "33L/32",
-      "name": "BOS 33L/32"
-    },
-    {
-      "group": 0,
-      "label": "33L",
-      "name": "BOS 33L"
-    },
-    {
-      "group": 1,
-      "label": "ASPC",
-      "name": "B, C, D, AIRSPACE"
-   },
-    {
-      "group": 0,
-      "label": "A90 BASE",
-      "name": "A90 BASE"
-    },
-    {
-      "group": 0,
-      "label": "MVA",
-      "name": "A90 MVA"
-    },
-    {
-      "group": 0,
-      "label": "COAST",
-      "name": "A90 COASTLINE"
-    },
-    {
-      "group": 0,
-      "label": "STAR 4L",
-      "name": "BOS RWY 4R/L RNAV STAR"
-    },
-    {
-      "group": 0,
-      "label": "STAR 15R",
-      "name": "BOS RWY 15R RNAV STAR"
-    },
-    {
-      "group": 0,
-      "label": "STAR 22L",
-      "name": "BOS RWY 22L RNAV STAR"
-    },
-    {
-      "group": 0,
-      "label": "STAR 27",
-      "name": "BOS RWY 27 RNAV STAR"
-    },
-    {
-      "group": 0,
-      "label": "STAR 33L",
-      "name": "BOS RWY 33L RNAV STAR"
-    },
-    {
-      "group": 0,
-      "label": "9 SID",
-      "name": "BOS RWY 9 RNAV SID"
-    },
-    {
-      "group": 0,
-      "label": "15R SID",
-      "name": "BOS RWY 15R RNAV SID"
-    },
-    {
-      "group": 0,
-      "label": "22L SID",
-      "name": "BOS RWY 22L RNAV SID"
-    },
-    {
-      "group": 0,
-      "label": "27 SID",
-      "name": "BOS RWY 27 RNAV SID"
-    },
-    {
-      "group": 0,
-      "label": "33L SID",
-      "name": "BOS RWY 33L RNAV SID"
-    }
-   ],
-   "video_map_file": "videomaps/ZBW-videomaps.json.zst"
+    "stars_maps": [
+      {
+        "group": 0,
+        "label": "MAIN",
+        "name": "BOS A90 MAIN"
+      },
+      {
+        "group": 0,
+        "label": "4R/L",
+        "name": "BOS 4R/L"
+      },
+      {
+        "group": 0,
+        "label": "4R/15R",
+        "name": "BOS 4R/15R"
+      },
+      {
+        "group": 0,
+        "label": "15R",
+        "name": "BOS 15R"
+      },
+      {
+        "group": 0,
+        "label": "15R/9",
+        "name": "BOS 15R/9"
+      },
+      {
+        "group": 0,
+        "label": "22L",
+        "name": "BOS 22L"
+      },
+      {
+        "group": 0,
+        "label": "27",
+        "name": "BOS 27"
+      },
+      {
+        "group": 0,
+        "label": "27/22",
+        "name": "BOS 27/22"
+      },
+      {
+        "group": 0,
+        "label": "27/32",
+        "name": "BOS 27/32"
+      },
+      {
+        "group": 0,
+        "label": "33L/32",
+        "name": "BOS 33L/32"
+      },
+      {
+        "group": 0,
+        "label": "33L",
+        "name": "BOS 33L"
+      },
+      {
+        "group": 1,
+        "label": "ASPC",
+        "name": "B, C, D, AIRSPACE"
+      },
+      {
+        "group": 0,
+        "label": "A90 BASE",
+        "name": "A90 BASE"
+      },
+      {
+        "group": 0,
+        "label": "MVA",
+        "name": "A90 MVA"
+      },
+      {
+        "group": 0,
+        "label": "COAST",
+        "name": "A90 COASTLINE"
+      },
+      {
+        "group": 0,
+        "label": "STAR 4L",
+        "name": "BOS RWY 4R/L RNAV STAR"
+      },
+      {
+        "group": 0,
+        "label": "STAR 15R",
+        "name": "BOS RWY 15R RNAV STAR"
+      },
+      {
+        "group": 0,
+        "label": "STAR 22L",
+        "name": "BOS RWY 22L RNAV STAR"
+      },
+      {
+        "group": 0,
+        "label": "STAR 27",
+        "name": "BOS RWY 27 RNAV STAR"
+      },
+      {
+        "group": 0,
+        "label": "STAR 33L",
+        "name": "BOS RWY 33L RNAV STAR"
+      },
+      {
+        "group": 0,
+        "label": "9 SID",
+        "name": "BOS RWY 9 RNAV SID"
+      },
+      {
+        "group": 0,
+        "label": "15R SID",
+        "name": "BOS RWY 15R RNAV SID"
+      },
+      {
+        "group": 0,
+        "label": "22L SID",
+        "name": "BOS RWY 22L RNAV SID"
+      },
+      {
+        "group": 0,
+        "label": "27 SID",
+        "name": "BOS RWY 27 RNAV SID"
+      },
+      {
+        "group": 0,
+        "label": "33L SID",
+        "name": "BOS RWY 33L RNAV SID"
+      }
+    ],
+    "video_map_file": "videomaps/ZBW-videomaps.json.zst"
   }
 }
-
