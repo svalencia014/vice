@@ -52,13 +52,13 @@
       },
       "departure_routes": {
         "24": {
-          "FJC,SAX,ARD,RBV,PTW,ETX,LRP": {
+          "FJC,SAX,ARD,RBV,PTW,ETX,LRP,PSB,RITTY": {
             "cleared_altitude": 3000,
             "waypoints": "KABE-6/h240"
           }
         },
         "6": {
-          "FJC,SAX,ARD,RBV,PTW,ETX, LRP": {
+          "FJC,SAX,ARD,RBV,PTW,ETX,LRP,PSB,RITTY": {
             "cleared_altitude": 3000,
             "waypoints": "KABE-24/h060"
           }
@@ -84,7 +84,7 @@
           ],
           "altitude": 34000,
           "destination": "KILN",
-          "exit": "ETX",
+          "exit": "PSB",
           "route": "ETX V30 PSB APE LIMPS"
         },
         {
@@ -231,7 +231,7 @@
           ],
           "altitude": 8000,
           "destination": "KAVP",
-          "exit": "FJC",
+          "exit": "RITTY",
           "route": "FJC T221 RITTY"
         }
       ],
@@ -557,43 +557,51 @@
     },
     "ABE_TWR": {
       "frequency": 120500,
-      "full_name": "Lehigh Valley tower",
+      "full_name": "Lehigh Valley Tower",
       "scope_char": "T",
       "sector_id": "1T"
     },
     "EWR_H_APP": {
       "frequency": 132800,
-      "full_name": "New York approach",
+      "full_name": "New York Approach",
       "scope_char": "2",
       "sector_id": "4H",
       "facility_id": "2"
     },
     "EWR_S_APP": {
       "frequency": 123775,
-      "full_name": "New York approach",
+      "full_name": "New York Approach",
       "scope_char": "2",
       "sector_id": "4S",
       "facility_id": "2"
     },
     "PHL_PT_APP": {
       "frequency": 128400,
-      "full_name": "Philly approach",
+      "full_name": "Philly Approach",
       "scope_char": "3",
       "sector_id": "1P",
       "facility_id": "3"
     },
     "MDT_APP": {
       "frequency": 126450,
-      "full_name": "Harrisburg approach",
+      "full_name": "Harrisburg Approach",
       "scope_char": "5",
       "sector_id": "1L",
       "facility_id": "5"
     },
     "NY_26_CTR": {
       "frequency": 120025,
-      "full_name": "New York center",
+      "full_name": "New York Center",
       "scope_char": "C",
       "sector_id": "26",
+      "facility_id": "C",
+      "eram_facility": true
+    },
+    "NY_92_CTR": {
+      "frequency": 124625,
+      "full_name": "New York Center",
+      "scope_char": "C",
+      "sector_id": "92",
       "facility_id": "C",
       "eram_facility": true
     }
@@ -645,7 +653,8 @@
         "EWR_H_APP",
         "EWR_S_APP",
         "MDT_APP",
-        "NY_26_CTR"
+        "NY_26_CTR",
+        "NY_92_CTR"
       ],
       "default_maps": ["Allentown TRACON Video Map"],
       "departure_runways": [
@@ -693,7 +702,8 @@
         "EWR_H_APP",
         "EWR_S_APP",
         "MDT_APP",
-        "NY_26_CTR"
+        "NY_26_CTR",
+        "NY_92_CTR"
       ],
       "default_maps": ["Allentown TRACON Video Map"],
       "departure_runways": [
@@ -717,8 +727,15 @@
           "ARD"
         ],
         "altitude_range": [0, 0],
-        "receiving_controller": "NY_26_CTR",
-        "to_center": true
+        "receiving_controller": "NY_26_CTR"
+      },
+      {
+        "fixes": [
+          "PSB",
+          "RITTY"
+        ],
+        "altitude_range": [0, 0],
+        "receiving_controller": "NY_92_CTR"
       }
     ],
     "center": "KABE",
@@ -759,7 +776,9 @@
       "PTW": "PTW",
       "RBV": "RBV",
       "SAX": "SAX",
-      "LRP": "ETX"
+      "LRP": "ETX",
+      "PSB": "ETX",
+      "RITTY": "FJC"
     },
     "stars_maps": [
       {
