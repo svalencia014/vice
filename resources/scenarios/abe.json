@@ -20,9 +20,7 @@
         "I6": {
           "runway": "6",
           "type": "ILS",
-          "waypoints": [
-            "JISTO/iaf/if/a3000/hilpt SHAGY/faf/a2400"
-          ]
+          "waypoints": ["JISTO/iaf/if/a3000/hilpt SHAGY/faf/a2400"]
         },
         "R13": {
           "runway": "13",
@@ -54,13 +52,13 @@
       },
       "departure_routes": {
         "24": {
-          "FJC,SAX,ARD,RBV,PTW,ETX": {
+          "FJC,SAX,ARD,RBV,PTW,ETX,LRP": {
             "cleared_altitude": 3000,
             "waypoints": "KABE-6/h240"
           }
         },
         "6": {
-          "FJC,SAX,ARD,RBV,PTW,ETX": {
+          "FJC,SAX,ARD,RBV,PTW,ETX, LRP": {
             "cleared_altitude": 3000,
             "waypoints": "KABE-24/h060"
           }
@@ -75,7 +73,7 @@
           ],
           "altitude": 38000,
           "destination": "KPIE",
-          "exit": "ETX",
+          "exit": "LRP",
           "route": "ETX LRP EMI GVE Q75 TEUFL BAAMF DADES1"
         },
         {
@@ -97,7 +95,7 @@
           ],
           "altitude": 38000,
           "destination": "KMCO",
-          "exit": "ETX",
+          "exit": "LRP",
           "route": "ETX LRP EMI CHS JAWSS OMN BITHO7"
         },
         {
@@ -119,7 +117,7 @@
           ],
           "altitude": 38000,
           "destination": "KCLT",
-          "exit": "ETX",
+          "exit": "LRP",
           "route": "ETX LRP EMI J48 MOL LYH CHSLY5"
         },
         {
@@ -243,7 +241,8 @@
         "FJC": "North",
         "PTW": "South",
         "RBV": "Southeast",
-        "SAX": "Northeast"
+        "SAX": "Northeast",
+        "LRP": "Southwest"
       },
       "tower_list": 1
     }
@@ -263,7 +262,7 @@
         "cruise_altitude": 10000,
         "initial_altitude": 6000,
         "description": "EWR S sats",
-        "initial_controller": "EWR_APP",
+        "initial_controller": "EWR_H_APP",
         "initial_speed": 250,
         "route": "/. FJC",
         "waypoints": "N040.34.21.392,W074.40.37.976 SBJ/ho FJC"
@@ -282,7 +281,7 @@
         "cruise_altitude": 8000,
         "initial_altitude": 4000,
         "description": "EWR via BWZ",
-        "initial_controller": "EWR_APP",
+        "initial_controller": "EWR_S_APP",
         "initial_speed": 250,
         "route": "/. FJC",
         "waypoints": "N040.48.51.729,W074.41.06.897 BWZ/ho FJC"
@@ -300,7 +299,7 @@
         "cruise_altitude": 18000,
         "description": "EWR N sats",
         "initial_altitude": 4000,
-        "initial_controller": "EWR_APP",
+        "initial_controller": "EWR_S_APP",
         "initial_speed": 250,
         "route": "/. FJC",
         "waypoints": "HUO N041.20.10.803,W074.41.14.423/ho N041.03.09.610,W075.02.14.170 FJC"
@@ -326,8 +325,8 @@
         "route": "/. KRAZE FJC",
         "runway_waypoints": {
           "KABE": {
-              "24": "FLOAT FJC",
-              "6": "FLOAT ETX"
+            "24": "FLOAT FJC",
+            "6": "FLOAT ETX"
           }
         },
         "waypoints": "N040.13.18.884,W076.09.35.958 BOYER/ho FLOAT"
@@ -344,7 +343,7 @@
         },
         "assigned_altitude": 4000,
         "cruise_altitude": 4000,
-        "initial_altitude": 300,
+        "initial_altitude": 2400,
         "description": "RDG departures",
         "initial_controller": "MDT_APP",
         "initial_speed": 250,
@@ -374,7 +373,7 @@
         "assigned_altitude": 4000,
         "cruise_altitude": 4000,
         "initial_altitude": 4000,
-        "initial_controller": "PHL_NA_APP",
+        "initial_controller": "PHL_PT_APP",
         "initial_speed": 250,
         "route": "/. FJC",
         "waypoints": "N040.13.33.015,W075.17.45.151 N040.20.16.955,W075.20.02.838/ho FJC"
@@ -402,13 +401,13 @@
         "cruise_altitude": 27000,
         "description": "via KRAZE",
         "initial_altitude": 10000,
-        "initial_controller": "NY_CTR",
+        "initial_controller": "NY_26_CTR",
         "initial_speed": 250,
         "route": "/. KRAZE",
         "runway_waypoints": {
           "KABE": {
-              "24": "KRAZE FJC",
-              "6": "KRAZE ETX"
+            "24": "KRAZE FJC",
+            "6": "KRAZE ETX"
           }
         },
         "waypoints": "MARRC N040.53.30.177,W076.08.25.233/ho KRAZE"
@@ -434,13 +433,13 @@
         "cruise_altitude": 33000,
         "initial_altitude": 10000,
         "description": "via SNOWY",
-        "initial_controller": "NY_CTR",
+        "initial_controller": "NY_26_CTR",
         "initial_speed": 250,
         "route": "/. SLATT",
         "runway_waypoints": {
           "KABE": {
-              "24": "SLATT FJC",
-              "6": "SLATT ETX"
+            "24": "SLATT FJC",
+            "6": "SLATT ETX"
           }
         },
         "waypoints": "N040.45.40.100,W076.28.27.028 N040.45.12.359,W076.18.36.760/ho SNOWY SLATT"
@@ -467,13 +466,13 @@
         "cruise_altitude": 22000,
         "initial_altitude": 10000,
         "description": "via SLATT",
-        "initial_controller": "NY_CTR",
+        "initial_controller": "NY_26_CTR",
         "initial_speed": 250,
         "route": "/. SLATT",
         "runway_waypoints": {
           "KABE": {
-              "24": "SLATT FJC",
-              "6": "SLATT ETX"
+            "24": "SLATT FJC",
+            "6": "SLATT ETX"
           }
         },
         "waypoints": "N041.09.29.229,W075.41.57.572 WHITT/ho SLATT"
@@ -497,13 +496,13 @@
         "cruise_altitude": 35000,
         "initial_altitude": 10000,
         "description": "via V162 DUMMR",
-        "initial_controller": "NY_CTR",
+        "initial_controller": "NY_26_CTR",
         "initial_speed": 250,
         "route": "/. DUMMR",
         "runway_waypoints": {
           "KABE": {
-              "24": "DUMMR FJC",
-              "6": "DUMMR ETX"
+            "24": "DUMMR FJC",
+            "6": "DUMMR ETX"
           }
         },
         "waypoints": "N040.20.24.385,W076.33.17.726 HWANG/ho DUMMR"
@@ -530,13 +529,13 @@
         "cruise_altitude": 12000,
         "initial_altitude": 10000,
         "description": "via V93 DUMMR",
-        "initial_controller": "NY_CTR",
+        "initial_controller": "NY_26_CTR",
         "initial_speed": 250,
         "route": "/. DUMMR",
         "runway_waypoints": {
           "KABE": {
-              "24": "DUMMR FJC",
-              "6": "DUMMR ETX"
+            "24": "DUMMR FJC",
+            "6": "DUMMR ETX"
           }
         },
         "waypoints": "N040.13.06.016,W076.13.47.957 N040.15.40.223,W076.12.25.120/ho DUMMR"
@@ -546,60 +545,72 @@
   "control_positions": {
     "ABE_APP": {
       "frequency": 119650,
-      "full_name": "Allentown approach",
-      "scope_char": "F",
-      "sector_id": "SF"
+      "full_name": "Allentown Approach",
+      "scope_char": "A",
+      "sector_id": "1A"
+    },
+    "ABE_DEP": {
+      "frequency": 124450,
+      "full_name": "Allentown Departure",
+      "scope_char": "D",
+      "sector_id": "1D"
     },
     "ABE_TWR": {
       "frequency": 120500,
       "full_name": "Lehigh Valley tower",
       "scope_char": "T",
-      "sector_id": "AL"
+      "sector_id": "1T"
     },
-    "AVP_APP": {
-      "frequency": 126300,
-      "full_name": "Wilkes Barre approach",
-      "scope_char": "B",
-      "sector_id": "WB"
-    },
-    "EWR_APP": {
-      "frequency": 128550,
+    "EWR_H_APP": {
+      "frequency": 132800,
       "full_name": "New York approach",
-      "scope_char": "P",
-      "sector_id": "4P"
+      "scope_char": "2",
+      "sector_id": "4H",
+      "facility_id": "2"
+    },
+    "EWR_S_APP": {
+      "frequency": 123775,
+      "full_name": "New York approach",
+      "scope_char": "2",
+      "sector_id": "4S",
+      "facility_id": "2"
+    },
+    "PHL_PT_APP": {
+      "frequency": 128400,
+      "full_name": "Philly approach",
+      "scope_char": "3",
+      "sector_id": "1P",
+      "facility_id": "3"
     },
     "MDT_APP": {
       "frequency": 126450,
       "full_name": "Harrisburg approach",
-      "scope_char": "S",
-      "sector_id": "HS"
+      "scope_char": "5",
+      "sector_id": "1L",
+      "facility_id": "5"
     },
-    "NY_CTR": {
-      "frequency": 125325,
+    "NY_26_CTR": {
+      "frequency": 120025,
       "full_name": "New York center",
       "scope_char": "C",
-      "sector_id": "N56"
-    },
-    "PHL_NA_APP": {
-      "frequency": 128400,
-      "full_name": "Philly approach",
-      "scope_char": "N",
-      "sector_id": "6N"
+      "sector_id": "26",
+      "facility_id": "C",
+      "eram_facility": true
     }
   },
   "default_scenario": "KABE Depart 6 Land 6",
   "name": "KABE",
   "primary_airport": "KABE",
   "reporting_points": [
-      "BWZ",
-      "DUMMR",
-      "ETX",
-      "FJC",
-      "FLOAT",
-      "HUO",
-      "KRAZE",
-      "SLATT",
-      "SNOWY"
+    "BWZ",
+    "DUMMR",
+    "ETX",
+    "FJC",
+    "FLOAT",
+    "HUO",
+    "KRAZE",
+    "SLATT",
+    "SNOWY"
   ],
   "scenarios": {
     "KABE Depart 24 Land 24": {
@@ -630,13 +641,13 @@
       "controllers": [
         "ABE_TWR",
         "ABE_APP",
-        "PHL_NA_APP",
-        "EWR_APP",
-        "AVP_APP",
+        "PHL_PT_APP",
+        "EWR_H_APP",
+        "EWR_S_APP",
         "MDT_APP",
-        "NY_CTR"
+        "NY_26_CTR"
       ],
-      "default_maps": [ "Allentown TRACON Video Map" ],
+      "default_maps": ["Allentown TRACON Video Map"],
       "departure_runways": [
         {
           "airport": "KABE",
@@ -678,13 +689,13 @@
       "controllers": [
         "ABE_TWR",
         "ABE_APP",
-        "PHL_NA_APP",
-        "EWR_APP",
-        "AVP_APP",
+        "PHL_PT_APP",
+        "EWR_H_APP",
+        "EWR_S_APP",
         "MDT_APP",
-        "NY_CTR"
+        "NY_26_CTR"
       ],
-      "default_maps": [ "Allentown TRACON Video Map" ],
+      "default_maps": ["Allentown TRACON Video Map"],
       "departure_runways": [
         {
           "airport": "KABE",
@@ -699,57 +710,69 @@
     }
   },
   "stars_config": {
-  "center": "KABE",
-  "inhibit_ca_volumes": [
+    "airspace_awareness": [
       {
-          "name": "ABE NO CA",
-          "type": "circle",
-          "floor": 0,
-          "ceiling": 1200,
-          "radius": 7,
-          "center": "40.65236,-75.4404"
+        "fixes": [
+          "LRP",
+          "ARD"
+        ],
+        "altitude_range": [0, 0],
+        "receiving_controller": "NY_26_CTR",
+        "to_center": true
       }
-  ],
-  "radar_sites": {
-    "ABE": {
-      "char": "A",
-      "position": "40.673611,-75.453333",
-      "elevation": 413,
-      "primary_range": 60,
-      "secondary_range": 120,
-      "silence_angle": 30,
-      "slope_angle": 0.3
+    ],
+    "center": "KABE",
+    "inhibit_ca_volumes": [
+      {
+        "name": "ABE NO CA",
+        "type": "circle",
+        "floor": 0,
+        "ceiling": 1200,
+        "radius": 7,
+        "center": "40.65236,-75.4404"
+      }
+    ],
+    "radar_sites": {
+      "ABE": {
+        "char": "A",
+        "position": "40.673611,-75.453333",
+        "elevation": 413,
+        "primary_range": 60,
+        "secondary_range": 120,
+        "silence_angle": 30,
+        "slope_angle": 0.3
+      },
+      "NXX": {
+        "char": "N",
+        "position": "40.19980, -75.14820",
+        "elevation": 408,
+        "primary_range": 60,
+        "secondary_range": 120,
+        "silence_angle": 50.4,
+        "slope_angle": 0.175
+      }
     },
-    "NXX": {
-      "char": "N",
-      "position": "40.19980, -75.14820",
-      "elevation": 408,
-      "primary_range": 60,
-      "secondary_range": 120,
-      "silence_angle": 50.4,
-      "slope_angle": 0.175
-    }
-  },
-  "scratchpads": {
-    "ARD": "ARD",
-    "ETX": "ETX",
-    "FJC": "FJC",
-    "PTW": "PTW",
-    "RBV": "RBV",
-    "SAX": "SAX"
-  },
-  "stars_maps": [
-    {
-      "group": 0,
-      "label": "ABE",
-      "name": "Allentown TRACON Video Map"
+    "scratchpads": {
+      "ARD": "ARD",
+      "ETX": "ETX",
+      "FJC": "FJC",
+      "PTW": "PTW",
+      "RBV": "RBV",
+      "SAX": "SAX",
+      "LRP": "ETX"
     },
-    {
-      "group": 1,
-      "label": "ABE MVA",
-      "name": "ABE MVA"
-    }
-  ],
-  "video_map_file": "videomaps/abe-maps.json.zst"
+    "stars_maps": [
+      {
+        "group": 0,
+        "label": "ABE",
+        "name": "Allentown TRACON Video Map"
+      },
+      {
+        "group": 1,
+        "label": "ABE MVA",
+        "name": "ABE MVA"
+      }
+    ],
+    "video_map_file": "videomaps/abe-maps.json.zst"
   }
 }
