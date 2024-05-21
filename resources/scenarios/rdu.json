@@ -1,0 +1,254 @@
+{
+    "departures": [
+        {
+            "airlines": [
+                {
+                "icao": "MXY"
+                }
+            ],
+            "destination": "KCAK",
+            "exit": "SHPRD",
+            "route": "SHPRD HMV JPU ZZIPS1"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "VXP"
+                }
+            ],
+            "destination": "KALB",
+            "exit": "BOUSY",
+            "route": "BOUSY BBOBO Q22 LLUND TRUDE V487 CANAN"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "FFT"
+                },
+                {
+                    "icao": "SWA"
+                },
+                {
+                    "fleet": "short",
+                    "icao": "DAL"
+                }
+            ],
+            "destination": "KATL",
+            "exit": "SHPRD",
+            "route": "SHPRD LEAVI OZZZI1"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "SWA"
+                },
+                {
+                    "icao": "SKW"
+                },
+                {
+                    "fleet": "short",
+                    "icao": "AAL"
+                }
+            ],
+            "destination": "KAUS",
+            "exit": "SHPRD",
+            "route": "SHPRD SQS HAWES HEERE WINDU SEWZY6"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "SWA"
+                }
+            ],
+            "destination": "KBWI",
+            "exit": "BOUSY",
+            "route": "BOUSY THHMP RAVNN6"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "FFT"
+                },
+                {
+                    "icao": "JBU"
+                },
+                {
+                    "fleet": "short",
+                    "icao": "DAL"
+                }
+            ],
+            "destination": "KBOS",
+            "exit": "BOUSY",
+            "route": "BOUSY GEARS BBOBO Q22 RBV Q419 JFK ROBUC3"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "FFT"
+                }
+            ],
+            "destination": "KBUF",
+            "exit": "CARML",
+            "route": "CARML OTTTO JST JHW"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "JBU"
+                }
+            ],
+            "destination": "MMUN",
+            "exit": "ROZBO",
+            "route": "ROZBO BAHAA HIBAC PHK FIS B646 CANO UB879 CUN"
+        },
+        {
+            "airlines": [
+                {
+                    "fleet": "short",
+                    "icao": "AAL"
+                }
+            ],
+            "destination": "KCLT",
+            "exit": "SHPRD",
+            "route" : "SHPRD CHSLY CHSLY6"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "SWA"
+                },
+                {
+                    "icao": "FFT"
+                }
+            ],
+            "destination": "KMDW",
+            "exit": "DANCO",
+            "route": "DANCO HVQ FWA PANGG5"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "SKW"
+                },
+                {
+                    "fleet": "short",
+                    "icao": "AAL"
+                },
+                {
+                    "fleet": "short",
+                    "icao": "UAL"
+                },
+                {
+                    "icao": "NKS"
+                },
+                {
+                    "icao": "FFT"
+                }
+            ],
+            "destination": "KORD",
+            "exit": "SHPRD",
+            "route": "SHPRD HMV FLM HEVAN BONNT VEECK5"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "EDV"
+                },
+                {
+                    "icao": "RPA"
+                },
+                {
+                    "icao": "FFT"
+                }
+            ],
+            "destination": "KCVG",
+            "exit": "SHPRD",
+            "route" : "SHPRD HMV CUBIM JAKIE6"
+        },
+        {
+            "airlines": [
+                {
+                    "icao":" FFT"
+                }
+            ],
+            "destination": "KCLE",
+            "exit": "DANCO",
+            "route": "DANCO HVQ JANYS ROLLN2"
+        },
+        {
+            "airlines": [
+                {
+                    "fleet": "short",
+                    "icao": "AAL"
+                }
+            ],
+            "destination": "KDFW",
+            "exit": "SHPRD",
+            "route": "SHPRD BURGG MEMFS LIT MEEOW FEWWW SEEVR4"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "SWA"
+                }
+            ],
+            "destination": "KDAL",
+            "exit": "SHPRD",
+            "route": "SHPRD VXV MEM LIT DIRRK HIBIL3"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "FFT"
+                },
+                {
+                    "fleet": "short",
+                    "icao": "UAL"
+                },
+                {
+                    "icao": "SWA"
+                }
+            ],
+            "destination": "KDEN",
+            "exit": "SHPRD",
+            "route": "SHPRD IIU STL J24 MCI J24 OATHE CLASH4"
+        },
+        {
+            "airlines": [
+                {
+                    "fleet": "short",
+                    "icao": "DAL"
+                },
+                {
+                    "icao": "FFT"
+                }
+            ],
+            "destination": "KDTW",
+            "exit": "DANCO",
+            "route": "DANCO BKW JAMOX BONZZ2"
+        },
+        {
+            "airlines": [
+                {
+                    "icao": "SWA"
+                },
+                {
+                    "icao": "FFT"
+                },
+                {
+                    "icao": "JBU"
+                },
+                {
+                    "icao": "NKS"
+                },
+                {
+                    "fleet": "short",
+                    "icao": "DAL"
+                }
+            ],
+            "destination": "KFLL",
+            "exit": "ROZBO",
+            "route": "ROZBO CAKET Q97 PRMUS CUUDA3"
+        }
+    ]
+}
