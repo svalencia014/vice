@@ -22,6 +22,7 @@ type Nav struct {
 	Heading        NavHeading
 	Approach       NavApproach
 	FixAssignments map[string]NavFixAssignment
+	Direct         map[string]DirectArrivalAirport
 
 	// DeferredHeading stores a heading assignment from the controller that
 	// the pilot has not yet started to follow.  Note that only a single
@@ -32,6 +33,7 @@ type Nav struct {
 
 	FinalAltitude float32
 	Waypoints     []Waypoint
+	Airports      []Airport
 }
 
 // DeferredHeading stores a heading assignment from the controller and the
@@ -126,6 +128,17 @@ type NavApproach struct {
 }
 
 type NavFixAssignment struct {
+	Arrive struct {
+		Altitude *AltitudeRestriction
+		Speed    *float32
+	}
+	Depart struct {
+		Fix     *Waypoint
+		Heading *float32
+	}
+}
+
+type DirectArrivalAirport struct {
 	Arrive struct {
 		Altitude *AltitudeRestriction
 		Speed    *float32
@@ -1863,6 +1876,17 @@ func (nav *Nav) fixPairInRoute(fixa, fixb string) (fa *Waypoint, fb *Waypoint) {
 	return
 }
 
+func (nav *Nav) directArrivalAirport(fix string) bool {
+	// Look for the airport to be in the route of the aircraft
+	for i, wp := range nav.Waypoints {
+		if fix == wp.Fix {
+			nav.Waypoints = nav.Waypoints[i:]
+			return true
+		}
+	}
+	return false // If the fix is not found
+}
+
 func (nav *Nav) directFix(fix string) bool {
 	// Look for the fix in the waypoints in the flight plan.
 	for i, wp := range nav.Waypoints {
@@ -1894,6 +1918,18 @@ func (nav *Nav) directFix(fix string) bool {
 		return found
 	}
 	return false
+}
+
+func (nav *Nav) DirectArrivalAirport(airport string) PilotResponse {
+	if nav.directArrivalAirport(airport) {
+		nav.EnqueueHeading(NavHeading{})
+		nav.Approach.NoPT = false
+		nav.Approach.InterceptState = NotIntercepting
+
+		return PilotResponse{Message: "direct " + FixReadback(airport)}
+	} else {
+		return PilotResponse{Message: "unable. " + FixReadback(airport) + " isn't in our route", Unexpected: true}
+	}
 }
 
 func (nav *Nav) DirectFix(fix string) PilotResponse {

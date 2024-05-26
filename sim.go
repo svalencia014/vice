@@ -18,7 +18,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/checkandmate1/AirportWeatherData"
+	getweather "github.com/checkandmate1/AirportWeatherData"
 	"github.com/mmp/imgui-go/v4"
 )
 
@@ -2528,6 +2528,16 @@ func (s *Sim) DirectFix(token, callsign, fix string) error {
 	return s.dispatchControllingCommand(token, callsign,
 		func(ctrl *Controller, ac *Aircraft) []RadioTransmission {
 			return ac.DirectFix(fix)
+		})
+}
+
+func (s *Sim) DirectAirport(token, callsign, airport string) error {
+	s.mu.Lock(s.lg)
+	defer s.mu.Unlock(s.lg)
+
+	return s.dispatchControllingCommand(token, callsign,
+		func(ctrl *Controller, ac *Aircraft) []RadioTransmission {
+			return ac.DirectArrivalAirport(airport)
 		})
 }
 

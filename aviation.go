@@ -55,6 +55,7 @@ type Arrival struct {
 	CruiseAltitude  float32                             `json:"cruise_altitude"`
 	Route           string                              `json:"route"`
 	STAR            string                              `json:"star"`
+	ArrivalAirport  string                              `json:"arrival_airport"`
 
 	InitialController   string  `json:"initial_controller"`
 	InitialAltitude     float32 `json:"initial_altitude"`

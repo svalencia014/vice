@@ -51,6 +51,7 @@ type Aircraft struct {
 	ArrivalGroup      string
 	ArrivalGroupIndex int
 	GotContactTower   bool
+	ArrivalAirport    string
 
 	// Who to try to hand off to at a waypoint with /ho
 	WaypointHandoffController string
@@ -260,6 +261,10 @@ func (ac *Aircraft) DirectFix(fix string) []RadioTransmission {
 func (ac *Aircraft) DepartFixHeading(fix string, hdg int) []RadioTransmission {
 	resp := ac.Nav.DepartFixHeading(strings.ToUpper(fix), float32(hdg))
 	return ac.transmitResponse(resp)
+}
+
+func (ac *Aircraft) DirectArrivalAirport(airport string) []RadioTransmission {
+	return ac.transmitResponse(ac.Nav.DirectArrivalAirport(strings.ToUpper(airport)))
 }
 
 func (ac *Aircraft) DepartFixDirect(fixa, fixb string) []RadioTransmission {
