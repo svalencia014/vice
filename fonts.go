@@ -290,7 +290,7 @@ func fontsInit(r Renderer, platform Platform) {
 		Pix:    unsafe.Slice((*uint8)(img.Pixels), 4*img.Width*img.Height),
 		Stride: 4 * img.Width,
 		Rect:   image.Rectangle{Max: image.Point{X: img.Width, Y: img.Height}}}
-	atlasId := r.CreateTextureFromImage(rgb8Image, false)
+	atlasId := r.CreateTextureFromImage(rgb8Image, true /* nearest */)
 	io.Fonts().SetTextureID(imgui.TextureID(atlasId))
 
 	// Patch up the texture id after the atlas was created with the
@@ -332,6 +332,11 @@ func DrawFontPicker(id *FontIdentifier, label string) (newFont *Font, changed bo
 		// Take advantage of the sort order returned by GetAllFonts()--that
 		// all fonts of the same name come consecutively.
 		for _, font := range f {
+			if _, ok := starsFonts[font.Name]; ok {
+				// Don't offer up the STARS fonts.
+				continue
+			}
+
 			if font.Name != lastFontName {
 				lastFontName = font.Name
 				// Use the 14pt version of the font in the combo box.
