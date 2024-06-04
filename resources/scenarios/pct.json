@@ -1,0 +1,432 @@
+{
+  "tracon": "PCT",
+  "airports": {
+    "KDCA": {
+      "approaches": {
+        "I1": {
+          "cifp_id": "I1",
+          "tower_controller": "DCA_TWR"
+        }
+      },
+      "departure_routes": {
+        "1": {
+          "SCOOB": {
+            "cleared_altitude": 5000,
+            "sid": "AMEEE1",
+            "waypoints": "REVGE/a1500+/s220- BEBLE COVTO ALEEX DOGUE/a4000+/s250- GUCER AMEEE/a5000+ COLIN SCOOB"
+          },
+          "MAULS": {
+            "cleared_altitude": 5000,
+            "sid": "CLTCH3",
+            "waypoints": "REVGE/a1500+/s220 BEBLE RGIII CUKLI BRUTL BUTRZ/a3000+ CLTCH KERRK"
+          },
+          "FLASK": {
+            "cleared_altitude": 5000,
+            "sid": "CLTCH3",
+            "waypoints": "REVGE/a1500+/s220 BEBLE RGIII CUKLI BRUTL BUTRZ/a3000+ CLTCH KERRK TEEMS"
+          },
+          "DQO,AGARD": {
+            "cleared_altitude": 5000,
+            "sid": "DOCTR5",
+            "waypoints": "REVGE/a1500+/s220 BEBLE COVTO ALEEX DOGUE/a4000+/s250 RIISE DOCTR/a5000+"
+          },
+          "JERES,BUFFR": {
+            "cleared_altitude": 5000,
+            "sid": "HORTO4",
+            "waypoints": "REVGE/a1500+/s220 BEBLE RGIII MELOE HORTO/a5000+"
+          },
+          "RRSIN": {
+            "cleared_altitude": 5000,
+            "sid": "JDUBB4",
+            "waypoints": "REVGE/a1500+/s220 BEBLE RGIII CUKLI HAFNR/a3000+ JDUBB TYPNZ SCORN"
+          },
+          "MELTN": {
+            "cleared_altitude": 5000,
+            "sid": "JDUBB4",
+            "waypoints": "REVGE/a1500+/s220 BEBLE RGIII CUKLI HAFNR/a3000+ JDUBB CASLY"
+          },
+          "OTTTO": {
+            "cleared_altitude": 5000,
+            "sid": "REBLL5",
+            "waypoints": "REVGE/a1500+/s220 BEBLE RGIII CUKLI DUDDD REBLL/a5000+"
+          },
+          "GLANC": {
+            "cleared_altitude": 5000,
+            "sid": "SCRAM6",
+            "waypoints": "REVGE/a1500+/s220 BEBLE RGIII CUKLI POOCH/a3000+ SCRAM DANOO WALCE"
+          },
+          "SWANN": {
+            "cleared_altitude": 5000,
+            "sid": "SOOKI5",
+            "waypoints": "REVGE/a1500+/s220 BEBLE COVTO ALEEX DOGUE/a4000+/s250 PHERB SOOKI/a5000+"
+          },
+          "RAMAY": {
+            "cleared_altitude": 5000,
+            "sid": "WYNGS5",
+            "waypoints": "REVGE/a1500+/s220 BEBLE RGIII MELOE WYNGS/a5000+"
+          }
+        }
+      },
+      "departures": [
+        {
+          "airlines": [
+            {
+              "icao": "JBU"
+            },
+            {
+              "icao": "RPA"
+            },
+            {
+              "fleet": "short",
+              "icao": "AAL"
+            }
+          ],
+          "destination": "KBOS",
+          "exit": "SWANN",
+          "route": "SWANN BROSS Q419 JFK ROBUC3"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "SWA"
+            },
+            {
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "icao": "RPA"
+            },
+            {
+              "icao": "JIA"
+            }
+          ],
+          "destination": "KATL",
+          "exit": "FLASK",
+          "route": "FLASK OZZZI1"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "short",
+              "icao": "UAL"
+            },
+            {
+              "fleet": "short",
+              "icao": "AAL"
+            }
+          ],
+          "destination": "KORD",
+          "exit": "RAMAY",
+          "route": "RAMAY Q72 HACKS J149 ROD WATSN4"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "RPA"
+            },
+            {
+              "fleet": "short",
+              "icao": "AAL"
+            }
+          ],
+          "destination": "KLGA",
+          "exit": "AGARD",
+          "route": "AGARD KORRY4"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "JBU"
+            },
+            {
+              "icao" : "SWA"
+            },
+            {
+              "fleet": "short",
+              "icao": "AAL"
+            }
+          ],
+          "destination": "KMCO",
+          "exit": "SCOOB",
+          "route": "SCOOB MOXXY Q85 LPERD GTOUT1"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "ENY"
+            },
+            {
+              "icao": "SWA"
+            },
+            {
+              "icao": "RPA"
+            }
+          ],
+          "destination": "KBNA",
+          "exit": "OTTTO",
+          "route": "OTTTO Q80 DEWAK GROAT PASLY4"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "short",
+              "icao" : "AAL"
+            }
+          ],
+          "destination": "KMIA",
+          "exit": "SCOOB",
+          "route": "SCOOB EARZZ SKARP Y313 HOAGG BNFSH2"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "GJS"
+            },
+            {
+              "icao": "RPA"
+            }
+          ],
+          "destination": "KEWR",
+          "exit": "SWANN",
+          "route": "SWANN PHLBO4"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "JIA"
+            },
+            {
+              "fleet": "short",
+              "icao": "AAL"
+            }
+          ],
+          "destination": "KCLT",
+          "exit": "GLANC",
+          "route": "GLANC LYH CHSLY5"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "short",
+              "icao": "AAL"
+            }
+          ],
+          "destination": "KDFW",
+          "exit": "OTTTO",
+          "route": "OTTTO Q80 FAREV RAMRD Q68 LITTR FEWWW BRDJE4"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "short",
+              "icao": "AAL"
+            },
+            {
+              "icao": "ENY"
+            },
+            {
+              "icao": "RPA"
+            },
+            {
+              "icao": "JIA"
+            }
+          ],
+          "destination": "KRDU",
+          "exit": "MELTN",
+          "route": "MELTN ALDAN3"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "icao": "JIA"
+            }
+          ],
+          "destination": "KDTW",
+          "exit": "BUFFR",
+          "route": "BUFFR Q178 KOZAR KLYNK3"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "RPA"
+            },
+            {
+              "icao": "JBU"
+            }
+          ],
+          "destination": "KJFK",
+          "exit": "AGARD",
+          "route": "AGARD DONIL T315 PANZE V44 CAMRN"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "RPA"
+            },
+            {
+              "icao": "JIA"
+            },
+            {
+              "fleet": "short",
+              "icao": "DAL"
+            } 
+          ],
+          "destination": "KMSP",
+          "exit": "BUFFR",
+          "route": "BUFFR Q178 DJB J34 VIO KAMMA KKILR3"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "JBU"
+            },
+            {
+              "icao": "SWA"
+            }
+          ],
+          "destination": "KFLL",
+          "exit": "SCOOB",
+          "route": "SCOOB EARZZ CHIEZ Y291 MAJIK CUUDA2"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "JBU"
+            },
+            {
+              "icao": "SWA"
+            }
+          ],
+          "destination": "KSTL",
+          "exit": "RAMAY",
+          "route": "RAMAY Q72 HACKS J149 EMPTY J80 VHP AARCH2"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "SWA"
+            },
+            {
+              "icao": "JIA"
+            }
+          ],
+          "destination": "KPVD",
+          "exit": "SWANN",
+          "route": "SWANN BROSS Q419 RBV Q430 CREEL ORCHA JORDN JORDN2"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "SWA"
+            }
+          ],
+          "destination": "KMDW",
+          "exit": "RAMAY",
+          "route": "RAMAY Q72 HACKS J149 FWA PANGG5"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "short",
+              "icao": "AAL"
+            },
+            {
+              "icao": "SWA"
+            }
+          ],
+          "destination": "KTPA",
+          "exit": "RRSIN",
+          "route": "RRSIN GSO Q75 TEUFL BAAMF DADES1"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "JZA"
+            },
+            {
+              "icao": "JIA"
+            }
+          ],
+          "destination": "CYYZ",
+          "exit": "JERES",
+          "route": "JERES J220 SFK WOZEE LINNG3"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "short",
+              "icao": "UAL"
+            }
+          ],
+          "destination": "KIAH",
+          "exit": "MAULS",
+          "route": "MAULS Q40 AEX DOOBI2"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "JIA"
+            },
+            {
+              "icao": "RPA"
+            }
+          ],
+          "destination": "KBDL",
+          "exit": "SWANN",
+          "route": "SWANN BROSS Q419 DPK DPK3"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "SWA"
+            },
+            {
+              "icao": "JIA"
+            }
+          ],
+          "destination": "KCMH",
+          "exit": "RAMAY",
+          "route": "RAMAY Q72 HACKS SCRLT SCRLT1"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "ENY"
+            },
+            {
+              "fleet": "short",
+              "icao": "DAL"
+            }
+          ],
+          "destination": "KCVG",
+          "exit": "OTTTO",
+          "route": "OTTTO Q176 COLNS GAVNN6"
+        }
+      ],
+      "exit_categories": {
+        "SCPPN": "ALL",
+        "MAULS": "ALL",
+        "FLASK": "ALL",
+        "DQO": "ALL",
+        "AGARD": "ALL",
+        "JERES": "ALL",
+        "RRSIN": "ALL",
+        "BUFFR": "ALL",
+        "MELTN": "ALL",
+        "OTTTO": "ALL",
+        "GLANC": "ALL",
+        "SWANN": "ALL",
+        "RAMAY": "ALL"
+      },
+      "tower_list": 2
+    }
+  },
+  "airspace": {
+    
+  }
+}
