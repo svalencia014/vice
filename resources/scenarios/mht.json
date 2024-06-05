@@ -760,5 +760,33 @@
                 }
             }
         ]
+    },
+    "control_positions": {
+        "BOS_CTR": {
+            "frequency": 134700,
+            "position": "Boston Center",
+            "scope_char": "C",
+            "eram_facility": true,
+            "facility_id": "C",
+            "sector_id": "C37"
+        },
+        "PSM_TWR": {
+            "frequency": 128400,
+            "position": "Portsmouth Tower",
+            "scope_char": "T",
+            "sector_id": "1S"
+        },
+        "MHT_TWR": {
+            "frequency": 121300,
+            "position": "Manchester Tower",
+            "scope_char": "T",
+            "sector_id": "1T"
+        },
+        "MHT_Z_APP": {
+            "default_airport" :"KMHT",
+            "frequency": 124900,
+            "position": "Manchester Approach",
+            
+        }
     }
 }
