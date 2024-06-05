@@ -48,17 +48,7 @@
                         "sid": "PPORT4",
                         "waypoints": "KMHT-35/h219 TYLIR/a3000+ PPORT SHOEL RBELA COTEE"
                     },
-                    "CAM": {
-                        "cleared_altitude": 3000,
-                        "sid": "MHT1",
-                        "waypoints": "KMHT-35/h219"
-                    },
-                    "MANCH": {
-                        "cleared_altitude": 3000,
-                        "sid": "MHT1",
-                        "waypoints": "KMHT-35/h219"
-                    },
-                    "HANAA": {
+                    "HANAA,ENE,MANCH,PEASE,CLOWW,CAM": {
                         "cleared_altitude": 3000,
                         "sid": "MHT1",
                         "waypoints": "KMHT-35/h219"
@@ -68,32 +58,22 @@
                     "CCC": {
                         "cleared_altitude": 3000,
                         "sid": "PPORT4",
-                        "waypoints": "KMHT-17/h219 TYLIR/a3000+ PPORT SHOEL RBELA JJIMY YANTC"
+                        "waypoints": "KMHT-17/h352 TYLIR/a3000+ PPORT SHOEL RBELA JJIMY YANTC"
                     },
                     "NELIE": {
                         "cleared_altitude": 3000,
                         "sid": "PPORT4",
-                        "waypoints": "KMHT-17/h219 TYLIR/a3000+ PPORT SHOEL RBELA JJIMY"
+                        "waypoints": "KMHT-17/h352 TYLIR/a3000+ PPORT SHOEL RBELA JJIMY"
                     },
                     "BAF": {
                         "cleared_altitude": 3000,
                         "sid": "PPORT4",
-                        "waypoints": "KMHT-17/h219 TYLIR/a3000+ PPORT SHOEL RBELA COTEE"
+                        "waypoints": "KMHT-17/h352 TYLIR/a3000+ PPORT SHOEL RBELA COTEE"
                     },
-                    "CAM": {
+                    "HANAA,ENE,MANCH,PEASE,CLOWW,CAM": {
                         "cleared_altitude": 3000,
                         "sid": "MHT1",
-                        "waypoints": "KMHT-17/h219"
-                    },
-                    "MANCH": {
-                        "cleared_altitude": 3000,
-                        "sid": "MHT1",
-                        "waypoints": "KMHT-17/h219"
-                    },
-                    "HANAA": {
-                        "cleared_altitude": 3000,
-                        "sid": "MHT1",
-                        "waypoints": "KMHT-17/h219"
+                        "waypoints": "KMHT-17/h352"
                     }
                 }
             },
@@ -372,36 +352,89 @@
                 "R34": {
                     "cifp_id": "R34"
                 }
-            }
-        },
-        "KASH": {
-            "approaches": {
-                "I14": {
-                    "cifp_id": "I14"
+            },
+            "departure_routes": {
+                
+            },
+            "departures": [
+                {
+                    "airlines": [
+                        {
+                            "icao": "GTI"
+                        }
+                    ],
+                    "destination": "KAEX",
+                    "exit": "CON",
+                    "route": "CON ALB DBABE Q448 PTW J48 CSN FANPO Q40 AEX"
                 },
-                "R14": {
-                    "cifp_id": "R14"
+                {
+                    "airlines": [
+                        {
+                            "icao": "CNS"
+                        }
+                    ],
+                    "destination": "KBOS",
+                    "exit": "STEVO",
+                    "route": "STEVO LWRNC"
                 },
-                "R32": {
-                    "cifp_id": "R32"
+                {
+                    "airlines": [
+                        {
+                            "icao": "AAY"
+                        }
+                    ],
+                    "destination": "KPIE",
+                    "exit": "CON",
+                    "route": "CON CAM ALB BIZEX Q75 TEUFL BAAMF DADES1"
+                },
+                {
+                    "airlines": [
+                        {
+                            "icao": "N"
+                        },
+                        {
+                            "icao": "CNS"
+                        }
+                    ],
+                    "destination": "KHEF",
+                    "exit": "CON",
+                    "route": "CON EEN DNY LAAYK V93 LRP V39 MRB"
+                },
+                {
+                    "airlines": [
+                        {
+                            "icao": "AAY"
+                        }
+                    ],
+                    "destination": "KSFB",
+                    "exit": "WEEZE",
+                    "route": "WEEZE SCUPP FOXBO RIFLE HEADI Q97 KALDA MOXXY Q85 LPERD TTHOR3"
+                },
+                {
+                    "airlines": [
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        }
+                    ],
+                    "destination": "KHOU",
+                    "exit": "CON",
+                    "route": "CON BAF Q448 PTW J48 CSN FANPO Q40 AEX"
+                },
+                {
+                    "airlines": [
+                        {
+                            "icao": "N"
+                        },
+                        {
+                            "icao": "CNS"
+                        }
+                    ],
+                    "destination": "KIWI",
+                    "exit": "PEASE",
+                    "route": "PEASE ENE"
                 }
-            }
-        },
-        "KCON": {
-            "approaches": {
-                "I35": {
-                    "cifp_id": "I35"
-                },
-                "R12": {
-                    "cifp_id": "R12"
-                },
-                "R17": {
-                    "cifp_id": "R17"
-                },
-                "R35": {
-                    "cifp_id": "R35"
-                }
-            }
+            ]
         }
     }
 }
