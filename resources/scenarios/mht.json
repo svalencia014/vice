@@ -786,7 +786,307 @@
             "default_airport" :"KMHT",
             "frequency": 124900,
             "position": "Manchester Approach",
-            
+            "scope_char": "Z",
+            "sector_id": "1Z"
+        },
+        "MHT_E_APP": {
+            "default_airport": "KPSM",
+            "frequency": 125050,
+            "position": "Manchester Approach",
+            "scope_char": "E",
+            "sector_id": "1E"
+        },
+        "MHT_W_APP": {
+            "frequency": 134750,
+            "position": "Manchester Approach",
+            "scope_char": "W",
+            "sector_id": "1W"
+        },
+        "MHT_P_APP": {
+            "frequency": 125825,
+            "position": "Manchester Approach",
+            "scope_char": "P",
+            "sector_id": "1P"
+        },
+        "MHT_J_APP": {
+            "frequency": 127350,
+            "position": "Manchester Approach",
+            "scope_char": "J",
+            "sector_id": "1J"
+        },
+        "BOS_DEP": {
+            "frequency": 130000,
+            "position": "Boston Departure",
+            "scope_char": "D",
+            "facility_id": "1",
+            "sector_id": "1D"
         }
+    },
+    "default_scenario": "South",
+    "name": "KMHT",
+    "primary_airport": "KMHT",
+    "scenarios": {
+        "South": {
+            "arrival_runways": [
+                {
+                    "airport": "KMHT",
+                    "runway": "17"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "24"
+                },
+                {
+                    "airport": "KPSM",
+                    "runway": "16"
+                }
+            ],
+            "arrivals": {
+                "ROZZE2": {
+                    "KMHT": 10
+                },
+                "ENE": {
+                    "KMHT": 5,
+                    "KPSM": 5
+                },
+                "CON": {
+                    "KMHT": 5,
+                    "KPSM": 5
+                },
+                "GDM": {
+                    "KMHT": 2,
+                    "KPSM": 10
+                }
+            },
+            "solo_controller": "MHT_Z_APP",
+            "multi_controllers": {
+                "default": {
+                    "MHT_J_APP": {"primary": true, "departures": ["KMHT"]},
+                    "MHT_Z_APP": {"backup": "MHT_J_APP"},
+                    "MHT_E_APP": {"backup": "MHT_Z_APP", "arrivals":["ENE"]},
+                    "MHT_P_APP": {"backup": "MHT_E_APP", "departures":["KPSM"]},
+                    "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM"]}
+                }
+            },
+            "controllers": [
+                "BOS_DEP",
+                "MHT_TWR",
+                "PSM_TWR",
+                "BOS_CTR"
+            ],
+            "default_maps": ["MHT MAIN"],
+            "departure_runways": [
+                {
+                    "airport": "KMHT",
+                    "rate": 30,
+                    "runway": "17"
+                },
+                {
+                    "airport": "KPSM",
+                    "rate": 15,
+                    "runway": "16"
+                }
+            ],
+            "wind": {
+                "direction": 210,
+                "gust": 15,
+                "speed": 7
+            }
+        },
+        "North": {
+            "arrival_runways": [
+                {
+                    "airport": "KMHT",
+                    "runway": "35"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "6"
+                },
+                {
+                    "airport": "KPSM",
+                    "runway": "34"
+                }
+            ],
+            "arrivals": {
+                "ROZZE2": {
+                    "KMHT": 10
+                },
+                "ENE": {
+                    "KMHT": 5,
+                    "KPSM": 5
+                },
+                "CON": {
+                    "KMHT": 5,
+                    "KPSM": 5
+                },
+                "GDM": {
+                    "KMHT": 2,
+                    "KPSM": 10
+                }
+            },
+            "solo_controller": "MHT_Z_APP",
+            "multi_controllers": {
+                "default": {
+                    "MHT_Z_APP": {"primary": true, "departures": ["KMHT"]},
+                    "MHT_J_APP": {"backup": "MHT_Z_APP"},
+                    "MHT_E_APP": {"backup": "MHT_Z_APP", "arrivals":["ENE"]},
+                    "MHT_P_APP": {"backup": "MHT_E_APP", "departures":["KPSM"]},
+                    "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM"]}
+                }
+            },
+            "controllers": [
+                "BOS_DEP",
+                "MHT_TWR",
+                "PSM_TWR",
+                "BOS_CTR"
+            ],
+            "default_maps": ["MHT MAIN"],
+            "departure_runways": [
+                {
+                    "airport": "KMHT",
+                    "rate": 30,
+                    "runway": "35"
+                },
+                {
+                    "airport": "KPSM",
+                    "rate": 15,
+                    "runway": "34"
+                }
+            ],
+            "wind": {
+                "direction": 10,
+                "gust": 15,
+                "speed": 7
+            }
+        }
+    },
+    "stars_config": {
+        "center": "KMHT",
+        "airspace_awareness": [
+            {
+                "fixes": ["ALL"],
+                "receiving_controller": "BOS_CTR"
+            }
+        ],
+        "inhibit_ca_volumes": [
+            {
+                "name": "MHT NO CA",
+                "type": "circle",
+                "floor": 0,
+                "ceiling": 2000,
+                "radius": 5,
+                "center": "KMHT"
+            },
+            {
+                "name": "PSM NO CA",
+                "type": "circle",
+                "floor": 0,
+                "ceiling": 2000,
+                "radius": 5,
+                "center": "KPSM"
+            }
+        ],
+        "scratchpads": {
+            "CCC": "PRT",
+            "NELIE": "PRT",
+            "BAF": "PRT",
+            "HANAA": "HAN",
+            "ENE": "ENE",
+            "MANCH": "MAN",
+            "CLOWW": "CLO",
+            "CAM": "CAM",
+            "CON": "PSM",
+            "WEEZE": "PSM",
+            "STEVO": "PSM",
+            "PEASE": "PSM"
+        },
+        "stars_maps": [
+            {
+                "group": 1,
+                "label": "MVA",
+                "name": "A90 MVA"
+            },
+            {
+                "group": 1,
+                "label": "ASPC",
+                "name": "B, C, D, AIRSPACE"
+            },
+            {
+                "group": 0,
+                "label": "SAT FIN",
+                "name": "A90 SAT FINALS"
+            },
+            {
+                "group": 1,
+                "label": "COAST",
+                "name": "A90 COASTLINE"
+            },
+            {
+                "group": 1,
+                "label": "EOVM",
+                "name": "A90 EOVM"
+            },
+            {
+                "group": 0,
+                "label": "MHT",
+                "name": "MHT MAIN"
+            },
+            {
+                "group": 0,
+                "label": "6ROZZE",
+                "name": "MHT RWY 6 ROZZE STAR"
+            },
+            {
+                "group": 0,
+                "label": "17ROZZE",
+                "name": "MHT RWY 17 ROZZE STAR"
+            },
+            {
+                "group": 0,
+                "label": "24ROZZE",
+                "name": "MHT RWY 24 ROZZE STAR"
+            },
+            {
+                "group": 0,
+                "label": "35ROZZE",
+                "name": "MHT RWY 35 ROZZE STAR"
+            },
+            {
+                "group": 0,
+                "label": "GPS 2",
+                "name": "A90 SAT GPS 2"
+            },
+            {
+                "group": 0,
+                "label": "GPS 3",
+                "name": "A90 SAT GPS 3"
+            },
+            {
+                "group": 0,
+                "label": "GPS 4",
+                "name": "A90 SAT GPS 4"
+            },
+            {
+                "group": 0,
+                "label": "GPS 5",
+                "name": "A90 SAT GPS 5"
+            },
+            {
+                "group": 1,
+                "label": "ZBW 1",
+                "name": "ZBW SPLIT 1"
+            },
+            {
+                "group": 1,
+                "label": "ZBW 2",
+                "name": "ZBW SPLIT 2"
+            },
+            {
+                "group": 1,
+                "label": "ZBW 3",
+                "name": "ZBW SPLIT 3"
+            }
+        ]
     }
 }
