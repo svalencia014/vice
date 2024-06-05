@@ -3281,7 +3281,12 @@
         "LBSTA": "ALL",
         "PATSS": "ALL",
         "REVSS": "ALL",
-        "SSOXS": "ALL"
+        "SSOXS": "ALL",
+        "PEASE": "ALL",
+        "DUNKK": "ALL",
+        "LFV": "ALL",
+        "MANCH": "ALL",
+        "PVC": "ALL"
       },
       "tower_list": 2
     }
@@ -4558,7 +4563,12 @@
           "LBSTA",
           "PATSS",
           "REVSS",
-          "SSOXS"
+          "SSOXS",
+          "PEASE",
+          "PVC",
+          "LFV",
+          "DUNKK",
+          "MANCH"
         ],
         "altitude_range": [
           0,
@@ -4575,7 +4585,12 @@
     "LBSTA": "LBS",
     "PATSS": "PAT",
     "REVSS": "REV",
-    "SSOXS": "SSO"
+    "SSOXS": "SSO",
+    "PEASE": "PSM",
+    "PVC" : "PVC",
+    "LFV" : "LFV",
+    "DUNKK": "DUN",
+    "MANCH": "MHT"
    },
    "stars_maps": [
     {
