@@ -14107,6 +14107,24 @@
     }
   },
   {
+    "icao": "cns",
+    "name": "Cobalt Air",
+    "callsign": {
+      "name": "Chronos",
+      "callsignFormats": [
+        "###"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "PC12",
+          25
+        ]
+      ]
+    }
+  },
+  {
     "icao": "cp",
     "name": "General Aviation Bolivia",
     "callsign": {
@@ -21197,6 +21215,60 @@
         [
           "B734",
           7
+        ]
+      ]
+    }
+  },
+  {
+    "icao": "fth",
+    "name": "Mountain Air Aviation",
+    "callsign": {
+      "name": "Foot Hills",
+      "callsignFormats": [
+        "###"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "B350",
+          1
+        ],
+        [
+          "BE20",
+          1
+        ],
+        [
+          "C25B",
+          9
+        ],
+        [
+          "C560",
+          1
+        ],
+        [
+          "C56X",
+          1
+        ],
+        [
+          "C680",
+          2
+        ],
+        [
+          "C750",
+          48
+        ],
+        [
+          "F2TH",
+          1
+        ],
+        [
+          "GLF4",
+          1
+        ],
+        [
+          "PA24",
+          1
         ]
       ]
     }
