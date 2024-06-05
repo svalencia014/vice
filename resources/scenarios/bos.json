@@ -277,1111 +277,606 @@
       },
       "departures": [
         {
-          "airlines": [
-            {
-              "icao": "RPA"
-            },
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "AAL"
-            }
-          ],
-          "altitude": 28000,
-          "destination": "KBOS",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 ZIZZI KNUKK ATR LAFLN DEALE3"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "ENY"
-            },
-            {
-              "fleet": "short",
-              "icao": "AAL"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "UAL"
-            },
-            {
-              "icao": "SKW"
-            }
-          ],
-          "altitude": 36000,
-          "destination": "KORD",
-          "exit": "HYLND",
-          "route": "HYLND CAM Q822 FNT WYNDE2"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "FFT"
-            },
-            {
-              "icao": "NKS"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "icao": "JBU"
-            }
-          ],
-          "altitude": 36000,
-          "destination": "KMCO",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 RIFLE HEADI Q97 SAWED MOXXY Q85 LPERD GTOUT1"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "fleet": "short",
-              "icao": "UAL"
-            },
-            {
-              "fleet": "short",
-              "icao": "AAL"
-            },
-            {
-              "icao": "NKS"
-            }
-          ],
-          "altitude": 34000,
-          "destination": "KLAX",
-          "exit": "BLZZR",
-          "route": "BLZZR BAF Q480 MIKYG Q480 HOTEE Q42 HIDON KI60S BIGXX KI54M ACORE KK45G DOREC KK39A WIXIX KA33U FIREY KA30Q HIPPI GABBL HLYWD1"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "AAY"
-            },
-            {
-              "icao": "RPA"
-            }
-          ],
-          "destination": "KAVL",
-          "exit": "PATSS",
-          "route": "PATSS NELIE BJEZX Q75 BROSK SUG"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "NKS"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KATL",
-          "exit": "BLZZR",
-          "route": "BLZZR BAF Q448 PTW J48 MOL FLASK OZZZI1"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "NKS"
-            },
-            {
-              "icao": "EJA"
-            }
-          ],
-          "destination": "KACY",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 RIFLE Q439 PLYME V139 BRIGS"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "fleet": "short",
-              "icao": "AAL"
-            }
-          ],
-          "destination": "KAUS",
-          "exit": "BLZZR",
-          "route": "BLZZR BAF Q406 BWZ J6 COLNS J6 HVQ Q68 LITTR TXK BROBB WINDU SEWZY6"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "SWA"
-            },
-            {
-              "icao": "RPA"
-            },
-            {
-              "icao": "JBU"
-            }
-          ],
-          "destination": "KBWI",
-          "exit": "PATSS",
-          "route": "PATSS NELIE BIZEX Q75 MXE V378 NUGGY TRISH3"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "EDV"
-            }
-          ],
-          "destination": "KBGR",
-          "exit": "LBSTA",
-          "route": "LBSTA ENE"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            }
-          ],
-          "destination": "KBZN",
-          "exit": "HYLND",
-          "route": "HYLND CAM Q822 GONZZ BUF HOCKE GRB EAU KP03C KP03Y BIL SUBKY LVM BZN"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KBUF",
-          "exit": "HYLND",
-          "route": "HYLND SYR ROC EHMAN"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KCHS",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 RIFLE HEADI Q97 SAWED DFENC Q109 LAANA AMYLU AMYLU3"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "icao": "RPA"
-            },
-            {
-              "icao": "NKS"
-            }
-          ],
-          "destination": "KCLT",
-          "exit": "PATSS",
-          "route": "PATSS NELIE BIZEX Q75 GVE LYH CHSLY5"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "SWA"
-            }
-          ],
-          "destination": "KMDW",
-          "exit": "HYLND",
-          "route": "HYLND CAM Q822 GONZZ Q29 JHW DJB J60 MAYZE J60 ASHEN BAGEL PANGG4"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "ENY"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "icao": "ABX"
-            },
-            {
-              "icao": "ENY"
-            }
-          ],
-          "destination": "KCVG",
-          "exit": "REVSS",
-          "route": "REVSS CTR HNK J49 MAGIO J49 PSB MAULL KODIE CTW TIGRR3"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "RPA"
-            }
-          ],
-          "destination": "KCLE",
-          "exit": "HYLND",
-          "route": "HYLND CAM Q822 GONZZ THOME TRYBE4"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "RPA"
-            },
-            {
-              "icao": "ENY"
-            }
-          ],
-          "destination": "KCMH",
-          "exit": "HYLND",
-          "route": "HYLND CAM Q822 GONZZ Q29 WWSHR CBUSS2"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "NKS"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "AAL"
-            }
-          ],
-          "destination": "KDFW",
-          "exit": "BLZZR",
-          "route": "BLZZR BAF Q406 BWZ J6 HVQ Q68 LITTR MEEOW FEWWW SEEVR4"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "SWA"
-            },
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "fleet": "short",
-              "icao": "UAL"
-            }
-          ],
-          "destination": "KDEN",
-          "exit": "HYLND",
-          "route": "HYLND PAYGE Q822 GONZZ BUF YARRK DAFLU J70 PMM DBQ KP72E PORDR AALLE3"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KDTW",
-          "exit": "HYLND",
-          "route": "HYLND CAM Q822 GONZZ DONEO TPGUN2"
-        },
-        {
-          "airlines":[
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "NKS"
-            }
-          ],
-          "destination": "KDTW",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 RIFLE HEADI Q97 ELMSZ JROSS Q409 ENEME TEEKY3"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KRSW",
-          "exit": "PATSS",
-          "route": "PATSS NELIE BIZEX Q75 SLOJO Q103 CYNTA SHFTY5"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "AAY"
-            }
-          ],
-          "destination": "KGRR",
-          "exit": "HYLND",
-          "route": "HYLND CAM Q822 FNT"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "PDT"
-            }
-          ],
-          "destination": "KMDT",
-          "exit": "REVSS",
-          "route" : "REVSS CTR DNY T291 LAAYK V93 DUMMR V162 HWANG"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "HAL"
-            }
-          ],
-          "destination": "PHNL",
-          "exit": "BLZZR",
-          "route": "BLZZR BAF Q480 CANDR J60 DANNR DJB J60 JOT DSM AYOLE EKR J84 OAK BEBOP R464 BAART R464 BEKME R464 BITTA MAGGI3"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "UAL"
-            }
-          ],
-          "destination": "KIAH",
-          "exit": "BLZZR",
-          "route": "BLZZR BAF Q448 TRIBS Q448 PTW J48 CSN FANPO Q40 ALEAN KT30O IGV KM15K AEX SKNRD4"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "FDX"
-            },
-            {
-              "icao": "AAY"
-            },
-            {
-              "icao": "RPA"
-            }
-          ],
-          "destination": "KIND",
-          "exit": "BLZZR",
-          "route": "BLZZR BAF Q480 AIR RINTE SNKPT2"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KJAX",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 RIFLE HEADI Q97 SAWED GUILD Q409 SESUE ESENT LUNNI1"
-        },
-        {
-          "airlines": 
-          [
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "icao": "JBU"
-            }
-          ],
-          "destination": "KJAX",
-          "exit": "HYLND",
-          "route": "HYLND CAM Q822 GONZZ Q29 DORET DJB FBC VHP SPI EUING RUDDH2"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "RPA"
-            },
-            {
-              "icao": "FDX"
-            }
-          ],
-          "destination": "KMEM",
-          "exit": "HYLND",
-          "route": "HYLND CAM Q822 GONZZ Q29 KYLNE SHB PXV BLUZZ3"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "NKS"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "fleet": "short",
-              "icao": "AAL"
-            }
-          ],
-          "destination": "KMIA",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 RIFLE HEADI Q97 DEBRL CSTAL2"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "RPA"
-            },
-            {
-              "icao": "JBU"
-            }
-          ],
-          "destination": "KMKE",
-          "exit": "HYLND",
-          "route": "HYLND HANAA Q816 HOCKE GETCH LYSTR SUDDS"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "SCX"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KMSP",
-          "exit": "HYLND",
-          "route": "HYLND HANAA Q816 KELTI Q812 ZOHAN IDIOM MUSCL3"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "NKS"
-            }
-          ],
-          "destination": "KMYR",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 RIFLE HEADI Q97 PAACK WYLMS"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "SWA"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KBNA",
-          "exit": "REVSS",
-          "route": "REVSS CTR HNK J49 PSB Q71 GEFFS HVQ Q68 YOCKY GROAT PASLY4"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KMSY",
-          "exit": "BLZZR",
-          "route": "BLZZR BAF Q448 PTW J48 CSN FANPO Q40 NIOLA MEI RYTHM4"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "RPA"
-            },
-            {
-              "icao": "SKW"
-            },
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KJFK",
-          "exit": "SSOXS",
-          "route": "SSOXS BUZRD SEY PARCH3"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "RPA"
-            }
-          ],
-          "destination": "KLGA",
-          "exit": "PATSS",
-          "route": "PATSS NELIE VALRE HAARP3"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "short",
-              "icao": "UAL"
-            }
-          ],
-          "destination": "KEWR",
-          "exit": "PATSS",
-          "route": "PATSS NELIE FLOSI4"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "RPA"
-            },
-            {
-              "icao": "AAY"
-            }
-          ],
-          "destination": "KORF",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 ZJAAY CCV"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "short",
-              "icao": "AAL"
-            },
-            {
-              "icao": "FFT"
-            },
-            {
-              "icao": "RPA"
-            },
-            {
-              "icao": "JBU"
-            }
-          ],
-          "destination": "KPHL",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 RIFLE Q439 BRIGS JIIMS4"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "AAL"
-            }
-          ],
-          "destination": "KPHX",
-          "exit": "HYLND",
-          "route": "HYLND FNT J36 BAE DBQ LNK PUB ALS GUP EAGUL6"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "RPA"
-            }
-          ],
-          "destination": "KPIT",
-          "exit": "REVSS",
-          "route": "REVSS CTR HNK KONJE J190 SLT HAYNZ7"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "ASA"
-            }
-          ],
-          "destination": "KPDX",
-          "exit": "BLZZR",
-          "route": "BLZZR BAF Q480 CANDR J60 HAGUD J50 DJB KC69Q OBK KP75G KP81A KD84W KU87Q DNJ DUFUR HHOOD4"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KRDU",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 HOFFI Q167 ZJAAY TAQLE1"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "EDV"
-            }
-          ],
-          "destination": "KRIC",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 ZJAAY ARICE JAMIE"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "PDT"
-            }
-          ],
-          "destination": "KROC",
-          "exit": "HYLND",
-          "route": "HYLND SYR"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            }
-          ],
-          "destination": "KSMF",
-          "exit": "HYLND",
-          "route": "HYLND NOVON KENPA CESNA FOSIG DDY MLD J32 LLC ANAHO SLMMR5"
-        },
-        {
-          "airlines" : [
-            {
-              "icao": "JBU"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KSLC",
-          "exit": "HYLND",
-          "route": "HYLND CAM GONZZ ROC YXU BAE MCW J16 ONTIJ KP78C KD78Y DDY NORDK6" 
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            }
-          ],
-          "destination": "KSAT",
-          "exit": "BLZZR",
-          "route": "BLZZR BAF Q448 LANNA Q448 PTW J48 CSN FANPO Q40 ALEAN KT33O KM30M KM21I WINDU BRAUN3"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "ASA"
-            }
-          ],
-          "destination": "KSAN",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 RIFLE HEADI Q97 SAWED Q64 GUILD Q409 MRPIT CEELY Q172 YUTEE IRQ THRSR VLKNN Q30 IZAAC EIC J4 ABI J66 EWM J4 SSO J50 GBN J2 HOGGZ LUCKI1"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "ASA"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KSFO",
-          "exit": "BLZZR",
-          "route": "BLZZR BAF Q406 BWZ J6 PERKS J6 HVQ J78 FAM SGF ICT GCK J28 PUB J28 MLF J80 OAL INYOE DYAMD5"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "NKS"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "icao": "JBU"
-            }
-          ],
-          "destination": "TJSJ",
-          "exit": "SSOXS",
-          "route": "SSOXS BALTN MEGGG L456 HANCY L456 THANK PLING RTE7 SAALR"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "AAY"
-            }
-          ],
-          "destination": "KSRQ",
-          "exit": "PATSS",
-          "route": "PATSS NELIE BIZEX Q75 SLOJO Q103 PUPYY KYYUU LUBBR3"
-        },
-        {
-          "airlines"  : [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "EDV"
-            },
-            {
-              "icao": "RPA"
-            }
-          ],
-          "destination": "KSAV",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 RIFLE HEADI Q97 SAWED GUILD Q409 SESUE SOOOP"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "ASA"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "KSEA",
-          "exit": "HYLND",
-          "route": "HYLND NOVON NOSIK ZOHAN RWF KP90C KU06W KU09Q HLN MLP GLASR2"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "SWA"
-            },
-            {
-              "icao": "ENY"
-            }
-          ],
-          "destination": "KSTL",
-          "exit": "HYLND",
-          "route": "HYLND SYR JOSSY JHW Q29 KLYNE ROD VHP AARCH2"
-        },
-        {
-          "airlines": [
-            {
-              "icao" : "PDT"
-            },
-            {
-              "icao": "RPA"
-            }
-          ],
-          "destination": "KSYR",
-          "exit": "HYLND",
-          "route": "HYLND MANCH CAM LAMMS T608 SYR"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "icao": "JBU"
-            }
-          ],
-          "destination": "KTPA",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 RIFLE HEADI Q97 KALDA Q131 ZILLS Y289 BAHAA HIBAC DADES1"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "ENY"
-            },
-            {
-              "icao": "RPA"
-            }
-          ],
-          "destination": "KTVC",
-          "exit": "HYLND",
-          "route": "HYLND HANAA Q816 KELTI AGDOX Q812 NOSIK DAYYY"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            },
-            {
-              "icao": "RPA"
-            },
-            {
-              "fleet": "short",
-              "icao": "AAL"
-            }
-          ],
-          "destination": "KDCA",
-          "exit": "PATSS",
-          "route": "PATSS NELIE BIZEX Q75 MXE CLIPRR2"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "short",
-              "icao": "UAL"
-            }
-          ],
-          "destination": "KIAD",
-          "exit": "BLZZR",
-          "route": "BLZZR BAF HYPER8"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "icao": "JBU"
-            }
-          ],
-          "destination": "KPBI",
-          "exit": "SSOXS",
-          "route": "SSOXS Q167 RIFLE HEADI Q97 KENLL CPTAN2"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "ENY"
-            },
-            {
-              "icao" : "ENY"
-            }
-          ],
-          "destination": "KILM",
-          "exit": "PATSS",
-          "route": "PATSS NELIE BIZEX Q75 GVE FAK"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "long",
-              "icao": "KLM"
-            },
-            {
-              "fleet": "long",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "EHAM",
-          "exit": "LBSTA",
-          "route": "LBSTA ALLEX N205B NICSO NATU LIMRI NATU XETBO LIFFY UL975 WAL M16 DOLAS L603 LAMSO"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            }
-          ],
-          "destination": "TNCA",
-          "exit": "BRUWN",
-          "route": "BRUWN BORQE Y578 KAYYT DASER BALTN MEGGG L456 HANCY L456 THANK L458 PANMO JOSHE L325 SCAPA SCAP2A"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "LGAV",
-          "exit": "CELTK",
-          "route": "CELTK FRILL KANNI N195A NICSO NATY DINIM NATY ELSOX TAKAS ALUTA KORER UM616 TUPAR DIDRU BEBIX VALKU LERGA TOZOT UT183 OTROT UM728 DOKAR SUNEV OST NOSTO UN7 NEMES"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "JBU"
-            }
-          ],
-          "destination": "TBPB",
-          "exit": "BRUWN",
-          "route":  "BRUWN BORQE Y578 JENYY Y578 KAYYT DASER BALTN MEGGG L456 HANCY L456 THANK ELOPO UB520 ANU UA632 BGI"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "short",
-              "icao": "IBE"
-            }
-          ],
-          "destination": "LEBL",
-          "exit": "LBSTA",
-          "route": "LBSTA V139 ENE DANOL NICSO 4730N/05000W 4830N/04000W 4800N/03000W 4600N/02000W HIDRA STG SUSOS NUBLO UN725 VASUM UN725 LOBAR"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "short",
-              "icao": "AAL"
-            },
-            {
-              "fleet": "short",
-              "icao": "DAL"
-            },
-            {
-              "fleet": "short",
-              "icao": "UAL"
-            }
-          ],
-          "destination": "MMUN",
-          "exit": "PATSS",
-          "route": "PATSS NELIE BIZEX Q75 GSO Q75 TEUFL Q75 ENEME EVANZ Q109 KNOST M219 CULLY M219 NAVVL L465 SHARQ UM463 WALKY UB879 NOSAT"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "SAS"
-            }
-          ],
-          "destination": "EKCH",
-          "exit": "CELTK",
-          "route": "CELTK FRILL TUSKY N465A SAXAN 5230N/05000W 5700N/04000W 6000N/03000W 6100N/02000W 6200N/01000W VALDI ZOL LUTUS T55 TESPI"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "UAE"
-            }
-          ],
-          "destination": "OMDB",
-          "exit": "LBSTA",
-          "route": "LBSTA ALLEX JOOPY 4900N/05000W 5100N/04000W 5300N/03000W 5300N/02000W MALOT GISTI LUPOR ENJEX ADHAV AXNEF ZIPWE OZZIL SAWPE Q63 CPT UL9 BIG L607 KONAN UL607 REMBA MATUG GUBAX BARSU MOOCE RUDNO DEXIT PESAT TEGRI KOMAN ARTAT UP975 ROKVA UP975 ERGUN UL124 BONAM G781 TUDNU L124 OTENA L319 DASDO T217 LAM G666 ORSAR R784 TATLA L223 VUTEB"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "long",
-              "icao": "DAL"
-            },
-            {
-              "fleet": "long",
-              "icao": "EIN"
-            }
-          ],
-          "destination": "EIDW",
-          "exit": "CELTK",
-          "route": "CELTK FRILL KANNI N139A PORTI NATX DINIM NATX ELSOX OSGAR"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "long",
-              "icao": "DAL"
-            }
-          ],
-          "destination": "EGPH",
-          "exit": "LBSTA",
-          "route": "LBSTA TOPPS N441A TUDEP NATT MALOT NATT GISTI ROTEV P600 TUNSO TUNS1E"
-        },
-        {
-          "airlines": [
-            {
-              "fleet": "long",
-              "icao": "DLH"
-            }
-          ],
-          "destination": "EDDF",
-          "exit": "CELTK",
-          "route": "CELTK FRILL BRADD N197A NICSO NATW XETBO NORLA PEWBI OXLOW M142 ROKKE M140 DVR UL9 KONAN UL607 REMBA UL607 SPI T180 UNOKO UNOKO4A"
+            "exit": "HYLND",
+            "destination": "KPHX",
+            "altitude": 32000,
+            "route": "HYLND7 HYLND SYR YXU FNT J94 PMM KG72M KG66K LEWRP KK54E KK51C KK48A KK45Y KA42W DIXAN GUP EAGUL6",
+            "airlines": [
+                {
+                    "icao": "AAL",
+                    "fleet": "short"
+                }
+            ]
+        },
+        {
+            "exit": "SSOXS",
+            "destination": "KPHL",
+            "altitude": 24000,
+            "route": "SSOXS7 SSOXS Q167 RIFLE Q439 BRIGS JIIMS4",
+            "airlines": [
+                {
+                    "icao": "AAL",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "PEASE",
+            "destination": "KAUG",
+            "altitude": 7000,
+            "route": "LOGAN4 PEASE ENE",
+            "airlines": [
+                {
+                    "icao": "KAP",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "PVC",
+            "destination": "KPVC",
+            "altitude": 3000,
+            "route": "LOGAN4 PVC",
+            "airlines": [
+                {
+                    "icao": "KAP",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KDTW",
+            "altitude": 28000,
+            "route": "HYLND7 HYLND CAM Q822 GONZZ DONEO TPGUN2",
+            "airlines": [
+                {
+                    "icao": "DAL",
+                    "fleet": "short"
+                }
+            ]
+        },
+        {
+            "exit": "SSOXS",
+            "destination": "KMIA",
+            "altitude": 34000,
+            "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 KALDA TUGGR Q101 SKARP Y313 HOAGG BNFSH2",
+            "airlines": [
+                {
+                    "icao": "AAL",
+                    "fleet": "a321"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KDTW",
+            "altitude": 32000,
+            "route": "HYLND7 HYLND CAM Q822 PAYGE Q822 GONZZ DONEO TPGUN2",
+            "airlines": [
+                {
+                    "icao": "JBU",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "SSOXS",
+            "destination": "KORF",
+            "altitude": 34000,
+            "route": "SSOXS7 SSOXS Q167 ZJAAY CCV",
+            "airlines": [
+                {
+                    "icao": "NKS",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "SSOXS",
+            "destination": "KRDU",
+            "altitude": 36000,
+            "route": "SSOXS7 SSOXS Q167 ORCHA Q167 ZJAAY TAQLE2",
+            "airlines": [
+                {
+                    "icao": "JBU",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KORD",
+            "altitude": 34000,
+            "route": "HYLND7 HYLND CAM Q822 GONZZ FARGN CHAAP Q436 EMMMA WYNDE2",
+            "airlines": [
+                {
+                    "icao": "AAL",
+                    "fleet": "tncmShort"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KORD",
+            "altitude": 32000,
+            "route": "HYLND7 HYLND CAM Q822 PAYGE Q822 GONZZ FARGN CHAAP Q436 EMMMA WYNDE2",
+            "airlines": [
+                {
+                    "icao": "UAL",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "BLZZR",
+            "destination": "KDFW",
+            "altitude": 36000,
+            "route": "BLZZR6 BLZZR BAF Q406 BWZ J6 HVQ Q68 LITTR MEEOW FEWWW SEEVR4",
+            "airlines": [
+                {
+                    "icao": "AAL",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KBNA",
+            "altitude": 34000,
+            "route": "HYLND7 HYLND SYR JOSSY JHW Q29 KLYNE RINTE Q139 IIU FORKS PASLY4",
+            "airlines": [
+                {
+                    "icao": "SWA",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "PATSS",
+            "destination": "KCLT",
+            "altitude": 36000,
+            "route": "PATSS7 PATSS NELIE BIZEX Q75 GVE AIROW CHSLY6",
+            "airlines": [
+                {
+                    "icao": "AAL",
+                    "fleet": "short"
+                }
+            ]
+        },
+        {
+            "exit": "LBSTA",
+            "destination": "BIKF",
+            "altitude": 37000,
+            "route": "LBSTA8 LBSTA EBONY KODIK 5800N/05000W 6100N/04000W 6300N/03000W EPENI ELDIS ELDIS3N",
+            "airlines": [
+                {
+                    "icao": "ICE",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "SSOXS",
+            "destination": "KBWI",
+            "altitude": 32000,
+            "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN MIIDY2",
+            "airlines": [
+                {
+                    "icao": "SWA",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "BLZZR",
+            "destination": "KATL",
+            "altitude": 32000,
+            "route": "BLZZR6 BLZZR BAF Q448 PTW J48 MOL FLASK OZZZI1",
+            "airlines": [
+                {
+                    "icao": "DAL",
+                    "fleet": "short"
+                }
+            ]
+        },
+        {
+            "exit": "PATSS",
+            "destination": "KCLT",
+            "altitude": 34000,
+            "route": "PATSS7 PATSS NELIE BIZEX Q75 COPES Q75 GVE AIROW CHSLY6",
+            "airlines": [
+                {
+                    "icao": "AAL",
+                    "fleet": "short"
+                }
+            ]
+        },
+        {
+            "exit": "SSOXS",
+            "destination": "KMCO",
+            "altitude": 36000,
+            "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED MOXXY Q85 LPERD GTOUT1",
+            "airlines": [
+                {
+                    "icao": "NKS",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KMSP",
+            "altitude": 28000,
+            "route": "HYLND7 HYLND NOVON KENPA CEWDA MUSCL3",
+            "airlines": [
+                {
+                    "icao": "DAL",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KSTC",
+            "altitude": 43000,
+            "route": "HYLND7 HYLND GONZZ Q822 DERLO HOCKE MBS MBL GRB GEP",
+            "airlines": [
+                {
+                    "icao": "LXJ",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "SSOXS",
+            "destination": "KDCA",
+            "altitude": 26000,
+            "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN DEALE3",
+            "airlines": [
+                {
+                    "icao": "JBU",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "PATSS",
+            "destination": "KTPA",
+            "altitude": 36000,
+            "route": "PATSS7 PATSS NELIE BIZEX Q75 TEUFL BAAMF DADES1",
+            "airlines": [
+                {
+                    "icao": "DAL",
+                    "fleet": "short"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KCVG",
+            "altitude": 38000,
+            "route": "HYLND7 HYLND CAM Q822 GONZZ JOSSY MAULL KODIE SAVVI TIGRR4",
+            "airlines": [
+                {
+                    "icao": "FFT",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KCMH",
+            "altitude": 28000,
+            "route": "HYLND7 HYLND CAM Q822 GONZZ Q29 WWSHR CBUSS2",
+            "airlines": [
+                {
+                    "icao": "ENY",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "BLZZR",
+            "destination": "KDEN",
+            "altitude": 28000,
+            "route": "BLZZR6 BLZZR BAF Q480 AIR J80 EMPTY J80 VHP J80 MCI J24 OATHE CLASH4",
+            "airlines": [
+                {
+                    "icao": "UAL",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KLAS",
+            "altitude": 30000,
+            "route": "HYLND7 HYLND CAM Q822 GONZZ DJB ARCAB JAAVE STL KK42A LBL KA39U TBC SQIRE RKSTR3",
+            "airlines": [
+                {
+                    "icao": "JBU",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KMSP",
+            "altitude": 34000,
+            "route": "HYLND7 HYLND GOATR Q816 AGDOX Q812 ZOHAN IDIOM MUSCL3",
+            "airlines": [
+                {
+                    "icao": "SCX",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KSEA",
+            "altitude": 32000,
+            "route": "HYLND7 HYLND JOGIM KIXIR BURWA GRIBY YQT KP21A KU21U CHOTE MLP GLASR3",
+            "airlines": [
+                {
+                    "icao": "ASA",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KLAX",
+            "altitude": 32000,
+            "route": "HYLND7 HYLND HANAA Q816 HOCKE GRB ODI FSD J114 DVV ZAKRY Q88 HAKMN ANJLL4",
+            "airlines": [
+                {
+                    "icao": "DAL",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "SSOXS",
+            "destination": "KMCO",
+            "altitude": 34000,
+            "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 ZJAAY Q97 SAWED MOXXY Q85 LPERD GTOUT1",
+            "airlines": [
+                {
+                    "icao": "JBU",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "PATSS",
+            "destination": "MMMX",
+            "altitude": 36000,
+            "route": "PATSS7 PATSS NELIE BIZEX Q75 GVE LYH COLZI AWYAT IPTAY CHOPZ MGM SJI TBD M345 AXEXO UM345 PAZ UT154 ENAGA ENAGA2A",
+            "airlines": [
+                {
+                    "icao": "AMX",
+                    "fleet": "b73x"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KSFO",
+            "altitude": 30000,
+            "route": "HYLND7 HYLND CAM Q822 GONZZ BMPAH HOCKE BAE DBQ OVR GLD JNC SAKES MLF ILC OAL INYOE DYAMD5",
+            "airlines": [
+                {
+                    "icao": "JBU",
+                    "fleet": "long"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KLAX",
+            "altitude": 30000,
+            "route": "HYLND7 HYLND CAM Q822 GONZZ DKK KEEHO DAIFE WHETT MCI GOSSL KK45A KENTO CIM DIXAN TANER INW DRK J231 HIPPI GABBL HLYWD1",
+            "airlines": [
+                {
+                    "icao": "JBU",
+                    "fleet": "long"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KSFO",
+            "altitude": 32000,
+            "route": "HYLND7 HYLND HANAA Q816 GOATR KC81W LEPOS KC81Q WOKNO KG81K MCW KP75E EBIRD KD66Y KD63W EKR LOOLO DTA RUMPS OAL INYOE DYAMD5",
+            "airlines": [
+                {
+                    "icao": "UAL",
+                    "fleet": "short"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KDEN",
+            "altitude": 34000,
+            "route": "HYLND7 HYLND HANAA Q816 GOATR Q816 OMRAK Q816 HOCKE MONEE DBQ OBH BRWRY LAWGR3",
+            "airlines": [
+                {
+                    "icao": "UAL",
+                    "fleet": "short"
+                }
+            ]
+        },
+        {
+            "exit": "REVSS",
+            "destination": "KLAX",
+            "altitude": 34000,
+            "route": "REVSS6 REVSS CTR HNK ULW JHW CXR PIA J96 SLN J102 ALS J110 RSK J64 TBC JASSE Q90 DNERO ANJLL4",
+            "airlines": [
+                {
+                    "icao": "AAL",
+                    "fleet": "short"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KSFO",
+            "altitude": 34000,
+            "route": "HYLND7 HYLND HANAA Q816 HOCKE BAE FOD CYS GAROT INYOE DYAMD5",
+            "airlines": [
+                {
+                    "icao": "ASA",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KSAN",
+            "altitude": 30000,
+            "route": "HYLND7 HYLND CAM Q822 GONZZ DKK KEEHO PNT GBG LOAMY MCI HUT LBL ABQ J18 HOGGZ LUCKI1",
+            "airlines": [
+                {
+                    "icao": "JBU",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "BLZZR",
+            "destination": "KLAX",
+            "altitude": 32000,
+            "route": "BLZZR6 BLZZR BAF Q406 BWZ J6 MRB J6 HVQ J78 FAM SGF LBL CIM J96 DRK J231 HIPPI GABBL HLYWD1",
+            "airlines": [
+                {
+                    "icao": "UAL",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KSFO",
+            "altitude": 34000,
+            "route": "HYLND7 HYLND HANAA Q816 GOATR KC81W YTP KC81Q YZEMN KG81M PKRNA KP81I MCW KP75E EBIRD KD66Y LIBIE KD63U EKR LOOLO DTA RUMPS OAL INYOE DYAMD5",
+            "airlines": [
+                {
+                    "icao": "UAL",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "CELTK",
+            "destination": "EGLL",
+            "altitude": 39000,
+            "route": "CELTK7 CELTK FRILL TUSKY N435A TUDEP 5200N/05000W 5400N/04000W 5500N/03000W 5400N/02000W MALOT GISTI ENJEX AVZAC INFEC JETZI AMFUL OCTIZ P2 SIRIC SIRIC1H",
+            "airlines": [
+                {
+                    "icao": "BAW",
+                    "fleet": "long"
+                }
+            ]
+        },
+        {
+            "exit": "HYLND",
+            "destination": "KSFO",
+            "altitude": 32000,
+            "route": "HYLND7 HYLND HANAA Q816 AGDOX Q816 HOCKE DLL HELLO ZZEEE OBH FQF JNETT SAKES MLF ILC OAL INYOE DYAMD5",
+            "airlines": [
+                {
+                    "icao": "JBU",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "SSOXS",
+            "destination": "KMYR",
+            "altitude": 34000,
+            "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 PAACK WYLMS",
+            "airlines": [
+                {
+                    "icao": "NKS",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "SSOXS",
+            "destination": "MDSD",
+            "altitude": 32000,
+            "route": "SSOXS7 SSOXS Q167 SPDEY Y488 OHRYN Y488 WEBBB Y488 SAUCR L453 LAMER L453 RODRK POKEG UT17 KOBET KOBET2H",
+            "airlines": [
+                {
+                    "icao": "JBU",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "SSOXS",
+            "destination": "MDST",
+            "altitude": 32000,
+            "route": "SSOXS7 SSOXS Q167 SPDEY Y488 OHRYN Y488 WEBBB Y488 SAUCR L453 LAMER L453 RODRK SEKAR SEKAR2P",
+            "airlines": [
+                {
+                    "icao": "JBU",
+                    "fleet": "long"
+                }
+            ]
+        },
+        {
+            "exit": "SSOXS",
+            "destination": "MDSD",
+            "altitude": 35000,
+            "route": "SSOXS7 SSOXS Q167 SPDEY Y488 WEBBB Y488 SAUCR L453 LAMER L453 RODRK POKEG UT17 KOBET KOBET2H",
+            "airlines": [
+                {
+                    "icao": "JBU",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+            "exit": "LFV",
+            "destination": "KACK",
+            "altitude": 5000,
+            "route": "LOGAN4 LFV",
+            "airlines": [
+                {
+                    "icao": "KAP",
+                    "fleet": "usa"
+                }
+            ]
+        },
+        {
+            "exit": "ENE",
+            "destination": "KAUG",
+            "altitude": 6000,
+            "route": "ENE PEASE STEVO LWRNC",
+            "airlines": [
+                {
+                    "icao": "KAP",
+                    "fleet": "usa"
+                }
+            ]
+        },
+        {
+            "exit": "PATSS",
+            "destination": "KLGA",
+            "altitude": 16000,
+            "route": "PATSS7 PATSS NELIE VALRE HAARP4",
+            "airlines": [
+                {
+                    "icao": "AAL",
+                    "fleet": "default"
+                }
+            ]
         }
-      ],
+    ],
       "exit_categories": {
         "BLZZR": "ALL",
         "BRUWN": "ALL",
