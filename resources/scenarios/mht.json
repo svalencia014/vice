@@ -354,8 +354,21 @@
                 }
             },
             "departure_routes": {
-                
-            },
+                "16": {
+                    "CON,WEEZE,STEVO,PEASE": {
+                        "cleared_altitude": 3000,
+                        "sid": "PSM4",
+                        "waypoints": "PSM-34/h220"
+                    }
+                },
+                "34": {
+                    "CON,WEEZE,STEVO,PEASE": {
+                        "cleared_altitude": 3000,
+                        "sid": "PSM4",
+                        "waypoints": "PSM-16/h345"
+                    }
+                }
+            },  
             "departures": [
                 {
                     "airlines": [
