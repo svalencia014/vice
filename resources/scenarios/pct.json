@@ -6,6 +6,31 @@
         "I1": {
           "cifp_id": "I1",
           "tower_controller": "DCA_TWR"
+        },
+        "MTV": {
+          "runway": "1",
+          "tower_controller": "DCA_TWR",
+          "type": "Visual",
+          "full_name": "Mount Vernon Visual Runway 1",
+          "waypoints": [
+            "KATRN/a2500 BADDN/a1600 WWBRG"
+          ]
+        },
+        "R15": {
+          "cifp_id": "R15",
+          "tower_controller": "DCA_TWR"
+        },
+        "R19": {
+          "cifp_id": "R19",
+          "tower_controller": "DCA_TWR"
+        },
+        "R33": {
+          "runway": "33",
+          "tower_controller": "DCA_TWR",
+          "type": "RNAV",
+          "waypoints": [
+            "KATRN/a2500 NADSE/a1700 IDTEK"
+          ]
         }
       },
       "departure_routes": {
@@ -13,7 +38,7 @@
           "SCOOB": {
             "cleared_altitude": 5000,
             "sid": "AMEEE1",
-            "waypoints": "REVGE/a1500+/s220- BEBLE COVTO ALEEX DOGUE/a4000+/s250- GUCER AMEEE/a5000+ COLIN SCOOB"
+            "waypoints": "REVGE/a1500+/s220 BEBLE COVTO ALEEX DOGUE/a4000+/s250 GUCER AMEEE/a5000+ COLIN SCOOB"
           },
           "MAULS": {
             "cleared_altitude": 5000,
@@ -426,7 +451,771 @@
       "tower_list": 2
     }
   },
-  "airspace": {
-    
+  "arrival_groups": {
+    "CAPSS3": [
+      {
+        "airlines": {
+          "KDCA": [
+            {
+              "airport": "KMCO",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KMCO",
+              "fleet": "short",
+              "icao": "AAL"
+            },
+            {
+              "airport": "KMIA",
+              "fleet": "short",
+              "icao": "AAL"
+            },
+            {
+              "airport": "KFLL",
+              "icao": "JBU"
+            },
+            {
+              "airport": "KPBI",
+              "fleet": "short",
+              "icao": "AAL"
+            },
+            {
+              "airport": "KCHS",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KATL",
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "airport": "KCLT",
+              "fleet": "short",
+              "icao": "AAL"
+            },
+            {
+              "airport": "KATL",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KATL",
+              "icao" : "SWA"
+            },
+            {
+              "airport": "KCAE",
+              "icao": "JIA"
+            }
+          ]
+        },
+        "cruise_altitude": 33000,
+        "initial_altitude": 18000,
+        "initial_controller": "DC_36_CTR",
+        "initial_speed": 290,
+        "star": "CAPSS3",
+        "runway_waypoints": {
+          "KDCA": {
+              "1": "CAPSS/a11000 HOYAS/a9000 HALLL KATRN/h008",
+              "4": "CAPSS/a11000 HOYAS/a9000 HALLL KATRN/h008",
+              "15": "CAPSS/a11000 FLIPZ/a11000-/s280 MOEJO/a10000/s250 JILES SMOOT/a7000+ BAAAM/a6000 PACKE/h327",
+              "19": "CAPSS/a11000 FLIPZ/a11000-/s280 MOEJO/a10000/s250 JILES SMOOT/a7000+ BAAAM/a6000 PACKE/h327",
+              "22": "CAPSS/a11000 FLIPZ/a11000-/s280 MOEJO/a10000/s250 JILES SMOOT/a7000+ BAAAM/a6000 PACKE/h327",
+              "33": "CAPSS/a11000 HOYAS/a9000 HALLL KATRN/h008"
+          }
+        },
+        "waypoints": "KSETT/a17000+ ELAPP/a16000/s280/ho BULII/a14000 CAPSS/a11000"
+      }
+    ],
+    "CLIPR3": [
+      {
+        "airlines": {
+          "KDCA": [
+            {
+              "airport": "KJFK",
+              "icao": "EDV"
+            },
+            {
+              "airport": "KJFK",
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "airport": "KJFK",
+              "fleet": "short",
+              "icao": "AAL"
+            },
+            {
+              "airport": "KLGA",
+              "icao": "EDV"
+            },
+            {
+              "airport": "KLGA",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KBOS",
+              "icao": "JBU"
+            },
+            {
+              "airport": "KBOS",
+              "fleet": "short",
+              "icao": "AAL"
+            },
+            {
+              "airport": "KBDL",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KPVD",
+              "icao": "JIA"
+            }
+          ]
+        },
+        "initial_altitude": 14000,
+        "initial_controller": "BWI_B_APP",
+        "initial_speed": 270,
+        "star": "CLIPR3",
+        "runway_waypoints": {
+          "KDCA": {
+              "1":  "EYESS BRUNC FELTY HITEK CAVDI/h187",
+              "4":  "EYESS BRUNC FELTY HITEK CAVDI/h187",
+              "15": "EYESS EDDWD MEGGS NAYES/h327",
+              "19": "EYESS EDDWD MEGGS NAYES/h327",
+              "22": "EYESS EDDWD MEGGS NAYES/h327",
+              "33": "EYESS BRUNC FELTY HITEK CAVDI/h187"
+          }
+        },
+        "waypoints": "CLIPR/a12000 BAL/a10000/s250/ho EYESS"
+      }
+    ],
+    "CLIPR3_MTVN": [
+      {
+        "airlines": {
+          "KDCA": [
+            {
+              "airport": "KJFK",
+              "icao": "EDV"
+            },
+            {
+              "airport": "KJFK",
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "airport": "KJFK",
+              "fleet": "short",
+              "icao": "AAL"
+            },
+            {
+              "airport": "KLGA",
+              "icao": "EDV"
+            },
+            {
+              "airport": "KLGA",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KBOS",
+              "icao": "JBU"
+            },
+            {
+              "airport": "KBOS",
+              "fleet": "short",
+              "icao": "AAL"
+            },
+            {
+              "airport": "KBDL",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KPVD",
+              "icao": "JIA"
+            }
+          ]
+        },
+        "initial_altitude": 14000,
+        "initial_controller": "BWI_B_APP",
+        "initial_speed": 270,
+        "star": "CLIPR3",
+        "runway_waypoints": {
+          "KDCA": {
+              "1":  "BRUNC FELTY HITEK CAVDI/h187",
+              "4":  "BRUNC FELTY HITEK CAVDI/h187",
+              "33": "BRUNC FELTY HITEK CAVDI/h187"
+          }
+        },
+        "waypoints": "CLIPR/a12000 BAL/a10000/s250/ho EYESS BRUNC"
+      }
+    ],
+    "DEALE3": [
+      {
+        "airlines": {
+          "KDCA": [
+            {
+              "airport": "KACY",
+              "icao": "NKS"
+            },
+            {
+              "airport": "KJFK",
+              "icao": "JBU"
+            },
+            {
+              "airport": "KJFK",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KLGA",
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "airport": "KEWR",
+              "fleet": "short",
+              "icao": "UAL"
+            }
+          ]
+        },
+        "initial_altitude": 12000,
+        "initial_controller": "BWI_P_APP",
+        "initial_speed": 280,
+        "star": "DEALE3",
+        "runway_waypoints": {
+          "KDCA": {
+              "1":  "DEALE/a10000/s280/ho YUCKK/a10000 TIRZA/a8000 HITEK/a7000 MITEY/h187",
+              "4":  "DEALE/a10000/s280/ho YUCKK/a10000 TIRZA/a8000 HITEK/a7000 MITEY/h187",
+              "15": "DEALE/a10000/s280/ho EDDGY THANE MEGGS",
+              "19": "DEALE/a10000/s280/ho EDDGY THANE MEGGS",
+              "22": "DEALE/a10000/s280/ho EDDGY THANE MEGGS",
+              "33": "DEALE/a10000/s280/ho YUCKK/a10000 TIRZA/a8000 HITEK/a7000 MITEY/h187"
+          }
+        },
+        "waypoints": "BILIT/a11000 DEALE/a10000/s280/ho"
+      }
+    ],
+    "DEALE3_MTVN": [
+      {
+        "airlines": {
+          "KDCA": [
+            {
+              "airport": "KACY",
+              "icao": "NKS"
+            },
+            {
+              "airport": "KJFK",
+              "icao": "JBU"
+            },
+            {
+              "airport": "KJFK",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KLGA",
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "airport": "KEWR",
+              "fleet": "short",
+              "icao": "UAL"
+            }
+          ]
+        },
+        "initial_altitude": 12000,
+        "initial_controller": "BWI_P_APP",
+        "initial_speed": 280,
+        "star": "DEALE3",
+        "runway_waypoints": {
+          "KDCA": {
+              "1":  "YUCKK/a10000 TIRZA/a8000 HITEK/a7000 MITEY/h187",
+              "4":  "YUCKK/a10000 TIRZA/a8000 HITEK/a7000 MITEY/h187",
+              "33": "YUCKK/a10000 TIRZA/a8000 HITEK/a7000 MITEY/h187"
+          }
+        },
+        "waypoints": "BILIT/a11000 DEALE/a10000/s280/ho YUCKK/a10000"
+      }
+    ],
+    "FRDMM6": [
+      {
+        "airlines": {
+          "KDCA": [
+            {
+              "airport": "KMDW",
+              "icao": "SWA"
+            },
+            {
+              "airport": "KORD",
+              "fleet": "short",
+              "icao": "UAL"
+            },
+            {
+              "airport": "KORD",
+              "fleet": "short",
+              "icao": "AAL"
+            },
+            {
+              "airport": "KMSP",
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "airport": "KMSP",
+              "icao": "SWA"
+            },
+            {
+              "airport": "KMKE",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KDEN",
+              "fleet": "short",
+              "icao": "UAL"
+            },
+            {
+              "airport": "KDEN",
+              "icao": "SWA"
+            },
+            {
+              "airport": "KCLE",
+              "fleet": "short",
+              "icao": "UAL"
+            },
+            {
+              "airport": "KCLE",
+              "fleet": "short",
+              "icao": "AAL"
+            }
+          ]
+        },
+        "initial_altitude": 20000,
+        "initial_controller": "DC_01_CTR",
+        "initial_speed": 280,
+        "star": "FRDMM6",
+        "runway_waypoints": {
+          "KDCA": {
+              "1":  "ALWYZ/a10000- LETZZ/a8000 RLLLL/a6000/s250 VCTRY HEROO",
+              "4":  "ALWYZ/a10000- LETZZ/a8000 RLLLL/a6000/s250 VCTRY HEROO",
+              "15": "ALWYZ/a10000- FRDMM/a8000/s240 STAND TGTHR FERGI/h148",
+              "19": "ALWYZ/a10000- FRDMM/a8000/s240 STAND TGTHR FERGI/h148",
+              "22": "ALWYZ/a10000- FRDMM/a8000/s240 STAND TGTHR FERGI/h148",
+              "33": "ALWYZ/a10000- LETZZ/a8000 RLLLL/a6000/s250 VCTRY HEROO"
+          }
+        },
+        "waypoints": "COURG/a20000-23000/s280 PLDGE/a15000-17000/s280/ho WEWIL/a14000+ NEVVR/a12000+ FORGT/a11000+/s250 SEPII/a10000 ALWYZ/a10000-"
+      }
+    ],
+    "TRUPS4": [
+      {
+        "airlines": {
+          "KDCA": [
+            {
+              "airport" : "KATL",
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "airport": "KATL",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KCLT",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KSDF",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KBNA",
+              "icao": "SWA"
+            },
+            {
+              "airport": "KBNA",
+              "icao": "JIA"
+            },
+            {
+              "airport": "KMEM",
+              "icao": "JIA"
+            }
+          ]
+        },
+        "initial_altitude": 18000,
+        "initial_controller": "DC_01_CTR",
+        "initial_speed": 280,
+        "star": "TRUPS4",
+        "runway_waypoints": {
+          "KDCA": {
+              "1":  "TRUPS/a11000/s250 LETZZ/a8000 RLLLL/a6000/s250 VCTRY HEROO/h189",
+              "4":  "TRUPS/a11000/s250 LETZZ/a8000 RLLLL/a6000/s250 VCTRY HEROO/h189",
+              "15": "TRUPS/a11000/s250 FRDMM/a8000/s240 STAND TGTHR FERGI/h148",
+              "19": "TRUPS/a11000/s250 FRDMM/a8000/s240 STAND TGTHR FERGI/h148",
+              "22": "TRUPS/a11000/s250 FRDMM/a8000/s240 STAND TGTHR FERGI/h148",
+              "33": "TRUPS/a11000/s250 LETZZ/a8000 RLLLL/a6000/s250 VCTRY HEROO/h189"
+          }
+        },
+        "waypoints": "USAAY/a17000-21000/s280 WEEDU/a16000-19000/ho SUPRT/a14000-17000/s280 OOURR/a13000-/s250 TRUPS/a11000/s250"
+      }
+    ]
+  },
+  "control_positions": {
+    "DC_01_CTR": {
+      "frequency": 128600,
+      "full_name": "Washington Center",
+      "facility_id": "C",
+      "eram_facility": true,
+      "scope_char": "C",
+      "sector_id": "C01"
+    },
+    "DC_19_CTR": {
+      "frequency": 125450,
+      "full_name": "Washington Center",
+      "facility_id": "C",
+      "eram_facility": true,
+      "scope_char": "C",
+      "sector_id": "C19"
+    },
+    "DC_32_CTR": {
+      "frequency": 133720,
+      "full_name": "Washington Center",
+      "facility_id": "C",
+      "eram_facility": true,
+      "scope_char": "C",
+      "sector_id": "C32"
+    },
+    "DC_36_CTR": {
+      "frequency": 118925,
+      "full_name": "Washington Center",
+      "facility_id": "C",
+      "eram_facility": true,
+      "scope_char": "C",
+      "sector_id": "C36"
+    },
+    "DCA_J_APP": {
+      "frequency": 119850,
+      "full_name": "Washington Approach",
+      "scope_char": "J",
+      "sector_id": "1J"
+    },
+    "DCA_E_APP": {
+      "frequency": 124200,
+      "full_name": "Washington Approach",
+      "scope_char": "E",
+      "sector_id": "1E"
+    },
+    "DCA_D_APP": {
+      "frequency": 128350,
+      "full_name": "Washington Approach",
+      "scope_char": "D",
+      "sector_id": "1D"
+    },
+    "DCA_L_APP": {
+      "frequency": 118675,
+      "full_name": "Washington Approach",
+      "scope_char": "L",
+      "sector_id": "1L"
+    },
+    "DCA_V_APP": {
+      "frequency": 124700,
+      "full_name": "Washington Approach",
+      "scope_char": "V",
+      "sector_id": "1V"
+    },
+    "DCA_F_APP": {
+      "frequency": 121050,
+      "full_name": "Washington Approach",
+      "scope_char": "F",
+      "sector_id": "1F"
+    },
+    "DCA_Y_APP": {
+      "frequency": 118950,
+      "full_name": "Washington Approach",
+      "scope_char": "Y",
+      "sector_id": "1Y"
+    },
+    "DCA_K_APP": {
+      "frequency": 125650,
+      "full_name": "Washington Approach",
+      "scope_char": "K",
+      "sector_id": "1K"
+    },
+    "DCA_A_APP": {
+      "frequency": 128000,
+      "full_name": "Washington Approach",
+      "scope_char": "A",
+      "sector_id": "1A"
+    },
+    "BWI_B_APP": {
+      "frequency": 125525,
+      "full_name": "Baltimore Approach",
+      "scope_char": "B",
+      "sector_id": "1B"
+    },
+    "BWI_P_APP": {
+      "frequency": 133750,
+      "full_name": "Baltimore Approach",
+      "scope_char": "P",
+      "sector_id": "1P"
+    },
+    "DCA_TWR": {
+      "frequency": 119100,
+      "full_name": "Washington Tower",
+      "scope_char": "T",
+      "sector_id": "4T"
+    }
+  },
+  "default_scenario": "DCA North",
+  "fixes": {
+    "WWBRG": "N038.48.16.806,W077.01.54.669"
+  },
+  "name": "KDCA",
+  "primary_airport": "KDCA",
+  "scenarios": {
+    "DCA North": {
+      "arrival_runways": [
+        {
+          "airport": "KDCA",
+          "runway": "1"
+        },
+        {
+          "airport": "KDCA",
+          "runway": "33"
+        }
+      ],
+      "arrivals": {
+        "CAPSS3": {
+          "KDCA": 15
+        },
+        "CLIPR3_MTVN": {
+          "KDCA": 10
+        },
+        "DEALE3_MTVN": {
+          "KDCA": 10
+        },
+        "FRDMM6": {
+          "KDCA": 10
+        },
+        "TRUPS4": {
+          "KDCA": 10
+        }
+      },
+      "solo_controller": "DCA_J_APP",
+      "multi_controllers": {
+        "default": {
+          "DCA_J_APP": { "primary": true, "departures": ["KDCA/1"], "arrivals": ["CAPSS3", "DEALE3_MTVN"]},
+          "DCA_E_APP": { "backup": "DCA_J_APP" },
+          "DCA_D_APP": { "backup": "DCA_K_APP" },
+          "DCA_L_APP": { "backup": "DCA_J_APP", "arrivals": ["FRDMM6", "TRUPS4"] },
+          "DCA_V_APP": { "backup": "DCA_J_APP" },
+          "DCA_F_APP": { "backup": "DCA_Y_APP" },
+          "DCA_Y_APP": { "backup": "DCA_J_APP" },
+          "DCA_K_APP": { "backup": "DCA_J_APP", "arrivals": ["CLIPR3_MTVN"] },
+          "DCA_A_APP": { "backup": "DCA_K_APP" }
+        }
+      },
+      "controllers": [
+        "DC_01_CTR",
+        "DC_19_CTR",
+        "DC_32_CTR",
+        "DCA_J_APP"
+      ],
+      "default_maps": [ "MTV North" ],
+      "wind": {
+        "direction": 30,
+        "gust": 12,
+        "speed": 7
+      },
+      "departure_runways": [
+        {
+          "airport": "KDCA",
+          "rate": 10,
+          "runway": "1"
+        }
+      ]
+    }
+  },
+  "stars_config": {
+    "airspace_awareness": [
+      {
+        "fixes": [
+          "RAMAY",
+          "OTTTO"
+        ],
+        "altitude_range": [
+          10000,
+          99000
+        ],
+        "receiving_controller": "DC_01_CTR"
+      },
+      {
+        "fixes": [
+          "COLIN",
+          "AMEEE",
+          "DOCTR",
+          "SOOKI"
+        ],
+        "altitude_range": [
+          10000,
+          99000
+        ],
+        "receiving_controller": "DC_19_CTR"
+      },
+      {
+        "fixes": [
+          "CLTCH",
+          "JDUBB",
+          "SCRAM"
+        ],
+        "altitude_range": [
+          10000,
+          99000
+        ],
+        "receiving_controller": "DC_32_CTR"
+      },
+      {
+        "fixes": [
+          "JERES",
+          "BUFFR",
+          "MCRAY"
+        ],
+        "altitude_range": [
+          10000,
+          99000
+        ],
+        "receiving_controller": "BWI_B_APP"
+      }
+    ],
+    "center": "KDCA",
+    "force_ql_self": true,
+    "scratchpads": {
+      "SCOOB": "AME",
+      "MAULS": "CLH",
+      "FLASK": "CLH",
+      "DQO": "DQO",
+      "AGARD": "DCR",
+      "JERES": "JS1",
+      "BUFFR": "BFR",
+      "RRSIN": "JDB",
+      "MELTN": "JDB",
+      "OTTTO": "OTO",
+      "GLANC": "SCM",
+      "SWANN": "SOK",
+      "RAMAY": "RAM"
+    },
+    "stars_maps": [
+      {
+        "group": 0,
+        "label": "MNORTH",
+        "name": "MTV North"
+      },
+      {
+        "group": 0,
+        "label": "MSOUTH",
+        "name": "MTV South"
+      },
+      {
+        "group": 0,
+        "label": "MADWN",
+        "name": "MTV ADWN"
+      },
+      {
+        "group": 0,
+        "label": "ADW S",
+        "name": "ADW South"
+      },
+      {
+        "group": 1,
+        "label": "ACOAST",
+        "name": "PCT Coastlines"
+      },
+      {
+        "group": 1,
+        "label": "MRIVER",
+        "name": "MTV River"
+     },
+      {
+        "group": 1,
+        "label": "ASFRA",
+        "name": "PCT SFRA"
+      },
+      {
+        "group": 1,
+        "label": "AMVA",
+        "name": "PCT MVA"
+      },
+      {
+        "group": 1,
+        "label": "MDANSR",
+        "name": "MTV DCA NSTAR"
+      },
+      {
+        "group": 1,
+        "label": "MDCASSR",
+        "name": "MTV DCA SSTAR"
+      },
+      {
+        "group": 1,
+        "label": "ABRAVO",
+        "name": "PCT ClassB"
+      },
+      {
+        "group": 1,
+        "label": "MDCANSD",
+        "name": "MTV DCA NSID"
+      },
+      {
+        "group": 1,
+        "label": "MDCASSD",
+        "name": "MTV DCA SSID"
+      },
+      {
+        "group": 1,
+        "label": "MADWSTR",
+        "name": "MTV ADW STAR"
+      },
+      {
+        "group": 1,
+        "label": "MADWSID",
+        "name": "MTV ADW SID"
+      },
+      {
+        "group": 1,
+        "label": "MBWISTR",
+        "name": "MTV BWI STAR"
+      },
+      {
+        "group": 1,
+        "label": "MCGSRNV",
+        "name": "MTV CGS RNAV"
+      },
+      {
+        "group": 0,
+        "label": "MDCAR33",
+        "name": "MTV DCA R33"
+      },
+      {
+        "group": 1,
+        "label": "MDCATCT",
+        "name": "MTV DCATCT"
+      },
+      {
+        "group": 1,
+        "label": "MOTHSID",
+        "name": "MTV Other SID"
+      },
+      {
+        "group": 1,
+        "label": "MRIVER",
+        "name": "MTV River"
+      },
+      {
+        "group": 1,
+        "label": "AARPT",
+        "name": "PCT Airport"
+      },
+      {
+        "group": 1,
+        "label": "ADELTA",
+        "name": "PCT ClassD"
+      }
+    ],
+    "video_map_file": "videomaps/ZDC-videomaps.json.zst"
   }
 }
