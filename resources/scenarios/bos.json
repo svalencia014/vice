@@ -3288,7 +3288,7 @@
         "MANCH": "ALL",
         "PVC": "ALL"
       },
-      "tower_list": 2
+      "tower_list": 1
     }
   },
   "airspace": {
@@ -4580,8 +4580,8 @@
    "scratchpads": {
     "BLZZR": "BLZ",
     "BRUWN": "BRU",
-    "CELTK": "CEL",
-    "HYLND": "HYL",
+    "CELTK": "FRI",
+    "HYLND": "LUR",
     "LBSTA": "LBS",
     "PATSS": "PAT",
     "REVSS": "REV",
