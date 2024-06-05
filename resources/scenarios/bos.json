@@ -146,9 +146,19 @@
             "cleared_altitude": 5000,
             "sid": "SSOXS6",
             "waypoints": "CLAWW/s250 FENWY BUCYK JSTER"
+          },
+          "PEASE,PVC,LFV,DUNKK,MANCH": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-27/h092"
           }
         },
         "15R": {
+          "PEASE,PVC,LFV,DUNKK,MANCH": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-33L/h120"
+          },
           "BLZZR": {
             "cleared_altitude": 5000,
             "sid": "BLZZR5",
@@ -230,6 +240,11 @@
             "cleared_altitude": 5000,
             "sid": "SSOXS6",
             "waypoints": "TJAYY BRRRO/s250 BUCYK JSTER"
+          },
+          "PEASE,PVC,LFV,DUNKK,MANCH": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-4R/h140"
           }
         },
         "33L": {
@@ -272,6 +287,11 @@
             "cleared_altitude": 5000,
             "sid": "SSOXS6",
             "waypoints": "TEKKK COUSY CBEAR COLYN"
+          },
+          "PEASE,PVC,LFV,DUNKK,MANCH": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-15R/h316"
           }
         }
       },
@@ -2125,18 +2145,6 @@
               ]
           },
           {
-              "exit": "HYLND",
-              "destination": "KMSS",
-              "altitude": 20000,
-              "route": "LOGAN4 HYLND",
-              "airlines": [
-                  {
-                      "icao": "BTQ",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
               "exit": "SSOXS",
               "destination": "KRIC",
               "altitude": 26000,
@@ -3105,18 +3113,6 @@
                   {
                       "icao": "KAP",
                       "fleet": "usa"
-                  }
-              ]
-          },
-          {
-              "exit": "HYLND",
-              "destination": "KMSS",
-              "altitude": 18000,
-              "route": "LOGAN4 HYLND",
-              "airlines": [
-                  {
-                      "icao": "BTQ",
-                      "fleet": "default"
                   }
               ]
           },
@@ -4550,16 +4546,6 @@
       "center": "N042.23.05.581,W071.00.43.615"
     }
    ],
-   "radar_sites": {
-     "KMLB": {
-       "char": "B",
-       "position": "KBOS",
-       "elevation": 150,
-       "primary_range": 60,
-       "secondary_range": 120,
-       "slope_angle": 0.175
-     }
-   },
     "allow_long_scratchpad": [false, false],
     "force_ql_self": true,
     "airspace_awareness": [
