@@ -253,7 +253,7 @@
                     ],
                     "destination": "KHYA",
                     "exit": "MANCH",
-                    "cruise_altitude": 7000,
+                    "altitude": 7000,
                     "route": "MANCH BOS V141 DUNKK"
                 },
                 {
