@@ -3156,14 +3156,14 @@
         },
         "departure_routes": {
             "11": {
-                "BLZZR": {
+                "BLZZR,SSOXS,REVSS,CELTK": {
                     "cleared_altitude": 2000,
                     "sid": "HNSCM5",
                     "waypoints": "KBED-29/h050"
                 }
             },
             "29": {
-                "BLZZR": {
+                "BLZZR,SSOXS,REVSS,CELTK": {
                     "cleared_altitude": 2000,
                     "sid": "HNSCM5",
                     "waypoints": "KBED-11/h290"
@@ -3180,9 +3180,36 @@
                         "icao": "EJA"
                     }
                 ],
-                "descent_altitude": "KCHS",
+                "destination": "KCHS",
                 "exit": "SSOXS",
                 "route": "SSOXS Q167 RIFLE HEADI Q97 SAWED DFENC Q109 LAANA AMYLU AMYLU3"
+            },
+            {
+                "airlines": [
+                    {
+                        "icao": "EJA"
+                    },
+                    {
+                        "icao": "LXJ"
+                    }
+                ],
+                "destination": "LFPG",
+                "exit": "CELTK",
+                "route": "CELTK FRILL BRADD N197A NICSO 4800N/05000W 5100N/04000W 5300N/03000W 5300N/02000W MALOT GISTI LEDGO BOGMI ANNET UM25 INGOR UZ297 PEXIR PEXIR9W"
+            },
+            {
+                "airlines": [
+                    {
+                        "icao": "N",
+                        "fleet": "fastGA"
+                    },
+                    {
+                        "icao": "LXJ"
+                    }
+                ],
+                "destination": "KTEB",
+                "exit": "REVSS",
+                "route": "REVSS BAF MOBBS T295 SAGES V489 COATE"
             }
         ]
     }
@@ -3920,7 +3947,7 @@
             "initial_speed": 250,
             "initial_controller": "BOS_37_CTR",
             "star": "ZELKA2",
-            "waypoints": "HAUKS/a14000+/ho WORIA/a1100-13000 BCATS/a8000-9000 GOLEE/a6000 ZELKA RIKAH/a6000/s210 EXXRO/a6000/s210"
+            "waypoints": "HAUKS/a14000+/ho WORIA/a11000-13000 BCATS/a8000-9000 GOLEE/a6000 ZELKA RIKAH/a6000/s210 EXXRO/a6000/s210"
         }
     ],
     "DREEM2": [
@@ -4163,6 +4190,12 @@
       "scope_char": "T",
       "sector_id": "1G"
     },
+    "BED_TWR": {
+        "frequency": 118500,
+        "full_name": "Bedford Tower",
+        "scope_char": "T",
+        "sector_id": "1C"
+    },
     "BOS_W_TWR": {
       "frequency": 128800,
       "full_name": "Boston Tower",
@@ -4250,6 +4283,318 @@
    "name": "KBOS",
    "primary_airport": "KBOS",
    "scenarios": {
+    "KBOS Land 4R/L Depart 9 + KBED East": {
+      "approach_airspace": [
+        "BOS_APP4R"
+      ],
+      "arrival_runways": [
+        {
+          "airport": "KBOS",
+          "runway": "4R"
+        },
+        {
+          "airport": "KBOS",
+          "runway": "4L"
+        },
+        {
+            "airport": "KBED",
+            "runway": "11"
+        }
+      ],
+      "arrivals": {
+        "JFUND2": {
+          "KBOS": 15
+        },
+        "ROBUC3": {
+          "KBOS": 25
+        },
+        "OOSHN5": {
+          "KBOS": 10
+        },
+        "ORW7": {
+          "KBOS": 3
+        },
+        "DREEM2": {
+            "KBED": 3
+        },
+        "ZELKA2": {
+            "KBED": 5
+        }
+      },
+      "solo_controller": "BOS_APP",
+        "multi_controllers": {
+            "default" : {
+                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_F_APP": {"backup": "BOS_N_APP"},
+                "BOS_I_APP": {"backup": "BOS_F_APP"},
+                "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
+                "BOS_U_APP": {"backup": "BOS_B_APP"},
+                "BOS_L_APP": {"backup": "BOS_U_APP"}
+            }
+        },
+      "controllers": [
+        "BOS_E_TWR",
+        "BOS_W_TWR",
+        "BOS_37_CTR"
+      ],
+      "default_maps": [ "BOS A90 MAIN" ],
+      "departure_airspace": [
+        "BOS_APP4R"
+      ],
+      "departure_runways": [
+        {
+          "airport": "KBOS",
+          "rate": 45,
+          "runway": "9",
+          "category": "ALL"
+        },
+        {
+            "airport": "KBED",
+            "rate": 10,
+            "runway": "11"
+        }
+      ],
+      "wind": {
+        "direction": 110,
+        "speed": 10
+      }
+    },
+    "KBOS Land 27/22L Depart 22R + KBED West": {
+      "approach_airspace": [
+        "BOS_APP"
+      ],
+      "arrival_runways": [
+        {
+          "airport": "KBOS",
+          "runway": "27"
+        },
+        {
+          "airport": "KBOS",
+          "runway": "22L"
+        },
+        {
+            "airport": "KBED",
+            "runway": "23"
+        },
+        {
+            "airport": "KBED",
+            "runway": "29"
+        }
+      ],
+      "arrivals": {
+        "JFUND2": {
+          "KBOS": 15
+        },
+        "ROBUC3": {
+          "KBOS": 25
+        },
+        "OOSHN5": {
+          "KBOS": 10
+        },
+        "ORW7": {
+          "KBOS": 3
+        },
+    "DREEM2": {
+        "KBED": 3
+    },
+    "ZELKA2": {
+        "KBED": 5
+    }
+      },
+      "solo_controller": "BOS_APP",
+        "multi_controllers": {
+            "default" : {
+                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_F_APP": {"backup": "BOS_N_APP"},
+                "BOS_I_APP": {"backup": "BOS_F_APP"},
+                "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
+                "BOS_U_APP": {"backup": "BOS_B_APP"},
+                "BOS_L_APP": {"backup": "BOS_U_APP"}
+            }
+        },
+      "controllers": [
+        "BOS_E_TWR",
+        "BOS_W_TWR",
+        "BOS_37_CTR"
+      ],
+      "default_maps": [ "BOS A90 MAIN" ],
+      "departure_airspace": [
+        "BOS_APP"
+      ],
+      "departure_runways": [
+        {
+          "airport": "KBOS",
+          "rate": 45,
+          "runway": "22R",
+          "category": "ALL"
+        },
+        {
+            "airport": "KBED",
+            "rate": 10,
+            "runway": "29"
+        }
+      ],
+      "wind": {
+        "direction": 230,
+        "speed": 10
+      }
+    },
+    "KBOS Land 27 Depart 33L + KBED West": {
+      "approach_airspace": [
+        "BOS_APP"
+      ],
+      "arrival_runways": [
+        {
+          "airport": "KBOS",
+          "runway": "27"
+        },
+        {
+            "airport": "KBED",
+            "runway": "29"
+        },
+        {
+            "airport": "KBED",
+            "runway": "23"
+        }
+      ],
+      "arrivals": {
+        "JFUND2": {
+          "KBOS": 15
+        },
+        "ROBUC3": {
+          "KBOS": 25
+        },
+        "OOSHN5": {
+          "KBOS": 10
+        },
+        "ORW7": {
+          "KBOS": 3
+        },
+        "DREEM2": {
+            "KBED": 3
+        },
+        "ZELKA2": {
+            "KBED": 5
+        }
+      },
+      "solo_controller": "BOS_APP",
+        "multi_controllers": {
+            "default" : {
+                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_F_APP": {"backup": "BOS_N_APP"},
+                "BOS_I_APP": {"backup": "BOS_F_APP"},
+                "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
+                "BOS_U_APP": {"backup": "BOS_B_APP"},
+                "BOS_L_APP": {"backup": "BOS_U_APP"}
+            }
+        },
+      "controllers": [
+        "BOS_E_TWR",
+        "BOS_W_TWR",
+        "BOS_37_CTR"
+      ],
+      "default_maps": [ "BOS A90 MAIN" ],
+      "departure_airspace": [
+        "BOS_APP"
+      ],
+      "departure_runways": [
+        {
+          "airport": "KBOS",
+          "rate": 45,
+          "runway": "33L",
+          "category": "ALL"
+        },
+        {
+            "airport": "KBED",
+            "rate": 10,
+            "runway": "29"
+        }
+      ],
+      "wind": {
+        "direction": 290,
+        "speed": 2
+      }
+    },
+    "KBOS Land 15R Depart 15R + KBED East": {
+      "approach_airspace": [
+        "BOS_APP"
+      ],
+      "arrival_runways": [
+        {
+          "airport": "KBOS",
+          "runway": "15R"
+        },
+        {
+            "airport": "KBED",
+            "runway": "11"
+        }
+      ],
+      "arrivals": {
+        "JFUND2": {
+          "KBOS": 15
+        },
+        "ROBUC3": {
+          "KBOS": 25
+        },
+        "OOSHN5": {
+          "KBOS": 10
+        },
+        "ORW7": {
+          "KBOS": 3
+        },
+        "DREEM2": {
+            "KBED": 3
+        },
+        "ZELKA2": {
+            "KBED": 5
+        }
+      },
+      "solo_controller": "BOS_APP",
+        "multi_controllers": {
+            "default" : {
+                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_F_APP": {"backup": "BOS_N_APP"},
+                "BOS_I_APP": {"backup": "BOS_F_APP"},
+                "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
+                "BOS_U_APP": {"backup": "BOS_B_APP"},
+                "BOS_L_APP": {"backup": "BOS_U_APP"}
+            }
+        },
+      "controllers": [
+        "BOS_E_TWR",
+        "BOS_W_TWR",
+        "BOS_37_CTR"
+      ],
+      "default_maps": [ "BOS A90 MAIN" ],
+      "departure_airspace": [
+        "BOS_APP"
+      ],
+      "departure_runways": [
+        {
+          "airport": "KBOS",
+          "rate": 45,
+          "runway": "15R",
+          "category": "ALL"
+        },
+        {
+            "airport": "KBED",
+            "rate": 10,
+            "runway": "11"
+        }
+      ],
+      "wind": {
+        "direction": 130,
+        "speed": 10
+      }
+    },
     "KBOS Land 4R/L Depart 9": {
       "approach_airspace": [
         "BOS_APP4R"

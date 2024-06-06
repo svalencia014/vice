@@ -4528,6 +4528,12 @@
       "scope_char": "T",
       "sector_id": "1G"
     },
+    "BED_TWR": {
+        "frequency": 121700,
+        "full_name": "Bedford Tower",
+        "scope_char": "T",
+        "sector_id": "1C"
+    },
     "BOS_W_TWR": {
       "frequency": 128800,
       "full_name": "Boston Tower",
