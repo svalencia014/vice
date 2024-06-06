@@ -3128,6 +3128,63 @@
         "ENE": "AAL"
       },
       "tower_list": 1
+    },
+    "KBED": {
+        "name": "Bedford Hanscom Field",
+        "approaches": {
+            "I11": {
+                "cifp_id": "I11"
+            },
+            "I29": {
+                "cifp_id": "I29"
+            },
+            "R23": {
+                "cifp_id": "R23"
+            },
+            "Y11": {
+                "cifp_id": "RY11"
+            },
+            "Y29": {
+                "cifp_id": "RY29"
+            },
+            "Z11": {
+                "cifp_id": "RZ11"
+            },
+            "Z29": {
+                "cifp_id": "RZ29"
+            }
+        },
+        "departure_routes": {
+            "11": {
+                "BLZZR": {
+                    "cleared_altitude": 2000,
+                    "sid": "HNSCM5",
+                    "waypoints": "KBED-29/h050"
+                }
+            },
+            "29": {
+                "BLZZR": {
+                    "cleared_altitude": 2000,
+                    "sid": "HNSCM5",
+                    "waypoints": "KBED-11/h290"
+                }
+            }
+        },
+        "departures": [
+            {
+                "airlines":  [
+                    {
+                        "icao": "LXJ"
+                    },
+                    {
+                        "icao": "EJA"
+                    }
+                ],
+                "descent_altitude": "KCHS",
+                "exit": "SSOXS",
+                "route": "SSOXS Q167 RIFLE HEADI Q97 SAWED DFENC Q109 LAANA AMYLU AMYLU3"
+            }
+        ]
     }
   },
   "airspace": {
@@ -3839,6 +3896,65 @@
         "speed_restriction": 250,
         "waypoints": "EURRO/a10000+ OOSHN/a9000-14000/s250/ho"
       }
+    ],
+    "ZELKA2": [
+        {
+            "airlines": {
+                "KBED": [
+                    {
+                        "airport": "KSAT",
+                        "icao": "LXJ"
+                    },
+                    {
+                        "airport": "KSAT",
+                        "icao": "EJA"
+                    },
+                    {
+                        "airport": "KSAT",
+                        "icao": "N",
+                        "fleet": "fastGA"
+                    }
+                ]
+            },
+            "initial_altitude": 14000,
+            "initial_speed": 250,
+            "initial_controller": "BOS_37_CTR",
+            "star": "ZELKA2",
+            "waypoints": "HAUKS/a14000+/ho WORIA/a1100-13000 BCATS/a8000-9000 GOLEE/a6000 ZELKA RIKAH/a6000/s210 EXXRO/a6000/s210"
+        }
+    ],
+    "DREEM2": [
+        {
+            "airlines": {
+                "KBED": [
+                    {
+                        "airport": "KSAT",
+                        "icao": "LXJ"
+                    },
+                    {
+                        "airport": "KSAT",
+                        "icao": "EJA"
+                    },
+                    {
+                        "airport": "KSAT",
+                        "icao": "N",
+                        "fleet": "fastGA"
+                    }
+                ]
+            },
+            "initial_altitude": 11000,
+            "initial_controller": "BOS_37_CTR",
+            "initial_speed": 250,
+            "star": "DREEM2",
+            "runway_waypoints": {
+                "KBED": {
+                    "11": "DREEM WANLA ZELKA/flyover",
+                    "23": "DREEM RIKAH EXXRO/h097",
+                    "29": "DREEM RIKAH EXXRO/h097"
+                }
+            },
+            "waypoints": "DVANY/a11000 GRAYM/ho GASSE/a5000 DREEM"
+        }
     ],
     "ROBUC3": [
       {
