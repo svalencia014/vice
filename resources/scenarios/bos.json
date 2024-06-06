@@ -2,6 +2,58 @@
   "tracon": "A90",
   "airports": {
     "KBOS": {
+        "atpa_volumes": {
+                "4R": {
+                    "runway_threshold": "KBOS-4R",
+                    "heading": 35,
+                    "max_heading_deviation": 90,
+                    "floor": 100,
+                    "ceiling": 7000,
+                    "length": 40,
+                    "left_width": 3000,
+                    "right_width": 2500
+                },
+                "22L": {
+                    "runway_threshold": "KBOS-22L",
+                    "heading": 215,
+                    "max_heading_deviation": 90,
+                    "floor": 100,
+                    "ceiling": 7000,
+                    "length": 40,
+                    "left_width": 3000,
+                    "right_width": 2500
+                },
+                "27": {
+                    "runway_threshold": "KBOS-27",
+                    "heading": 272,
+                    "max_heading_deviation": 90,
+                    "floor": 100,
+                    "ceiling": 7000,
+                    "length": 40,
+                    "left_width": 3000,
+                    "right_width": 2500
+                },
+                "15R": {
+                    "runway_threshold": "KBOS-15R",
+                    "heading": 150,
+                    "max_heading_deviation": 90,
+                    "floor": 100,
+                    "ceiling": 7000,
+                    "length": 40,
+                    "left_width": 3000,
+                    "right_width": 2500
+                },
+                "33L": {
+                    "runway_threshold": "KBOS-33L",
+                    "heading": 330,
+                    "max_heading_deviation": 90,
+                    "floor": 100,
+                    "ceiling": 7000,
+                    "length": 40,
+                    "left_width": 3000,
+                    "right_width": 2500
+                }
+            },
       "approaches": {
         "I4R": {
           "cifp_id": "I4R",
