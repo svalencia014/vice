@@ -4909,6 +4909,121 @@
             "speed": 10
         }
         },
+        "KBOS Land 27/22L Depart 22R KMHT South + Sat": {
+            "arrival_runways": [
+                {
+                    "airport": "KBOS",
+                    "runway": "27"
+                },
+                {
+                    "airport": "KBOS",
+                    "runway": "22L"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "17"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "24"
+                },
+                {
+                    "airport": "KPSM",
+                    "runway": "16"
+                },
+                {
+                    "airport": "KBED",
+                    "runway": "11"
+                }
+            ],
+            "arrivals": {
+                "JFUND2": {
+                    "KBOS": 10
+                },
+                "ROBUC3": {
+                      "KBOS": 15
+                 },
+                 "OOSHN5": {
+                     "KBOS": 5
+                 },
+                 "ORW7": {
+                     "KBOS": 1
+                 },
+                 "ROZZE2": {
+                    "KMHT": 5
+                },
+                "ENE": {
+                    "KMHT": 3,
+                    "KPSM": 3
+                },
+                "CON": {
+                    "KMHT": 3,
+                    "KPSM": 3
+                },
+                "GDM": {
+                    "KMHT": 2,
+                    "KPSM": 5
+                },
+                "DREEM2": {
+                    "KBED": 3
+                },
+                "ZELKA2": {
+                    "KBED": 5
+                }
+            },
+            "solo_controller": "BOS_DEP",
+            "multi_controllers": {
+            "default" : {
+                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_F_APP": {"backup": "BOS_N_APP"},
+                "BOS_I_APP": {"backup": "BOS_F_APP"},
+                "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals":["DREEM2", "ZELKA2"]},
+                "BOS_U_APP": {"backup": "BOS_B_APP"},
+                "BOS_L_APP": {"backup": "BOS_U_APP"},
+                "MHT_J_APP": {"backup": "BOS_DEP", "departures": ["KMHT"]},
+                "MHT_Z_APP": {"backup": "MHT_J_APP"},
+                "MHT_E_APP": {"backup": "MHT_Z_APP", "arrivals":["ENE"]},
+                "MHT_P_APP": {"backup": "MHT_E_APP", "departures":["KPSM"]},
+                "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM", "ROZZE2"]}
+            }
+        },
+        "controllers": [
+            "BOS_37_CTR",
+            "BOS_E_TWR",
+            "BOS_W_TWR",
+            "MHT_TWR",
+            "PSM_TWR"
+        ],
+        "default_maps": ["A90 BASE", "BOS 4R/L"],
+        "departure_runways": [
+            {
+                "airport" : "KBOS",
+                "rate": 35,
+                "runway": "9"
+            },
+            {
+                "airport": "KMHT",
+                "rate": 20,
+                "runway": "17"
+            },
+            {
+                "airport": "KPSM",
+                "rate": 10,
+                "runway": "16"
+            },
+            {
+                "airport": "KBED",
+                "rate": 10,
+                "runway": "11"
+            }
+        ],
+        "wind": {
+            "direction": 110,
+            "speed": 10
+        }
+        },
         "BOS Land 4R/L Dep 9 KMHT South": {
             "arrival_runways": [
                 {
