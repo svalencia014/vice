@@ -545,7 +545,7 @@
                     ]
                 },
                 "initial_altitude": 15000,
-                "initial_controller": "BOS_CTR",
+                "initial_controller": "BOS_37_CTR",
                 "initial_speed": 280,
                 "star": "ROZZE2",
                 "runway_waypoints": {
@@ -608,7 +608,7 @@
                     ]
                 },
                 "initial_altitude": 7000,
-                "initial_controller": "BOS_CTR",
+                "initial_controller": "BOS_37_CTR",
                 "initial_speed": 250,
                 "route": "BTSEE SCARB ENE",
                 "waypoints": "BTSEE SCARB/ho",
@@ -675,7 +675,7 @@
                     ]
                 },
                 "initial_altitude": 11000,
-                "initial_controller": "BOS_CTR",
+                "initial_controller": "BOS_37_CTR",
                 "initial_speed": 280,
                 "route": "KJOHN CAMTN CON",
                 "waypoints": "KJOHN/ho CAMTN",
@@ -742,7 +742,7 @@
                     ]
                 },
                 "initial_altitude": 9000,
-                "initial_controller": "BOS_CTR",
+                "initial_controller": "BOS_37_CTR",
                 "initial_speed": 250,
                 "route": "BAF PUDGY GDM",
                 "waypoints": "BAF PUDGY/ho",
@@ -762,7 +762,7 @@
         ]
     },
     "control_positions": {
-        "BOS_CTR": {
+        "BOS_37_CTR": {
             "frequency": 134700,
             "full_name": "Boston Center",
             "scope_char": "C",
@@ -774,13 +774,13 @@
             "frequency": 128400,
             "full_name": "Portsmouth Tower",
             "scope_char": "T",
-            "sector_id": "1S"
+            "sector_id": "1R"
         },
         "MHT_TWR": {
             "frequency": 121300,
             "full_name": "Manchester Tower",
             "scope_char": "T",
-            "sector_id": "1T"
+            "sector_id": "1M"
         },
         "MHT_Z_APP": {
             "default_airport" :"KMHT",
@@ -872,7 +872,7 @@
                 "BOS_DEP",
                 "MHT_TWR",
                 "PSM_TWR",
-                "BOS_CTR"
+                "BOS_37_CTR"
             ],
             "default_maps": ["MHT MAIN"],
             "departure_runways": [
@@ -939,7 +939,7 @@
                 "BOS_DEP",
                 "MHT_TWR",
                 "PSM_TWR",
-                "BOS_CTR"
+                "BOS_37_CTR"
             ],
             "default_maps": ["MHT MAIN"],
             "departure_runways": [
@@ -966,7 +966,7 @@
         "airspace_awareness": [
             {
                 "fixes": ["ALL"],
-                "receiving_controller": "BOS_CTR"
+                "receiving_controller": "BOS_37_CTR"
             }
         ],
         "inhibit_ca_volumes": [

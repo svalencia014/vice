@@ -100,11 +100,11 @@
         "tower_controller": "BOS_W_TWR"
        },
        "Y2L": {
-        "cifp_id": "Y22L",
+        "cifp_id": "RY22L",
         "tower_controller": "BOS_E_TWR"
        },
-       "Y3L": {
-        "cifp_id": "RY33L",
+       "Z3L": {
+        "cifp_id": "RZ33L",
         "tower_controller": "BOS_W_TWR"
        }
       },
@@ -199,14 +199,14 @@
             "sid": "SSOXS6",
             "waypoints": "CLAWW/s250 FENWY BUCYK JSTER"
           },
-          "PEASE,PVC,LFV,DUNKK,MANCH": {
+          "PEASE,PVC,LFV,DUNKK,MANCH,ENE,BOSOX,CON": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
             "waypoints": "KBOS-27/h092"
           }
         },
         "15R": {
-          "PEASE,PVC,LFV,DUNKK,MANCH": {
+          "PEASE,PVC,LFV,DUNKK,MANCH,ENE,BOSOX,CON": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
             "waypoints": "KBOS-33L/h120"
@@ -293,7 +293,7 @@
             "sid": "SSOXS6",
             "waypoints": "TJAYY BRRRO/s250 BUCYK JSTER"
           },
-          "PEASE,PVC,LFV,DUNKK,MANCH": {
+          "PEASE,PVC,LFV,DUNKK,MANCH,ENE,BOSOX,CON": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
             "waypoints": "KBOS-4R/h140"
@@ -340,7 +340,7 @@
             "sid": "SSOXS6",
             "waypoints": "TEKKK COUSY CBEAR COLYN"
           },
-          "PEASE,PVC,LFV,DUNKK,MANCH": {
+          "PEASE,PVC,LFV,DUNKK,MANCH,ENE,BOSOX,CON": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
             "waypoints": "KBOS-15R/h316"
@@ -1441,18 +1441,6 @@
               ]
           },
           {
-              "exit": "KEMPR",
-              "destination": "KILM",
-              "altitude": 35000,
-              "route": "KEMPR SBY JFK ROBUC3",
-              "airlines": [
-                  {
-                      "icao": "ENY",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
               "exit": "HYLND",
               "destination": "KSFO",
               "altitude": 30000,
@@ -1633,30 +1621,6 @@
               ]
           },
           {
-              "exit": "SWANN",
-              "destination": "KDCA",
-              "altitude": 29000,
-              "route": "SOOKI5 SWANN BROSS Q419 JFK ROBUC3",
-              "airlines": [
-                  {
-                      "icao": "AAL",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
-              "exit": "LEWKE",
-              "destination": "KRKD",
-              "altitude": 45000,
-              "route": "LEWKE GIJ J554 JHW Q29 KRAZZ MPV",
-              "airlines": [
-                  {
-                      "icao": "LXJ",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
               "exit": "SSOXS",
               "destination": "KJFK",
               "altitude": 22000,
@@ -1713,18 +1677,6 @@
                   {
                       "icao": "JBU",
                       "fleet": "default"
-                  }
-              ]
-          },
-          {
-              "exit": "RDU",
-              "destination": "KCLT",
-              "altitude": 29000,
-              "route": "BARMY5 RDU NOWAE Q87 GEARS BBOBO Q22 RBV Q419 LAURN Q419 JFK ROBUC3",
-              "airlines": [
-                  {
-                      "icao": "AAL",
-                      "fleet": "a321"
                   }
               ]
           },
@@ -1789,18 +1741,6 @@
               ]
           },
           {
-              "exit": "FREDO",
-              "destination": "KPVC",
-              "altitude": 2000,
-              "route": "FREDO",
-              "airlines": [
-                  {
-                      "icao": "KAP",
-                      "fleet": "c402"
-                  }
-              ]
-          },
-          {
               "exit": "SSOXS",
               "destination": "KCHS",
               "altitude": 38000,
@@ -1808,18 +1748,6 @@
               "airlines": [
                   {
                       "icao": "JBU",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
-              "exit": "WISPR",
-              "destination": "KJAX",
-              "altitude": 37000,
-              "route": "CROSB2 WISPR JROSS Q87 GEARS BBOBO Q22 RBV Q419 JFK ROBUC3",
-              "airlines": [
-                  {
-                      "icao": "DAL",
                       "fleet": "default"
                   }
               ]
@@ -2029,18 +1957,6 @@
               ]
           },
           {
-              "exit": "SWANN",
-              "destination": "KDCA",
-              "altitude": 29000,
-              "route": "SOOKI5 SWANN BROSS Q419 JFK ROBUC3",
-              "airlines": [
-                  {
-                      "icao": "AAL",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
               "exit": "REVSS",
               "destination": "KPIT",
               "altitude": 28000,
@@ -2173,18 +2089,6 @@
               ]
           },
           {
-              "exit": "BEEPS",
-              "destination": "KROC",
-              "altitude": 29000,
-              "route": "BEEPS PONCT JFUND2",
-              "airlines": [
-                  {
-                      "icao": "PDT",
-                      "fleet": "e145"
-                  }
-              ]
-          },
-          {
               "exit": "MANCH",
               "destination": "KLEB",
               "altitude": 6000,
@@ -2241,18 +2145,6 @@
                   {
                       "icao": "JBU",
                       "fleet": "default"
-                  }
-              ]
-          },
-          {
-              "exit": "MICKE",
-              "destination": "KCLT",
-              "altitude": 37000,
-              "route": "MICKE BNA TAZZA FILPZ4",
-              "airlines": [
-                  {
-                      "icao": "AAL",
-                      "fleet": "short"
                   }
               ]
           },
@@ -2425,18 +2317,6 @@
               ]
           },
           {
-              "exit": "FREDO",
-              "destination": "KPVC",
-              "altitude": 2000,
-              "route": "FREDO",
-              "airlines": [
-                  {
-                      "icao": "KAP",
-                      "fleet": "c402"
-                  }
-              ]
-          },
-          {
               "exit": "PATSS",
               "destination": "KEWR",
               "altitude": 16000,
@@ -2533,18 +2413,6 @@
               ]
           },
           {
-              "exit": "SYR",
-              "destination": "KPHL",
-              "altitude": 20000,
-              "route": "SYR CFB SPUDS7",
-              "airlines": [
-                  {
-                      "icao": "PDT",
-                      "fleet": "e145"
-                  }
-              ]
-          },
-          {
               "exit": "ENE",
               "destination": "KAUG",
               "altitude": 6000,
@@ -2576,30 +2444,6 @@
               "airlines": [
                   {
                       "icao": "JBU",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
-              "exit": "DITCH",
-              "destination": "KHPN",
-              "altitude": 21000,
-              "route": "DITCH T416 DRIFT Q439 DUNEE T320 RICED RICED4 KHPN",
-              "airlines": [
-                  {
-                      "icao": "LXJ",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
-              "exit": "CMK",
-              "destination": "KLEB",
-              "altitude": 9100,
-              "route": "CMK SOARS JUDDS WHATE",
-              "airlines": [
-                  {
-                      "icao": "KAP",
                       "fleet": "default"
                   }
               ]
@@ -2893,18 +2737,6 @@
               ]
           },
           {
-              "exit": "OWEBO",
-              "destination": "KCMH",
-              "altitude": 33000,
-              "route": "OWEBO HLG SLT J190 RKA PONCT JFUND2",
-              "airlines": [
-                  {
-                      "icao": "ENY",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
               "exit": "SSOXS",
               "destination": "MDPC",
               "altitude": 32000,
@@ -2913,18 +2745,6 @@
                   {
                       "icao": "JBU",
                       "fleet": "long"
-                  }
-              ]
-          },
-          {
-              "exit": "SYR",
-              "destination": "KDCA",
-              "altitude": 38000,
-              "route": "SYR PTAKI ULW HAR BAL",
-              "airlines": [
-                  {
-                      "icao": "AAL",
-                      "fleet": "short"
                   }
               ]
           },
@@ -3008,18 +2828,6 @@
               "airlines": [
                   {
                       "icao": "JBU",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
-              "exit": "HULZE",
-              "destination": "KABQ",
-              "altitude": 34000,
-              "route": "HRPER3 HULZE TXO RECKN COLTR4",
-              "airlines": [
-                  {
-                      "icao": "ENY",
                       "fleet": "default"
                   }
               ]
@@ -3253,18 +3061,6 @@
               ]
           },
           {
-              "exit": "MXE",
-              "destination": "KSAN",
-              "altitude": 28000,
-              "route": "MXE PENSY J110 AIR J110 VHP KK51G KA39Y ABQ J18 HOGGZ LUCKI1",
-              "airlines": [
-                  {
-                      "icao": "AAL",
-                      "fleet": "a321"
-                  }
-              ]
-          },
-          {
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 34000,
@@ -3301,18 +3097,6 @@
               ]
           },
           {
-              "exit": "STOEN",
-              "destination": "KMCO",
-              "altitude": 34000,
-              "route": "STOEN Q75 SLOJO Q83 ROYCO Q85 LPERD SNFLD3",
-              "airlines": [
-                  {
-                      "icao": "AAL",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
               "exit": "PEASE",
               "destination": "KRKD",
               "altitude": 5000,
@@ -3338,7 +3122,10 @@
         "DUNKK": "ALL",
         "LFV": "ALL",
         "MANCH": "ALL",
-        "PVC": "ALL"
+        "PVC": "ALL",
+        "BOSOX": "ALL",
+        "CON": "AAL",
+        "ENE": "AAL"
       },
       "tower_list": 1
     }
@@ -3727,7 +3514,7 @@
         "initial_altitude": 11000,
         "initial_controller": "BOS_37_CTR",
         "initial_speed": 250,
-        "cleared_altitude": 11000,
+        "assigned_altitude": 11000,
         "star": "ORW7",
         "waypoints": "OUTTT/ho PVD/a11000/s250 KRANN/a11000/s250/h074"
       }  
@@ -4680,7 +4467,10 @@
     "PVC" : "PVC",
     "LFV" : "LFV",
     "DUNKK": "DUN",
-    "MANCH": "MHT"
+    "MANCH": "MHT",
+    "CON": "CON",
+    "ENE": "ENE",
+    "BOSOX": "BOX"
    },
    "stars_maps": [
     {
