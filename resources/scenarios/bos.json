@@ -3654,6 +3654,32 @@
         "waypoints": "DUBLE/a17000/ho BASEZ JFUND"
       }
     ],
+    "ORW7": [
+      {
+        "airlines": {
+            "KBOS": [
+                {
+                    "airport": "KJFK",
+                    "icao": "KAP"
+                },
+                {
+                    "airport": "KJFK",
+                    "icao": "MTN"
+                },
+                {
+                    "airport": "KJFK",
+                    "icao": "FTH"
+                }
+            ]
+        },
+        "initial_altitude": 11000,
+        "initial_controller": "BOS_37_CTR",
+        "initial_speed": 250,
+        "cleared_altitude": 11000,
+        "star": "ORW7",
+        "waypoints": "OUTTT/ho PVD/a11000/s250 KRANN/a11000/s250/h074"
+      }  
+    ],
     "NORTH_4FINAL": [
       {
         "airlines": {
@@ -4292,6 +4318,9 @@
         },
         "OOSHN5": {
           "KBOS": 10
+        },
+        "ORW7": {
+          "KBOS": 3
         }
       },
       "solo_controller": "BOS_APP",
@@ -4299,7 +4328,7 @@
             "default" : {
                 "BOS_DEP": {"departures": ["KBOS"], "primary": true},
                 "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
                 "BOS_I_APP": {"backup": "BOS_F_APP"},
                 "BOS_B_APP": {"backup": "BOS_N_APP"},
@@ -4352,6 +4381,9 @@
         },
         "OOSHN5": {
           "KBOS": 10
+        },
+        "ORW7": {
+          "KBOS": 3
         }
       },
       "solo_controller": "BOS_APP",
@@ -4359,7 +4391,7 @@
             "default" : {
                 "BOS_DEP": {"departures": ["KBOS"], "primary": true},
                 "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
                 "BOS_I_APP": {"backup": "BOS_F_APP"},
                 "BOS_B_APP": {"backup": "BOS_N_APP"},
@@ -4408,6 +4440,9 @@
         },
         "OOSHN5": {
           "KBOS": 10
+        },
+        "ORW7": {
+          "KBOS": 3
         }
       },
       "solo_controller": "BOS_APP",
@@ -4415,7 +4450,7 @@
             "default" : {
                 "BOS_DEP": {"departures": ["KBOS"], "primary": true},
                 "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
                 "BOS_I_APP": {"backup": "BOS_F_APP"},
                 "BOS_B_APP": {"backup": "BOS_N_APP"},
@@ -4464,6 +4499,9 @@
         },
         "OOSHN5": {
           "KBOS": 10
+        },
+        "ORW7": {
+          "KBOS": 3
         }
       },
       "solo_controller": "BOS_APP",
@@ -4471,7 +4509,7 @@
             "default" : {
                 "BOS_DEP": {"departures": ["KBOS"], "primary": true},
                 "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
                 "BOS_I_APP": {"backup": "BOS_F_APP"},
                 "BOS_B_APP": {"backup": "BOS_N_APP"},
