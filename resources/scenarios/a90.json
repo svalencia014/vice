@@ -1,6 +1,90 @@
 {
     "tracon": "A90",
     "airports": {
+        "KBED": {
+            "name": "Bedford Hanscom Field",
+            "approaches": {
+                "I11": {
+                    "cifp_id": "I11"
+                },
+                "I29": {
+                    "cifp_id": "I29"
+                },
+                "R23": {
+                    "cifp_id": "R23"
+                },
+                "Y11": {
+                    "cifp_id": "RY11"
+                },
+                "Y29": {
+                    "cifp_id": "RY29"
+                },
+                "Z11": {
+                    "cifp_id": "RZ11"
+                },
+                "Z29": {
+                    "cifp_id": "RZ29"
+                }
+            },
+            "departure_routes": {
+                "11": {
+                    "BLZZR,SSOXS,REVSS,CELTK": {
+                        "cleared_altitude": 2000,
+                        "sid": "HNSCM5",
+                        "waypoints": "KBED-29/h050"
+                    }
+                },
+                "29": {
+                    "BLZZR,SSOXS,REVSS,CELTK": {
+                        "cleared_altitude": 2000,
+                        "sid": "HNSCM5",
+                        "waypoints": "KBED-11/h290"
+                    }
+                }
+            },
+            "departures": [
+                {
+                    "airlines":  [
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "EJA"
+                        }
+                    ],
+                    "destination": "KCHS",
+                    "exit": "SSOXS",
+                    "route": "SSOXS Q167 RIFLE HEADI Q97 SAWED DFENC Q109 LAANA AMYLU AMYLU3"
+                },
+                {
+                    "airlines": [
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "LXJ"
+                        }
+                    ],
+                    "destination": "LFPG",
+                    "exit": "CELTK",
+                    "route": "CELTK FRILL BRADD N197A NICSO 4800N/05000W 5100N/04000W 5300N/03000W 5300N/02000W MALOT GISTI LEDGO BOGMI ANNET UM25 INGOR UZ297 PEXIR PEXIR9W"
+                },
+                {
+                    "airlines": [
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        },
+                        {
+                            "icao": "LXJ"
+                        }
+                    ],
+                    "destination": "KTEB",
+                    "exit": "REVSS",
+                    "route": "REVSS BAF MOBBS T295 SAGES V489 COATE"
+                }
+            ]
+        },
         "KBOS": {
             "atpa_volumes": {
                 "4R": {
@@ -4321,6 +4405,65 @@
         "waypoints": "EURRO/a10000+ OOSHN/a9000-14000/s250/ho"
       }
     ],
+    "ZELKA2": [
+        {
+            "airlines": {
+                "KBED": [
+                    {
+                        "airport": "KSAT",
+                        "icao": "LXJ"
+                    },
+                    {
+                        "airport": "KSAT",
+                        "icao": "EJA"
+                    },
+                    {
+                        "airport": "KSAT",
+                        "icao": "N",
+                        "fleet": "fastGA"
+                    }
+                ]
+            },
+            "initial_altitude": 14000,
+            "initial_speed": 250,
+            "initial_controller": "BOS_37_CTR",
+            "star": "ZELKA2",
+            "waypoints": "HAUKS/a14000+/ho WORIA/a11000-13000 BCATS/a8000-9000 GOLEE/a6000 ZELKA RIKAH/a6000/s210 EXXRO/a6000/s210"
+        }
+    ],
+    "DREEM2": [
+        {
+            "airlines": {
+                "KBED": [
+                    {
+                        "airport": "KSAT",
+                        "icao": "LXJ"
+                    },
+                    {
+                        "airport": "KSAT",
+                        "icao": "EJA"
+                    },
+                    {
+                        "airport": "KSAT",
+                        "icao": "N",
+                        "fleet": "fastGA"
+                    }
+                ]
+            },
+            "initial_altitude": 11000,
+            "initial_controller": "BOS_37_CTR",
+            "initial_speed": 250,
+            "star": "DREEM2",
+            "runway_waypoints": {
+                "KBED": {
+                    "11": "DREEM WANLA ZELKA/flyover",
+                    "23": "DREEM RIKAH EXXRO/h097",
+                    "29": "DREEM RIKAH EXXRO/h097"
+                }
+            },
+            "waypoints": "DVANY/a11000 GRAYM/ho GASSE/a5000 DREEM"
+        }
+    ],
     "ROBUC3": [
       {
         "airlines": {
@@ -4647,11 +4790,11 @@
             "sector_id": "1J"
         }
     },
-    "default_scenario": "BOS Land 4R/L Dep 9 KMHT South",
+    "default_scenario": "BOS Land 4R/L Dep 9 KMHT South + Sat",
     "name": "KBOS",
     "primary_airport": "KBOS",
     "scenarios": {
-        "BOS Land 4R/L Dep 9 KMHT South": {
+        "BOS Land 4R/L Dep 9 KMHT South + Sat": {
             "arrival_runways": [
                 {
                     "airport": "KBOS",
@@ -4672,6 +4815,10 @@
                 {
                     "airport": "KPSM",
                     "runway": "16"
+                },
+                {
+                    "airport": "KBED",
+                    "runway": "11"
                 }
             ],
             "arrivals": {
@@ -4701,6 +4848,12 @@
                 "GDM": {
                     "KMHT": 2,
                     "KPSM": 5
+                },
+                "DREEM2": {
+                    "KBED": 3
+                },
+                "ZELKA2": {
+                    "KBED": 5
                 }
             },
             "solo_controller": "BOS_DEP",
@@ -4711,7 +4864,7 @@
                 "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
                 "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP"},
+                "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals":["DREEM2", "ZELKA2"]},
                 "BOS_U_APP": {"backup": "BOS_B_APP"},
                 "BOS_L_APP": {"backup": "BOS_U_APP"},
                 "MHT_J_APP": {"backup": "BOS_DEP", "departures": ["KMHT"]},
@@ -4744,6 +4897,11 @@
                 "airport": "KPSM",
                 "rate": 10,
                 "runway": "16"
+            },
+            {
+                "airport": "KBED",
+                "rate": 10,
+                "runway": "11"
             }
         ],
         "wind": {
