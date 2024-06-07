@@ -1087,6 +1087,7 @@
                 "label": "ZBW 3",
                 "name": "ZBW SPLIT 3"
             }
-        ]
+        ],
+          "video_map_file": "videomaps/ZBW-videomaps.json.zst"
     }
 }
