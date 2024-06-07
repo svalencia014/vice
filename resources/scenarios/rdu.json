@@ -1970,6 +1970,7 @@
                 "label": "MVA",
                 "name": "RDU MVA"
             }
-        ]
+        ],
+  "video_map_file": "videomaps/ZDC-videomaps.json.zst"
     }
 }
