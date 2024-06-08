@@ -1,0 +1,18 @@
+{
+  "tracon": "RSW",
+  "airports": {
+    "KRSW": {
+      "approaches": {
+        "I6": {
+          "cifp_id": "I6"
+        },
+        "R24": {
+          "cifp_id": "R24"
+        },
+        "R6": {
+          "cifp_id": "R6"
+        }
+      }
+    }
+  }
+}
