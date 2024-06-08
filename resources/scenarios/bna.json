@@ -2351,6 +2351,20 @@
           "receiving_controller": "MEM_60_CTR"
         }
       ],
+      "inhibit_ca_volumes": [
+        {
+            "name": "BNA FINAL NO CA",
+            "type": "polygon",
+            "floor": 0,
+            "ceiling": 5000,
+            "vertices": [
+                "N036.29.08.240,W086.27.15.479",
+                "N035.44.51.142,W086.45.31.503",
+                "N035.46.18.277,W086.52.55.570",
+                "N036.30.24.060,W086.34.05.599"
+            ]
+        }
+    ],
       "scratchpads": {
         "CHADM": "OZC",
         "SWAPP": "OZC",
