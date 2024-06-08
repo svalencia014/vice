@@ -5757,7 +5757,7 @@
             {
                 "airport" : "KBOS",
                 "rate": 35,
-                "runway": "22R"
+                "runway": "33L"
             },
             {
                 "airport": "KMHT",
@@ -5902,7 +5902,7 @@
             {
                 "airport" : "KBOS",
                 "rate": 35,
-                "runway": "22R"
+                "runway": "15R"
             },
             {
                 "airport": "KMHT",
@@ -6176,7 +6176,7 @@
             {
                 "airport" : "KBOS",
                 "rate": 35,
-                "runway": "22R"
+                "runway": "33L"
             },
             {
                 "airport": "KMHT",
@@ -6260,7 +6260,7 @@
             {
                 "airport" : "KBOS",
                 "rate": 35,
-                "runway": "22R"
+                "runway": "15R"
             },
             {
                 "airport": "KMHT",
