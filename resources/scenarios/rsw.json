@@ -100,17 +100,116 @@
         "R5": {
           "cifp_id": "R5"
         }
-      }
-    },
-    "KMKY": {
-      "approaches": {
-        "R17": {
-          "cifp_id": "R17"
+      },
+      "departure_routes": {
+        "5": {
+          "ORL,LAL": {
+            "cleared_altitude": 2000,
+            "sid": "CSHEL6",
+            "waypoints": "KAPF-23/h047 CSHEL JUNLO PULEC"
+          },
+          "CSHEL": {
+            "cleared_altitude": 2000,
+            "sid": "CSHEL6",
+            "waypoints": "KAPF-23/h047"
+          },
+          "MARCI,AABER,MOOKY": {
+            "cleared_altitude": 2000,
+            "sid": "APF5",
+            "waypoints": "KAPF-23/h047"
+          }
         },
-        "R35": {
-          "cifp_id": "R35"
+        "23": {
+          "ORL,LAL": {
+            "cleared_altitude": 2000,
+            "sid": "CSHEL6",
+            "waypoints": "KAPF-5/h227 CSHEL JUNLO PULEC"
+          },
+          "CSHEL": {
+            "cleared_altitude": 2000,
+            "sid": "CSHEL6",
+            "waypoints": "KAPF-5/h227"
+          },
+          "MARCI,AABER,MOOKY": {
+            "cleared_altitude": 2000,
+            "sid": "APF5",
+            "waypoints": "KAPF-5/h227"
+          }
         }
-      }
+      },
+      "departures": [
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            }
+          ],
+          "altitude": 18000,
+          "destination": "KTPA",
+          "exit": "CSHEL",
+          "route": "CSHEL DSIDE BLFRG2"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "N",
+              "fleet": "fastGA"
+            }
+          ],
+          "altitude": 43000,
+          "destination": "MGGT",
+          "exit": "MARCI",
+          "route": "MARCI RIGOR V225 EYW FIS B646 CANOA B879 CUN B881 CZM UG765 AUR"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "N",
+              "fleet": "fastGA"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJA"
+            }
+          ],
+          "altitude": 36000,
+          "destination": "KCLT",
+          "exit": "ORL",
+          "route": "ORL DUCEN Q87 VIYAP CHECR STOCR4"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "N",
+              "fleet": "fastGA"
+            },
+            {
+              "icao": "EJA"
+            }
+          ],
+          "altitude": 17000,
+          "destination": "MYNN",
+          "exit": "AABER",
+          "route": "AABER SAXXN ELQUE RAJAY"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "N",
+              "fleet": "fastGA"
+            },
+            {
+              "icao": "EJA"
+            }
+          ],
+          "altitude": 32000,
+          "destination": "KTME",
+          "exit": "MOOKY",
+          "route": "MOOKY BAGGS Y290 BACCA ROZZI Q100 LEV BBURT TKNIQ3"
+        }
+      ]
     }
   }
 }
