@@ -616,12 +616,12 @@
         "departure_runways": [
             {
                 "airport" : "KACK",
-                "rate": 35,
+                "rate": 15,
                 "runway": "6"
             },
             {
                 "airport": "KMVY",
-                "rate": 20,
+                "rate": 10,
                 "runway": "6"
             }
         ],

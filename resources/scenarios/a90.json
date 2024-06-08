@@ -3679,6 +3679,373 @@
                 "PEASE": "ALL"
             },
             "tower_list": 2
+        },
+        "KACK": {
+            "name": "Nantucket Airport",
+            "approaches": {
+                "I24": {
+                    "cifp_id": "I24"
+                },
+                "I6": {
+                    "cifp_id": "I6"
+                },
+                "R15": {
+                    "cifp_id": "R15"
+                }
+            },
+            "departure_routes": {
+                "6": {
+                    "MVY,LFV,BOGEY,FREDO,POMPY,BLZZR,SSOXS,REVSS,CELTK": {
+                        "cleared_altitude": 2000,
+                        "waypoints": "KACK-24/h060"
+                    }
+                },
+                "24": {
+                    "MVY,LFV,BOGEY,FREDO,POMPY,BLZZR,SSOXS,REVSS,CELTK": {
+                        "cleared_altitude": 2000,
+                        "waypoints": "KACK-6/h240"
+                    }
+                }
+            },
+            "departures": [
+                    {
+                        "exit": "MVY",
+                        "destination": "KPHL",
+                        "altitude": 28000,
+                        "route": "MVY JAWZZ Q220 RIFLE Q439 BRIGS JIIMS4",
+                        "airlines": [
+                            {
+                                "icao": "EJA",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "MVY",
+                        "destination": "KPVD",
+                        "altitude": 4000,
+                        "route": "MVY",
+                        "airlines": [
+                            {
+                                "icao": "MTN",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "LFV",
+                        "destination": "KPTK",
+                        "altitude": 43000,
+                        "route": "LFV CELTS MANCH CAM SYR JHW Q82 WWSHR FOREY2",
+                        "airlines": [
+                            {
+                                "icao": "EJA",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "MVY",
+                        "destination": "KEWR",
+                        "altitude": 14000,
+                        "route": "MVY PUT NELIE FLOSI4",
+                        "airlines": [
+                            {
+                                "icao": "GJS",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "MVY",
+                        "destination": "KPVD",
+                        "altitude": 4000,
+                        "route": "MVY",
+                        "airlines": [
+                            {
+                                "icao": "MTN",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "MVY",
+                        "destination": "KLGA",
+                        "altitude": 10000,
+                        "route": "MVY V146 PUT NELIE VALRE HAARP4",
+                        "airlines": [
+                            {
+                                "icao": "JBU",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "MVY",
+                        "destination": "KLGA",
+                        "altitude": 16000,
+                        "route": "MVY V146 PUT NELIE VALRE HAARP4",
+                        "airlines": [
+                            {
+                                "icao": "RPA",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "LFV",
+                        "destination": "KBOS",
+                        "altitude": 5000,
+                        "route": "LOGAN4 LFV",
+                        "airlines": [
+                            {
+                                "icao": "KAP",
+                                "fleet": "c402"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "FREDO",
+                        "destination": "KBOS",
+                        "altitude": 4000,
+                        "route": "FREDO",
+                        "airlines": [
+                            {
+                                "icao": "KAP",
+                                "fleet": "usa"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "MVY",
+                        "destination": "KDCA",
+                        "altitude": 22000,
+                        "route": "MVY JAWZZ Q220 RIFLE Q167 ZIZZI KNUKK ATR LAFLN DEALE3",
+                        "airlines": [
+                            {
+                                "icao": "JBU",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "MVY",
+                        "destination": "KJFK",
+                        "altitude": 22000,
+                        "route": "MVY JAWZZ Q220 SEY ROBER2",
+                        "airlines": [
+                            {
+                                "icao": "JBU",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "LFV",
+                        "destination": "KBOS",
+                        "altitude": 5000,
+                        "route": "LOGAN4 LFV",
+                        "airlines": [
+                            {
+                                "icao": "KAP",
+                                "fleet": "usa"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "POMPY",
+                        "destination": "KTEB",
+                        "altitude": 17000,
+                        "route": "POMPY HNK V167 WEARD V489 COATE",
+                        "airlines": [
+                            {
+                                "icao": "EJA",
+                                "fleet": "default"
+                            }
+                        ]
+                    }
+            ]
+        },
+        "KMVY": {
+            "name": "Marthas Vineyard",
+            "approaches": {
+                "I24": {
+                    "cifp_id": "I24"
+                },
+                "R15": {
+                    "cifp_id": "R15"
+                },
+                "R24": {
+                    "cifp_id": "R24"
+                },
+                "R33": {
+                    "cifp_id": "R33"
+                },
+                "R6": {
+                    "cifp_id": "R6"
+                }
+            },
+            "departure_routes": {
+                "6": {
+                    "PVD,ACK,SWANN,MVY,HYA,KEWB,DUNKK,LFV,DOLIE": {
+                        "cleared_altitude": 2000,
+                        "waypoints": "KMVY-24/h060"
+                    }
+                },
+                "24": {
+                    "PVD,ACK,SWANN,MVY,HYA,KEWB,DUNKK,LFV,DOLIE": {
+                        "cleared_altitude": 2000,
+                        "waypoints": "KMVY-6/h240"
+                    }
+                }
+            },
+            "departures": [
+                    {
+                        "exit": "PVD",
+                        "destination": "KPVD",
+                        "altitude": 3000,
+                        "route": "PVD V167 TUTOR MVY",
+                        "airlines": [
+                            {
+                                "icao": "MTN",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "ACK",
+                        "destination": "KBOS",
+                        "altitude": 4000,
+                        "route": "ACK ACK341 FREDO",
+                        "airlines": [
+                            {
+                                "icao": "KAP",
+                                "fleet": "usa"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "SWANN",
+                        "destination": "KBOS",
+                        "altitude": 31000,
+                        "route": "SWANN3 SWANN BROSS Q419 JFK ROBUC3",
+                        "airlines": [
+                            {
+                                "icao": "RPA",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "MVY",
+                        "destination": "KBOS",
+                        "altitude": 6000,
+                        "route": "MVY MVY017 FREDO",
+                        "airlines": [
+                            {
+                                "icao": "KAP",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "KEWB",
+                        "destination": "KEWB",
+                        "altitude": 4000,
+                        "route": "KEWB",
+                        "airlines": [
+                            {
+                                "icao": "KAP",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "MVY",
+                        "destination": "KBOS",
+                        "altitude": 3000,
+                        "route": "MVY MVY017 FREDO",
+                        "airlines": [
+                            {
+                                "icao": "KAP",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "MVY",
+                        "destination": "KBOS",
+                        "altitude": 3000,
+                        "route": "MVY MVY017 FREDO",
+                        "airlines": [
+                            {
+                                "icao": "KAP",
+                                "fleet": "usa"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "MVY",
+                        "destination": "KBOS",
+                        "altitude": 3000,
+                        "route": "MVY MVY017 FREDO",
+                        "airlines": [
+                            {
+                                "icao": "KAP",
+                                "fleet": "usa"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "DUNKK",
+                        "destination": "KBOS",
+                        "altitude": 5000,
+                        "route": "LOGAN4 DUNKK",
+                        "airlines": [
+                            {
+                                "icao": "KAP",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "DUNKK",
+                        "destination": "KBOS",
+                        "altitude": 5000,
+                        "route": "LOGAN4 DUNKK",
+                        "airlines": [
+                            {
+                                "icao": "KAP",
+                                "fleet": "usa"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "SWANN",
+                        "destination": "KBOS",
+                        "altitude": 31000,
+                        "route": "SWANN3 SWANN BROSS Q419 JFK ROBUC3",
+                        "airlines": [
+                            {
+                                "icao": "RPA",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+
+                    {
+                        "exit": "DOLIE",
+                        "destination": "KAUS",
+                        "altitude": 43000,
+                        "route": "BNICE2 DOLIE Y280 LEV LCH WEEED WLEEE7",
+                        "airlines": [
+                            {
+                                "icao": "EJA",
+                                "fleet": "default"
+                            }
+                        ]
+                    }
+                ]
         }
     },
     "arrival_groups": {
@@ -3770,6 +4137,152 @@
                 },
                 "waypoints": "FLYZZ/a13000+/ho FYSHR/a9000+ ROZZE"
             }
+        ],
+        "DEEPO1": [
+            {
+              "airlines": {
+                "KACK": [
+                        {
+                            "airport": "KHYA",
+                            "icao": "N"
+                        },
+                        {
+                            "airport": "KHYA",
+                            "icao": "N"
+                        },
+                        {
+                            "airport": "KHYA",
+                            "icao": "N"
+                        },
+                        {
+                            "airport": "KLUK",
+                            "icao": "N"
+                        },
+                        {
+                            "airport": "KLGA",
+                            "icao": "JBU"
+                        },
+                        {
+                            "airport": "KEWR",
+                            "icao": "GJS"
+                        },
+                        {
+                            "airport": "KHYA",
+                            "icao": "AMF"
+                        },
+                        {
+                            "airport": "KHPN",
+                            "icao": "N"
+                        },
+                        {
+                            "airport": "KBOS",
+                            "icao": "RPA"
+                        },
+                        {
+                            "airport": "KBOS",
+                            "icao": "KAP"
+                        },
+                        {
+                            "airport": "KTEB",
+                            "icao": "N"
+                        },
+                        {
+                            "airport": "KEWR",
+                            "icao": "EJA"
+                        },
+                        {
+                            "airport": "KMVY",
+                            "icao": "KAP"
+                        },
+                        {
+                            "airport": "KHPN",
+                            "icao": "CNS"
+                        },
+                        {
+                            "airport": "KHYA",
+                            "icao": "KAP"
+                        }
+                ]
+              },
+              "initial_altitude": 25000,
+              "initial_controller": "BOS_37_CTR",
+              "initial_speed": 310,
+              "star": "DEEPO1",
+              "spawn": "DEEPO@0.6"
+            }
+          ],
+        "NEWBE3": [
+        {
+            "airlines": {
+            "KACK": [
+                    {
+                        "airport": "KHYA",
+                        "icao": "N"
+                    },
+                    {
+                        "airport": "KHYA",
+                        "icao": "N"
+                    },
+                    {
+                        "airport": "KHYA",
+                        "icao": "N"
+                    },
+                    {
+                        "airport": "KLUK",
+                        "icao": "N"
+                    },
+                    {
+                        "airport": "KLGA",
+                        "icao": "JBU"
+                    },
+                    {
+                        "airport": "KEWR",
+                        "icao": "GJS"
+                    },
+                    {
+                        "airport": "KHYA",
+                        "icao": "AMF"
+                    },
+                    {
+                        "airport": "KHPN",
+                        "icao": "N"
+                    },
+                    {
+                        "airport": "KBOS",
+                        "icao": "RPA"
+                    },
+                    {
+                        "airport": "KBOS",
+                        "icao": "KAP"
+                    },
+                    {
+                        "airport": "KTEB",
+                        "icao": "N"
+                    },
+                    {
+                        "airport": "KEWR",
+                        "icao": "EJA"
+                    },
+                    {
+                        "airport": "KMVY",
+                        "icao": "KAP"
+                    },
+                    {
+                        "airport": "KHPN",
+                        "icao": "CNS"
+                    },
+                    {
+                        "airport": "KHYA",
+                        "icao": "KAP"
+                    }
+            ]
+            },
+            "initial_altitude": 25000,
+            "initial_controller": "BOS_37_CTR",
+            "initial_speed": 310,
+            "star": "NEWBE3",
+            "spawn": "NEWBE@0.6"
+        }
         ],
         "ENE": [
             {
@@ -4788,13 +5301,61 @@
             "full_name": "Boston Approach",
             "scope_char": "J",
             "sector_id": "1J"
-        }
+        },
+        "ACK_N_APP": {
+            "frequency": 118200,
+            "full_name": "Boston Approach",
+            "scope_char": "N",
+            "sector_id": "4N"
+          },
+          "ACK_O_APP": {
+              "frequency": 126300,
+              "full_name": "Boston Approach",
+              "scope_char": "O",
+              "sector_id": "4O"
+            },
+            "ACK_Y_APP": {
+              "frequency": 119700,
+              "full_name": "Boston Approach",
+              "scope_char": "Y",
+              "sector_id": "4Y"
+            },
+            "ACK_S_APP": {
+              "frequency": 133750,
+              "full_name": "Boston Approach",
+              "scope_char": "S",
+              "sector_id": "4S"
+            },
+            "ACK_DEP": {
+              "frequency": 126100,
+              "full_name": "Boston Approach",
+              "scope_char": "D",
+              "sector_id": "4D"
+            },
+            "ACK_A_APP": {
+              "frequency": 124050,
+              "full_name": "Boston Approach",
+              "scope_char": "A",
+              "sector_id": "4A"
+            },
+            "ACK_TWR": {
+              "frequency": 118300,
+              "full_name": "Boston Approach",
+              "scope_char": "T",
+              "sector_id": "9T"
+            },
+            "MVY_TWR": {
+              "frequency": 121400,
+              "full_name": "Vineyard Tower",
+              "scope_char": "T",
+              "sector_id": "6T"
+            }
     },
-    "default_scenario": "BOS Land 4R/L Dep 9 KMHT South + Sat",
+    "default_scenario": "BOS Land 4R/L Dep 9 KMHT North + Sat",
     "name": "KBOS",
     "primary_airport": "KBOS",
     "scenarios": {
-        "BOS Land 4R/L Dep 9 KMHT South + Sat": {
+        "BOS Land 4R/L Dep 9 KMHT North + Sat": {
             "arrival_runways": [
                 {
                     "airport": "KBOS",
@@ -4806,19 +5367,27 @@
                 },
                 {
                     "airport": "KMHT",
-                    "runway": "17"
+                    "runway": "35"
                 },
                 {
                     "airport": "KMHT",
-                    "runway": "24"
+                    "runway": "6"
                 },
                 {
                     "airport": "KPSM",
-                    "runway": "16"
+                    "runway": "34"
                 },
                 {
                     "airport": "KBED",
                     "runway": "11"
+                },
+                {
+                    "airport": "KACK",
+                    "runway": "6"
+                },
+                {
+                    "airport": "KMVY",
+                    "runway": "6"
                 }
             ],
             "arrivals": {
@@ -4854,6 +5423,12 @@
                 },
                 "ZELKA2": {
                     "KBED": 5
+                },
+                "DEEPO1": {
+                    "KACK": 5
+                },
+                "NEWBE3": {
+                    "KACK": 5
                 }
             },
             "solo_controller": "BOS_DEP",
@@ -4867,11 +5442,17 @@
                 "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals":["DREEM2", "ZELKA2"]},
                 "BOS_U_APP": {"backup": "BOS_B_APP"},
                 "BOS_L_APP": {"backup": "BOS_U_APP"},
-                "MHT_J_APP": {"backup": "BOS_DEP", "departures": ["KMHT"]},
-                "MHT_Z_APP": {"backup": "MHT_J_APP"},
+                "MHT_Z_APP": {"backup": "BOS_DEP", "departures": ["KMHT"]},
+                "MHT_J_APP": {"backup": "MHT_Z_APP"},
                 "MHT_E_APP": {"backup": "MHT_Z_APP", "arrivals":["ENE"]},
                 "MHT_P_APP": {"backup": "MHT_E_APP", "departures":["KPSM"]},
-                "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM", "ROZZE2"]}
+                "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM", "ROZZE2"]},
+                "ACK_N_APP": {"arrivals": ["DEEPO1","NEWBE3"], "backup": "BOS_DEP"},
+                "ACK_DEP": {"departures": ["KACK","KMVY"], "backup": "ACK_N_APP"},
+                "ACK_O_APP": {"departures": ["KACK"],  "backup": "ACK_DEP"},
+                "ACK_Y_APP": {"departures": ["KACK"],  "backup": "ACK_O_APP"},
+                "ACK_S_APP": {"departures": ["KACK"],  "backup": "ACK_Y_APP"},
+                "ACK_A_APP": {"departures": ["KACK"],  "backup": "ACK_S_APP"}
             }
         },
         "controllers": [
@@ -4881,7 +5462,7 @@
             "MHT_TWR",
             "PSM_TWR"
         ],
-        "default_maps": ["A90 BASE", "BOS 4R/L"],
+        "default_maps": ["A90 BASE", "BOS 4R/L", "CAPE NE FLOW"],
         "departure_runways": [
             {
                 "airport" : "KBOS",
@@ -4891,17 +5472,27 @@
             {
                 "airport": "KMHT",
                 "rate": 20,
-                "runway": "17"
+                "runway": "35"
             },
             {
                 "airport": "KPSM",
                 "rate": 10,
-                "runway": "16"
+                "runway": "34"
             },
             {
                 "airport": "KBED",
                 "rate": 10,
                 "runway": "11"
+            },
+            {
+                "airport" : "KACK",
+                "rate": 5,
+                "runway": "6"
+            },
+            {
+                "airport": "KMVY",
+                "rate": 5,
+                "runway": "6"
             }
         ],
         "wind": {
@@ -4934,6 +5525,14 @@
                 {
                     "airport": "KBED",
                     "runway": "29"
+                },
+                {
+                    "airport": "KACK",
+                    "runway": "24"
+                },
+                {
+                    "airport": "KMVY",
+                    "runway": "24"
                 }
             ],
             "arrivals": {
@@ -4969,6 +5568,12 @@
                 },
                 "ZELKA2": {
                     "KBED": 5
+                },
+                "DEEPO1": {
+                    "KACK": 10
+                },
+                "NEWBE3": {
+                    "KACK": 10
                 }
             },
             "solo_controller": "BOS_DEP",
@@ -4986,7 +5591,13 @@
                 "MHT_Z_APP": {"backup": "MHT_J_APP"},
                 "MHT_E_APP": {"backup": "MHT_Z_APP", "arrivals":["ENE"]},
                 "MHT_P_APP": {"backup": "MHT_E_APP", "departures":["KPSM"]},
-                "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM", "ROZZE2"]}
+                "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM", "ROZZE2"]},
+                "ACK_N_APP": {"arrivals": ["DEEPO1","NEWBE3"], "backup": "BOS_DEP"},
+                "ACK_DEP": {"departures": ["KACK","KMVY"], "backup": "ACK_N_APP"},
+                "ACK_O_APP": {"departures": ["KACK"],  "backup": "ACK_DEP"},
+                "ACK_Y_APP": {"departures": ["KACK"],  "backup": "ACK_O_APP"},
+                "ACK_S_APP": {"departures": ["KACK"],  "backup": "ACK_Y_APP"},
+                "ACK_A_APP": {"departures": ["KACK"],  "backup": "ACK_S_APP"}
             }
         },
         "controllers": [
@@ -4996,7 +5607,7 @@
             "MHT_TWR",
             "PSM_TWR"
         ],
-        "default_maps": ["A90 BASE", "BOS 4R/L"],
+        "default_maps": ["A90 BASE", "BOS 27/22", "CAPE SW FLOW"],
         "departure_runways": [
             {
                 "airport" : "KBOS",
@@ -5017,6 +5628,306 @@
                 "airport": "KBED",
                 "rate": 10,
                 "runway": "29"
+            },
+            {
+                "airport" : "KACK",
+                "rate": 15,
+                "runway": "24"
+            },
+            {
+                "airport": "KMVY",
+                "rate": 10,
+                "runway": "24"
+            }
+        ],
+        "wind": {
+            "direction": 220,
+            "speed": 3
+        }
+        },
+        "KBOS Land 27 Depart 33L KMHT South + Sat": {
+            "arrival_runways": [
+                {
+                    "airport": "KBOS",
+                    "runway": "27"
+                },
+                {
+                    "airport": "KBOS",
+                    "runway": "22L"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "17"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "24"
+                },
+                {
+                    "airport": "KPSM",
+                    "runway": "16"
+                },
+                {
+                    "airport": "KBED",
+                    "runway": "29"
+                },
+                {
+                    "airport": "KACK",
+                    "runway": "24"
+                },
+                {
+                    "airport": "KMVY",
+                    "runway": "24"
+                }
+            ],
+            "arrivals": {
+                "JFUND2": {
+                    "KBOS": 10
+                },
+                "ROBUC3": {
+                      "KBOS": 15
+                 },
+                 "OOSHN5": {
+                     "KBOS": 5
+                 },
+                 "ORW7": {
+                     "KBOS": 1
+                 },
+                 "ROZZE2": {
+                    "KMHT": 5
+                },
+                "ENE": {
+                    "KMHT": 3,
+                    "KPSM": 3
+                },
+                "CON": {
+                    "KMHT": 3,
+                    "KPSM": 3
+                },
+                "GDM": {
+                    "KMHT": 2,
+                    "KPSM": 5
+                },
+                "DREEM2": {
+                    "KBED": 3
+                },
+                "ZELKA2": {
+                    "KBED": 5
+                },
+                "DEEPO1": {
+                    "KACK": 10
+                },
+                "NEWBE3": {
+                    "KACK": 10
+                }
+            },
+            "solo_controller": "BOS_DEP",
+            "multi_controllers": {
+            "default" : {
+                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_F_APP": {"backup": "BOS_N_APP"},
+                "BOS_I_APP": {"backup": "BOS_F_APP"},
+                "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals":["DREEM2", "ZELKA2"]},
+                "BOS_U_APP": {"backup": "BOS_B_APP"},
+                "BOS_L_APP": {"backup": "BOS_U_APP"},
+                "MHT_J_APP": {"backup": "BOS_DEP", "departures": ["KMHT"]},
+                "MHT_Z_APP": {"backup": "MHT_J_APP"},
+                "MHT_E_APP": {"backup": "MHT_Z_APP", "arrivals":["ENE"]},
+                "MHT_P_APP": {"backup": "MHT_E_APP", "departures":["KPSM"]},
+                "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM", "ROZZE2"]},
+                "ACK_N_APP": {"arrivals": ["DEEPO1","NEWBE3"], "backup": "BOS_DEP"},
+                "ACK_DEP": {"departures": ["KACK","KMVY"], "backup": "ACK_N_APP"},
+                "ACK_O_APP": {"departures": ["KACK"],  "backup": "ACK_DEP"},
+                "ACK_Y_APP": {"departures": ["KACK"],  "backup": "ACK_O_APP"},
+                "ACK_S_APP": {"departures": ["KACK"],  "backup": "ACK_Y_APP"},
+                "ACK_A_APP": {"departures": ["KACK"],  "backup": "ACK_S_APP"}
+            }
+        },
+        "controllers": [
+            "BOS_37_CTR",
+            "BOS_E_TWR",
+            "BOS_W_TWR",
+            "MHT_TWR",
+            "PSM_TWR"
+        ],
+        "default_maps": ["A90 BASE", "BOS 27", "CAPE SW FLOW"],
+        "departure_runways": [
+            {
+                "airport" : "KBOS",
+                "rate": 35,
+                "runway": "22R"
+            },
+            {
+                "airport": "KMHT",
+                "rate": 20,
+                "runway": "17"
+            },
+            {
+                "airport": "KPSM",
+                "rate": 10,
+                "runway": "16"
+            },
+            {
+                "airport": "KBED",
+                "rate": 10,
+                "runway": "29"
+            },
+            {
+                "airport" : "KACK",
+                "rate": 15,
+                "runway": "24"
+            },
+            {
+                "airport": "KMVY",
+                "rate": 10,
+                "runway": "24"
+            }
+        ],
+        "wind": {
+            "direction": 250,
+            "speed": 10
+        }
+        },
+        "KBOS Land 15R Depart 15R KMHT South + Sat": {
+            "arrival_runways": [
+                {
+                    "airport": "KBOS",
+                    "runway": "27"
+                },
+                {
+                    "airport": "KBOS",
+                    "runway": "22L"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "17"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "24"
+                },
+                {
+                    "airport": "KPSM",
+                    "runway": "16"
+                },
+                {
+                    "airport": "KBED",
+                    "runway": "29"
+                },
+                {
+                    "airport": "KACK",
+                    "runway": "24"
+                },
+                {
+                    "airport": "KMVY",
+                    "runway": "24"
+                }
+            ],
+            "arrivals": {
+                "JFUND2": {
+                    "KBOS": 10
+                },
+                "ROBUC3": {
+                      "KBOS": 15
+                 },
+                 "OOSHN5": {
+                     "KBOS": 5
+                 },
+                 "ORW7": {
+                     "KBOS": 1
+                 },
+                 "ROZZE2": {
+                    "KMHT": 5
+                },
+                "ENE": {
+                    "KMHT": 3,
+                    "KPSM": 3
+                },
+                "CON": {
+                    "KMHT": 3,
+                    "KPSM": 3
+                },
+                "GDM": {
+                    "KMHT": 2,
+                    "KPSM": 5
+                },
+                "DREEM2": {
+                    "KBED": 3
+                },
+                "ZELKA2": {
+                    "KBED": 5
+                },
+                "DEEPO1": {
+                    "KACK": 10
+                },
+                "NEWBE3": {
+                    "KACK": 10
+                }
+            },
+            "solo_controller": "BOS_DEP",
+            "multi_controllers": {
+            "default" : {
+                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_F_APP": {"backup": "BOS_N_APP"},
+                "BOS_I_APP": {"backup": "BOS_F_APP"},
+                "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals":["DREEM2", "ZELKA2"]},
+                "BOS_U_APP": {"backup": "BOS_B_APP"},
+                "BOS_L_APP": {"backup": "BOS_U_APP"},
+                "MHT_J_APP": {"backup": "BOS_DEP", "departures": ["KMHT"]},
+                "MHT_Z_APP": {"backup": "MHT_J_APP"},
+                "MHT_E_APP": {"backup": "MHT_Z_APP", "arrivals":["ENE"]},
+                "MHT_P_APP": {"backup": "MHT_E_APP", "departures":["KPSM"]},
+                "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM", "ROZZE2"]},
+                "ACK_N_APP": {"arrivals": ["DEEPO1","NEWBE3"], "backup": "BOS_DEP"},
+                "ACK_DEP": {"departures": ["KACK","KMVY"], "backup": "ACK_N_APP"},
+                "ACK_O_APP": {"departures": ["KACK"],  "backup": "ACK_DEP"},
+                "ACK_Y_APP": {"departures": ["KACK"],  "backup": "ACK_O_APP"},
+                "ACK_S_APP": {"departures": ["KACK"],  "backup": "ACK_Y_APP"},
+                "ACK_A_APP": {"departures": ["KACK"],  "backup": "ACK_S_APP"}
+            }
+        },
+        "controllers": [
+            "BOS_37_CTR",
+            "BOS_E_TWR",
+            "BOS_W_TWR",
+            "MHT_TWR",
+            "PSM_TWR"
+        ],
+        "default_maps": ["A90 BASE", "BOS 15R", "CAPE SW FLOW"],
+        "departure_runways": [
+            {
+                "airport" : "KBOS",
+                "rate": 35,
+                "runway": "22R"
+            },
+            {
+                "airport": "KMHT",
+                "rate": 20,
+                "runway": "17"
+            },
+            {
+                "airport": "KPSM",
+                "rate": 10,
+                "runway": "16"
+            },
+            {
+                "airport": "KBED",
+                "rate": 10,
+                "runway": "29"
+            },
+            {
+                "airport" : "KACK",
+                "rate": 15,
+                "runway": "24"
+            },
+            {
+                "airport": "KMVY",
+                "rate": 10,
+                "runway": "24"
             }
         ],
         "wind": {
@@ -5024,7 +5935,7 @@
             "speed": 10
         }
         },
-        "BOS Land 4R/L Dep 9 KMHT South": {
+        "BOS Land 4R/L Dep 9 KMHT North": {
             "arrival_runways": [
                 {
                     "airport": "KBOS",
@@ -5033,6 +5944,92 @@
                 {
                     "airport": "KBOS",
                     "runway": "4R"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "35"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "6"
+                }
+            ],
+            "arrivals": {
+                "JFUND2": {
+                    "KBOS": 10
+                },
+                "ROBUC3": {
+                      "KBOS": 15
+                 },
+                 "OOSHN5": {
+                     "KBOS": 5
+                 },
+                 "ORW7": {
+                     "KBOS": 1
+                 },
+                 "ROZZE2": {
+                    "KMHT": 5
+                },
+                "ENE": {
+                    "KMHT": 3
+                },
+                "CON": {
+                    "KMHT": 3
+                },
+                "GDM": {
+                    "KMHT": 2
+                }
+            },
+            "solo_controller": "BOS_DEP",
+            "multi_controllers": {
+            "default" : {
+                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_F_APP": {"backup": "BOS_N_APP"},
+                "BOS_I_APP": {"backup": "BOS_F_APP"},
+                "BOS_B_APP": {"backup": "BOS_N_APP"},
+                "BOS_U_APP": {"backup": "BOS_B_APP"},
+                "BOS_L_APP": {"backup": "BOS_U_APP"},
+                 "MHT_Z_APP": {"backup" : "BOS_DEP", "departures": ["KMHT"]},
+                "MHT_J_APP": {"backup": "MHT_Z_APP"},
+                "MHT_E_APP": {"backup": "MHT_Z_APP", "arrivals":["ENE"]},
+                "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM", "ROZZE2"]}
+            }
+        },
+        "controllers": [
+            "BOS_37_CTR",
+            "BOS_E_TWR",
+            "BOS_W_TWR",
+            "MHT_TWR"
+        ],
+        "default_maps": ["A90 BASE", "BOS 4R/L"],
+        "departure_runways": [
+            {
+                "airport" : "KBOS",
+                "rate": 35,
+                "runway": "9"
+            },
+            {
+                "airport": "KMHT",
+                "rate": 20,
+                "runway": "35"
+            }
+        ],
+        "wind": {
+            "direction": 20,
+            "speed": 10
+        }
+        },
+        "KBOS Land 27/22L Depart 22R KMHT South": {
+            "arrival_runways": [
+                {
+                    "airport": "KBOS",
+                    "runway": "27"
+                },
+                {
+                    "airport": "KBOS",
+                    "runway": "22L"
                 },
                 {
                     "airport": "KMHT",
@@ -5077,13 +6074,9 @@
                 "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
                 "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP"},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"},
                 "MHT_J_APP": {"backup": "BOS_DEP", "departures": ["KMHT"]},
                 "MHT_Z_APP": {"backup": "MHT_J_APP"},
                 "MHT_E_APP": {"backup": "MHT_Z_APP", "arrivals":["ENE"]},
-                "MHT_P_APP": {"backup": "MHT_E_APP"},
                 "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM", "ROZZE2"]}
             }
         },
@@ -5091,14 +6084,183 @@
             "BOS_37_CTR",
             "BOS_E_TWR",
             "BOS_W_TWR",
-            "MHT_TWR"
+            "MHT_TWR",
+            "PSM_TWR"
         ],
-        "default_maps": ["A90 BASE", "BOS 4R/L"],
+        "default_maps": ["A90 BASE", "BOS 27/22"],
         "departure_runways": [
             {
                 "airport" : "KBOS",
                 "rate": 35,
-                "runway": "9"
+                "runway": "22R"
+            },
+            {
+                "airport": "KMHT",
+                "rate": 20,
+                "runway": "17"
+            }
+        ],
+        "wind": {
+            "direction": 220,
+            "speed": 3
+        }
+        },
+        "KBOS Land 27 Depart 33L KMHT South": {
+            "arrival_runways": [
+                {
+                    "airport": "KBOS",
+                    "runway": "27"
+                },
+                {
+                    "airport": "KBOS",
+                    "runway": "22L"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "17"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "24"
+                }
+            ],
+            "arrivals": {
+                "JFUND2": {
+                    "KBOS": 10
+                },
+                "ROBUC3": {
+                      "KBOS": 15
+                 },
+                 "OOSHN5": {
+                     "KBOS": 5
+                 },
+                 "ORW7": {
+                     "KBOS": 1
+                 },
+                 "ROZZE2": {
+                    "KMHT": 5
+                },
+                "ENE": {
+                    "KMHT": 3
+                },
+                "CON": {
+                    "KMHT": 3
+                },
+                "GDM": {
+                    "KMHT": 2
+                }
+            },
+            "solo_controller": "BOS_DEP",
+            "multi_controllers": {
+            "default" : {
+                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_F_APP": {"backup": "BOS_N_APP"},
+                "BOS_I_APP": {"backup": "BOS_F_APP"},
+                "MHT_J_APP": {"backup": "BOS_DEP", "departures": ["KMHT"]},
+                "MHT_Z_APP": {"backup": "MHT_J_APP"},
+                "MHT_E_APP": {"backup": "MHT_Z_APP", "arrivals":["ENE"]},
+                "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM", "ROZZE2"]}
+            }
+        },
+        "controllers": [
+            "BOS_37_CTR",
+            "BOS_E_TWR",
+            "BOS_W_TWR",
+            "MHT_TWR",
+            "PSM_TWR"
+        ],
+        "default_maps": ["A90 BASE", "BOS 27"],
+        "departure_runways": [
+            {
+                "airport" : "KBOS",
+                "rate": 35,
+                "runway": "22R"
+            },
+            {
+                "airport": "KMHT",
+                "rate": 20,
+                "runway": "17"
+            }
+        ],
+        "wind": {
+            "direction": 250,
+            "speed": 10
+        }
+        },
+        "KBOS Land 15R Depart 15R KMHT South": {
+            "arrival_runways": [
+                {
+                    "airport": "KBOS",
+                    "runway": "27"
+                },
+                {
+                    "airport": "KBOS",
+                    "runway": "22L"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "17"
+                },
+                {
+                    "airport": "KMHT",
+                    "runway": "24"
+                }
+            ],
+            "arrivals": {
+                "JFUND2": {
+                    "KBOS": 10
+                },
+                "ROBUC3": {
+                      "KBOS": 15
+                 },
+                 "OOSHN5": {
+                     "KBOS": 5
+                 },
+                 "ORW7": {
+                     "KBOS": 1
+                 },
+                 "ROZZE2": {
+                    "KMHT": 5
+                },
+                "ENE": {
+                    "KMHT": 3
+                },
+                "CON": {
+                    "KMHT": 3
+                },
+                "GDM": {
+                    "KMHT": 2
+                }
+            },
+            "solo_controller": "BOS_DEP",
+            "multi_controllers": {
+            "default" : {
+                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_F_APP": {"backup": "BOS_N_APP"},
+                "BOS_I_APP": {"backup": "BOS_F_APP"},
+                "MHT_J_APP": {"backup": "BOS_DEP", "departures": ["KMHT"]},
+                "MHT_Z_APP": {"backup": "MHT_J_APP"},
+                "MHT_E_APP": {"backup": "MHT_Z_APP", "arrivals":["ENE"]},
+                "MHT_W_APP": {"backup": "MHT_Z_APP", "arrivals": ["CON", "GDM", "ROZZE2"]}
+            }
+        },
+        "controllers": [
+            "BOS_37_CTR",
+            "BOS_E_TWR",
+            "BOS_W_TWR",
+            "MHT_TWR",
+            "PSM_TWR"
+        ],
+        "default_maps": ["A90 BASE", "BOS 15R"],
+        "departure_runways": [
+            {
+                "airport" : "KBOS",
+                "rate": 35,
+                "runway": "22R"
             },
             {
                 "airport": "KMHT",
@@ -5172,7 +6334,17 @@
             "PVC" : "PVC",
             "LFV" : "LFV",
             "DUNKK": "DUN",
-            "BOSOX": "BOX"
+            "BOSOX": "BOX",
+            "MVY": "MVY",
+            "BOGEY": "BOG",
+            "FREDO": "FRE",
+            "POMPY": "PMP",
+            "PVD": "PVD",
+            "ACK": "ACK",
+            "SWANN": "SWANN",
+            "HYA": "HYA",
+            "KEWB": "KEW",
+            "DOLIE": "DOL"
         },
         "stars_maps": [
             {
@@ -5184,6 +6356,16 @@
                 "group": 0,
                 "label": "MHT",
                 "name": "MHT MAIN"
+            },
+            {
+                "group": 0,
+                "label": "CAPE NE",
+                "name": "CAPE NE FLOW"
+            },
+            {
+                "group": 0,
+                "label": "CAPE SW",
+                "name": "CAPE SW FLOW"
             },
             {
                 "group": 1,
