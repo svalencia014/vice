@@ -753,12 +753,20 @@
         ],
         "inhibit_ca_volumes": [
             {
-                "name": "MHT NO CA",
+                "name": "KACK NO CA",
                 "type": "circle",
                 "floor": 0,
                 "ceiling": 2000,
                 "radius": 5,
-                "center": "KMHT"
+                "center": "KACK"
+            },
+            {
+                "name": "KMVY NO CA",
+                "type": "circle",
+                "floor": 0,
+                "ceiling": 2000,
+                "radius": 5,
+                "center": "KMVY"
             }
         ],
         "allow_long_scratchpad": [false, false],
