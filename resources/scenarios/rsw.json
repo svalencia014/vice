@@ -12,6 +12,104 @@
         "R6": {
           "cifp_id": "R6"
         }
+      },
+      "departure_routes": {
+        "6": {
+          "LAL,ORL": {
+            "cleared_altitude": 4000,
+            "sid": "CSHEL6",
+            "waypoints": "KRSW-24/h058 CSHEL JUNLO PULEC"
+          },
+          "DYLYN,SABEE": {
+            "cleared_altitude": 4000,
+            "sid": "ALICO7",
+            "waypoints": "KRSW-24/h058"
+          },
+          "CSHEL": {
+            "cleared_altitude": 4000,
+            "sid": "CSHEL6",
+            "waypoints": "KRSW-24/h058"
+          },
+          "MOOKY": {
+            "cleared_altitude" : 3000,
+            "sid": "MOOKY6",
+            "waypoints": "KRSW-24/h100"
+          },
+          "MARCI": {
+            "cleared_altitude" : 3000,
+            "sid": "SCUBY7",
+            "waypoints": "KRSW-24/h100"
+          }
+        },
+        "24": {
+          "LAL,ORL": {
+            "cleared_altitude": 4000,
+            "sid": "CSHEL6",
+            "waypoints": "KRSW-6 MAPUL SNOKE WITAR LOSBY YALOO CSHEL JUNLO PULEC"
+           },
+           "CSHEL": {
+            "cleared_altitude": 4000,
+            "sid": "CSHEL6",
+            "waypoints": "KRSW-6 MAPUL SNOKE WITAR LOSBY YALOO"
+          },
+          "DYLYN,SABEE": {
+            "cleared_altitude": 4000,
+            "sid": "ALICO7",
+            "waypoints": "KRSW-6/h310"
+          },
+          "MOOKY": {
+            "cleared_altitude" : 3000,
+            "sid": "MOOKY6",
+            "waypoints": "KRSW-6/h238"
+          },
+          "MARCI": {
+            "cleared_altitude" : 3000,
+            "sid": "SCUBY7",
+            "waypoints": "KRSW-6/h220"
+          }
+        }
+      },
+      "departures": [
+        
+      ]
+    },
+    "KPGD": {
+      "approaches": {
+        "I4": {
+          "cifp_id": "I4"
+        },
+        "R15":{
+          "cifp_id": "R15"
+        },
+        "R22": {
+          "cifp_id": "R22"
+        },
+        "R33": {
+          "cifp_id": "R33"
+        },
+        "R4": {
+          "cifp_id": "R4"
+        }
+      }
+    },
+    "KAPF": {
+      "approaches": {
+        "R23": {
+          "cifp_id": "R23"
+        },
+        "R5": {
+          "cifp_id": "R5"
+        }
+      }
+    },
+    "KMKY": {
+      "approaches": {
+        "R17": {
+          "cifp_id": "R17"
+        },
+        "R35": {
+          "cifp_id": "R35"
+        }
       }
     }
   }
