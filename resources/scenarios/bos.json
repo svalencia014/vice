@@ -158,6 +158,73 @@
           }
       ],
       "departure_routes": {
+        "4L": {
+          "BLZZR": {
+            "cleared_altitude": 5000,
+            "sid": "BLZZR5",
+            "waypoints": "CLAWW/s250 FENWY JAITE HEWMO/s260 KENWI"
+          },
+          "BRUWN": {
+            "cleared_altitude": 5000,
+            "sid": "BRUWN6",
+            "waypoints": "CLAWW/s250 FENWY BUCYK"
+          },
+          "CELTK": {
+            "cleared_altitude": 5000,
+            "sid": "CELTK6",
+            "waypoints": "CLAWW/s250 FENWY SCOAR"
+          },
+          "HYLND": {
+            "cleared_altitude": 5000,
+            "sid": "HYLND6",
+            "waypoints": "CLAWW/s250 CORRT STAYC SOFEA SHAAN"
+          },
+          "LBSTA": {
+            "cleared_altitude": 5000,
+            "sid": "LBSTA7",
+            "waypoints": "CLAWW/s250 CLMPP SHAUN"
+          },
+          "PATSS": {
+            "cleared_altitude": 5000,
+            "sid": "PATSS6",
+            "waypoints": "CLAWW/s250 FENWY GLLET WYMTH"
+          },
+          "REVSS": {
+            "cleared_altitude": 5000,
+            "sid": "REVSS5",
+            "waypoints": "CLAWW/s250 FENWY GLLET WYMTH DEDHM"
+          },
+          "SSOXS": {
+            "cleared_altitude": 5000,
+            "sid": "SSOXS6",
+            "waypoints": "CLAWW/s250 FENWY BUCYK JSTER"
+          },
+          "PEASE,ENE": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-22L/h010"
+          },
+          "MANCH,CON": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-22L/h350"
+          },
+          "BOSOX,GLYDE": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-22L/h300"
+          },
+          "PVC": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-22L/h120"
+          },
+          "LFV,DUNKK": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-22L/h140"
+          }
+        },
         "9": {
           "BLZZR": {
             "cleared_altitude": 5000,
@@ -199,17 +266,57 @@
             "sid": "SSOXS6",
             "waypoints": "CLAWW/s250 FENWY BUCYK JSTER"
           },
-          "PEASE,PVC,LFV,DUNKK,MANCH,ENE,BOSOX,CON": {
+          "PEASE,ENE": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
-            "waypoints": "KBOS-27/h092"
+            "waypoints": "KBOS-27/h010"
+          },
+          "MANCH,CON": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-27/h350"
+          },
+          "BOSOX": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-27/h300"
+          },
+          "PVC": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-27/h120"
+          },
+          "LFV,DUNKK": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-27/h140"
           }
         },
         "15R": {
-          "PEASE,PVC,LFV,DUNKK,MANCH,ENE,BOSOX,CON": {
+          "PEASE,ENE": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-33L/h180"
+          },
+          "MANCH,CON": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
             "waypoints": "KBOS-33L/h120"
+          },
+          "BOSOX,GLYDE": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-33L/h120"
+          },
+          "PVC": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-33L/h180"
+          },
+          "LFV,DUNKK": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-33L/h180"
           },
           "BLZZR": {
             "cleared_altitude": 5000,
@@ -293,10 +400,30 @@
             "sid": "SSOXS6",
             "waypoints": "TJAYY BRRRO/s250 BUCYK JSTER"
           },
-          "PEASE,PVC,LFV,DUNKK,MANCH,ENE,BOSOX,CON": {
+          "PEASE,ENE": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
-            "waypoints": "KBOS-4R/h140"
+            "waypoints": "KBOS-4L/h250"
+          },
+          "MANCH,CON": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-4L/h250"
+          },
+          "BOSOX,GLYDE": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-4L/h250"
+          },
+          "PVC": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-4L/h250"
+          },
+          "LFV,DUNKK": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-4L/h250"
           }
         },
         "33L": {
@@ -340,10 +467,30 @@
             "sid": "SSOXS6",
             "waypoints": "TEKKK COUSY CBEAR COLYN"
           },
-          "PEASE,PVC,LFV,DUNKK,MANCH,ENE,BOSOX,CON": {
+          "PEASE,ENE": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
-            "waypoints": "KBOS-15R/h316"
+            "waypoints": "KBOS-15R/h010"
+          },
+          "MANCH,CON": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-15R/h350"
+          },
+          "BOSOX,GLYDE": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-15R/h300"
+          },
+          "PVC": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-15R/h280"
+          },
+          "LFV,DUNKK": {
+            "cleared_altitude": 2000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-15R/h250"
           }
         }
       },
@@ -352,6 +499,7 @@
             "exit": "HYLND",
             "destination": "KPHX",
             "altitude": 32000,
+            "scratchpad": "M320",
             "route": "HYLND7 HYLND SYR YXU FNT J94 PMM KG72M KG66K LEWRP KK54E KK51C KK48A KK45Y KA42W DIXAN GUP EAGUL6",
             "airlines": [
                 {
@@ -364,6 +512,7 @@
             "exit": "SSOXS",
             "destination": "KPHL",
             "altitude": 24000,
+            "scratchpad": "S240",
             "route": "SSOXS7 SSOXS Q167 RIFLE Q439 BRIGS JIIMS4",
             "airlines": [
                 {
@@ -376,6 +525,7 @@
             "exit": "PEASE",
             "destination": "KAUG",
             "altitude": 7000,
+            "scratchpad": "P070",
             "route": "LOGAN4 PEASE ENE",
             "airlines": [
                 {
@@ -389,6 +539,7 @@
             "destination": "KPVC",
             "altitude": 3000,
             "route": "LOGAN4 PVC",
+            "scratchpad": "P030",
             "airlines": [
                 {
                     "icao": "KAP",
@@ -399,6 +550,7 @@
         {
             "exit": "HYLND",
             "destination": "KDTW",
+            "scratchpad": "M280",
             "altitude": 28000,
             "route": "HYLND7 HYLND CAM Q822 GONZZ DONEO TPGUN2",
             "airlines": [
@@ -412,6 +564,7 @@
             "exit": "SSOXS",
             "destination": "KMIA",
             "altitude": 34000,
+            "scratchpad": "S340",
             "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 KALDA TUGGR Q101 SKARP Y313 HOAGG BNFSH2",
             "airlines": [
                 {
@@ -424,6 +577,7 @@
             "exit": "HYLND",
             "destination": "KDTW",
             "altitude": 32000,
+            "scratchpad": "M320",
             "route": "HYLND7 HYLND CAM Q822 PAYGE Q822 GONZZ DONEO TPGUN2",
             "airlines": [
                 {
@@ -436,6 +590,7 @@
             "exit": "SSOXS",
             "destination": "KORF",
             "altitude": 34000,
+            "scratchpad": "S340",
             "route": "SSOXS7 SSOXS Q167 ZJAAY CCV",
             "airlines": [
                 {
@@ -448,6 +603,7 @@
             "exit": "SSOXS",
             "destination": "KRDU",
             "altitude": 36000,
+            "scratchpad": "S360",
             "route": "SSOXS7 SSOXS Q167 ORCHA Q167 ZJAAY TAQLE2",
             "airlines": [
                 {
@@ -460,6 +616,7 @@
             "exit": "HYLND",
             "destination": "KORD",
             "altitude": 34000,
+            "scratchpad": "M340",
             "route": "HYLND7 HYLND CAM Q822 GONZZ FARGN CHAAP Q436 EMMMA WYNDE2",
             "airlines": [
                 {
@@ -472,6 +629,7 @@
             "exit": "HYLND",
             "destination": "KORD",
             "altitude": 32000,
+            "scratchpad": "M320",
             "route": "HYLND7 HYLND CAM Q822 PAYGE Q822 GONZZ FARGN CHAAP Q436 EMMMA WYNDE2",
             "airlines": [
                 {
@@ -484,6 +642,7 @@
             "exit": "BLZZR",
             "destination": "KDFW",
             "altitude": 36000,
+            "scratchpad": "X360",
             "route": "BLZZR6 BLZZR BAF Q406 BWZ J6 HVQ Q68 LITTR MEEOW FEWWW SEEVR4",
             "airlines": [
                 {
@@ -496,6 +655,7 @@
             "exit": "HYLND",
             "destination": "KBNA",
             "altitude": 34000,
+            "scratchpad": "M340",
             "route": "HYLND7 HYLND SYR JOSSY JHW Q29 KLYNE RINTE Q139 IIU FORKS PASLY4",
             "airlines": [
                 {
@@ -508,6 +668,7 @@
             "exit": "PATSS",
             "destination": "KCLT",
             "altitude": 36000,
+            "scratchpad": "Y360",
             "route": "PATSS7 PATSS NELIE BIZEX Q75 GVE AIROW CHSLY6",
             "airlines": [
                 {
@@ -520,6 +681,7 @@
             "exit": "LBSTA",
             "destination": "BIKF",
             "altitude": 37000,
+            "scratchpad": "P370",
             "route": "LBSTA8 LBSTA EBONY KODIK 5800N/05000W 6100N/04000W 6300N/03000W EPENI ELDIS ELDIS3N",
             "airlines": [
                 {
@@ -532,6 +694,7 @@
             "exit": "SSOXS",
             "destination": "KBWI",
             "altitude": 32000,
+            "scratchpad": "S320",
             "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN MIIDY2",
             "airlines": [
                 {
@@ -544,6 +707,7 @@
             "exit": "BLZZR",
             "destination": "KATL",
             "altitude": 32000,
+            "scratchpad": "X320",
             "route": "BLZZR6 BLZZR BAF Q448 PTW J48 MOL FLASK OZZZI1",
             "airlines": [
                 {
@@ -556,6 +720,7 @@
             "exit": "PATSS",
             "destination": "KCLT",
             "altitude": 34000,
+            "scratchpad": "Y340",
             "route": "PATSS7 PATSS NELIE BIZEX Q75 COPES Q75 GVE AIROW CHSLY6",
             "airlines": [
                 {
@@ -568,6 +733,7 @@
             "exit": "SSOXS",
             "destination": "KMCO",
             "altitude": 36000,
+            "scratchpad": "S360",
             "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED MOXXY Q85 LPERD GTOUT1",
             "airlines": [
                 {
@@ -580,6 +746,7 @@
             "exit": "HYLND",
             "destination": "KMSP",
             "altitude": 28000,
+            "scratchpad": "M280",
             "route": "HYLND7 HYLND NOVON KENPA CEWDA MUSCL3",
             "airlines": [
                 {
@@ -592,6 +759,7 @@
             "exit": "HYLND",
             "destination": "KSTC",
             "altitude": 43000,
+            "scratchpad": "M430",
             "route": "HYLND7 HYLND GONZZ Q822 DERLO HOCKE MBS MBL GRB GEP",
             "airlines": [
                 {
@@ -604,6 +772,7 @@
             "exit": "SSOXS",
             "destination": "KDCA",
             "altitude": 26000,
+            "scratchpad": "S260",
             "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN DEALE3",
             "airlines": [
                 {
@@ -616,6 +785,7 @@
             "exit": "PATSS",
             "destination": "KTPA",
             "altitude": 36000,
+            "scratchpad": "Y360",
             "route": "PATSS7 PATSS NELIE BIZEX Q75 TEUFL BAAMF DADES1",
             "airlines": [
                 {
@@ -628,6 +798,7 @@
             "exit": "HYLND",
             "destination": "KCVG",
             "altitude": 38000,
+            "scratchpad": "M380",
             "route": "HYLND7 HYLND CAM Q822 GONZZ JOSSY MAULL KODIE SAVVI TIGRR4",
             "airlines": [
                 {
@@ -640,6 +811,7 @@
             "exit": "HYLND",
             "destination": "KCMH",
             "altitude": 28000,
+            "scratchpad": "M280",
             "route": "HYLND7 HYLND CAM Q822 GONZZ Q29 WWSHR CBUSS2",
             "airlines": [
                 {
@@ -652,6 +824,7 @@
             "exit": "BLZZR",
             "destination": "KDEN",
             "altitude": 28000,
+            "scratchpad": "X280",
             "route": "BLZZR6 BLZZR BAF Q480 AIR J80 EMPTY J80 VHP J80 MCI J24 OATHE CLASH4",
             "airlines": [
                 {
@@ -664,6 +837,7 @@
             "exit": "HYLND",
             "destination": "KLAS",
             "altitude": 30000,
+            "scratchpad": "M300",
             "route": "HYLND7 HYLND CAM Q822 GONZZ DJB ARCAB JAAVE STL KK42A LBL KA39U TBC SQIRE RKSTR3",
             "airlines": [
                 {
@@ -676,6 +850,7 @@
             "exit": "HYLND",
             "destination": "KMSP",
             "altitude": 34000,
+            "scratchpad": "M340",
             "route": "HYLND7 HYLND GOATR Q816 AGDOX Q812 ZOHAN IDIOM MUSCL3",
             "airlines": [
                 {
@@ -688,6 +863,7 @@
             "exit": "HYLND",
             "destination": "KSEA",
             "altitude": 32000,
+            "scratchpad": "M320",
             "route": "HYLND7 HYLND JOGIM KIXIR BURWA GRIBY YQT KP21A KU21U CHOTE MLP GLASR3",
             "airlines": [
                 {
@@ -700,6 +876,7 @@
             "exit": "HYLND",
             "destination": "KLAX",
             "altitude": 32000,
+            "scratchpad": "M320",
             "route": "HYLND7 HYLND HANAA Q816 HOCKE GRB ODI FSD J114 DVV ZAKRY Q88 HAKMN ANJLL4",
             "airlines": [
                 {
@@ -712,6 +889,7 @@
             "exit": "SSOXS",
             "destination": "KMCO",
             "altitude": 34000,
+            "scratchpad": "M340",
             "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 ZJAAY Q97 SAWED MOXXY Q85 LPERD GTOUT1",
             "airlines": [
                 {
@@ -724,6 +902,7 @@
             "exit": "PATSS",
             "destination": "MMMX",
             "altitude": 36000,
+            "scratchpad": "Y360",
             "route": "PATSS7 PATSS NELIE BIZEX Q75 GVE LYH COLZI AWYAT IPTAY CHOPZ MGM SJI TBD M345 AXEXO UM345 PAZ UT154 ENAGA ENAGA2A",
             "airlines": [
                 {
@@ -736,6 +915,7 @@
             "exit": "HYLND",
             "destination": "KSFO",
             "altitude": 30000,
+            "scratchpad": "M300",
             "route": "HYLND7 HYLND CAM Q822 GONZZ BMPAH HOCKE BAE DBQ OVR GLD JNC SAKES MLF ILC OAL INYOE DYAMD5",
             "airlines": [
                 {
@@ -748,6 +928,7 @@
             "exit": "HYLND",
             "destination": "KLAX",
             "altitude": 30000,
+            "scratchpad": "M300",
             "route": "HYLND7 HYLND CAM Q822 GONZZ DKK KEEHO DAIFE WHETT MCI GOSSL KK45A KENTO CIM DIXAN TANER INW DRK J231 HIPPI GABBL HLYWD1",
             "airlines": [
                 {
@@ -760,6 +941,7 @@
             "exit": "HYLND",
             "destination": "KSFO",
             "altitude": 32000,
+            "scratchpad": "M320",
             "route": "HYLND7 HYLND HANAA Q816 GOATR KC81W LEPOS KC81Q WOKNO KG81K MCW KP75E EBIRD KD66Y KD63W EKR LOOLO DTA RUMPS OAL INYOE DYAMD5",
             "airlines": [
                 {
@@ -772,6 +954,7 @@
             "exit": "HYLND",
             "destination": "KDEN",
             "altitude": 34000,
+            "scratchpad": "M340",
             "route": "HYLND7 HYLND HANAA Q816 GOATR Q816 OMRAK Q816 HOCKE MONEE DBQ OBH BRWRY LAWGR3",
             "airlines": [
                 {
@@ -784,6 +967,7 @@
             "exit": "REVSS",
             "destination": "KLAX",
             "altitude": 34000,
+            "scratchpad": "W340",
             "route": "REVSS6 REVSS CTR HNK ULW JHW CXR PIA J96 SLN J102 ALS J110 RSK J64 TBC JASSE Q90 DNERO ANJLL4",
             "airlines": [
                 {
@@ -796,6 +980,7 @@
             "exit": "HYLND",
             "destination": "KSFO",
             "altitude": 34000,
+            "scratchpad": "M340",
             "route": "HYLND7 HYLND HANAA Q816 HOCKE BAE FOD CYS GAROT INYOE DYAMD5",
             "airlines": [
                 {
@@ -808,6 +993,7 @@
             "exit": "HYLND",
             "destination": "KSAN",
             "altitude": 30000,
+            "scratchpad": "M300", 
             "route": "HYLND7 HYLND CAM Q822 GONZZ DKK KEEHO PNT GBG LOAMY MCI HUT LBL ABQ J18 HOGGZ LUCKI1",
             "airlines": [
                 {
@@ -820,6 +1006,7 @@
             "exit": "BLZZR",
             "destination": "KLAX",
             "altitude": 32000,
+            "scratchpad": "X320",
             "route": "BLZZR6 BLZZR BAF Q406 BWZ J6 MRB J6 HVQ J78 FAM SGF LBL CIM J96 DRK J231 HIPPI GABBL HLYWD1",
             "airlines": [
                 {
@@ -832,6 +1019,7 @@
             "exit": "HYLND",
             "destination": "KSFO",
             "altitude": 34000,
+            "scratchpad": "M340",
             "route": "HYLND7 HYLND HANAA Q816 GOATR KC81W YTP KC81Q YZEMN KG81M PKRNA KP81I MCW KP75E EBIRD KD66Y LIBIE KD63U EKR LOOLO DTA RUMPS OAL INYOE DYAMD5",
             "airlines": [
                 {
@@ -844,6 +1032,7 @@
             "exit": "CELTK",
             "destination": "EGLL",
             "altitude": 39000,
+            "scratchpad": "C390",
             "route": "CELTK7 CELTK FRILL TUSKY N435A TUDEP 5200N/05000W 5400N/04000W 5500N/03000W 5400N/02000W MALOT GISTI ENJEX AVZAC INFEC JETZI AMFUL OCTIZ P2 SIRIC SIRIC1H",
             "airlines": [
                 {
@@ -856,6 +1045,7 @@
             "exit": "HYLND",
             "destination": "KSFO",
             "altitude": 32000,
+            "scratchpad": "M320",
             "route": "HYLND7 HYLND HANAA Q816 AGDOX Q816 HOCKE DLL HELLO ZZEEE OBH FQF JNETT SAKES MLF ILC OAL INYOE DYAMD5",
             "airlines": [
                 {
@@ -868,6 +1058,7 @@
             "exit": "SSOXS",
             "destination": "KMYR",
             "altitude": 34000,
+            "scratchpad": "S340",
             "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 PAACK WYLMS",
             "airlines": [
                 {
@@ -880,6 +1071,7 @@
             "exit": "SSOXS",
             "destination": "MDSD",
             "altitude": 32000,
+            "scratchpad": "S320",
             "route": "SSOXS7 SSOXS Q167 SPDEY Y488 OHRYN Y488 WEBBB Y488 SAUCR L453 LAMER L453 RODRK POKEG UT17 KOBET KOBET2H",
             "airlines": [
                 {
@@ -892,6 +1084,7 @@
             "exit": "SSOXS",
             "destination": "MDST",
             "altitude": 32000,
+            "scratchpad": "S320",
             "route": "SSOXS7 SSOXS Q167 SPDEY Y488 OHRYN Y488 WEBBB Y488 SAUCR L453 LAMER L453 RODRK SEKAR SEKAR2P",
             "airlines": [
                 {
@@ -904,6 +1097,7 @@
             "exit": "SSOXS",
             "destination": "MDSD",
             "altitude": 35000,
+            "scratchpad": "S350",
             "route": "SSOXS7 SSOXS Q167 SPDEY Y488 WEBBB Y488 SAUCR L453 LAMER L453 RODRK POKEG UT17 KOBET KOBET2H",
             "airlines": [
                 {
@@ -916,6 +1110,7 @@
             "exit": "LFV",
             "destination": "KACK",
             "altitude": 5000,
+            "scratchpad": "L050",
             "route": "LOGAN4 LFV",
             "airlines": [
                 {
@@ -928,6 +1123,7 @@
             "exit": "ENE",
             "destination": "KAUG",
             "altitude": 6000,
+            "scratchpad": "P060",
             "route": "ENE PEASE STEVO LWRNC",
             "airlines": [
                 {
@@ -940,6 +1136,7 @@
             "exit": "PATSS",
             "destination": "KLGA",
             "altitude": 16000,
+            "scratchpad": "Y160",
             "route": "PATSS7 PATSS NELIE VALRE HAARP4",
             "airlines": [
                 {
@@ -951,7 +1148,8 @@
           {
               "exit": "DUNKK",
               "destination": "KMVY",
-              "altitude": 3500,
+              "scratchpad": "D030",
+              "altitude": 3000,
               "route": "LOGAN4 DUNKK",
               "airlines": [
                   {
@@ -964,6 +1162,7 @@
               "exit": "BLZZR",
               "destination": "KATL",
               "altitude": 38000,
+              "scratchpad": "X380",
               "route": "BLZZR6 BLZZR BAF Q448 PTW J48 MOL FLASK OZZZI1",
               "airlines": [
                   {
@@ -976,6 +1175,7 @@
               "exit": "HYLND",
               "destination": "KMSP",
               "altitude": 28000,
+              "scratchpad": "M280",
               "route": "HYLND7 HYLND BUGSY POLTY UBTIX ULAMO STNRD COLDD BAINY3",
               "airlines": [
                   {
@@ -985,21 +1185,10 @@
               ]
           },
           {
-              "exit": "LFV",
-              "destination": "KACK",
-              "altitude": 5500,
-              "route": "LOGAN4 LFV",
-              "airlines": [
-                  {
-                      "icao": "KAP",
-                      "fleet": "usa"
-                  }
-              ]
-          },
-          {
               "exit": "SSOXS",
               "destination": "KFLL",
               "altitude": 32000,
+              "scratchpad": "S320",
               "route": "SSOXS7 SSOXS Q167 SPDEY Y488 WEBBB Y488 STERN Y493 TUBBS Y493 JENKS MAJIK CUUDA3",
               "airlines": [
                   {
@@ -1012,6 +1201,7 @@
               "exit": "SSOXS",
               "destination": "KMCO",
               "altitude": 36000,
+              "scratchpad": "S360", 
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED MOXXY Q85 LPERD GTOUT1",
               "airlines": [
                   {
@@ -1024,6 +1214,7 @@
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 38000,
+              "scratchpad": "M380",
               "route": "HYLND7 HYLND BUGSY POLTY OXASA SSM GRB SHIKY FYTTE7",
               "airlines": [
                   {
@@ -1036,6 +1227,7 @@
               "exit": "HYLND",
               "destination": "KSAN",
               "altitude": 30000,
+              "scratchpad": "M300",
               "route": "HYLND7 HYLND CAM Q822 GONZZ Q29 KLYNE ROD VHP J110 BUM Q176 CIM J96 PKE LUCKI1",
               "airlines": [
                   {
@@ -1048,6 +1240,7 @@
               "exit": "SSOXS",
               "destination": "KATL",
               "altitude": 32000,
+              "scratchpad": "S320",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED GUILD Q409 MRPIT CEELY Q172 YUTEE SKWKR JJEDI3",
               "airlines": [
                   {
@@ -1060,6 +1253,7 @@
               "exit": "HYLND",
               "destination": "KDEN",
               "altitude": 38000,
+              "scratchpad": "M380",
               "route": "HYLND7 HYLND BUGSY POLTY UBTIX ULAMO STNRD COLDD ONL PORDR AALLE3",
               "airlines": [
                   {
@@ -1072,6 +1266,7 @@
               "exit": "SSOXS",
               "destination": "KSAV",
               "altitude": 34000,
+              "scratchpad": "S340",
               "route": "SSOXS7 SSOXS Q167 ORCHA Q167 RIFLE HEADI Q97 SAWED GUILD Q409 SESUE SOOOP",
               "airlines": [
                   {
@@ -1084,6 +1279,7 @@
               "exit": "HYLND",
               "destination": "KDFW",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND CAM Q822 PAYGE Q822 GONZZ Q29 DORET DJB MIE STL RZC FSM KOMMA RRNET BRDJE4",
               "airlines": [
                   {
@@ -1096,6 +1292,7 @@
               "exit": "SSOXS",
               "destination": "KRSW",
               "altitude": 34000,
+              "scratchpad": "S340",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED GUILD Q409 PUPYY Q103 CYNTA SHFTY5",
               "airlines": [
                   {
@@ -1108,6 +1305,7 @@
               "exit": "REVSS",
               "destination": "KPIT",
               "altitude": 28000,
+              "scratchpad": "W280",
               "route": "REVSS6 REVSS CTR HNK KONJE J190 SLT HAYNZ7",
               "airlines": [
                   {
@@ -1120,6 +1318,7 @@
               "exit": "BLZZR",
               "destination": "KDFW",
               "altitude": 30000,
+              "scratchpad": "X300",
               "route": "BLZZR6 BLZZR BAF Q406 BWZ J6 COLNS J6 HVQ Q68 LITTR FEWWW BRDJE4",
               "airlines": [
                   {
@@ -1132,6 +1331,7 @@
               "exit": "HYLND",
               "destination": "KMDW",
               "altitude": 38000,
+              "scratchpad": "M380",
               "route": "HYLND7 HYLND CAM Q822 GONZZ Q29 JHW DJB J60 ASHEN BAGEL PANGG5",
               "airlines": [
                   {
@@ -1144,6 +1344,7 @@
               "exit": "SSOXS",
               "destination": "KRIC",
               "altitude": 26000,
+              "scratchpad": "S260",
               "route": "SSOXS7 SSOXS Q167 ZJAAY ARICE JAMIE",
               "airlines": [
                   {
@@ -1156,6 +1357,7 @@
               "exit": "SSOXS",
               "destination": "KCLT",
               "altitude": 34000,
+              "scratchpad": "S340",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED COUPN CHSLY6",
               "airlines": [
                   {
@@ -1168,6 +1370,7 @@
               "exit": "SSOXS",
               "destination": "KBWI",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN MIIDY2",
               "airlines": [
                   {
@@ -1180,6 +1383,7 @@
               "exit": "HYLND",
               "destination": "KCLE",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND CAM Q822 PAYGE Q822 GONZZ HANKK THOME TRYBE4",
               "airlines": [
                   {
@@ -1192,6 +1396,7 @@
               "exit": "SSOXS",
               "destination": "KDCA",
               "altitude": 28000,
+              "scratchpad": "S280",
               "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN DEALE3",
               "airlines": [
                   {
@@ -1204,6 +1409,7 @@
               "exit": "BLZZR",
               "destination": "KIAD",
               "altitude": 28000,
+              "scratchpad": "X280",
               "route": "BLZZR6 BLZZR BAF HYPER9",
               "airlines": [
                   {
@@ -1216,6 +1422,7 @@
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND CAM Q822 DERLO NOLNN ESSPO5",
               "airlines": [
                   {
@@ -1228,6 +1435,7 @@
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND CAM Q822 GONZZ FARGN CHAAP Q436 EMMMA WYNDE2",
               "airlines": [
                   {
@@ -1240,6 +1448,7 @@
               "exit": "BLZZR",
               "destination": "KAUS",
               "altitude": 36000,
+              "scratchpad": "X360",
               "route": "BLZZR6 BLZZR BAF Q406 BWZ J6 COLNS J6 HVQ Q68 LITTR TXK BROBB WINDU SEWZY6",
               "airlines": [
                   {
@@ -1252,6 +1461,7 @@
               "exit": "BLZZR",
               "destination": "KATL",
               "altitude": 32000,
+              "scratchpad": "X320",
               "route": "BLZZR6 BLZZR BAF Q448 BIGGO Q448 PTW J48 MOL FLASK OZZZI1",
               "airlines": [
                   {
@@ -1264,6 +1474,7 @@
               "exit": "SSOXS",
               "destination": "KMCO",
               "altitude": 38000,
+              "scratchpad": "S380",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED MOXXY Q85 LPERD GTOUT1",
               "airlines": [
                   {
@@ -1276,6 +1487,7 @@
               "exit": "HYLND",
               "destination": "KSTL",
               "altitude": 40000,
+              "scratchpad": "M400",
               "route": "HYLND7 HYLND SYR JOSSY JHW Q29 KLYNE ROD VHP AARCH2",
               "airlines": [
                   {
@@ -1288,6 +1500,7 @@
               "exit": "HYLND",
               "destination": "KSFO",
               "altitude": 26000,
+              "scratchpad": "M260",
               "route": "HYLND7 HYLND BUGSY POLTY UBTIX ULAMO STNRD COLDD FAR MOTLY CZI J32 LLC LEGGS BDEGA3",
               "airlines": [
                   {
@@ -1300,6 +1513,7 @@
               "exit": "BLZZR",
               "destination": "KATL",
               "altitude": 32000,
+              "scratchpad": "X320",
               "route": "BLZZR6 BLZZR BAF Q448 PTW J48 MOL FLASK OZZZI1",
               "airlines": [
                   {
@@ -1312,6 +1526,7 @@
               "exit": "HYLND",
               "destination": "KMDW",
               "altitude": 40000,
+              "scratchpad": "M400",
               "route": "HYLND7 HYLND CAM Q822 GONZZ Q29 JHW DJB J60 ASHEN BAGEL PANGG5",
               "airlines": [
                   {
@@ -1324,6 +1539,7 @@
               "exit": "SSOXS",
               "destination": "KMCO",
               "altitude": 36000,
+              "scratchpad": "S360",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED MOXXY Q85 LPERD GTOUT1",
               "airlines": [
                   {
@@ -1336,6 +1552,7 @@
               "exit": "HYLND",
               "destination": "KDEN",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND BUGSY POLTY UBTIX ULAMO STNRD COLDD ONL PORDR AALLE3",
               "airlines": [
                   {
@@ -1348,6 +1565,7 @@
               "exit": "HYLND",
               "destination": "KPHX",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND SYR YXU FNT J94 PMM KG72M KG66K LEWRP KK54E KK51C KK48A KK45Y KA42W DIXAN GUP EAGUL6",
               "airlines": [
                   {
@@ -1360,6 +1578,7 @@
               "exit": "SSOXS",
               "destination": "KMIA",
               "altitude": 34000,
+              "scratchpad": "S340",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 KALDA TUGGR Q101 SKARP Y313 HOAGG BNFSH2",
               "airlines": [
                   {
@@ -1372,6 +1591,7 @@
               "exit": "BLZZR",
               "destination": "KDFW",
               "altitude": 36000,
+              "scratchpad": "X360",
               "route": "BLZZR6 BLZZR BAF Q406 BWZ J6 HVQ Q68 LITTR MEEOW FEWWW SEEVR4",
               "airlines": [
                   {
@@ -1384,6 +1604,7 @@
               "exit": "BRUWN",
               "destination": "TJSJ",
               "altitude": 35000,
+             "scratchpad": "B350",
               "route": "BRUWN7 BRUWN BORQE Y578 KAYYT DASER BALTN MEGGG L456 THANK PLING RTE7 SAALR",
               "airlines": [
                   {
@@ -1396,6 +1617,7 @@
               "exit": "PATSS",
               "destination": "KMYR",
               "altitude": 34000,
+              "scratchpad": "Y340",
               "route": "PATSS7 PATSS NELIE BIZEX Q75 GVE MELTN SBV RDU V136 CRE",
               "airlines": [
                   {
@@ -1408,6 +1630,7 @@
               "exit": "HYLND",
               "destination": "KLAS",
               "altitude": 30000,
+              "scratchpad": "M300",
               "route": "HYLND7 HYLND CAM Q822 GONZZ DJB ARCAB JAAVE STL KK42A LBL KA39U TBC SQIRE RKSTR3",
               "airlines": [
                   {
@@ -1420,6 +1643,7 @@
               "exit": "HYLND",
               "destination": "KSEA",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND JOGIM KIXIR BURWA GRIBY YQT KP21A KU21U CHOTE MLP GLASR3",
               "airlines": [
                   {
@@ -1432,6 +1656,7 @@
               "exit": "HYLND",
               "destination": "KLAX",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND HANAA Q816 HOCKE GRB ODI FSD J114 DVV ZAKRY Q88 HAKMN ANJLL4",
               "airlines": [
                   {
@@ -1444,6 +1669,7 @@
               "exit": "HYLND",
               "destination": "KSFO",
               "altitude": 30000,
+              "scratchpad": "M300",
               "route": "HYLND7 HYLND CAM Q822 GONZZ BMPAH HOCKE BAE DBQ OVR GLD JNC SAKES MLF ILC OAL INYOE DYAMD5",
               "airlines": [
                   {
@@ -1456,6 +1682,7 @@
               "exit": "HYLND",
               "destination": "KLAX",
               "altitude": 30000,
+              "scratchpad": "M300",
               "route": "HYLND7 HYLND CAM Q822 GONZZ DKK KEEHO DAIFE WHETT MCI GOSSL KK45A KENTO CIM DIXAN TANER INW DRK J231 HIPPI GABBL HLYWD1",
               "airlines": [
                   {
@@ -1468,6 +1695,7 @@
               "exit": "HYLND",
               "destination": "KSFO",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND HANAA Q816 GOATR KC81W LEPOS KC81Q WOKNO KG81K MCW KP75E EBIRD KD66Y KD63W EKR LOOLO DTA RUMPS OAL INYOE DYAMD5",
               "airlines": [
                   {
@@ -1480,6 +1708,7 @@
               "exit": "SSOXS",
               "destination": "KMYR",
               "altitude": 34000,
+              "scratchpad": "S340",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 PAACK WYLMS",
               "airlines": [
                   {
@@ -1492,6 +1721,7 @@
               "exit": "SSOXS",
               "destination": "MDSD",
               "altitude": 32000,
+              "scratchpad": "S320",
               "route": "SSOXS7 SSOXS Q167 SPDEY Y488 OHRYN Y488 WEBBB Y488 SAUCR L453 LAMER L453 RODRK POKEG UT17 KOBET KOBET2H",
               "airlines": [
                   {
@@ -1504,6 +1734,7 @@
               "exit": "SSOXS",
               "destination": "MDST",
               "altitude": 32000,
+              "scratchpad": "S320",
               "route": "SSOXS7 SSOXS Q167 SPDEY Y488 OHRYN Y488 WEBBB Y488 SAUCR L453 LAMER L453 RODRK SEKAR SEKAR2P",
               "airlines": [
                   {
@@ -1516,6 +1747,7 @@
               "exit": "SSOXS",
               "destination": "MDSD",
               "altitude": 35000,
+              "scratchpad": "S350",
               "route": "SSOXS7 SSOXS Q167 SPDEY Y488 WEBBB Y488 SAUCR L453 LAMER L453 RODRK POKEG UT17 KOBET KOBET2H",
               "airlines": [
                   {
@@ -1528,6 +1760,7 @@
               "exit": "CELTK",
               "destination": "OTHH",
               "altitude": 35000,
+              "scratchpad": "C350",
               "route": "CELTK7 CELTK FRILL TUSKY N175E OMSAT 4800N/05000W 5200N/04000W 5400N/03000W 5400N/02000W MALOT GISTI KER EVRIN JETZI AMFUL CAWZE SIRIC P2 DVR UL9 KONAN KOK REMBA MATUG AMASI BOMBI TENLO LAMSI STEIN INVED ARTAT UP975 ERGUN UL124 EVSAS UM688 BAYIR UM688 RATVO UM688 KEDIM SISIN UM688 SIDAD P975 LONOS L703 GEPUT L703 GODRI L703 KOBOK L703 GIRMO L703 HAYYA",
               "airlines": [
                   {
@@ -1537,22 +1770,11 @@
               ]
           },
           {
-              "exit": "LFV",
-              "destination": "KACK",
-              "altitude": 5000,
-              "route": "LOGAN4 LFV",
-              "airlines": [
-                  {
-                      "icao": "KAP",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
               "exit": "ENE",
               "destination": "KAUG",
               "altitude": 6000,
               "route": "ENE PEASE STEVO LWRNC",
+              "scratchpad": "P060",
               "airlines": [
                   {
                       "icao": "KAP",
@@ -1564,6 +1786,7 @@
               "exit": "PATSS",
               "destination": "KLGA",
               "altitude": 16000,
+              "scratchpad": "Y160",
               "route": "PATSS7 PATSS NELIE VALRE HAARP4",
               "airlines": [
                   {
@@ -1576,6 +1799,7 @@
               "exit": "MANCH",
               "destination": "KLEB",
               "altitude": 6000,
+              "scratchpad": "M060",
               "route": "LOGAN4 MANCH",
               "airlines": [
                   {
@@ -1588,6 +1812,7 @@
               "exit": "PEASE",
               "destination": "KRKD",
               "altitude": 5000,
+              "scratchpad": "P050",
               "route": "LOGAN4 PEASE ENE",
               "airlines": [
                   {
@@ -1597,22 +1822,11 @@
               ]
           },
           {
-              "exit": "DUNKK",
-              "destination": "KMVY",
-              "altitude": 3500,
-              "route": "LOGAN4 DUNKK",
-              "airlines": [
-                  {
-                      "icao": "KAP",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
               "exit": "PATSS",
               "destination": "KEWR",
               "altitude": 16000,
               "route": "PATSS7 PATSS NELIE FLOSI4",
+              "scratchpad": "Y160",
               "airlines": [
                   {
                       "icao": "UAL",
@@ -1624,6 +1838,7 @@
               "exit": "SSOXS",
               "destination": "KJFK",
               "altitude": 22000,
+              "scratchpad": "S220",
               "route": "SSOXS7 SSOXS BUZRD SEY ROBER2",
               "airlines": [
                   {
@@ -1636,6 +1851,7 @@
               "exit": "ENE",
               "destination": "KAUG",
               "altitude": 6000,
+              "scratchpad": "P060",
               "route": "ENE PEASE STEVO LWRNC",
               "airlines": [
                   {
@@ -1648,6 +1864,7 @@
               "exit": "HYLND",
               "destination": "KDTW",
               "altitude": 36000,
+              "scratchpad": "H360",
               "route": "HYLND7 HYLND CAM Q822 GONZZ DONEO TPGUN2",
               "airlines": [
                   {
@@ -1660,6 +1877,7 @@
               "exit": "CON",
               "destination": "KSLK",
               "altitude": 9000,
+              "scratchpad": "M090",
               "route": "CON CON135 TOMIE LWRNC",
               "airlines": [
                   {
@@ -1672,6 +1890,7 @@
               "exit": "SSOXS",
               "destination": "KDCA",
               "altitude": 30000,
+              "scratchpad": "S300",
               "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN DEALE3",
               "airlines": [
                   {
@@ -1684,6 +1903,7 @@
               "exit": "PATSS",
               "destination": "KLGA",
               "altitude": 20000,
+              "scratchpad": "Y200",
               "route": "PATSS7 PATSS NELIE VALRE HAARP4",
               "airlines": [
                   {
@@ -1696,6 +1916,7 @@
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 36000,
+              "scratchpad": "M360",
               "route": "HYLND7 HYLND CAM Q822 FNT WYNDE2",
               "airlines": [
                   {
@@ -1708,6 +1929,7 @@
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 30000,
+              "scratchpad": "M300",
               "route": "HYLND7 HYLND CAM Q822 PAYGE Q822 GONZZ FARGN CHAAP Q436 EMMMA WYNDE2",
               "airlines": [
                   {
@@ -1719,7 +1941,8 @@
           {
               "exit": "LFV",
               "destination": "KACK",
-              "altitude": 5500,
+              "altitude": 5000,
+              "scratchpad": "L050",
               "route": "LOGAN4 LFV",
               "airlines": [
                   {
@@ -1732,6 +1955,7 @@
               "exit": "BLZZR",
               "destination": "KATL",
               "altitude": 34000,
+              "scratchpad": "X340",
               "route": "BLZZR6 BLZZR BAF Q448 PTW J48 MOL FLASK OZZZI1",
               "airlines": [
                   {
@@ -1744,6 +1968,7 @@
               "exit": "SSOXS",
               "destination": "KCHS",
               "altitude": 38000,
+              "scratchpad": "S380",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED DFENC Q109 LAANA AMYLU AMYLU3",
               "airlines": [
                   {
@@ -1753,21 +1978,10 @@
               ]
           },
           {
-              "exit": "LFV",
-              "destination": "KACK",
-              "altitude": 3500,
-              "route": "LOGAN4 LFV",
-              "airlines": [
-                  {
-                      "icao": "KAP",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
               "exit": "ENE",
               "destination": "KBHB",
               "altitude": 6000,
+              "scratchpad": "P060",
               "route": "ENE PEASE STEVO LWRNC",
               "airlines": [
                   {
@@ -1780,6 +1994,7 @@
               "exit": "HYLND",
               "destination": "CYYZ",
               "altitude": 30000,
+              "scratchpad": "M300",
               "route": "HYLND7 HYLND CAM Q822 PAYGE Q822 PUPPY Q822 GONZZ WOZEE LINNG3",
               "airlines": [
                   {
@@ -1792,6 +2007,7 @@
               "exit": "SSOXS",
               "destination": "KATL",
               "altitude": 38000,
+              "scratchpad": "S380",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 YURCK SKWKR JJEDI3",
               "airlines": [
                   {
@@ -1804,6 +2020,7 @@
               "exit": "SSOXS",
               "destination": "KSAV",
               "altitude": 34000,
+              "scratchpad": "S340",
               "route": "SSOXS7 SSOXS Q167 ORCHA Q167 RIFLE HEADI Q97 SAWED GUILD Q409 SESUE SOOOP",
               "airlines": [
                   {
@@ -1816,6 +2033,7 @@
               "exit": "SSOXS",
               "destination": "KDCA",
               "altitude": 30000,
+              "scratchpad": "S300",
               "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN DEALE3",
               "airlines": [
                   {
@@ -1828,6 +2046,7 @@
               "exit": "BLZZR",
               "destination": "KEWR",
               "altitude": 24000,
+              "scratchpad": "X240",
               "route": "BLZZR6 BLZZR BAF FLOSI4",
               "airlines": [
                   {
@@ -1840,6 +2059,7 @@
               "exit": "SSOXS",
               "destination": "KMIA",
               "altitude": 38000,
+              "scratchpad": "S380",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 KALDA Q101 SKARP Y313 HOAGG BNFSH2",
               "airlines": [
                   {
@@ -1852,6 +2072,7 @@
               "exit": "HYLND",
               "destination": "KMKE",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND NOVON KENPA",
               "airlines": [
                   {
@@ -1864,6 +2085,7 @@
               "exit": "SSOXS",
               "destination": "KFLL",
               "altitude": 32000,
+              "scratchpad": "S320",
               "route": "SSOXS7 SSOXS Q167 SPDEY Y488 WEBBB Y488 STERN Y493 TUBBS Y493 JENKS MAJIK CUUDA3",
               "airlines": [
                   {
@@ -1876,6 +2098,7 @@
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND CAM Q822 DERLO Q822 FNT WYNDE2",
               "airlines": [
                   {
@@ -1888,6 +2111,7 @@
               "exit": "HYLND",
               "destination": "CYUL",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND PBERG CARTR5",
               "airlines": [
                   {
@@ -1900,6 +2124,7 @@
               "exit": "HYLND",
               "destination": "KMSP",
               "altitude": 28000,
+              "scratchpad": "M280",
               "route": "HYLND7 HYLND BUGSY POLTY UBTIX ULAMO STNRD COLDD BAINY3",
               "airlines": [
                   {
@@ -1912,6 +2137,7 @@
               "exit": "PATSS",
               "destination": "KEWR",
               "altitude": 16000,
+              "scratchpad": "Y160",
               "route": "PATSS7 PATSS NELIE FLOSI4",
               "airlines": [
                   {
@@ -1924,6 +2150,7 @@
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 38000,
+              "scratchpad": "M380",
               "route": "HYLND7 HYLND BUGSY POLTY OXASA SSM GRB SHIKY FYTTE7",
               "airlines": [
                   {
@@ -1936,6 +2163,7 @@
               "exit": "HYLND",
               "destination": "KMDW",
               "altitude": 38000,
+              "scratchpad": "M380",
               "route": "HYLND7 HYLND CAM Q822 GONZZ Q29 JHW DJB J60 ASHEN BAGEL PANGG5",
               "airlines": [
                   {
@@ -1948,6 +2176,7 @@
               "exit": "SSOXS",
               "destination": "KATL",
               "altitude": 32000,
+              "scratchpad": "S320",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED GUILD Q409 MRPIT CEELY Q172 YUTEE SKWKR JJEDI3",
               "airlines": [
                   {
@@ -1960,6 +2189,7 @@
               "exit": "REVSS",
               "destination": "KPIT",
               "altitude": 28000,
+              "scratchpad": "W280",
               "route": "REVSS6 REVSS CTR HNK KONJE J190 SLT HAYNZ7",
               "airlines": [
                   {
@@ -1972,6 +2202,7 @@
               "exit": "SSOXS",
               "destination": "KCLT",
               "altitude": 34000,
+              "scratchpad": "S340",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED COUPN CHSLY6",
               "airlines": [
                   {
@@ -1984,6 +2215,7 @@
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND CAM Q822 DERLO NOLNN ESSPO5",
               "airlines": [
                   {
@@ -1996,6 +2228,7 @@
               "exit": "BLZZR",
               "destination": "KDFW",
               "altitude": 30000,
+              "scratchpad": "X300",
               "route": "BLZZR6 BLZZR BAF Q406 BWZ J6 COLNS J6 HVQ Q68 LITTR FEWWW BRDJE4",
               "airlines": [
                   {
@@ -2005,21 +2238,10 @@
               ]
           },
           {
-              "exit": "DUNKK",
-              "destination": "KMVY",
-              "altitude": 3500,
-              "route": "LOGAN4 DUNKK",
-              "airlines": [
-                  {
-                      "icao": "KAP",
-                      "fleet": "usa"
-                  }
-              ]
-          },
-          {
               "exit": "SSOXS",
               "destination": "KRSW",
               "altitude": 34000,
+              "scratchpad": "S340",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED GUILD Q409 PUPYY Q103 CYNTA SHFTY5",
               "airlines": [
                   {
@@ -2032,6 +2254,7 @@
               "exit": "SSOXS",
               "destination": "KMCO",
               "altitude": 36000,
+              "scratchpad": "S360",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED MOXXY Q85 LPERD GTOUT1",
               "airlines": [
                   {
@@ -2044,6 +2267,7 @@
               "exit": "SSOXS",
               "destination": "KBWI",
               "altitude": 32000,
+              "scratchpad": "S320",
               "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN MIIDY2",
               "airlines": [
                   {
@@ -2056,6 +2280,7 @@
               "exit": "BLZZR",
               "destination": "KIAD",
               "altitude": 28000,
+              "scratchpad": "X280",
               "route": "BLZZR6 BLZZR BAF HYPER9",
               "airlines": [
                   {
@@ -2068,6 +2293,7 @@
               "exit": "HYLND",
               "destination": "KCLE",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND CAM Q822 PAYGE Q822 GONZZ HANKK THOME TRYBE4",
               "airlines": [
                   {
@@ -2080,6 +2306,7 @@
               "exit": "REVSS",
               "destination": "KDFW",
               "altitude": 36000,
+              "scratchpad": "W360",
               "route": "REVSS6 REVSS CTR HNK SFK SLT CXR DJB FWA BVT SPI SGF RZC FSM KOMMA RRNET SEEVR4",
               "airlines": [
                   {
@@ -2093,6 +2320,7 @@
               "destination": "KLEB",
               "altitude": 6000,
               "route": "LOGAN4 MANCH",
+              "scratchpad": "M060",
               "airlines": [
                   {
                       "icao": "KAP",
@@ -2104,6 +2332,7 @@
               "exit": "SSOXS",
               "destination": "KRIC",
               "altitude": 26000,
+              "scratchpad": "S260",
               "route": "SSOXS7 SSOXS Q167 ZJAAY ARICE JAMIE",
               "airlines": [
                   {
@@ -2116,6 +2345,7 @@
               "exit": "PATSS",
               "destination": "KLGA",
               "altitude": 16000,
+              "scratchpad": "Y160",
               "route": "PATSS7 PATSS NELIE VALRE HAARP4",
               "airlines": [
                   {
@@ -2128,6 +2358,7 @@
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND CAM Q822 GONZZ FARGN CHAAP Q436 EMMMA WYNDE2",
               "airlines": [
                   {
@@ -2140,6 +2371,7 @@
               "exit": "BRUWN",
               "destination": "TJSJ",
               "altitude": 35000,
+              "scratchpad": "B350",
               "route": "BRUWN7 BRUWN BORQE Y578 KAYYT DASER BALTN MEGGG L456 THANK PLING RTE7 SAALR",
               "airlines": [
                   {
@@ -2152,6 +2384,7 @@
               "exit": "SSOXS",
               "destination": "KPHL",
               "altitude": 32000,
+              "scratchpad": "S320",
               "route": "SSOXS7 SSOXS Q167 RIFLE Q439 BRIGS JIIMS4",
               "airlines": [
                   {
@@ -2164,6 +2397,7 @@
               "exit": "PATSS",
               "destination": "KDCA",
               "altitude": 26000,
+              "scratchpad": "Y260",
               "route": "PATSS7 PATSS NELIE BIZEX Q75 MXE CLIPR3",
               "airlines": [
                   {
@@ -2176,6 +2410,7 @@
               "exit": "SSOXS",
               "destination": "KRDU",
               "altitude": 22000,
+              "scratchpad": "S220",
               "route": "SSOXS7 SSOXS Q167 ZJAAY TAQLE2",
               "airlines": [
                   {
@@ -2185,21 +2420,10 @@
               ]
           },
           {
-              "exit": "LFV",
-              "destination": "KACK",
-              "altitude": 5000,
-              "route": "LOGAN4 LFV",
-              "airlines": [
-                  {
-                      "icao": "KAP",
-                      "fleet": "c402"
-                  }
-              ]
-          },
-          {
               "exit": "SSOXS",
               "destination": "KPHL",
               "altitude": 28000,
+              "scratchpad": "S280",
               "route": "SSOXS7 SSOXS Q167 RIFLE Q439 BRIGS JIIMS4",
               "airlines": [
                   {
@@ -2212,6 +2436,7 @@
               "exit": "SSOXS",
               "destination": "KMCO",
               "altitude": 38000,
+              "scratchpad": "S380",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED MOXXY Q85 LPERD GTOUT1",
               "airlines": [
                   {
@@ -2224,6 +2449,7 @@
               "exit": "BLZZR",
               "destination": "KATL",
               "altitude": 32000,
+              "scratchpad": "X320",
               "route": "BLZZR6 BLZZR BAF Q448 BIGGO Q448 PTW J48 MOL FLASK OZZZI1",
               "airlines": [
                   {
@@ -2236,6 +2462,7 @@
               "exit": "CON",
               "destination": "KSLK",
               "altitude": 9000,
+              "scratchpad": "M090",
               "route": "CON CON135 TOMIE LWRNC",
               "airlines": [
                   {
@@ -2248,6 +2475,7 @@
               "exit": "BLZZR",
               "destination": "KAUS",
               "altitude": 36000,
+              "scratchpad": "X360",
               "route": "BLZZR6 BLZZR BAF Q406 BWZ J6 COLNS J6 HVQ Q68 LITTR TXK BROBB WINDU SEWZY6",
               "airlines": [
                   {
@@ -2260,6 +2488,7 @@
               "exit": "HYLND",
               "destination": "KSTL",
               "altitude": 40000,
+              "scratchpad": "M400",
               "route": "HYLND7 HYLND SYR JOSSY JHW Q29 KLYNE ROD VHP AARCH2",
               "airlines": [
                   {
@@ -2272,6 +2501,7 @@
               "exit": "SSOXS",
               "destination": "KMCO",
               "altitude": 36000,
+              "scratchpad": "S360",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED MOXXY Q85 LPERD GTOUT1",
               "airlines": [
                   {
@@ -2284,6 +2514,7 @@
               "exit": "BLZZR",
               "destination": "KATL",
               "altitude": 32000,
+              "scratchpad": "X320",
               "route": "BLZZR6 BLZZR BAF Q448 PTW J48 MOL FLASK OZZZI1",
               "airlines": [
                   {
@@ -2296,6 +2527,7 @@
               "exit": "PEASE",
               "destination": "KRKD",
               "altitude": 5000,
+              "scratchpad": "M050",
               "route": "LOGAN4 PEASE ENE",
               "airlines": [
                   {
@@ -2308,6 +2540,7 @@
               "exit": "PATSS",
               "destination": "KCLT",
               "altitude": 34000,
+              "scratchpad": "Y340",
               "route": "PATSS7 PATSS NELIE BIZEX Q75 COPES Q75 GVE AIROW CHSLY6",
               "airlines": [
                   {
@@ -2320,6 +2553,7 @@
               "exit": "PATSS",
               "destination": "KEWR",
               "altitude": 16000,
+              "scratchpad": "Y160",
               "route": "PATSS7 PATSS NELIE FLOSI4",
               "airlines": [
                   {
@@ -2332,6 +2566,7 @@
               "exit": "BRUWN",
               "destination": "TJSJ",
               "altitude": 35000,
+              "scratchpad": "B350",
               "route": "BRUWN7 BRUWN BORQE Y578 KAYYT DASER BALTN MEGGG L456 THANK PLING RTE7 SAALR",
               "airlines": [
                   {
@@ -2344,6 +2579,7 @@
               "exit": "SSOXS",
               "destination": "KMIA",
               "altitude": 34000,
+              "scratchpad": "S340",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 KALDA TUGGR Q101 SKARP Y313 HOAGG BNFSH2",
               "airlines": [
                   {
@@ -2356,6 +2592,7 @@
               "exit": "HYLND",
               "destination": "KDTW",
               "altitude": 28000,
+              "scratchpad": "M280",
               "route": "HYLND7 HYLND CAM Q822 GONZZ DONEO TPGUN2",
               "airlines": [
                   {
@@ -2368,6 +2605,7 @@
               "exit": "BLZZR",
               "destination": "KDFW",
               "altitude": 36000,
+              "scratchpad": "X360",
               "route": "BLZZR6 BLZZR BAF Q406 BWZ J6 HVQ Q68 LITTR MEEOW FEWWW SEEVR4",
               "airlines": [
                   {
@@ -2380,6 +2618,7 @@
               "exit": "PATSS",
               "destination": "KLGA",
               "altitude": 16000,
+              "scratchpad": "Y160",
               "route": "PATSS7 PATSS NELIE VALRE HAARP4",
               "airlines": [
                   {
@@ -2392,6 +2631,7 @@
               "exit": "HYLND",
               "destination": "KMDW",
               "altitude": 40000,
+              "scratchpad": "M400",
               "route": "HYLND7 HYLND CAM Q822 GONZZ Q29 JHW DJB J60 ASHEN BAGEL PANGG5",
               "airlines": [
                   {
@@ -2404,6 +2644,7 @@
               "exit": "HYLND",
               "destination": "KBUF",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND SYR ROC EHMAN",
               "airlines": [
                   {
@@ -2416,6 +2657,7 @@
               "exit": "ENE",
               "destination": "KAUG",
               "altitude": 6000,
+              "scratchpad": "M060",
               "route": "ENE PEASE STEVO LWRNC",
               "airlines": [
                   {
@@ -2428,6 +2670,7 @@
               "exit": "SSOXS",
               "destination": "KRDU",
               "altitude": 36000,
+              "scratchpad": "S360",
               "route": "SSOXS7 SSOXS Q167 ORCHA Q167 ZJAAY TAQLE2",
               "airlines": [
                   {
@@ -2440,6 +2683,7 @@
               "exit": "HYLND",
               "destination": "KDTW",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND CAM Q822 PAYGE Q822 GONZZ DONEO TPGUN2",
               "airlines": [
                   {
@@ -2452,6 +2696,7 @@
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND CAM Q822 PAYGE Q822 GONZZ FARGN CHAAP Q436 EMMMA WYNDE2",
               "airlines": [
                   {
@@ -2464,6 +2709,7 @@
               "exit": "LBSTA",
               "destination": "BIKF",
               "altitude": 37000,
+              "scratchpad": "P370",
               "route": "LBSTA8 LBSTA EBONY KODIK 5800N/05000W 6100N/04000W 6300N/03000W EPENI ELDIS ELDIS3N",
               "airlines": [
                   {
@@ -2476,6 +2722,7 @@
               "exit": "HYLND",
               "destination": "KBNA",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND SYR JOSSY JHW Q29 KLYNE RINTE Q139 IIU FORKS PASLY4",
               "airlines": [
                   {
@@ -2488,6 +2735,7 @@
               "exit": "HYLND",
               "destination": "KPHX",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND SYR YXU FNT J94 PMM KG72M KG66K LEWRP KK54E KK51C KK48A KK45Y KA42W DIXAN GUP EAGUL6",
               "airlines": [
                   {
@@ -2500,6 +2748,7 @@
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND CAM Q822 PUPPY Q822 FNT WYNDE2",
               "airlines": [
                   {
@@ -2512,6 +2761,7 @@
               "exit": "PATSS",
               "destination": "KLGA",
               "altitude": 16000,
+              "scratchpad": "Y160",
               "route": "PATSS7 PATSS NELIE VALRE HAARP4",
               "airlines": [
                   {
@@ -2521,21 +2771,10 @@
               ]
           },
           {
-              "exit": "LFV",
-              "destination": "KACK",
-              "altitude": 5500,
-              "route": "LOGAN4 LFV",
-              "airlines": [
-                  {
-                      "icao": "KAP",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
               "exit": "DUNKK",
               "destination": "KHYA",
               "altitude": 5000,
+              "scratchpad": "M050",
               "route": "LOGAN4 DUNKK V141 GAILS",
               "airlines": [
                   {
@@ -2548,6 +2787,7 @@
               "exit": "SSOXS",
               "destination": "KMCO",
               "altitude": 36000,
+              "scratchpad": "S360",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED MOXXY Q85 LPERD GTOUT1",
               "airlines": [
                   {
@@ -2560,6 +2800,7 @@
               "exit": "BLZZR",
               "destination": "KATL",
               "altitude": 32000,
+              "scratchpad": "X320",
               "route": "BLZZR6 BLZZR BAF Q448 PTW J48 MOL FLASK OZZZI1",
               "airlines": [
                   {
@@ -2572,6 +2813,7 @@
               "exit": "SSOXS",
               "destination": "KDCA",
               "altitude": 26000,
+              "scratchpad": "S260",
               "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN DEALE3",
               "airlines": [
                   {
@@ -2584,6 +2826,7 @@
               "exit": "REVSS",
               "destination": "KLAX",
               "altitude": 34000,
+              "scratchpad": "W340",
               "route": "REVSS6 REVSS CTR HNK ULW JHW CXR PIA J96 SLN J102 ALS J110 RSK J64 TBC JASSE Q90 DNERO ANJLL4",
               "airlines": [
                   {
@@ -2596,6 +2839,7 @@
               "exit": "PATSS",
               "destination": "KLGA",
               "altitude": 16000,
+              "scratchpad": "Y160",
               "route": "PATSS7 PATSS NELIE VALRE HAARP4",
               "airlines": [
                   {
@@ -2608,6 +2852,7 @@
               "exit": "SSOXS",
               "destination": "KBWI",
               "altitude": 32000,
+              "scratchpad": "S320",
               "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN MIIDY2",
               "airlines": [
                   {
@@ -2617,21 +2862,10 @@
               ]
           },
           {
-              "exit": "LFV",
-              "destination": "KACK",
-              "altitude": 5500,
-              "route": "LOGAN4 LFV",
-              "airlines": [
-                  {
-                      "icao": "KAP",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
               "exit": "HYLND",
               "destination": "KMSP",
               "altitude": 28000,
+              "scratchpad": "M280",
               "route": "HYLND7 HYLND NOVON KENPA CEWDA MUSCL3",
               "airlines": [
                   {
@@ -2644,6 +2878,7 @@
               "exit": "HYLND",
               "destination": "KLAS",
               "altitude": 30000,
+              "scratchpad": "M300",
               "route": "HYLND7 HYLND CAM Q822 GONZZ DJB ARCAB JAAVE STL KK42A LBL KA39U TBC SQIRE RKSTR3",
               "airlines": [
                   {
@@ -2653,21 +2888,10 @@
               ]
           },
           {
-              "exit": "LFV",
-              "destination": "KACK",
-              "altitude": 7000,
-              "route": "LOGAN4 LFV",
-              "airlines": [
-                  {
-                      "icao": "JBU",
-                      "fleet": "default"
-                  }
-              ]
-          },
-          {
               "exit": "BOSOX",
               "destination": "KEWR",
               "altitude": 8000,
+              "scratchpad": "B080",
               "route": "LOGAN4 BOSOX V1 HFD SEALL V188 CMK V623 SAX",
               "airlines": [
                   {
@@ -2680,6 +2904,7 @@
               "exit": "PATSS",
               "destination": "KTPA",
               "altitude": 36000,
+              "scratchpad": "Y360",
               "route": "PATSS7 PATSS NELIE BIZEX Q75 TEUFL BAAMF DADES1",
               "airlines": [
                   {
@@ -2692,6 +2917,7 @@
               "exit": "BLZZR",
               "destination": "KDEN",
               "altitude": 28000,
+              "scratchpad": "X280",
               "route": "BLZZR6 BLZZR BAF Q480 AIR J80 EMPTY J80 VHP J80 MCI J24 OATHE CLASH4",
               "airlines": [
                   {
@@ -2704,6 +2930,7 @@
               "exit": "LFV",
               "destination": "KACK",
               "altitude": 5000,
+              "scratchpad": "L050",
               "route": "LOGAN4 LFV",
               "airlines": [
                   {
@@ -2716,6 +2943,7 @@
               "exit": "DUNKK",
               "destination": "KHYA",
               "altitude": 3000,
+              "scratchpad": "L030",
               "route": "LOGAN4 DUNKK V141 GAILS",
               "airlines": [
                   {
@@ -2728,6 +2956,7 @@
               "exit": "PATSS",
               "destination": "KCLT",
               "altitude": 36000,
+              "scratchpad": "Y360",
               "route": "PATSS7 PATSS NELIE BIZEX Q75 GVE AIROW CHSLY6",
               "airlines": [
                   {
@@ -2740,6 +2969,7 @@
               "exit": "SSOXS",
               "destination": "MDPC",
               "altitude": 32000,
+              "scratchpad": "S320",
               "route": "SSOXS7 SSOXS Q167 SPDEY Y489 RESQU SKPPR L455 MCOOP L455 JANMA M597 BETIR W17 PNA",
               "airlines": [
                   {
@@ -2752,6 +2982,7 @@
               "exit": "PVC",
               "destination": "KPVC",
               "altitude": 3000,
+              "scratchpad": "L030",
               "route": "LOGAN4 PVC",
               "airlines": [
                   {
@@ -2764,6 +2995,7 @@
               "exit": "PATSS",
               "destination": "KEWR",
               "altitude": 16000,
+              "scratchpad": "Y160",
               "route": "PATSS7 PATSS NELIE FLOSI4",
               "airlines": [
                   {
@@ -2776,6 +3008,7 @@
               "exit": "SSOXS",
               "destination": "KCHS",
               "altitude": 38000,
+              "scratchpad": "S380",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED DFENC Q109 LAANA AMYLU AMYLU3",
               "airlines": [
                   {
@@ -2788,6 +3021,7 @@
               "exit": "SSOXS",
               "destination": "KMCO",
               "altitude": 34000,
+              "scratchpad": "S340",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 ZJAAY Q97 SAWED MOXXY Q85 LPERD GTOUT1",
               "airlines": [
                   {
@@ -2800,6 +3034,7 @@
               "exit": "HYLND",
               "destination": "KMSP",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND GOATR Q816 AGDOX Q812 ZOHAN IDIOM MUSCL3",
               "airlines": [
                   {
@@ -2812,6 +3047,7 @@
               "exit": "PATSS",
               "destination": "KMYR",
               "altitude": 34000,
+              "scratchpad": "Y340",
               "route": "PATSS7 PATSS NELIE BIZEX Q75 GVE MELTN SBV RDU V136 CRE",
               "airlines": [
                   {
@@ -2824,6 +3060,7 @@
               "exit": "SSOXS",
               "destination": "KCHS",
               "altitude": 38000,
+              "scratchpad": "S380",
               "route": "SSOXS7 SSOXS Q167 RIFLE HEADI Q97 SAWED DFENC Q109 LAANA AMYLU AMYLU3",
               "airlines": [
                   {
@@ -2836,6 +3073,7 @@
               "exit": "SSOXS",
               "destination": "KDCA",
               "altitude": 26000,
+              "scratchpad": "S260",
               "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN DEALE3",
               "airlines": [
                   {
@@ -2848,6 +3086,7 @@
               "exit": "HYLND",
               "destination": "KLAX",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND HANAA Q816 HOCKE GRB ODI FSD J114 DVV ZAKRY Q88 HAKMN ANJLL4",
               "airlines": [
                   {
@@ -2860,6 +3099,7 @@
               "exit": "BLZZR",
               "destination": "KBNA",
               "altitude": 34000,
+              "scratchpad": "X340",
               "route": "BLZZR6 BLZZR BAF Q406 BIGGO Q406 BWZ J6 HVQ Q68 YOCKY GROAT PASLY4",
               "airlines": [
                   {
@@ -2872,6 +3112,7 @@
               "exit": "HYLND",
               "destination": "KSFO",
               "altitude": 30000,
+              "scratchpad": "M300",
               "route": "HYLND7 HYLND CAM Q822 GONZZ BMPAH HOCKE BAE DBQ OVR GLD JNC SAKES MLF ILC OAL INYOE DYAMD5",
               "airlines": [
                   {
@@ -2884,6 +3125,7 @@
               "exit": "PATSS",
               "destination": "KEWR",
               "altitude": 24000,
+              "scratchpad": "Y240",
               "route": "PATSS7 PATSS NELIE FLOSI4",
               "airlines": [
                   {
@@ -2896,6 +3138,7 @@
               "exit": "SSOXS",
               "destination": "KRDU",
               "altitude": 38000,
+              "scratchpad": "S380",
               "route": "SSOXS7 SSOXS Q167 ZJAAY TAQLE2",
               "airlines": [
                   {
@@ -2908,6 +3151,7 @@
               "exit": "HYLND",
               "destination": "KSFO",
               "altitude": 32000,
+              "scratchpad": "M320",
               "route": "HYLND7 HYLND HANAA Q816 GOATR KC81W LEPOS KC81Q WOKNO KG81K MCW KP75E EBIRD KD66Y KD63W EKR LOOLO DTA RUMPS OAL INYOE DYAMD5",
               "airlines": [
                   {
@@ -2920,6 +3164,7 @@
               "exit": "HYLND",
               "destination": "KLAX",
               "altitude": 30000,
+              "scratchpad": "M300",
               "route": "HYLND7 HYLND CAM Q822 GONZZ DKK KEEHO DAIFE WHETT MCI GOSSL KK45A KENTO CIM DIXAN TANER INW DRK J231 HIPPI GABBL HLYWD1",
               "airlines": [
                   {
@@ -2932,6 +3177,7 @@
               "exit": "SSOXS",
               "destination": "KBWI",
               "altitude": 36000,
+              "scratchpad": "S360",
               "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN MIIDY2",
               "airlines": [
                   {
@@ -2944,6 +3190,7 @@
               "exit": "PATSS",
               "destination": "MMMX",
               "altitude": 36000,
+              "scratchpad": "Y360",
               "route": "PATSS7 PATSS NELIE BIZEX Q75 GVE LYH COLZI AWYAT IPTAY CHOPZ MGM SJI TBD M345 AXEXO UM345 PAZ UT154 ENAGA ENAGA2A",
               "airlines": [
                   {
@@ -2956,6 +3203,7 @@
               "exit": "SSOXS",
               "destination": "KDCA",
               "altitude": 30000,
+              "scratchpad": "S300",
               "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN DEALE3",
               "airlines": [
                   {
@@ -2968,6 +3216,7 @@
               "exit": "ENE",
               "destination": "KAUG",
               "altitude": 6000,
+              "scratchpad": "P060",
               "route": "ENE PEASE STEVO LWRNC",
               "airlines": [
                   {
@@ -2980,6 +3229,7 @@
               "exit": "PATSS",
               "destination": "KTPA",
               "altitude": 34000,
+              "scratchpad": "Y340",
               "route": "PATSS7 PATSS NELIE BIZEX Q75 TOOBN Q75 TEUFL BAAMF DADES1",
               "airlines": [
                   {
@@ -2992,6 +3242,7 @@
               "exit": "HYLND",
               "destination": "CYYZ",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND CAM Q822 GONZZ WOZEE LINNG3",
               "airlines": [
                   {
@@ -3004,6 +3255,7 @@
               "exit": "PATSS",
               "destination": "KEWR",
               "altitude": 16000,
+              "scratchpad": "Y160",
               "route": "PATSS7 PATSS NELIE FLOSI4",
               "airlines": [
                   {
@@ -3016,6 +3268,7 @@
               "exit": "BLZZR",
               "destination": "KATL",
               "altitude": 32000,
+              "scratchpad": "X320",
               "route": "BLZZR6 BLZZR BAF Q448 PTW J48 MOL FLASK OZZZI1",
               "airlines": [
                   {
@@ -3028,6 +3281,7 @@
               "exit": "PATSS",
               "destination": "KCLT",
               "altitude": 24000,
+              "scratchpad": "Y240",
               "route": "PATSS7 PATSS NELIE BIZEX Q75 JERSY Q75 SBJ Q75 GVE AIROW CHSLY6",
               "airlines": [
                   {
@@ -3040,6 +3294,7 @@
               "exit": "SSOXS",
               "destination": "KRDU",
               "altitude": 34000,
+              "scratchpad": "S340",
               "route": "SSOXS7 SSOXS Q167 ZJAAY TAQLE2",
               "airlines": [
                   {
@@ -3052,6 +3307,7 @@
               "exit": "HYLND",
               "destination": "KDEN",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND HANAA Q816 GOATR Q816 OMRAK Q816 HOCKE MONEE DBQ OBH BRWRY LAWGR3",
               "airlines": [
                   {
@@ -3064,6 +3320,7 @@
               "exit": "HYLND",
               "destination": "KORD",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND GONZZ FARGN CHAAP Q436 EMMMA WYNDE2",
               "airlines": [
                   {
@@ -3076,6 +3333,7 @@
               "exit": "HYLND",
               "destination": "KSFO",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND HANAA Q816 HOCKE BAE FOD CYS GAROT INYOE DYAMD5",
               "airlines": [
                   {
@@ -3088,6 +3346,7 @@
               "exit": "HYLND",
               "destination": "KDTW",
               "altitude": 34000,
+              "scratchpad": "M340",
               "route": "HYLND7 HYLND CAM Q822 PAYGE Q822 PUPPY Q822 GONZZ DONEO TPGUN2",
               "airlines": [
                   {
@@ -3100,6 +3359,7 @@
               "exit": "PEASE",
               "destination": "KRKD",
               "altitude": 5000,
+              "scratchpad": "P050",
               "route": "LOGAN4 PEASE ENE",
               "airlines": [
                   {
@@ -3118,14 +3378,15 @@
         "PATSS": "ALL",
         "REVSS": "ALL",
         "SSOXS": "ALL",
-        "PEASE": "ALL",
-        "DUNKK": "ALL",
-        "LFV": "ALL",
-        "MANCH": "ALL",
-        "PVC": "ALL",
-        "BOSOX": "ALL",
-        "CON": "AAL",
-        "ENE": "AAL"
+        "PEASE": "Prop.N",
+        "LFV": "Prop.S",
+        "DUNKK": "Prop.S",
+        "MANCH": "Prop.N",
+        "PVC": "Prop.S",
+        "GLYDE": "Prop.N",
+        "BOSOX": "Prop.N",
+        "CON": "Prop.N",
+        "ENE": "Prop.N"
       },
       "tower_list": 1
     },
@@ -3182,6 +3443,8 @@
                 ],
                 "destination": "KCHS",
                 "exit": "SSOXS",
+                "altitude": 38000,
+                "scratchpad": "S380",
                 "route": "SSOXS Q167 RIFLE HEADI Q97 SAWED DFENC Q109 LAANA AMYLU AMYLU3"
             },
             {
@@ -3195,6 +3458,8 @@
                 ],
                 "destination": "LFPG",
                 "exit": "CELTK",
+                "altitude": 33000,
+                "scratchpad": "C330",
                 "route": "CELTK FRILL BRADD N197A NICSO 4800N/05000W 5100N/04000W 5300N/03000W 5300N/02000W MALOT GISTI LEDGO BOGMI ANNET UM25 INGOR UZ297 PEXIR PEXIR9W"
             },
             {
@@ -3209,6 +3474,8 @@
                 ],
                 "destination": "KTEB",
                 "exit": "REVSS",
+                "altitude": 20000,
+                "scratchpad": "W200",
                 "route": "REVSS BAF MOBBS T295 SAGES V489 COATE"
             }
         ]
@@ -3560,7 +3827,7 @@
           ]
         },
         "initial_altitude": 17000,
-        "initial_controller": "BOS_37_CTR",
+        "initial_controller": "BOS_36_CTR",
         "initial_speed": 290,
         "star": "JFUND2",
         "runway_waypoints": {
@@ -3577,31 +3844,134 @@
         "waypoints": "DUBLE/a17000/ho BASEZ JFUND"
       }
     ],
-    "ORW7": [
+    "WOONS": [
       {
         "airlines": {
-            "KBOS": [
-                {
-                    "airport": "KJFK",
-                    "icao": "KAP"
-                },
-                {
-                    "airport": "KJFK",
-                    "icao": "MTN"
-                },
-                {
-                    "airport": "KJFK",
-                    "icao": "FTH"
-                }
-            ]
+          "KBOS": [
+            {
+              "airport": "KTEB",
+              "icao": "MTN"
+            },
+            {
+              "airport": "KTEB",
+              "icao": "CNS"
+            },
+            {
+              "airport": "KTEB",
+              "icao": "N"
+            },
+            {
+              "airport": "KTEB",
+              "icao": "CYC"
+            }
+          ]
         },
-        "initial_altitude": 11000,
-        "initial_controller": "BOS_37_CTR",
-        "initial_speed": 250,
-        "assigned_altitude": 11000,
-        "star": "ORW7",
-        "waypoints": "OUTTT/ho PVD/a11000/s250 KRANN/a11000/s250/h074"
-      }  
+        "initial_altitude": 7000,
+        "initial_controller": "PVD_APP",
+        "initial_speed": 210,
+        "route": "FOSTY WOONS KBOS",
+        "waypoints": "FOSTY WOONS/ho/h056"
+      }
+    ],
+    "GDM": [
+      {
+        "airlines": {
+          "KBOS": [
+            {
+              "airport": "CYQW",
+              "icao": "POE"
+            },
+            {
+              "airport": "CYUL",
+              "icao": "POE"
+            },
+            {
+              "airport": "CYYZ",
+              "icao": "POE"
+            },
+            {
+              "airport": "KLEB",
+              "icao": "KAP"
+            },
+            {
+              "airport": "KMSS",
+              "icao": "BTQ"
+            }
+          ]
+        },
+        "initial_altitude": 7000,
+        "initial_controller": "BOS_36_CTR",
+        "initial_speed": 230,
+        "route": "GDM T608 REVER KBOS",
+        "waypoints": "GDM/ho LOBBY/a7000 REVER/h210"
+      }
+    ],
+    "FREDO": [
+      {
+        "airlines": {
+          "KBOS": [
+            {
+              "airport": "KTEB",
+              "icao": "MTN"
+            },
+            {
+              "airport": "KTEB",
+              "icao": "CNS"
+            },
+            {
+              "airport": "KTEB",
+              "icao": "CYC"
+            }
+          ]
+        },
+        "initial_altitude": 7000,
+        "initial_controller": "ACK_N_APP",
+        "initial_speed": 230,
+        "route": "ACK FREDO KBOS",
+        "waypoints": "ACK/ho FREDO/h339"
+      }
+    ],
+    "PSM..LWRNC": [
+      {
+        "airlines": {
+          "KBOS": [
+            {
+              "airport": "KBGR",
+              "icao": "KAP"
+            },
+            {
+              "airport": "KBGR",
+              "icao": "CNS"
+            }
+          ]
+        },
+        "initial_altitude": 6000,
+        "initial_controller": "MHT_E_APP",
+        "initial_speed": 230,
+        "route": "PSM LWRNC KBOS",
+        "waypoints": "PSM/ho LWRNC/h182"
+      }
+    ],
+    "MANCH..LWRNC": [
+      {
+        "airlines": {
+          "KBOS": [
+            {
+              "airport": "KBGR",
+              "icao": "KAP"
+            },
+            {
+              "airport": "KBGR",
+              "icao": "CNS"
+            }
+          ]
+        },
+        "initial_altitude": 6000,
+        "initial_controller": "MHT_W_APP",
+        "initial_speed": 230,
+        "route": "MANCH LWRNC KBOS",
+        "waypoints": "MANCH/ho LWRNC/h182"
+      }
     ],
     "NORTH_4FINAL": [
       {
@@ -3907,7 +4277,7 @@
           ]
         },
         "initial_altitude": 17000,
-        "initial_controller": "BOS_37_CTR",
+        "initial_controller": "BOS_16_CTR",
         "initial_speed": 290,
         "star": "OOSHN5",
         "runway_waypoints": {
@@ -3945,7 +4315,7 @@
             },
             "initial_altitude": 14000,
             "initial_speed": 250,
-            "initial_controller": "BOS_37_CTR",
+            "initial_controller": "BOS_36_CTR",
             "star": "ZELKA2",
             "waypoints": "HAUKS/a14000+/ho WORIA/a11000-13000 BCATS/a8000-9000 GOLEE/a6000 ZELKA RIKAH/a6000/s210 EXXRO/a6000/s210"
         }
@@ -3970,7 +4340,7 @@
                 ]
             },
             "initial_altitude": 11000,
-            "initial_controller": "BOS_37_CTR",
+            "initial_controller": "BOS_42_CTR",
             "initial_speed": 250,
             "star": "DREEM2",
             "runway_waypoints": {
@@ -4068,22 +4438,22 @@
             }
           ]
         },
-        "initial_altitude": 17000,
-        "initial_controller": "BOS_37_CTR",
+        "initial_altitude": 16000,
+        "initial_controller": "BOS_34_CTR",
         "initial_speed": 290,
         "star": "ROBUC3",
         "runway_waypoints": {
           "KBOS": {
-              "4R": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY SOFEE/a9000-10000/s220 ERNEI/a7000-8000 GOSHI/a6000/s210/h035",
-              "4L": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY SOFEE/a9000-10000/s220 ERNEI/a7000-8000 GOSHI/a6000/s210/h035",
-              "27": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY KRANN/a11000-12000/s250 CRADL/a8000-10000 KLEBB HOKDU/a5000/s210/h024",
-              "22L": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY KRANN/a11000-12000/s250 CRADL/a8000-10000 KLEBB/a8000/s250 ETHYN/a5000/s250 PTRIK/a5000/s220 TAALE/a5000/s210/h035",
-              "15R": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY JAYNA/a11000/s250 BOXRS/a8000/s250 CHERS/a6000/s220 RDHOK/a6000/s210 TKMAN/a6000/s210/h329",
-              "33L": "ROBUC/a12000-19000/s260/ho PROVI/a11000+ JOODY JAYNA/a11000/s250 ANSLY/a8000/s240 BEREI/a6000-7000/s220 BBOGG/a6000/s210/h060"
+              "4R": "ROBUC/a12000-19000/s260 PROVI/a11000+ JOODY SOFEE/a9000-10000/s220 ERNEI/a7000-8000 GOSHI/a6000/s210/h035",
+              "4L": "ROBUC/a12000-19000/s260 PROVI/a11000+ JOODY SOFEE/a9000-10000/s220 ERNEI/a7000-8000 GOSHI/a6000/s210/h035",
+              "27": "ROBUC/a12000-19000/s260 PROVI/a11000+ JOODY KRANN/a11000-12000/s250 CRADL/a8000-10000 KLEBB HOKDU/a5000/s210/h024",
+              "22L": "ROBUC/a12000-19000/s260 PROVI/a11000+ JOODY KRANN/a11000-12000/s250 CRADL/a8000-10000 KLEBB/a8000/s250 ETHYN/a5000/s250 PTRIK/a5000/s220 TAALE/a5000/s210/h035",
+              "15R": "ROBUC/a12000-19000/s260 PROVI/a11000+ JOODY JAYNA/a11000/s250 BOXRS/a8000/s250 CHERS/a6000/s220 RDHOK/a6000/s210 TKMAN/a6000/s210/h329",
+              "33L": "ROBUC/a12000-19000/s260 PROVI/a11000+ JOODY JAYNA/a11000/s250 ANSLY/a8000/s240 BEREI/a6000-7000/s220 BBOGG/a6000/s210/h060"
           }
         },
         "speed_restriction": 260,
-        "waypoints": "BANKI/a16000+ ROBUC/a12000-19000/s260/ho"
+        "waypoints": "BANKI/a16000+/ho ROBUC/a12000-19000/s260"
       }
     ],
     "ROBUC3_4FINAL": [
@@ -4224,7 +4594,7 @@
       "frequency": 120600,
       "full_name": "Boston Approach",
       "scope_char": "S",
-      "sector_id": "1S"
+      "sector_id": "1M"
     },
     "BOS_F_APP": {
       "frequency": 126500,
@@ -4263,8 +4633,73 @@
       "sector_id": "C37",
       "facility_id": "C",
       "eram_facility": true
+    },
+    "BOS_36_CTR": {
+      "frequency": 123750,
+      "full_name": "Boston Center",
+      "scope_char": "C",
+      "sector_id": "C36",
+      "facility_id": "C",
+      "eram_facility": true
+    },
+    "BOS_42_CTR": {
+      "frequency": 133425,
+      "full_name": "Boston Center",
+      "scope_char": "C",
+      "sector_id": "C42",
+      "facility_id": "C",
+      "eram_facility": true
+    },
+    "BOS_34_CTR": {
+      "frequency": 124850,
+      "full_name": "Boston Center",
+      "scope_char": "C",
+      "sector_id": "C34",
+      "facility_id": "C",
+      "eram_facility": true
+    },
+    "BOS_16_CTR": {
+      "frequency": 128200,
+      "full_name": "Boston Center",
+      "scope_char": "C",
+      "sector_id": "C16",
+      "facility_id": "C",
+      "eram_facility": true
+    },
+    "BOS_18_CTR": {
+      "frequency": 128750,
+      "full_name": "Boston Center",
+      "scope_char": "C",
+      "sector_id": "C18",
+      "facility_id": "C",
+      "eram_facility": true
+    },
+    "PVD_APP": {
+      "frequency": 123675,
+      "full_name": "Providence Approach",
+      "scope_char": "D",
+      "sector_id": "1D",
+      "facility_id": "1"
+    },
+    "MHT_E_APP": {
+      "frequency": 125050,
+      "full_name": "Boston Approach",
+      "scope_char": "E",
+      "sector_id": "1E"
+  },
+  "MHT_W_APP": {
+      "frequency": 134750,
+      "full_name": "Boston Approach",
+      "scope_char": "W",
+      "sector_id": "1W"
+    },
+    "ACK_N_APP": {
+      "frequency": 118200,
+      "full_name": "Boston Approach",
+      "scope_char": "N",
+      "sector_id": "4N"
     }
-   },
+     },
    "default_scenario": "KBOS Land 4R/L Depart 9",
    "fixes": {
     "_BOS_4L": "N42.21.28.758,W71.00.51.518",
@@ -4303,30 +4738,42 @@
       ],
       "arrivals": {
         "JFUND2": {
-          "KBOS": 15
+          "KBOS": 10
         },
         "ROBUC3": {
-          "KBOS": 25
+          "KBOS": 15
         },
         "OOSHN5": {
           "KBOS": 10
-        },
-        "ORW7": {
-          "KBOS": 3
         },
         "DREEM2": {
             "KBED": 3
         },
         "ZELKA2": {
             "KBED": 5
+        },
+        "WOONS": {
+          "KBOS": 1
+        },
+        "GDM": {
+          "KBOS": 2
+        },
+        "FREDO": {
+          "KBOS": 1
+        },
+        "PSM..LWRNC": {
+          "KBOS": 2
+        },
+        "MANCH..LWRNC": {
+          "KBOS": 2
         }
       },
       "solo_controller": "BOS_APP",
         "multi_controllers": {
             "default" : {
                 "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
                 "BOS_I_APP": {"backup": "BOS_F_APP"},
                 "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
@@ -4339,16 +4786,28 @@
         "BOS_W_TWR",
         "BOS_37_CTR"
       ],
-      "default_maps": [ "BOS A90 MAIN" ],
+      "default_maps": [ "BOS A90 MAIN", "BOS 4R/L"],
       "departure_airspace": [
         "BOS_APP4R"
       ],
       "departure_runways": [
         {
           "airport": "KBOS",
-          "rate": 45,
+          "rate": 35,
           "runway": "9",
           "category": "ALL"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "4L",
+          "category": "Prop.N"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "9",
+          "category": "Prop.S"
         },
         {
             "airport": "KBED",
@@ -4388,27 +4847,39 @@
           "KBOS": 15
         },
         "ROBUC3": {
-          "KBOS": 25
+          "KBOS": 15
         },
         "OOSHN5": {
           "KBOS": 10
-        },
-        "ORW7": {
-          "KBOS": 3
         },
     "DREEM2": {
         "KBED": 3
     },
     "ZELKA2": {
         "KBED": 5
+    },
+    "WOONS": {
+      "KBOS": 1
+    },
+    "GDM": {
+      "KBOS": 2
+    },
+    "FREDO": {
+      "KBOS": 1
+    },
+    "PSM..LWRNC": {
+      "KBOS": 2
+    },
+    "MANCH..LWRNC": {
+      "KBOS": 2
     }
       },
       "solo_controller": "BOS_APP",
         "multi_controllers": {
-            "default" : {
+           "default" : {
                 "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
                 "BOS_I_APP": {"backup": "BOS_F_APP"},
                 "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
@@ -4421,16 +4892,28 @@
         "BOS_W_TWR",
         "BOS_37_CTR"
       ],
-      "default_maps": [ "BOS A90 MAIN" ],
+      "default_maps": [ "BOS A90 MAIN", "BOS 27/22"],
       "departure_airspace": [
         "BOS_APP"
       ],
       "departure_runways": [
         {
           "airport": "KBOS",
-          "rate": 45,
+          "rate": 35,
           "runway": "22R",
           "category": "ALL"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "22R",
+          "category": "Prop.N"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "22R",
+          "category": "Prop.S"
         },
         {
             "airport": "KBED",
@@ -4466,27 +4949,39 @@
           "KBOS": 15
         },
         "ROBUC3": {
-          "KBOS": 25
+          "KBOS": 15
         },
         "OOSHN5": {
           "KBOS": 10
-        },
-        "ORW7": {
-          "KBOS": 3
         },
         "DREEM2": {
             "KBED": 3
         },
         "ZELKA2": {
             "KBED": 5
+        },
+        "WOONS": {
+          "KBOS": 1
+        },
+        "GDM": {
+          "KBOS": 2
+        },
+        "FREDO": {
+          "KBOS": 1
+        },
+        "PSM..LWRNC": {
+          "KBOS": 2
+        },
+        "MANCH..LWRNC": {
+          "KBOS": 2
         }
       },
       "solo_controller": "BOS_APP",
         "multi_controllers": {
-            "default" : {
+           "default" : {
                 "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
                 "BOS_I_APP": {"backup": "BOS_F_APP"},
                 "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
@@ -4499,16 +4994,28 @@
         "BOS_W_TWR",
         "BOS_37_CTR"
       ],
-      "default_maps": [ "BOS A90 MAIN" ],
+      "default_maps": [ "BOS A90 MAIN", "BOS 27"],
       "departure_airspace": [
         "BOS_APP"
       ],
       "departure_runways": [
         {
           "airport": "KBOS",
-          "rate": 45,
+          "rate": 35,
           "runway": "33L",
           "category": "ALL"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "33L",
+          "category": "Prop.N"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "33L",
+          "category": "Prop.S"
         },
         {
             "airport": "KBED",
@@ -4540,27 +5047,40 @@
           "KBOS": 15
         },
         "ROBUC3": {
-          "KBOS": 25
+          "KBOS": 15
         },
         "OOSHN5": {
           "KBOS": 10
         },
-        "ORW7": {
-          "KBOS": 3
-        },
+
         "DREEM2": {
             "KBED": 3
         },
         "ZELKA2": {
             "KBED": 5
+        },
+        "WOONS": {
+          "KBOS": 1
+        },
+        "GDM": {
+          "KBOS": 2
+        },
+        "FREDO": {
+          "KBOS": 1
+        },
+        "PSM..LWRNC": {
+          "KBOS": 2
+        },
+        "MANCH..LWRNC": {
+          "KBOS": 2
         }
       },
       "solo_controller": "BOS_APP",
         "multi_controllers": {
-            "default" : {
+           "default" : {
                 "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
                 "BOS_I_APP": {"backup": "BOS_F_APP"},
                 "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
@@ -4573,16 +5093,28 @@
         "BOS_W_TWR",
         "BOS_37_CTR"
       ],
-      "default_maps": [ "BOS A90 MAIN" ],
+      "default_maps": [ "BOS A90 MAIN", "BOS 15R"],
       "departure_airspace": [
         "BOS_APP"
       ],
       "departure_runways": [
         {
           "airport": "KBOS",
-          "rate": 45,
+          "rate": 35,
           "runway": "15R",
           "category": "ALL"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "15R",
+          "category": "Prop.N"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "15R",
+          "category": "Prop.S"
         },
         {
             "airport": "KBED",
@@ -4614,26 +5146,35 @@
           "KBOS": 15
         },
         "ROBUC3": {
-          "KBOS": 25
+          "KBOS": 15
         },
         "OOSHN5": {
           "KBOS": 10
         },
-        "ORW7": {
-          "KBOS": 3
+        "WOONS": {
+          "KBOS": 1
+        },
+        "GDM": {
+          "KBOS": 2
+        },
+        "FREDO": {
+          "KBOS": 1
+        },
+        "PSM..LWRNC": {
+          "KBOS": 2
+        },
+        "MANCH..LWRNC": {
+          "KBOS": 2
         }
       },
       "solo_controller": "BOS_APP",
         "multi_controllers": {
-            "default" : {
+           "default" : {
                 "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP"},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"}
+                "BOS_I_APP": {"backup": "BOS_F_APP"}
             }
         },
       "controllers": [
@@ -4641,16 +5182,28 @@
         "BOS_W_TWR",
         "BOS_37_CTR"
       ],
-      "default_maps": [ "BOS A90 MAIN" ],
+      "default_maps": [ "BOS A90 MAIN", "BOS 4R/L"],
       "departure_airspace": [
         "BOS_APP4R"
       ],
       "departure_runways": [
         {
           "airport": "KBOS",
-          "rate": 45,
+          "rate": 35,
           "runway": "9",
           "category": "ALL"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "4L",
+          "category": "Prop.N"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "9",
+          "category": "Prop.S"
         }
       ],
       "wind": {
@@ -4677,26 +5230,35 @@
           "KBOS": 15
         },
         "ROBUC3": {
-          "KBOS": 25
+          "KBOS": 15
         },
         "OOSHN5": {
           "KBOS": 10
         },
-        "ORW7": {
-          "KBOS": 3
+        "WOONS": {
+          "KBOS": 1
+        },
+        "GDM": {
+          "KBOS": 2
+        },
+        "FREDO": {
+          "KBOS": 1
+        },
+        "PSM..LWRNC": {
+          "KBOS": 2
+        },
+        "MANCH..LWRNC": {
+          "KBOS": 2
         }
       },
       "solo_controller": "BOS_APP",
         "multi_controllers": {
-            "default" : {
+           "default" : {
                 "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP"},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"}
+                "BOS_I_APP": {"backup": "BOS_F_APP"}
             }
         },
       "controllers": [
@@ -4704,16 +5266,28 @@
         "BOS_W_TWR",
         "BOS_37_CTR"
       ],
-      "default_maps": [ "BOS A90 MAIN" ],
+      "default_maps": [ "BOS A90 MAIN", "BOS 27/22"],
       "departure_airspace": [
         "BOS_APP"
       ],
       "departure_runways": [
         {
           "airport": "KBOS",
-          "rate": 45,
+          "rate": 35,
           "runway": "22R",
           "category": "ALL"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "22R",
+          "category": "Prop.N"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "22R",
+          "category": "Prop.S"
         }
       ],
       "wind": {
@@ -4736,26 +5310,35 @@
           "KBOS": 15
         },
         "ROBUC3": {
-          "KBOS": 25
+          "KBOS": 15
         },
         "OOSHN5": {
           "KBOS": 10
         },
-        "ORW7": {
-          "KBOS": 3
+        "WOONS": {
+          "KBOS": 1
+        },
+        "GDM": {
+          "KBOS": 2
+        },
+        "FREDO": {
+          "KBOS": 1
+        },
+        "PSM..LWRNC": {
+          "KBOS": 2
+        },
+        "MANCH..LWRNC": {
+          "KBOS": 2
         }
       },
       "solo_controller": "BOS_APP",
         "multi_controllers": {
-            "default" : {
+           "default" : {
                 "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP"},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"}
+                "BOS_I_APP": {"backup": "BOS_F_APP"}
             }
         },
       "controllers": [
@@ -4763,16 +5346,28 @@
         "BOS_W_TWR",
         "BOS_37_CTR"
       ],
-      "default_maps": [ "BOS A90 MAIN" ],
+      "default_maps": [ "BOS A90 MAIN", "BOS 27"],
       "departure_airspace": [
         "BOS_APP"
       ],
       "departure_runways": [
         {
           "airport": "KBOS",
-          "rate": 45,
+          "rate": 35,
           "runway": "33L",
           "category": "ALL"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "33L",
+          "category": "Prop.N"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "33L",
+          "category": "Prop.S"
         }
       ],
       "wind": {
@@ -4795,26 +5390,35 @@
           "KBOS": 15
         },
         "ROBUC3": {
-          "KBOS": 25
+          "KBOS": 15
         },
         "OOSHN5": {
           "KBOS": 10
         },
-        "ORW7": {
-          "KBOS": 3
+        "WOONS": {
+          "KBOS": 1
+        },
+        "GDM": {
+          "KBOS": 2
+        },
+        "FREDO": {
+          "KBOS": 1
+        },
+        "PSM..LWRNC": {
+          "KBOS": 2
+        },
+        "MANCH..LWRNC": {
+          "KBOS": 2
         }
       },
       "solo_controller": "BOS_APP",
         "multi_controllers": {
-            "default" : {
+           "default" : {
                 "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "ORW7"]},
+                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
+                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
                 "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP"},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"}
+                "BOS_I_APP": {"backup": "BOS_F_APP"}
             }
         },
       "controllers": [
@@ -4822,16 +5426,28 @@
         "BOS_W_TWR",
         "BOS_37_CTR"
       ],
-      "default_maps": [ "BOS A90 MAIN" ],
+      "default_maps": [ "BOS A90 MAIN", "BOS 15R"],
       "departure_airspace": [
         "BOS_APP"
       ],
       "departure_runways": [
         {
           "airport": "KBOS",
-          "rate": 45,
+          "rate": 35,
           "runway": "15R",
           "category": "ALL"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "15R",
+          "category": "Prop.N"
+        },
+        {
+          "airport": "KBOS",
+          "rate": 5,
+          "runway": "15R",
+          "category": "Prop.S"
         }
       ],
       "wind": {
@@ -4889,30 +5505,118 @@
       "center": "N042.23.05.581,W071.00.43.615"
     }
    ],
-    "allow_long_scratchpad": [false, false],
+    "allow_long_scratchpad": [true, true],
     "force_ql_self": true,
     "airspace_awareness": [
       {
         "fixes": [
-          "BLZZR",
-          "BRUWN",
-          "CELTK",
           "HYLND",
-          "LBSTA",
-          "PATSS",
-          "REVSS",
-          "SSOXS",
-          "PEASE",
-          "PVC",
-          "LFV",
-          "DUNKK",
+          "CON",
           "MANCH"
         ],
         "altitude_range": [
-          0,
-          0
+          11000,
+          999000
         ],
         "receiving_controller": "BOS_37_CTR"
+      },
+      {
+        "fixes": [
+          "HYLND",
+          "CON",
+          "MANCH"
+        ],
+        "altitude_range": [
+          0, 
+          10000
+        ],
+        "receiving_controller": "MHT_W_APP"
+      },
+      {
+        "fixes": [
+          "BLZZR",
+          "PATSS",
+          "REVSS",
+          "BOSOX",
+          "GLYDE"
+        ],
+        "altitude_range": [
+          0,
+          999000
+        ],
+        "receiving_controller": "BOS_42_CTR"
+      },
+      {
+        "fixes": [
+          "BRUWN",
+          "PVC",
+          "LFV",
+          "DUNKK"
+        ],
+        "altitude_range": [
+            11000,
+            99999000
+        ],
+        "receiving_controller": "BOS_18_CTR"
+      },
+      {
+        "fixes": [
+          "BRUWN",
+          "PVC",
+          "LFV",
+          "DUNKK"
+        ],
+        "altitude_range": [
+            0,
+            10000
+        ],
+        "receiving_controller": "ACK_N_APP"
+      },
+      {
+        "fixes": [
+          "CELTK",
+          "LBSTA",
+          "PEASE",
+          "ENE"
+        ],
+        "altitude_range": [
+          0, 
+          10000
+        ],
+        "receiving_controller": "MHT_E_APP"
+      },
+      {
+        "fixes": [
+          "CELTK",
+          "LBSTA",
+          "PEASE",
+          "ENE"
+        ],
+        "altitude_range": [
+          11000, 
+          99999000
+        ],
+        "receiving_controller": "BOS_16_CTR"
+      },
+      {
+        "fixes": [
+          "SSOXS"
+        ],
+        "altitude_range": [
+          11000,
+          999000
+        ],
+        "receiving_controller": "BOS_34_CTR"
+      },
+      {
+        "fixes": [
+          "SSOXS"
+        ],
+        "altitude_range": [
+          0,
+          10000
+        ],
+        "receiving_controller": "PVD_APP"
       }
     ],
    "scratchpads": {

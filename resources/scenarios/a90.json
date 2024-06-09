@@ -4495,20 +4495,12 @@
             },
             {
               "airport": "CYUL",
-              "icao": "JZA"
-            },
-            {
-              "airport": "CYUL",
               "fleet": "short",
               "icao": "ACA"
             },
             {
               "airport": "CYYZ",
               "icao": "JBU"
-            },
-            {
-              "airport": "CYYZ",
-              "icao": "JZA"
             },
             {
               "airport": "CYYZ",
@@ -5258,6 +5250,46 @@
       "facility_id": "C",
       "eram_facility": true
     },
+    "BOS_36_CTR": {
+        "frequency": 123750,
+        "full_name": "Boston Center",
+        "scope_char": "C",
+        "sector_id": "C36",
+        "facility_id": "C",
+        "eram_facility": true
+      },
+      "BOS_42_CTR": {
+        "frequency": 133425,
+        "full_name": "Boston Center",
+        "scope_char": "C",
+        "sector_id": "C42",
+        "facility_id": "C",
+        "eram_facility": true
+      },
+      "BOS_34_CTR": {
+        "frequency": 124850,
+        "full_name": "Boston Center",
+        "scope_char": "C",
+        "sector_id": "C34",
+        "facility_id": "C",
+        "eram_facility": true
+      },
+      "BOS_16_CTR": {
+        "frequency": 128200,
+        "full_name": "Boston Center",
+        "scope_char": "C",
+        "sector_id": "C16",
+        "facility_id": "C",
+        "eram_facility": true
+      },
+      "BOS_18_CTR": {
+        "frequency": 128750,
+        "full_name": "Boston Center",
+        "scope_char": "C",
+        "sector_id": "C18",
+        "facility_id": "C",
+        "eram_facility": true
+      },
     "PSM_TWR": {
             "frequency": 128400,
             "full_name": "Portsmouth Tower",
@@ -5340,7 +5372,7 @@
             },
             "ACK_TWR": {
               "frequency": 118300,
-              "full_name": "Boston Approach",
+              "full_name": "Nantucket Tower",
               "scope_char": "T",
               "sector_id": "9T"
             },

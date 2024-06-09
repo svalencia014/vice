@@ -15287,6 +15287,24 @@
     }
   },
   {
+    "icao": "CYC",
+    "name": "Circadian Aviation",
+    "callsign": {
+      "name": " Circadian",
+      "callsignFormats": [
+        "###"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "B350",
+          4
+        ]
+      ]
+    }
+  },
+  {
     "icao": "cwc",
     "name": "Centurion Air Cargo",
     "callsign": {
