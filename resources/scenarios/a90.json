@@ -5944,11 +5944,15 @@
             "speed": 3
         }
         },
-        "KBOS Land 27 Depart 33L KMHT South + Sat": {
+        "KBOS Land 27/32 Depart 33L KMHT South + Sat": {
             "arrival_runways": [
                 {
                     "airport": "KBOS",
                     "runway": "27"
+                },
+                {
+                    "airport": "KBOS",
+                    "runway": "32"
                 },
                 {
                     "airport": "KBOS",
@@ -6409,6 +6413,10 @@
                 {
                     "airport": "KBOS",
                     "runway": "27"
+                },
+                {
+                    "airport": "KBOS",
+                    "runway": "32"
                 },
                 {
                     "airport": "KBOS",
