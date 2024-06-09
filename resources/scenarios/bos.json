@@ -4926,7 +4926,7 @@
         "speed": 10
       }
     },
-    "KBOS Land 27 Depart 33L + KBED West": {
+    "KBOS Land 27/32 Depart 33L + KBED West": {
       "approach_airspace": [
         "BOS_APP"
       ],
@@ -4934,6 +4934,10 @@
         {
           "airport": "KBOS",
           "runway": "27"
+        },
+        {
+          "airport": "KBOS",
+          "runway": "32"
         },
         {
             "airport": "KBED",
@@ -5295,7 +5299,7 @@
         "speed": 10
       }
     },
-    "KBOS Land 27 Depart 33L": {
+    "KBOS Land 27/32 Depart 33L": {
       "approach_airspace": [
         "BOS_APP"
       ],
@@ -5303,6 +5307,10 @@
         {
           "airport": "KBOS",
           "runway": "27"
+        },
+        {
+          "airport": "KBOS",
+          "runway": "32"
         }
       ],
       "arrivals": {
