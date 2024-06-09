@@ -223,6 +223,11 @@
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
             "waypoints": "KBOS-22L/h140"
+          },
+          "MILIS": {
+            "cleared_altitude": 4000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-22L/h035"
           }
         },
         "9": {
@@ -290,6 +295,11 @@
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
             "waypoints": "KBOS-27/h140"
+          },
+          "MILIS": {
+            "cleared_altitude": 4000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-22L/h092"
           }
         },
         "15R": {
@@ -357,6 +367,11 @@
             "cleared_altitude": 5000,
             "sid": "SSOXS6",
             "waypoints": "TASKT BRRRO/s250 BUCYK JSTER"
+          },
+          "MILIS": {
+            "cleared_altitude": 4000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-33L/h120"
           }
         },
         "22R": {
@@ -424,6 +439,11 @@
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
             "waypoints": "KBOS-4L/h250"
+          },
+          "MILIS": {
+            "cleared_altitude": 4000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-4L/h140"
           }
         },
         "33L": {
@@ -491,6 +511,11 @@
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
             "waypoints": "KBOS-15R/h250"
+          },
+          "MILIS": {
+            "cleared_altitude": 4000,
+            "sid": "LOGAN4",
+            "waypoints": "KBOS-15R/h316"
           }
         }
       },
@@ -507,6 +532,25 @@
                     "fleet": "short"
                 }
             ]
+        },
+        {
+          "exit": "MILIS",
+          "destination": "KPVD",
+          "altitude": 4000,
+          "scratchpad": "PVD",
+          "route": "LOGAN4 MILIS PVD",
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "N",
+              "fleet": "fastGA"
+            },
+            {
+              "icao": "LXJ"
+            }
+          ]
         },
         {
             "exit": "SSOXS",
@@ -1110,7 +1154,7 @@
             "exit": "LFV",
             "destination": "KACK",
             "altitude": 5000,
-            "scratchpad": "L050",
+            "scratchpad": "ACK",
             "route": "LOGAN4 LFV",
             "airlines": [
                 {
@@ -1119,6 +1163,32 @@
                 }
             ]
         },
+        {
+          "exit": "LFV",
+          "destination": "KACK",
+          "altitude": 7000,
+          "scratchpad": "ACK",
+          "route": "LOGAN4 LFV",
+          "airlines": [
+              {
+                  "icao": "KAP",
+                  "fleet": "usa"
+              }
+          ]
+      },
+      {
+        "exit": "LFV",
+        "destination": "KACK",
+        "altitude": 9000,
+        "scratchpad": "ACK",
+        "route": "LOGAN4 LFV",
+        "airlines": [
+            {
+                "icao": "KAP",
+                "fleet": "usa"
+            }
+        ]
+    },
         {
             "exit": "ENE",
             "destination": "KAUG",
@@ -1148,7 +1218,7 @@
           {
               "exit": "DUNKK",
               "destination": "KMVY",
-              "scratchpad": "D030",
+              "scratchpad": "MVY",
               "altitude": 3000,
               "route": "LOGAN4 DUNKK",
               "airlines": [
@@ -1158,6 +1228,32 @@
                   }
               ]
           },
+          {
+            "exit": "DUNKK",
+            "destination": "KMVY",
+            "scratchpad": "MVY",
+            "altitude": 5000,
+            "route": "LOGAN4 DUNKK",
+            "airlines": [
+                {
+                    "icao": "KAP",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+          "exit": "DUNKK",
+          "destination": "KMVY",
+          "scratchpad": "MVY",
+          "altitude": 7000,
+          "route": "LOGAN4 DUNKK",
+          "airlines": [
+              {
+                  "icao": "KAP",
+                  "fleet": "default"
+              }
+          ]
+      },
           {
               "exit": "BLZZR",
               "destination": "KATL",
@@ -2774,7 +2870,7 @@
               "exit": "DUNKK",
               "destination": "KHYA",
               "altitude": 5000,
-              "scratchpad": "M050",
+              "scratchpad": "HYA",
               "route": "LOGAN4 DUNKK V141 GAILS",
               "airlines": [
                   {
@@ -2783,6 +2879,32 @@
                   }
               ]
           },
+          {
+            "exit": "DUNKK",
+            "destination": "KHYA",
+            "altitude": 3000,
+            "scratchpad": "HYA",
+            "route": "LOGAN4 DUNKK V141 GAILS",
+            "airlines": [
+                {
+                    "icao": "KAP",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+          "exit": "DUNKK",
+          "destination": "KHYA",
+          "altitude": 7000,
+          "scratchpad": "HYA",
+          "route": "LOGAN4 DUNKK V141 GAILS",
+          "airlines": [
+              {
+                  "icao": "KAP",
+                  "fleet": "default"
+              }
+          ]
+      },
           {
               "exit": "SSOXS",
               "destination": "KMCO",
@@ -2982,7 +3104,7 @@
               "exit": "PVC",
               "destination": "KPVC",
               "altitude": 3000,
-              "scratchpad": "L030",
+              "scratchpad": "PVC",
               "route": "LOGAN4 PVC",
               "airlines": [
                   {
@@ -3016,6 +3138,42 @@
                       "fleet": "default"
                   }
               ]
+          },
+          {
+            "exit": "DUNKK",
+            "destination": "KCQX",
+            "altitude": 3000,
+            "scratchpad": "CQX",
+            "route": "LOGAN4 DUNKK V141 GAILS",
+            "airlines": [
+              {
+                "icao": "KAP"
+              }
+            ]
+          },
+          {
+            "exit": "DUNKK",
+            "destination": "KCQX",
+            "altitude": 5000,
+            "scratchpad": "CQX",
+            "route": "LOGAN4 DUNKK V141 GAILS",
+            "airlines": [
+              {
+                "icao": "KAP"
+              }
+            ]
+          },
+          {
+            "exit": "DUNKK",
+            "destination": "KCQX",
+            "altitude": 7000,
+            "scratchpad": "CQX",
+            "route": "LOGAN4 DUNKK V141 GAILS",
+            "airlines": [
+              {
+                "icao": "KAP"
+              }
+            ]
           },
           {
               "exit": "SSOXS",
@@ -3386,7 +3544,8 @@
         "GLYDE": "Prop.N",
         "BOSOX": "Prop.N",
         "CON": "Prop.N",
-        "ENE": "Prop.N"
+        "ENE": "Prop.N",
+        "MILIS": "ALL"
       },
       "tower_list": 1
     },
@@ -3844,7 +4003,7 @@
         "waypoints": "DUBLE/a17000/ho BASEZ JFUND"
       }
     ],
-    "WOONS": [
+    "WOONS.7K": [
       {
         "airlines": {
           "KBOS": [
@@ -3870,24 +4029,45 @@
         "initial_controller": "PVD_APP",
         "initial_speed": 210,
         "route": "FOSTY WOONS KBOS",
-        "waypoints": "FOSTY WOONS/ho/h056"
+        "waypoints": "FOSTY/ho WOONS/h056"
       }
     ],
-    "GDM": [
+    "WOONS.5K": [
+      {
+        "airlines": {
+          "KBOS": [
+            {
+              "airport": "KTEB",
+              "icao": "MTN"
+            },
+            {
+              "airport": "KTEB",
+              "icao": "CNS"
+            },
+            {
+              "airport": "KTEB",
+              "icao": "N"
+            },
+            {
+              "airport": "KTEB",
+              "icao": "CYC"
+            }
+          ]
+        },
+        "initial_altitude": 5000,
+        "initial_controller": "PVD_APP",
+        "initial_speed": 250,
+        "route": "FOSTY WOONS KBOS",
+        "waypoints": "FOSTY/ho WOONS/h056"
+      }
+    ],
+    "GDM.7K": [
       {
         "airlines": {
           "KBOS": [
             {
               "airport": "CYQW",
-              "icao": "POE"
-            },
-            {
-              "airport": "CYUL",
-              "icao": "POE"
-            },
-            {
-              "airport": "CYYZ",
-              "icao": "POE"
+              "icao": "N"
             },
             {
               "airport": "KLEB",
@@ -3906,17 +4086,39 @@
         "waypoints": "GDM/ho LOBBY/a7000 REVER/h210"
       }
     ],
-    "FREDO": [
+    "GDM.9K": [
+      {
+        "airlines": {
+          "KBOS": [
+            {
+              "airport": "CYQW",
+              "icao": "POE"
+            },
+            {
+              "airport": "CYUL",
+              "icao": "POE"
+            },
+            {
+              "airport": "KMSS",
+              "icao": "BTQ"
+            }
+          ]
+        },
+        "initial_altitude": 9000,
+        "initial_controller": "BOS_36_CTR",
+        "initial_speed": 250,
+        "route": "GDM T608 REVER KBOS",
+        "waypoints": "GDM/ho LOBBY/a9000 REVER/h210"
+      }
+    ],
+    "FREDO.4K": [
       {
         "airlines": {
           "KBOS": [
             {
               "airport": "KTEB",
-              "icao": "MTN"
-            },
-            {
-              "airport": "KTEB",
-              "icao": "CNS"
+              "icao": "N",
+              "fleet" : "fastGA"
             },
             {
               "airport": "KTEB",
@@ -3924,9 +4126,59 @@
             }
           ]
         },
-        "initial_altitude": 7000,
+        "initial_altitude": 8000,
+        "initial_controller": "ACK_N_APP",
+        "initial_speed": 250,
+        "route": "ACK FREDO KBOS",
+        "waypoints": "ACK/ho FREDO/h339"
+      }
+    ],
+    "FREDO.6K": [
+      {
+        "airlines": {
+          "KBOS": [
+            {
+              "airport": "KTEB",
+              "icao": "KAP"
+            },
+            {
+              "airport": "KTEB",
+              "icao": "KAP"
+            },
+            {
+              "airport": "KTEB",
+              "icao": "CYC"
+            }
+          ]
+        },
+        "initial_altitude": 6000,
         "initial_controller": "ACK_N_APP",
         "initial_speed": 230,
+        "route": "ACK FREDO KBOS",
+        "waypoints": "ACK/ho FREDO/h339"
+      }
+    ],
+    "FREDO.8K": [
+      {
+        "airlines": {
+          "KBOS": [
+            {
+              "airport": "KTEB",
+              "icao": "KAP"
+            },
+            {
+              "airport": "KTEB",
+              "icao": "KAP"
+            },
+            {
+              "airport": "KTEB",
+              "icao": "CYC"
+            }
+          ]
+        },
+        "initial_altitude": 4000,
+        "initial_controller": "ACK_N_APP",
+        "initial_speed": 210,
         "route": "ACK FREDO KBOS",
         "waypoints": "ACK/ho FREDO/h339"
       }
@@ -4752,13 +5004,25 @@
         "ZELKA2": {
             "KBED": 5
         },
-        "WOONS": {
+        "WOONS.5K": {
           "KBOS": 1
         },
-        "GDM": {
+        "WOONS.7K": {
+          "KBOS": 1
+        },
+        "GDM.7K": {
           "KBOS": 2
         },
-        "FREDO": {
+        "GDM.9K": {
+          "KBOS": 1
+        },
+        "FREDO.4K": {
+          "KBOS": 1
+        },
+        "FREDO.8K": {
+          "KBOS": 1
+        },
+        "FREDO.6K": {
           "KBOS": 1
         },
         "PSM..LWRNC": {
@@ -4771,14 +5035,14 @@
       "solo_controller": "BOS_APP",
         "multi_controllers": {
             "default" : {
-                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
-                "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"}
+              "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+              "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM.7K", "GDM.9K"]},
+              "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS.5K", "WOONS.7K", "FREDO.4K", "FREDO.6K",  "FREDO.8K"]},
+              "BOS_F_APP": {"backup": "BOS_N_APP"},
+              "BOS_I_APP": {"backup": "BOS_F_APP"},
+              "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
+              "BOS_U_APP": {"backup": "BOS_B_APP"},
+              "BOS_L_APP": {"backup": "BOS_U_APP"}
             }
         },
       "controllers": [
@@ -4858,13 +5122,25 @@
     "ZELKA2": {
         "KBED": 5
     },
-    "WOONS": {
+    "WOONS.5K": {
       "KBOS": 1
     },
-    "GDM": {
+    "WOONS.7K": {
+      "KBOS": 1
+    },
+    "GDM.7K": {
       "KBOS": 2
     },
-    "FREDO": {
+    "GDM.9K": {
+      "KBOS": 1
+    },
+    "FREDO.4K": {
+      "KBOS": 1
+    },
+    "FREDO.8K": {
+      "KBOS": 1
+    },
+    "FREDO.6K": {
       "KBOS": 1
     },
     "PSM..LWRNC": {
@@ -4877,14 +5153,14 @@
       "solo_controller": "BOS_APP",
         "multi_controllers": {
            "default" : {
-                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
-                "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"}
+            "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+            "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM.7K", "GDM.9K"]},
+            "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS.5K", "WOONS.7K", "FREDO.4K", "FREDO.6K",  "FREDO.8K"]},
+            "BOS_F_APP": {"backup": "BOS_N_APP"},
+            "BOS_I_APP": {"backup": "BOS_F_APP"},
+            "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
+            "BOS_U_APP": {"backup": "BOS_B_APP"},
+            "BOS_L_APP": {"backup": "BOS_U_APP"}
             }
         },
       "controllers": [
@@ -4964,13 +5240,25 @@
         "ZELKA2": {
             "KBED": 5
         },
-        "WOONS": {
+        "WOONS.5K": {
           "KBOS": 1
         },
-        "GDM": {
+        "WOONS.7K": {
+          "KBOS": 1
+        },
+        "GDM.7K": {
           "KBOS": 2
         },
-        "FREDO": {
+        "GDM.9K": {
+          "KBOS": 1
+        },
+        "FREDO.4K": {
+          "KBOS": 1
+        },
+        "FREDO.8K": {
+          "KBOS": 1
+        },
+        "FREDO.6K": {
           "KBOS": 1
         },
         "PSM..LWRNC": {
@@ -4983,14 +5271,14 @@
       "solo_controller": "BOS_APP",
         "multi_controllers": {
            "default" : {
-                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
-                "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"}
+            "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+            "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM.7K", "GDM.9K"]},
+            "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS.5K", "WOONS.7K", "FREDO.4K", "FREDO.6K",  "FREDO.8K"]},
+            "BOS_F_APP": {"backup": "BOS_N_APP"},
+            "BOS_I_APP": {"backup": "BOS_F_APP"},
+            "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
+            "BOS_U_APP": {"backup": "BOS_B_APP"},
+            "BOS_L_APP": {"backup": "BOS_U_APP"}
             }
         },
       "controllers": [
@@ -5063,13 +5351,25 @@
         "ZELKA2": {
             "KBED": 5
         },
-        "WOONS": {
+        "WOONS.5K": {
           "KBOS": 1
         },
-        "GDM": {
+        "WOONS.7K": {
+          "KBOS": 1
+        },
+        "GDM.7K": {
           "KBOS": 2
         },
-        "FREDO": {
+        "GDM.9K": {
+          "KBOS": 1
+        },
+        "FREDO.4K": {
+          "KBOS": 1
+        },
+        "FREDO.8K": {
+          "KBOS": 1
+        },
+        "FREDO.6K": {
           "KBOS": 1
         },
         "PSM..LWRNC": {
@@ -5082,14 +5382,14 @@
       "solo_controller": "BOS_APP",
         "multi_controllers": {
            "default" : {
-                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
-                "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"},
-                "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
-                "BOS_U_APP": {"backup": "BOS_B_APP"},
-                "BOS_L_APP": {"backup": "BOS_U_APP"}
+            "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+            "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM.7K", "GDM.9K"]},
+            "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS.5K", "WOONS.7K", "FREDO.4K", "FREDO.6K",  "FREDO.8K"]},
+            "BOS_F_APP": {"backup": "BOS_N_APP"},
+            "BOS_I_APP": {"backup": "BOS_F_APP"},
+            "BOS_B_APP": {"backup": "BOS_N_APP", "arrivals": ["DREEM2", "ZELKA2"]},
+            "BOS_U_APP": {"backup": "BOS_B_APP"},
+            "BOS_L_APP": {"backup": "BOS_U_APP"}
             }
         },
       "controllers": [
@@ -5155,13 +5455,25 @@
         "OOSHN5": {
           "KBOS": 10
         },
-        "WOONS": {
+        "WOONS.5K": {
           "KBOS": 1
         },
-        "GDM": {
+        "WOONS.7K": {
+          "KBOS": 1
+        },
+        "GDM.7K": {
           "KBOS": 2
         },
-        "FREDO": {
+        "GDM.9K": {
+          "KBOS": 1
+        },
+        "FREDO.4K": {
+          "KBOS": 1
+        },
+        "FREDO.8K": {
+          "KBOS": 1
+        },
+        "FREDO.6K": {
           "KBOS": 1
         },
         "PSM..LWRNC": {
@@ -5174,11 +5486,11 @@
       "solo_controller": "BOS_APP",
         "multi_controllers": {
            "default" : {
-                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
-                "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"}
+            "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+            "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM.7K", "GDM.9K"]},
+            "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS.5K", "WOONS.7K", "FREDO.4K", "FREDO.6K",  "FREDO.8K"]},
+            "BOS_F_APP": {"backup": "BOS_N_APP"},
+            "BOS_I_APP": {"backup": "BOS_F_APP"}
             }
         },
       "controllers": [
@@ -5239,13 +5551,25 @@
         "OOSHN5": {
           "KBOS": 10
         },
-        "WOONS": {
+        "WOONS.5K": {
           "KBOS": 1
         },
-        "GDM": {
+        "WOONS.7K": {
+          "KBOS": 1
+        },
+        "GDM.7K": {
           "KBOS": 2
         },
-        "FREDO": {
+        "GDM.9K": {
+          "KBOS": 1
+        },
+        "FREDO.4K": {
+          "KBOS": 1
+        },
+        "FREDO.8K": {
+          "KBOS": 1
+        },
+        "FREDO.6K": {
           "KBOS": 1
         },
         "PSM..LWRNC": {
@@ -5258,11 +5582,11 @@
       "solo_controller": "BOS_APP",
         "multi_controllers": {
            "default" : {
-                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
-                "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"}
+            "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+            "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM.7K", "GDM.9K"]},
+            "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS.5K", "WOONS.7K", "FREDO.4K", "FREDO.6K",  "FREDO.8K"]},
+            "BOS_F_APP": {"backup": "BOS_N_APP"},
+            "BOS_I_APP": {"backup": "BOS_F_APP"}
             }
         },
       "controllers": [
@@ -5323,13 +5647,25 @@
         "OOSHN5": {
           "KBOS": 10
         },
-        "WOONS": {
+        "WOONS.5K": {
           "KBOS": 1
         },
-        "GDM": {
+        "WOONS.7K": {
+          "KBOS": 1
+        },
+        "GDM.7K": {
           "KBOS": 2
         },
-        "FREDO": {
+        "GDM.9K": {
+          "KBOS": 1
+        },
+        "FREDO.4K": {
+          "KBOS": 1
+        },
+        "FREDO.8K": {
+          "KBOS": 1
+        },
+        "FREDO.6K": {
           "KBOS": 1
         },
         "PSM..LWRNC": {
@@ -5342,11 +5678,11 @@
       "solo_controller": "BOS_APP",
         "multi_controllers": {
            "default" : {
-                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
-                "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"}
+            "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+            "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM.7K", "GDM.9K"]},
+            "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS.5K", "WOONS.7K", "FREDO.4K", "FREDO.6K",  "FREDO.8K"]},
+            "BOS_F_APP": {"backup": "BOS_N_APP"},
+            "BOS_I_APP": {"backup": "BOS_F_APP"}
             }
         },
       "controllers": [
@@ -5403,13 +5739,25 @@
         "OOSHN5": {
           "KBOS": 10
         },
-        "WOONS": {
+        "WOONS.5K": {
           "KBOS": 1
         },
-        "GDM": {
+        "WOONS.7K": {
+          "KBOS": 1
+        },
+        "GDM.7K": {
           "KBOS": 2
         },
-        "FREDO": {
+        "GDM.9K": {
+          "KBOS": 1
+        },
+        "FREDO.4K": {
+          "KBOS": 1
+        },
+        "FREDO.8K": {
+          "KBOS": 1
+        },
+        "FREDO.6K": {
           "KBOS": 1
         },
         "PSM..LWRNC": {
@@ -5422,11 +5770,11 @@
       "solo_controller": "BOS_APP",
         "multi_controllers": {
            "default" : {
-                "BOS_DEP": {"departures": ["KBOS"], "primary": true},
-                "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM"]},
-                "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS", "FREDO"]},
-                "BOS_F_APP": {"backup": "BOS_N_APP"},
-                "BOS_I_APP": {"backup": "BOS_F_APP"}
+            "BOS_DEP": {"departures": ["KBOS"], "primary": true},
+            "BOS_N_APP": {"backup": "BOS_DEP", "arrivals": ["JFUND2", "OOSHN5", "MANCH..LWRNC", "PSM..LWRNC", "GDM.7K", "GDM.9K"]},
+            "BOS_S_APP": {"backup": "BOS_N_APP", "arrivals": ["ROBUC3", "WOONS.5K", "WOONS.7K", "FREDO.4K", "FREDO.6K",  "FREDO.8K"]},
+            "BOS_F_APP": {"backup": "BOS_N_APP"},
+            "BOS_I_APP": {"backup": "BOS_F_APP"}
             }
         },
       "controllers": [
