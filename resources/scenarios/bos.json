@@ -1604,7 +1604,7 @@
               "exit": "BRUWN",
               "destination": "TJSJ",
               "altitude": 35000,
-             "scratchpad": "B350",
+             "scratchpad": "T350",
               "route": "BRUWN7 BRUWN BORQE Y578 KAYYT DASER BALTN MEGGG L456 THANK PLING RTE7 SAALR",
               "airlines": [
                   {
@@ -2371,7 +2371,7 @@
               "exit": "BRUWN",
               "destination": "TJSJ",
               "altitude": 35000,
-              "scratchpad": "B350",
+              "scratchpad": "T350",
               "route": "BRUWN7 BRUWN BORQE Y578 KAYYT DASER BALTN MEGGG L456 THANK PLING RTE7 SAALR",
               "airlines": [
                   {
@@ -2566,7 +2566,7 @@
               "exit": "BRUWN",
               "destination": "TJSJ",
               "altitude": 35000,
-              "scratchpad": "B350",
+              "scratchpad": "T350",
               "route": "BRUWN7 BRUWN BORQE Y578 KAYYT DASER BALTN MEGGG L456 THANK PLING RTE7 SAALR",
               "airlines": [
                   {
