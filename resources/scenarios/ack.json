@@ -522,37 +522,37 @@
       "frequency": 118200,
       "full_name": "Boston Approach",
       "scope_char": "N",
-      "sector_id": "4N"
+      "sector_id": "1N"
     },
     "ACK_O_APP": {
         "frequency": 126300,
         "full_name": "Boston Approach",
         "scope_char": "O",
-        "sector_id": "4O"
+        "sector_id": "1O"
       },
       "ACK_Y_APP": {
         "frequency": 119700,
         "full_name": "Boston Approach",
         "scope_char": "Y",
-        "sector_id": "4Y"
+        "sector_id": "1Y"
       },
       "ACK_S_APP": {
         "frequency": 133750,
         "full_name": "Boston Approach",
         "scope_char": "S",
-        "sector_id": "4S"
+        "sector_id": "1S"
       },
       "ACK_DEP": {
         "frequency": 126100,
         "full_name": "Boston Approach",
         "scope_char": "D",
-        "sector_id": "4D"
+        "sector_id": "1D"
       },
       "ACK_A_APP": {
         "frequency": 124050,
         "full_name": "Boston Approach",
         "scope_char": "A",
-        "sector_id": "4A"
+        "sector_id": "1A"
       },
       "ACK_TWR": {
         "frequency": 118300,
