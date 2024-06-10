@@ -3649,44 +3649,83 @@
         "R35": {
           "cifp_id": "R35"
         }
-      }
-    },
-    "KBVY": {
-      "name": "Beverly",
-      "approaches": {
-        "R16": {
-          "cifp_id": "R16"
-        },
-        "R27": {
-          "cifp_id": "R27"
-        },
-        "R34": {
-          "cifp_id": "R34"
-        },
-        "R9": {
-          "cifp_id": "R9"
+      },
+      "departure_routes": {
+        "35": {
+          "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX": {
+            "cleared_altitude": 2000,
+            "sid": "OWD5",
+            "waypoints": "KBED-35/h350"
+           }
         }
-      }
-    },
-    "KLWM": {
-      "name": "Lawrence",
-      "approaches": {
-        "I5": {
-          "cifp_id": "I5"
+      },
+      "departures": [
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "KAP"
+            }
+          ],
+          "destination": "KBXM",
+          "exit": "PEASE",
+          "altitude": 10000,
+          "scratchpad": "P100",
+          "route": "PEASE ENE"
         },
-        "R14": {
-          "cifp_id": "R14"
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJM"
+            },
+            {
+              "fleet": "fastGA",
+              "icao": "N"
+            },
+            {
+              "icao": "TWY"
+            }
+          ],
+          "destination": "KSAV",
+          "altitude": 38000,
+          "scratchpad": "S380",
+          "exit": "SSOXS",
+          "route": "SSOXS Q167 RIFLE HEADI Q97 SAWED GUILD Q409 SESUE SOOOP"
         },
-        "R23": {
-          "cifp_id": "R23"
-        },
-        "R32": {
-          "cifp_id": "R32"
-        },
-        "R5": {
-          "cifp_id": "R5"
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJM"
+            },
+            {
+              "fleet": "fastGA",
+              "icao": "N"
+            },
+            {
+              "icao": "TWY"
+            }
+          ],
+          "destination": "KBMG",
+          "exit": "BOSOX",
+          "altitude": 28000,
+          "scratchpad": "B280",
+          "route": "BOSOX Q167 RIFLE HEADI Q97 SAWED GUILD Q409 SESUE SOOOP"
         }
-      }
+      ]
     },
     "KBED": {
         "name": "Bedford Hanscom Field",
@@ -3715,14 +3754,29 @@
         },
         "departure_routes": {
             "11": {
-                "BLZZR,SSOXS,REVSS,CELTK": {
-                    "cleared_altitude": 2000,
-                    "sid": "HNSCM5",
-                    "waypoints": "KBED-29/h050"
+                "MANCH,HYLND,PEASE,LBSTA": {
+                  "cleared_altitude": 2000,
+                  "sid": "HNSCM5",
+                  "route": "KBED-29/h070"
+                },
+                "CELTK,FRILL,BURDY": {
+                  "cleared_altitude": 2000,
+                  "sid": "HNSCM5",
+                  "waypoints": "KBED-29/h090"
+                },
+                "REVSS,GLYDE": {
+                  "cleared_altitude": 2000,
+                  "sid": "HNSCM5",
+                  "waypoints": "KBED-29/h250"
+                },
+                "PUT,BOSOX": {
+                  "cleared_altitude": 2000,
+                  "sid": "HNSCM5",
+                  "waypoints": "KBED-29/h250"
                 }
             },
             "29": {
-                "BLZZR,SSOXS,REVSS,CELTK": {
+                "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX": {
                     "cleared_altitude": 2000,
                     "sid": "HNSCM5",
                     "waypoints": "KBED-11/h290"
@@ -3744,6 +3798,64 @@
                 "altitude": 38000,
                 "scratchpad": "S380",
                 "route": "SSOXS Q167 RIFLE HEADI Q97 SAWED DFENC Q109 LAANA AMYLU AMYLU3"
+            },
+            {
+              "airlines": [
+                {
+                  "icao": "LXJ"
+                },
+                {
+                  "icao": "EJA"
+                },
+                {
+                  "icao": "N",
+                  "fleet": "fastGA"
+               },
+               {
+                "icao": "EJM"
+               }
+              ],
+              "destination": "KBDL",
+              "exit": "BOSOX",
+              "altitude": 14000,
+              "scratchpad": "B140",
+              "route": "BOSOX T303 GRAYM"
+            },
+            {
+              "airlines": [
+                {
+                  "icao": "KAP"
+                },
+                {
+                  "icao": "EJA"
+                },
+                {
+                  "icao": "EJM"
+                },
+                {
+                  "icao": "N"
+                }
+              ],
+              "destination": "KPWM",
+              "scratchpad": "PWM",
+              "exit": "PEASE",
+              "altitude": 9000,
+              "route": "PEASE ENE"
+            },
+            {
+              "airlines": [
+                {
+                  "icao": "LXJ"
+                },
+                {
+                  "icao": "EJA"
+                }
+              ],
+              "destination": "EGGW",
+              "scratchpad": "P370",
+              "exit": "LBSTA",
+              "altitude": 41000,
+              "route": "LBSTA ENE FLEUR ROBBE 5800N/07000W 6100N/07000W ALSAK KENKI EBEXI NASOP NONRO 6400N/02000W RATSU BARKU BRUCE TRN EMGAT UN57 DCS UL612 LISTO LISTO1N"
             },
             {
                 "airlines": [
@@ -4232,6 +4344,16 @@
               "airport": "KMSS",
               "icao": "BTQ"
             }
+          ],
+          "KBED": [
+            {
+              "airport": "KLEB",
+              "icao": "N"
+            },
+            {
+              "airport": "KLEB",
+              "icao": "CNS"
+            }
           ]
         },
         "initial_altitude": 7000,
@@ -4707,18 +4829,89 @@
                 "KBED": [
                     {
                         "airport": "KSAT",
-                        "icao": "LXJ"
+                        "icao": "LXJ",
+                        "scratchpad": "RBED"
                     },
                     {
                         "airport": "KSAT",
-                        "icao": "EJA"
+                        "icao": "EJA",
+                        "scratchpad": "RBED"
                     },
                     {
                         "airport": "KSAT",
                         "icao": "N",
-                        "fleet": "fastGA"
+                        "fleet": "fastGA",
+                        "scratchpad": "RBED"
+                    },
+                    {
+                      "airport": "KSAT",
+                      "icao": "EJM",
+                      "scratchpad": "RBED"
+                    },
+                    {
+                      "airport": "KSAT",
+                      "icao": "CST",
+                      "scratchpad": "RBED"
+                    },
+                    {
+                      "airport": "KSAT",
+                      "icao": "GPD",
+                      "scratchpad": "RBED"
+                    },
+                    {
+                      "airport": "KSAT",
+                      "icao": "TWY",
+                      "scratchpad": "RBED"
+                    },
+                    {
+                      "airport": "KSAt",
+                      "icao": "LAK",
+                      "scratchpad": "RBED"
                     }
-                ]
+                ],
+                "KOWD": [
+                  {
+                      "airport": "KSAT",
+                      "icao": "LXJ",
+                      "scratchpad": "ROWD"
+                  },
+                  {
+                      "airport": "KSAT",
+                      "icao": "EJA",
+                       "scratchpad": "ROWD"
+                  },
+                  {
+                      "airport": "KSAT",
+                      "icao": "N",
+                      "fleet": "fastGA",
+                       "scratchpad": "ROWD"
+                  },
+                  {
+                    "airport": "KSAT",
+                    "icao": "EJM",
+                     "scratchpad": "ROWD"
+                  },
+                  {
+                    "airport": "KSAT",
+                    "icao": "CST",
+                     "scratchpad": "ROWD"
+                  },
+                  {
+                    "airport": "KSAT",
+                    "icao": "GPD",
+                     "scratchpad": "ROWD"
+                  },
+                  {
+                    "airport": "KSAT",
+                    "icao": "TWY",
+                     "scratchpad": "ROWD"
+                  },
+                  {
+                    "airport": "KSAt",
+                    "icao": "LAK",
+                     "scratchpad": "ROWD"
+                  }
+              ]
             },
             "initial_altitude": 14000,
             "initial_speed": 250,
@@ -4730,24 +4923,92 @@
     "DREEM2": [
         {
             "airlines": {
-                "KBED": [
+              "KBED": [
                     {
                         "airport": "KSAT",
                         "icao": "LXJ",
-                        "scratchpad": "XBED"
+                        "scratchpad": "RBED"
                     },
                     {
                         "airport": "KSAT",
                         "icao": "EJA",
-                        "scratchpad": "XBED"
+                        "scratchpad": "RBED"
                     },
                     {
                         "airport": "KSAT",
                         "icao": "N",
                         "fleet": "fastGA",
-                        "scratchpad": "XBED"
+                        "scratchpad": "RBED"
+                    },
+                    {
+                      "airport": "KSAT",
+                      "icao": "EJM",
+                      "scratchpad": "RBED"
+                    },
+                    {
+                      "airport": "KSAT",
+                      "icao": "CST",
+                      "scratchpad": "RBED"
+                    },
+                    {
+                      "airport": "KSAT",
+                      "icao": "GPD",
+                      "scratchpad": "RBED"
+                    },
+                    {
+                      "airport": "KSAT",
+                      "icao": "TWY",
+                      "scratchpad": "RBED"
+                    },
+                    {
+                      "airport": "KSAt",
+                      "icao": "LAK",
+                      "scratchpad": "RBED"
                     }
-                ]
+                ],
+                "KOWD": [
+                  {
+                      "airport": "KSAT",
+                      "icao": "LXJ",
+                      "scratchpad": "ROWD"
+                  },
+                  {
+                      "airport": "KSAT",
+                      "icao": "EJA",
+                       "scratchpad": "ROWD"
+                  },
+                  {
+                      "airport": "KSAT",
+                      "icao": "N",
+                      "fleet": "fastGA",
+                       "scratchpad": "ROWD"
+                  },
+                  {
+                    "airport": "KSAT",
+                    "icao": "EJM",
+                     "scratchpad": "ROWD"
+                  },
+                  {
+                    "airport": "KSAT",
+                    "icao": "CST",
+                     "scratchpad": "ROWD"
+                  },
+                  {
+                    "airport": "KSAT",
+                    "icao": "GPD",
+                     "scratchpad": "ROWD"
+                  },
+                  {
+                    "airport": "KSAT",
+                    "icao": "TWY",
+                     "scratchpad": "ROWD"
+                  },
+                  {
+                    "airport": "KSAt",
+                    "icao": "LAK",
+                     "scratchpad": "ROWD"
+                  }
+              ]
             },
             "initial_altitude": 11000,
             "initial_controller": "BOS_42_CTR",
@@ -4969,6 +5230,13 @@
       "full_name": "Boston Tower",
       "scope_char": "T",
       "sector_id": "1G"
+    },
+    "BDL_APP": {
+      "frequency": 123950,
+      "full_name": "Yankee Approach",
+      "scope_char": "B",
+      "sector_id": "1B",
+      "facility_id": "1"
     },
     "BED_TWR": {
         "frequency": 118500,
