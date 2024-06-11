@@ -18078,6 +18078,251 @@
     }
   },
   {
+    "icao": "ejm",
+    "name": "Executive Jet Management",
+    "callsign": {
+      "name": "Jet Speed",
+      "callsignFormats": [
+        "###"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "BE40",
+          2
+        ],
+        [
+          "GLF5",
+          2
+        ]
+      ]
+    }
+  },
+  {
+    "icao": "twy",
+    "name": "Solarius Aviation",
+    "callsign": {
+      "name": "Twylight",
+      "callsignFormats": [
+        "##"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "GLEX",
+          4
+        ],
+        [
+          "GLF5",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "icao": "ftd",
+    "name": "AB Jets",
+    "callsign": {
+      "name": "Fortitude",
+      "callsignFormats": [
+        "##"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "GLEX",
+          4
+        ],
+        [
+          "GLF5",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "icao": "gpd",
+    "name": "Tradewind Aviation",
+    "callsign": {
+      "name": "Godspeed",
+      "callsignFormats": [
+        "##",
+        "###"
+      ]
+    },
+    "fleets": {
+      "default": [
+        "PC12",
+        12
+      ]
+    }
+  },
+  {
+    "icao": "kpo",
+    "name": "Nxt Jet",
+    "callsign": {
+      "name": "Nxt Jet",
+      "callsignFormats": [
+        "##",
+        "###"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "GLF4",
+          2
+        ]
+      ]
+    }
+  },
+  {
+    "icao": "jas",
+    "name": "Jet Aviation Flight Services",
+    "callsign": {
+      "name": "Jet Setter",
+      "callsignFormats": [
+        "##"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "GLF4",
+          2
+        ]
+      ]
+    }
+  },
+  {
+    "icao": "pvo",
+    "name": "Privaira",
+    "callsign": {
+      "name": "Private Orange",
+      "callsignFormats": [
+        "##",
+        "###"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "CL60",
+          3
+        ]
+      ]
+    }
+  },
+  {
+    "icao": "xoj",
+    "name": "Exojet",
+    "callsign": {
+      "name": "Exojet",
+      "callsignFormats": [
+        "##",
+        "###"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "CRJ2",
+          3
+        ],
+        [
+          "C750",
+          26
+        ]
+      ]
+    }
+  },
+  {
+    "icao": "LAK",
+    "name": "Red Wing Aeroplance Company",
+    "callsign": {
+      "name": "Redlake",
+      "callsignFormats": [
+        "##",
+        "###"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "C560",
+          19
+        ]
+      ]
+    }
+  },
+  {
+    "icao": "edg",
+    "name": "Jet Edge",
+    "callsign": {
+      "name": "Jet Edge",
+      "length": 2
+    },
+    "fleets": {
+      "default": [
+        [
+          "B737",
+          1
+        ],
+        [
+          "GLF4",
+          5
+        ],
+        [
+          "GLF5",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "icao": "wup",
+    "name": "Wheels up Private Jets",
+    "callsign": {
+      "name": "Up Jet",
+      "callsignFormats": [
+        "##",
+        "###",
+        "####"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "B350",
+          59
+        ],
+        [
+          "BE40",
+          39
+        ]
+      ]
+    }
+  },
+  {
+    "icao": "cst",
+    "name": "Shoreline Aviation",
+    "callsign": {
+      "name": "Shoreline",
+      "length": 2
+    },
+    "fleets": {
+      "default": [
+        [
+          "PC12",
+          3
+        ]
+      ]
+    }
+  },
+  {
     "icao": "eja",
     "name": "NetJets",
     "callsign": {
