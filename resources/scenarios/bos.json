@@ -3966,6 +3966,190 @@
         }
       ]
     },
+    "KBVY": {
+      "name": "Beverly",
+      "approaches": {
+        "R16": {
+          "cifp_id": "R16"
+        },
+        "R27": {
+          "cifp_id": "R27"
+        },
+        "R34": {
+          "cifp_id": "R34"
+        },
+        "R9": {
+          "cifp_id": "R9"
+        }
+      },
+      "departure_routes": {
+        "9": {
+          "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX": {
+              "cleared_altitude": 2000,
+              "sid": "HNSCM5",
+              "waypoints": "KBED-27/h090"
+          }
+        },
+        "27": {
+          "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX": {
+              "cleared_altitude": 2000,
+              "sid": "HNSCM5",
+              "waypoints": "KBVY-9/h270"
+          }
+        }
+      },
+      "departures": [
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJM"
+            },
+            {
+              "fleet": "fastGA",
+              "icao": "N"
+            },
+            {
+              "icao": "TWY"
+            },  
+            {
+              "icao": "EDG"
+            },
+            {
+              "icao": "CST"
+            },
+            {
+              "icao": "FTD"
+            },
+            {
+              "icao": "KPO"
+            },
+            {
+              "icao": "JAS"
+            },
+            {
+              "icao": "PVO"
+            },
+            {
+              "icao": "XOJ"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "WDY"
+            },
+            {
+              "icao": "COL"
+            },
+            {
+              "icao": "HRT"
+            },
+            {
+              "icao": "FKW"
+            },
+            {
+              "icao": "GPD"
+            }
+          ],
+          "destination": "KHPN",
+          "exit": "BOSOX",
+          "altitude": 12000,
+          "scratchpad": "B100",
+          "route": "BOSOX T303 MAD EEGOR ALIXX RYMES"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJM"
+            },
+            {
+              "fleet": "fastGA",
+              "icao": "N"
+            },
+            {
+              "icao": "TWY"
+            },  
+            {
+              "icao": "EDG"
+            },
+            {
+              "icao": "CST"
+            },
+            {
+              "icao": "FTD"
+            },
+            {
+              "icao": "KPO"
+            },
+            {
+              "icao": "JAS"
+            },
+            {
+              "icao": "PVO"
+            },
+            {
+              "icao": "XOJ"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "WDY"
+            },
+            {
+              "icao": "COL"
+            },
+            {
+              "icao": "HRT"
+            },
+            {
+              "icao": "FKW"
+            },
+            {
+              "icao": "GPD"
+            }
+          ],
+          "destination": "KJFK",
+          "exit": "SSOXS",
+          "altitude": 24000,
+          "scratchpad": "S240",
+          "route": "SSOXS BUZRD SEY PARCH3"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "CNS"
+            },
+            {
+              "icao": "N"
+            }
+          ],
+          "destination": "KPVC",
+          "altitude": 5000,
+          "exit": "PVC",
+          "scratchpad": "PVC",
+          "route": "PVC"
+        }
+      ]
+    },
     "KBED": {
         "name": "Bedford Hanscom Field",
         "approaches": {
