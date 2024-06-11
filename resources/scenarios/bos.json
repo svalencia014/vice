@@ -3643,6 +3643,153 @@
       },
       "tower_list": 1
     },
+    "KLWM": {
+      "name": "Lawrence",
+      "approaches": {
+        "I5": {
+          "cifp_id": "I5"
+        },
+        "R14": {
+          "cifp_id": "R14"
+        },
+        "R23": {
+          "cifp_id": "R23"
+        },
+        "R32": {
+          "cifp_id": "R32"
+        },
+        "R5": {
+          "cifp_id": "R5"
+        }
+      },
+      "departure_routes": {
+        "5": {
+          "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX,SSOXS,DUNKK,LFV": {
+            "cleared_altitude": 2000,
+            "sid": "LWM2",
+            "waypoints": "KLWM-23/h053"
+           }
+        },
+        "23": {
+          "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX,SSOXS,DUNKK,LFV": {
+            "cleared_altitude": 2000,
+            "sid": "LWM2",
+            "waypoints": "KLWM-5/h233"
+           }
+        }
+      },
+      "departures": [
+        {
+          "airlines": [
+            {
+              "icao": "CNS"
+            },
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "N",
+              "fleet": "fastGA"
+            }
+          ],
+          "destination": "KPTK",
+          "exit": "HYLND",
+          "altitude": 16000,
+          "scratchpad": "M160",
+          "route": "HYLND SYR COLTS OKLND1"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "CNS"
+            },
+            {
+              "icao": "N"
+            }
+          ],
+          "destination": "KCQX",
+          "exit": "DUNKK",
+          "altitude": 5000,
+          "scratchpad": "CQX",
+          "route": "DUNKK V141 GAILS"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "TWY"
+            }
+          ],
+          "destination": "KTEB",
+          "exit": "REVSS",
+          "altitude": 12000,
+          "scratchpad": "W120",
+          "route": "REVSS BAF MOBBS T295 SAGES V489 COATE"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "TWY"
+            },
+            {
+              "icao": "N",
+              "fleet": "fastGA"
+            }
+          ],
+          "destination": "CYPS",
+          "exit": "LBSTA",
+          "altitude": 35000,
+          "scratchpad": "P350",
+          "route": "LBSTA SCOGS VIGMA"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "N"
+            },
+            {
+              "icao": "CNS"
+            }
+          ],
+          "destination": "KPSM",
+          "exit": "PEASE",
+          "altitude": 5000,
+          "scratchpad": "PSM",
+          "route": "PEASE"
+        }
+      ],
+      "exit_categories": {
+        "MANCH": "ALL",
+        "HYLND": "ALL",
+        "PEASE": "ALL",
+        "LBSTA": "ALL",
+        "CELTK": "ALL",
+        "FRILL": "ALL",
+        "BURDY": "ALL",
+        "REVSS": "ALL",
+        "GLYDE": "ALL",
+        "PUT": "ALL",
+        "BOSOX": "ALL",
+        "SSOXS": "ALL",
+        "DUNKK": "ALL",
+        "LFV": "ALL"
+      },
+      "tower_list": 2
+    },
     "KOWD": {
       "name": "Norwood",
       "approaches": {
@@ -3655,7 +3802,7 @@
           "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX,SSOXS,DUNKK,LFV": {
             "cleared_altitude": 2000,
             "sid": "OWD5",
-            "waypoints": "KBED-35/h350"
+            "waypoints": "KBED-35/h330"
            }
         }
       },
@@ -3964,7 +4111,24 @@
           "scratchpad": "M200",
           "route": "MANCH CON"
         }
-      ]
+      ],
+      "exit_categories": {
+        "MANCH": "ALL",
+        "HYLND": "ALL",
+        "PEASE": "ALL",
+        "LBSTA": "ALL",
+        "CELTK": "ALL",
+        "FRILL": "ALL",
+        "BURDY": "ALL",
+        "REVSS": "ALL",
+        "GLYDE": "ALL",
+        "PUT": "ALL",
+        "BOSOX": "ALL",
+        "SSOXS": "ALL",
+        "DUNKK": "ALL",
+        "LFV": "ALL"
+      },
+      "tower_list": 3
     },
     "KBVY": {
       "name": "Beverly",
@@ -3984,16 +4148,16 @@
       },
       "departure_routes": {
         "9": {
-          "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX": {
+          "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX,BRUWN": {
               "cleared_altitude": 2000,
-              "sid": "HNSCM5",
+              "sid": "BVY3",
               "waypoints": "KBED-27/h090"
           }
         },
         "27": {
-          "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX": {
+          "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX,BRUWN": {
               "cleared_altitude": 2000,
-              "sid": "HNSCM5",
+              "sid": "BVY3",
               "waypoints": "KBVY-9/h270"
           }
         }
@@ -4147,8 +4311,162 @@
           "exit": "PVC",
           "scratchpad": "PVC",
           "route": "PVC"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "CNS"
+            },
+            {
+              "icao": "N"
+            }
+          ],
+          "destination": "KPWM",
+          "altitude": 5000,
+          "exit": "PEASE",
+          "scratchpad": "PWM",
+          "route": "PEASE ENE"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJM"
+            },
+            {
+              "fleet": "fastGA",
+              "icao": "N"
+            },
+            {
+              "icao": "TWY"
+            },  
+            {
+              "icao": "EDG"
+            },
+            {
+              "icao": "CST"
+            },
+            {
+              "icao": "FTD"
+            },
+            {
+              "icao": "KPO"
+            },
+            {
+              "icao": "JAS"
+            },
+            {
+              "icao": "PVO"
+            },
+            {
+              "icao": "XOJ"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "WDY"
+            },
+            {
+              "icao": "COL"
+            },
+            {
+              "icao": "HRT"
+            },
+            {
+              "icao": "FKW"
+            },
+            {
+              "icao": "GPD"
+            }
+          ],
+          "destination": "KBWI",
+          "exit": "REVSS",
+          "altitude": 20000,
+          "scratchpad": "W200",
+          "route": "REVSS CTR DNY LAAYK T295 LRP T449 KITHE"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJM"
+            },
+            {
+              "fleet": "fastGA",
+              "icao": "N"
+            },
+            {
+              "icao": "TWY"
+            },  
+            {
+              "icao": "EDG"
+            },
+            {
+              "icao": "CST"
+            },
+            {
+              "icao": "JAS"
+            },
+            {
+              "icao": "PVO"
+            },
+            {
+              "icao": "XOJ"
+            },
+            {
+              "icao": "WDY"
+            },
+            {
+              "icao": "COL"
+            },
+            {
+              "icao": "HRT"
+            },
+            {
+              "icao": "FKW"
+            },
+            {
+              "icao": "GPD"
+            }
+          ],
+          "destination": "TXKF",
+          "exit": "BRUWN",
+          "altitude": 39000,
+          "scratchpad": "T390",
+          "route": "BRUWN ACK KAYYT L462 ANVER MOMOM1"
         }
-      ]
+      ],
+      "exit_categories": {
+        "MANCH": "ALL",
+        "HYLND": "ALL",
+        "PEASE": "ALL",
+        "LBSTA": "ALL",
+        "CELTK": "ALL",
+        "FRILL": "ALL",
+        "BURDY": "ALL",
+        "REVSS": "ALL",
+        "GLYDE": "ALL",
+        "PUT": "ALL",
+        "BOSOX": "ALL",
+        "SSOXS": "ALL",
+        "DUNKK": "ALL",
+        "LFV": "ALL"
+      },
+      "tower_list": 4
     },
     "KBED": {
         "name": "Bedford Hanscom Field",
@@ -4311,7 +4629,24 @@
                 "scratchpad": "W200",
                 "route": "REVSS BAF MOBBS T295 SAGES V489 COATE"
             }
-        ]
+        ],
+        "exit_categories": {
+          "MANCH": "ALL",
+          "HYLND": "ALL",
+          "PEASE": "ALL",
+          "LBSTA": "ALL",
+          "CELTK": "ALL",
+          "FRILL": "ALL",
+          "BURDY": "ALL",
+          "REVSS": "ALL",
+          "GLYDE": "ALL",
+          "PUT": "ALL",
+          "BOSOX": "ALL",
+          "SSOXS": "ALL",
+          "DUNKK": "ALL",
+          "LFV": "ALL"
+        },
+        "tower_list": 5
     }
   },
   "airspace": {
@@ -5819,7 +6154,7 @@
    "name": "KBOS",
    "primary_airport": "KBOS",
    "scenarios": {
-    "KBOS Land 4R/L Depart 9 + KBED East": {
+    "KBOS Land 4R/L Depart 9 + Sat": {
       "approach_airspace": [
         "BOS_APP4R"
       ],
@@ -5929,8 +6264,23 @@
         },
         {
             "airport": "KBED",
-            "rate": 10,
+            "rate": 5,
             "runway": "11"
+        },
+        {
+          "airport": "KLWM",
+          "rate": 5,
+          "runway": "5"
+        },
+        {
+          "airport": "KOWD",
+          "rate": 5,
+          "runway": "35"
+        },
+        {
+          "airport": "KBVY",
+          "rate": 5,
+          "runway": "9"
         }
       ],
       "wind": {
@@ -5938,7 +6288,7 @@
         "speed": 10
       }
     },
-    "KBOS Land 27/22L Depart 22R + KBED West": {
+    "KBOS Land 27/22L Depart 22R + Sat": {
       "approach_airspace": [
         "BOS_APP"
       ],
@@ -5970,39 +6320,39 @@
         "OOSHN5": {
           "KBOS": 10
         },
-    "DREEM2": {
-        "KBED": 3
-    },
-    "ZELKA2": {
-        "KBED": 5
-    },
-    "WOONS.5K": {
-      "KBOS": 1
-    },
-    "WOONS.7K": {
-      "KBOS": 1
-    },
-    "GDM.7K": {
-      "KBOS": 2
-    },
-    "GDM.9K": {
-      "KBOS": 1
-    },
-    "FREDO.4K": {
-      "KBOS": 1
-    },
-    "FREDO.8K": {
-      "KBOS": 1
-    },
-    "FREDO.6K": {
-      "KBOS": 1
-    },
-    "PSM..LWRNC": {
-      "KBOS": 2
-    },
-    "MANCH..LWRNC": {
-      "KBOS": 2
-    }
+        "DREEM2": {
+            "KBED": 3
+        },
+        "ZELKA2": {
+            "KBED": 5
+        },
+        "WOONS.5K": {
+          "KBOS": 1
+        },
+        "WOONS.7K": {
+          "KBOS": 1
+        },
+        "GDM.7K": {
+          "KBOS": 2
+        },
+        "GDM.9K": {
+          "KBOS": 1
+        },
+        "FREDO.4K": {
+          "KBOS": 1
+        },
+        "FREDO.8K": {
+          "KBOS": 1
+        },
+        "FREDO.6K": {
+          "KBOS": 1
+        },
+        "PSM..LWRNC": {
+          "KBOS": 2
+        },
+        "MANCH..LWRNC": {
+          "KBOS": 2
+        }
       },
       "solo_controller": "BOS_APP",
         "multi_controllers": {
@@ -6054,6 +6404,18 @@
             "airport": "KBED",
             "rate": 10,
             "runway": "29"
+        },
+        {
+          "airport": "KLWM",
+          "runway": "23"
+        },
+        {
+          "airport": "KOWD",
+          "runway": "35"
+        },
+        {
+          "airport": "KBVY",
+          "runway": "27"
         }
       ],
       "wind": {
@@ -6061,7 +6423,7 @@
         "speed": 10
       }
     },
-    "KBOS Land 27/32 Depart 33L + KBED West": {
+    "KBOS Land 27/32 Depart 33L + Sat": {
       "approach_airspace": [
         "BOS_APP"
       ],
@@ -6177,6 +6539,18 @@
             "airport": "KBED",
             "rate": 10,
             "runway": "29"
+        },
+        {
+          "airport": "KLWM",
+          "runway": "23"
+        },
+        {
+          "airport": "KOWD",
+          "runway": "35"
+        },
+        {
+          "airport": "KBVY",
+          "runway": "27"
         }
       ],
       "wind": {
@@ -6184,7 +6558,7 @@
         "speed": 2
       }
     },
-    "KBOS Land 15R Depart 15R + KBED East": {
+    "KBOS Land 15R Depart 15R + Sat": {
       "approach_airspace": [
         "BOS_APP"
       ],
@@ -6293,6 +6667,21 @@
             "airport": "KBED",
             "rate": 10,
             "runway": "11"
+        },
+        {
+          "airport": "KLWM",
+          "rate": 5,
+          "runway": "5"
+        },
+        {
+          "airport": "KOWD",
+          "rate": 5,
+          "runway": "35"
+        },
+        {
+          "airport": "KBVY",
+          "rate": 5,
+          "runway": "9"
         }
       ],
       "wind": {
