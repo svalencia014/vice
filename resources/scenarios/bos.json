@@ -6002,6 +6002,12 @@
         "scope_char": "T",
         "sector_id": "1C"
     },
+    "LWM_TWR": {
+      "frequency": 119250,
+      "full_name": "Lawrence Tower",
+      "scope_char": "Q",
+      "sector_id": "1Q"
+    },
     "BOS_W_TWR": {
       "frequency": 128800,
       "full_name": "Boston Tower",
@@ -6013,6 +6019,18 @@
       "full_name": "Boston Approach",
       "scope_char": "D",
       "sector_id": "1D"
+    },
+    "OWD_TWR": {
+      "frequency": 126000,
+      "full_name": "Norwood Tower",
+      "scope_char": "O",
+      "sector_id": "1O"
+    },
+    "BVY_TWR": {
+      "frequency": 125200,
+      "full_name": "Beverly Tower",
+      "scope_char": "V",
+      "sector_id": "1V"
     },
     "BOS_DEP": {
       "frequency": 133000,
