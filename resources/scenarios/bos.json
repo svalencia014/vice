@@ -419,32 +419,32 @@
           "PEASE,ENE": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
-            "waypoints": "KBOS-4L/h250"
+            "waypoints": "KBOS-22R/h250"
           },
           "MANCH,CON,MHT": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
-            "waypoints": "KBOS-4L/h250"
+            "waypoints": "KBOS-22R/h250"
           },
           "BOSOX,GLYDE": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
-            "waypoints": "KBOS-4L/h250"
+            "waypoints": "KBOS-22R/h250"
           },
           "PVC": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
-            "waypoints": "KBOS-4L/h250"
+            "waypoints": "KBOS-22R/h250"
           },
           "LFV,DUNKK": {
             "cleared_altitude": 2000,
             "sid": "LOGAN4",
-            "waypoints": "KBOS-4L/h250"
+            "waypoints": "KBOS-22R/h250"
           },
           "MILIS": {
             "cleared_altitude": 4000,
             "sid": "LOGAN4",
-            "waypoints": "KBOS-4L/h140"
+            "waypoints": "KBOS-22R/h140"
           }
         },
         "33L": {
@@ -3652,7 +3652,7 @@
       },
       "departure_routes": {
         "35": {
-          "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX": {
+          "MANCH,HYLND,PEASE,LBSTA,CELTK,FRILL,BURDY,REVSS,GLYDE,PUT,BOSOX,SSOXS,DUNKK,LFV": {
             "cleared_altitude": 2000,
             "sid": "OWD5",
             "waypoints": "KBED-35/h350"
@@ -3666,7 +3666,59 @@
               "icao": "EJA"
             },
             {
-              "icao": "KAP"
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJM"
+            },
+            {
+              "fleet": "fastGA",
+              "icao": "N"
+            },
+            {
+              "icao": "TWY"
+            },  
+            {
+              "icao": "EDG"
+            },
+            {
+              "icao": "CST"
+            },
+            {
+              "icao": "FTD"
+            },
+            {
+              "icao": "KPO"
+            },
+            {
+              "icao": "JAS"
+            },
+            {
+              "icao": "PVO"
+            },
+            {
+              "icao": "XOJ"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "WDY"
+            },
+            {
+              "icao": "COL"
+            },
+            {
+              "icao": "HRT"
+            },
+            {
+              "icao": "FKW"
+            },
+            {
+              "icao": "GPD"
             }
           ],
           "destination": "KBXM",
@@ -3692,6 +3744,48 @@
             },
             {
               "icao": "TWY"
+            },  
+            {
+              "icao": "EDG"
+            },
+            {
+              "icao": "CST"
+            },
+            {
+              "icao": "FTD"
+            },
+            {
+              "icao": "KPO"
+            },
+            {
+              "icao": "JAS"
+            },
+            {
+              "icao": "PVO"
+            },
+            {
+              "icao": "XOJ"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "WDY"
+            },
+            {
+              "icao": "COL"
+            },
+            {
+              "icao": "HRT"
+            },
+            {
+              "icao": "FKW"
+            },
+            {
+              "icao": "GPD"
             }
           ],
           "destination": "KSAV",
@@ -3717,6 +3811,48 @@
             },
             {
               "icao": "TWY"
+            },  
+            {
+              "icao": "EDG"
+            },
+            {
+              "icao": "CST"
+            },
+            {
+              "icao": "FTD"
+            },
+            {
+              "icao": "KPO"
+            },
+            {
+              "icao": "JAS"
+            },
+            {
+              "icao": "PVO"
+            },
+            {
+              "icao": "XOJ"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "WDY"
+            },
+            {
+              "icao": "COL"
+            },
+            {
+              "icao": "HRT"
+            },
+            {
+              "icao": "FKW"
+            },
+            {
+              "icao": "GPD"
             }
           ],
           "destination": "KBMG",
@@ -3724,6 +3860,109 @@
           "altitude": 28000,
           "scratchpad": "B280",
           "route": "BOSOX Q167 RIFLE HEADI Q97 SAWED GUILD Q409 SESUE SOOOP"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "CNS"
+            },
+            {
+              "icao": "N"
+            }
+          ],
+          "destination": "KHYA",
+          "exit": "DUNKK",
+          "altitude": 5000,
+          "scratchpad": "HYA",
+          "route": "DUNKK V141 GAILS"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "CNS"
+            },
+            {
+              "icao": "N"
+            },
+            {
+              "icao": "GPD"
+            },
+            {
+              "icao": "LAK"
+            }
+          ],
+          "destination": "KACK",
+          "exit": "LFV",
+          "altitude": 7000,
+          "scratchpad": "ACK",
+          "route": "LFV"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "EJM"
+            },
+            {
+              "fleet": "fastGA",
+              "icao": "N"
+            },
+            {
+              "icao": "TWY"
+            },  
+            {
+              "icao": "EDG"
+            },
+            {
+              "icao": "CST"
+            },
+            {
+              "icao": "FTD"
+            },
+            {
+              "icao": "KPO"
+            },
+            {
+              "icao": "JAS"
+            },
+            {
+              "icao": "PVO"
+            },
+            {
+              "icao": "XOJ"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "LAK"
+            },
+            {
+              "icao": "WDY"
+            },
+            {
+              "icao": "COL"
+            },
+            {
+              "icao": "HRT"
+            },
+            {
+              "icao": "FKW"
+            },
+            {
+              "icao": "GPD"
+            }
+          ],
+          "destination": "KBTV",
+          "exit": "MANCH",
+          "altitude": 20000,
+          "scratchpad": "M200",
+          "route": "MANCH CON"
         }
       ]
     },
@@ -4496,7 +4735,7 @@
           ]
         },
         "initial_altitude": 6000,
-        "initial_controller": "MHT_W_APP",
+        "initial_controller": "MHT_Z_APP",
         "initial_speed": 230,
         "route": "MANCH LWRNC KBOS",
         "waypoints": "MANCH/ho LWRNC/h182"
@@ -5365,11 +5604,11 @@
       "scope_char": "E",
       "sector_id": "1E"
   },
-  "MHT_W_APP": {
-      "frequency": 134750,
+  "MHT_Z_APP": {
+      "frequency": 124900,
       "full_name": "Boston Approach",
       "scope_char": "W",
-      "sector_id": "1W"
+      "sector_id": "1Z"
     },
     "ACK_N_APP": {
       "frequency": 118200,
@@ -6332,7 +6571,7 @@
           0, 
           10000
         ],
-        "receiving_controller": "MHT_W_APP"
+        "receiving_controller": "MHT_Z_APP"
       },
       {
         "fixes": [
