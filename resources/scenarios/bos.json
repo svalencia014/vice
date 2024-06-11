@@ -5244,6 +5244,88 @@
         "waypoints": "ACK/ho FREDO/h339"
       }
     ],
+    "PSM..LWRNC.SAT": [
+      {
+        "airlines": {
+          "KBED": [
+            {
+              "airport": "KBGR",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KBGR",
+              "icao": "LXJ"
+            }
+          ],
+          "KOWD": [
+            {
+              "airport": "KBGR",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KBGR",
+              "icao": "LXJ"
+            }
+          ],
+          "KBVY": [
+            {
+              "airport": "KBGR",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KBGR",
+              "icao": "LXJ"
+            }
+          ]
+        },
+        "initial_altitude": 3000,
+        "initial_controller": "MHT_E_APP",
+        "initial_speed": 230,
+        "route": "PSM LWRNC",
+        "waypoints": "PSM/ho LWRNC/flyover"
+      }
+    ],
+    "MANCH..LWRNC.SAT": [
+      {
+        "airlines": {
+          "KBED": [
+            {
+              "airport": "KBGR",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KBGR",
+              "icao": "LXJ"
+            }
+          ],
+          "KOWD": [
+            {
+              "airport": "KBGR",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KBGR",
+              "icao": "LXJ"
+            }
+          ],
+          "KBVY": [
+            {
+              "airport": "KBGR",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KBGR",
+              "icao": "LXJ"
+            }
+          ]
+        },
+        "initial_altitude": 3000,
+        "initial_controller": "MHT_Z_APP",
+        "initial_speed": 230,
+        "route": "MANCH LWRNC",
+        "waypoints": "MANCH/ho LWRNC/flyover"
+      }
+    ],
     "PSM..LWRNC": [
       {
         "airlines": {
