@@ -5999,14 +5999,14 @@
     "BED_TWR": {
         "frequency": 118500,
         "full_name": "Bedford Tower",
-        "scope_char": "T",
-        "sector_id": "1C"
+        "scope_char": "Q",
+        "sector_id": "1Q"
     },
     "LWM_TWR": {
       "frequency": 119250,
       "full_name": "Lawrence Tower",
       "scope_char": "Q",
-      "sector_id": "1Q"
+      "sector_id": "3Q"
     },
     "BOS_W_TWR": {
       "frequency": 128800,
@@ -6023,14 +6023,14 @@
     "OWD_TWR": {
       "frequency": 126000,
       "full_name": "Norwood Tower",
-      "scope_char": "O",
-      "sector_id": "1O"
+      "scope_char": "Q",
+      "sector_id": "4Q"
     },
     "BVY_TWR": {
       "frequency": 125200,
       "full_name": "Beverly Tower",
-      "scope_char": "V",
-      "sector_id": "1V"
+      "scope_char": "Q",
+      "sector_id": "2Q"
     },
     "BOS_DEP": {
       "frequency": 133000,

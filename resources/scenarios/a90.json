@@ -5561,13 +5561,13 @@
             "frequency": 128400,
             "full_name": "Portsmouth Tower",
             "scope_char": "T",
-            "sector_id": "1R"
+            "sector_id": "3T"
         },
         "MHT_TWR": {
             "frequency": 121300,
             "full_name": "Manchester Tower",
-            "scope_char": "T",
-            "sector_id": "1M"
+            "scope_char": "V",
+            "sector_id": "1V"
         },
         "MHT_Z_APP": {
             "default_airport" :"KMHT",
@@ -5605,31 +5605,31 @@
             "frequency": 118200,
             "full_name": "Boston Approach",
             "scope_char": "N",
-            "sector_id": "4N"
+            "sector_id": "1N"
           },
           "ACK_O_APP": {
               "frequency": 126300,
               "full_name": "Boston Approach",
               "scope_char": "O",
-              "sector_id": "4O"
+              "sector_id": "1O"
             },
             "ACK_Y_APP": {
               "frequency": 119700,
               "full_name": "Boston Approach",
               "scope_char": "Y",
-              "sector_id": "4Y"
+              "sector_id": "1Y"
             },
             "ACK_S_APP": {
               "frequency": 133750,
               "full_name": "Boston Approach",
               "scope_char": "S",
-              "sector_id": "4S"
+              "sector_id": "1S"
             },
             "ACK_DEP": {
               "frequency": 126100,
               "full_name": "Boston Approach",
               "scope_char": "D",
-              "sector_id": "4D"
+              "sector_id": "1D"
             },
             "ACK_A_APP": {
               "frequency": 124050,
@@ -5641,13 +5641,13 @@
               "frequency": 118300,
               "full_name": "Nantucket Tower",
               "scope_char": "T",
-              "sector_id": "9T"
+              "sector_id": "4T"
             },
             "MVY_TWR": {
               "frequency": 121400,
               "full_name": "Vineyard Tower",
-              "scope_char": "T",
-              "sector_id": "6T"
+              "scope_char": "V",
+              "sector_id": "4V"
             }
     },
     "default_scenario": "BOS Land 4R/L Dep 9 KMHT North + Sat",
