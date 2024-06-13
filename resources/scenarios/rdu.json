@@ -1955,22 +1955,8 @@
             "SHPRD": "SHP"
         },
         "stars_maps": [
-            {
-                "group": 0,
-                "label": "NE RVM",
-                "name": "RDU NE RVM"
-            },
-            {
-                "group": 0,
-                "label": "SW RVM",
-                "name": "RDU SW RVM"
-            },
-            {
-                "group": 1,
-                "label": "MVA",
-                "name": "RDU MVA"
-            }
+            "RDU NE RVM", "RDU SW RVM", "RDU MVA"
         ],
-  "video_map_file": "videomaps/ZDC-videomaps.json.zst"
+  "video_map_file": "videomaps/ZDC-videomaps.gob.zst"
     }
 }

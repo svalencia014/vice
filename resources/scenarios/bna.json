@@ -2389,46 +2389,9 @@
         "TIPPN": "ROR"
       },
       "stars_maps": [
-        {
-          "group": 0,
-          "label": "NORTH",
-          "name": "BNA_NORTH FLOW"
-        },
-        {
-          "group": 0,
-          "label": "SOUTH",
-          "name": "BNA_SOUTH FLOW"
-        },
-        {
-          "group": 0,
-          "label": "CLASSC",
-          "name": "BNA_CLASS C"
-      },
-      {
-          "group": 0,
-          "label": "EOVM",
-          "name": "BNA_EOVM"
-      },
-      {
-          "group": 0,
-          "label": "EW N",
-          "name": "BNA_EW NORTH SPLIT"
-      },
-      {
-          "group": 0,
-          "label": "EW S",
-          "name": "BNA_EW SOUTH SPLIT"
-      },
-      {
-        "group": 0,
-        "label": "GATES",
-        "name": "BNA_SID EXIT GATES"
-    },
-    {
-        "group": 0,
-        "label": "SID",
-        "name": "BNA_SID EXIT"
-    }
-      ]
+        "BNA_NORTH FLOW", "BNA_SOUTH FLOW", "BNA_CLASS C", "BNA_EOVM",
+        "BNA_EW NORTH SPLIT", "BNA_EW SOUTH SPLIT", "BNA_SID EXIT GATES", "BNA_SID EXIT"
+      ],
+      "video_map_file": "videomaps/ZME-videomaps.gob.zst"
     }
   }
