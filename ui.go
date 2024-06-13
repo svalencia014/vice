@@ -391,11 +391,7 @@ func drawUI(p Platform, r Renderer, w *World, eventStream *EventStream, stats *S
 			imgui.SetTooltip("Display information about vice")
 		}
 		if imgui.BeginMenu(FontAwesomeIconDiscord) {
-			if imgui.MenuItem("Vice Discord") {
-				browser.OpenURL("https://discord.gg/y993vgQxhY")
-			} else if imgui.MenuItem("Vice ATC Hub") {
-				browser.OpenURL("https://discord.gg/MRDfS3yyhA")
-			}
+			browser.OpenURL("https://discord.gg/y993vgQxhY")
 			imgui.EndMenu()
 		}
 
@@ -1103,11 +1099,12 @@ func showAboutDialog() {
   Valencia, and Yi Zhang.
 - Facility engineering: Connor Allen, Adam
   Bolek, Lucas Chan, Aaron Flett, Mike K,
-  Jud Lopez, Ethan Malimon, Jace Martin,
-  Merry, Yahya Nazimuddin, Justin Nguyen,
-  Andrew S, Arya T, Nelson T, Eli Thompson,
-  Michael Trokel, Samuel Valencia, Gavin
-  Velicevic, and Jackson Verdoorn.
+  Jonah Lefkoff, Jud Lopez, Ethan Malimon,
+  Jace Martin, Merry, Yahya Nazimuddin,
+  Justin Nguyen, Giovanni, Andrew S,
+  Arya T, Nelson T, Eli Thompson, Michael
+  Trokel, Samuel Valencia, Gavin Velicevic,
+  and Jackson Verdoorn.
 - Video maps: thanks to the ZAU, ZBW, ZDC,
   ZDV, ZHU, ZID, ZJX, ZLA, ZMP, ZNY, ZOB,
   ZSE, and ZTL VATSIM ARTCCs.
