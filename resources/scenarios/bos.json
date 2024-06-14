@@ -6574,7 +6574,7 @@
       "sector_id": "1N"
     }
      },
-   "default_scenario": "KBOS Land 4R/L Depart 9",
+   "default_scenario": "BOS Land 4R/L Depart 9",
    "fixes": {
     "_BOS_4L": "N42.21.28.758,W71.00.51.518",
     "_BOS_4R": "N42.21.14.449,W71.00.37.024",
@@ -6592,7 +6592,7 @@
    "name": "KBOS",
    "primary_airport": "KBOS",
    "scenarios": {
-    "KBOS Land 4R/L Depart 9 + Sats": {
+    "BOS Land 4R/L Depart 9 + Sats": {
       "approach_airspace": [
         "BOS_APP4R"
       ],
@@ -6797,7 +6797,7 @@
         "speed": 10
       }
     },
-    "KBOS Land 27/22L Depart 22R + Sats": {
+    "BOS Land 27/22L Depart 22R + Sats": {
       "approach_airspace": [
         "BOS_APP"
       ],
@@ -7001,7 +7001,7 @@
         "speed": 10
       }
     },
-    "KBOS Land 27/32 Depart 33L + Sats": {
+    "BOS Land 27/32 Depart 33L + Sats": {
       "approach_airspace": [
         "BOS_APP"
       ],
@@ -7205,7 +7205,7 @@
         "speed": 2
       }
     },
-    "KBOS Land 15R Depart 15R + Sats": {
+    "BOS Land 15R Depart 15R + Sats": {
       "approach_airspace": [
         "BOS_APP"
       ],
@@ -7404,7 +7404,7 @@
         "speed": 10
       }
     },
-    "KBOS Land 4R/L Depart 9": {
+    "BOS Land 4R/L Depart 9": {
       "approach_airspace": [
         "BOS_APP4R"
       ],
@@ -7500,7 +7500,7 @@
         "speed": 10
       }
     },
-    "KBOS Land 27/22L Depart 22R": {
+    "BOS Land 27/22L Depart 22R": {
       "approach_airspace": [
         "BOS_APP"
       ],
@@ -7596,7 +7596,7 @@
         "speed": 10
       }
     },
-    "KBOS Land 27/32 Depart 33L": {
+    "BOS Land 27/32 Depart 33L": {
       "approach_airspace": [
         "BOS_APP"
       ],
@@ -7692,7 +7692,7 @@
         "speed": 2
       }
     },
-    "KBOS Land 15R Depart 15R": {
+    "BOS Land 15R Depart 15R": {
       "approach_airspace": [
         "BOS_APP"
       ],
