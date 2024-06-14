@@ -7642,11 +7642,11 @@
               "sector_id": "4V"
             }
     },
-    "default_scenario": "KBOS Land 4R/L Dep 9 KMHT North + Sat",
+    "default_scenario": "Consolidated KBOS Land 4R/L Dep 9 KMHT North + Sat",
     "name": "KBOS",
     "primary_airport": "KBOS",
     "scenarios": {
-        "KBOS Land 4R/L Dep 9 KMHT North + Sat": {
+        "A90 Consolidated KBOS Land 4R/L Dep 9 KMHT North + Sat": {
             "arrival_runways": [
                 {
                     "airport": "KBOS",
@@ -7882,7 +7882,7 @@
             "speed": 10
         }
         },
-        "KBOS Land 27/22L Depart 22R KMHT South + Sat": {
+        "A90 Consolidated KBOS Land 27/22L Depart 22R KMHT South + Sat": {
             "arrival_runways": [
                 {
                     "airport": "KBOS",
@@ -8122,7 +8122,7 @@
             "speed": 3
         }
         },
-        "KBOS Land 27/32 Depart 33L KMHT South + Sat": {
+        "A90 Consolidated KBOS Land 27/32 Depart 33L KMHT South + Sat": {
             "arrival_runways": [
                 {
                     "airport": "KBOS",
@@ -8362,7 +8362,7 @@
             "speed": 10
         }
         },
-        "KBOS Land 15R Depart 15R KMHT South + Sat": {
+        "A90 Consolidated  KBOS Land 15R Depart 15R KMHT South + Sat": {
             "arrival_runways": [
                 {
                     "airport": "KBOS",
@@ -8594,7 +8594,7 @@
             "speed": 10
         }
         },
-        "KBOS Land 4R/L Dep 9 KMHT North": {
+        "A90 Consolidated KBOS Land 4R/L Dep 9 KMHT North": {
             "arrival_runways": [
                 {
                     "airport": "KBOS",
@@ -8698,7 +8698,7 @@
             "speed": 10
         }
         },
-        "KBOS Land 27/22L Depart 22R KMHT South": {
+        "A90 Consolidated KBOS Land 27/22L Depart 22R KMHT South": {
             "arrival_runways": [
                 {
                     "airport": "KBOS",
@@ -8803,7 +8803,7 @@
             "speed": 3
         }
         },
-        "KBOS Land 27/32 Depart 33L KMHT South": {
+        "A90 Consolidated  KBOS Land 27/32 Depart 33L KMHT South": {
             "arrival_runways": [
                 {
                     "airport": "KBOS",
@@ -8912,7 +8912,7 @@
             "speed": 10
         }
         },
-        "KBOS Land 15R Depart 15R KMHT South": {
+        "A90 Consolidated  KBOS Land 15R Depart 15R KMHT South": {
             "arrival_runways": [
                 {
                     "airport": "KBOS",
