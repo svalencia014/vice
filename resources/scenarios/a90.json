@@ -6440,10 +6440,10 @@
                 ]
               },
               "initial_altitude": 3000,
-              "initial_controller": "MHT_E_APP",
+              "initial_controller": "BOS_42_CTR",
               "initial_speed": 230,
-              "route": "PWM PSM LWRNC",
-              "waypoints": "PWM/ho PSM LWRNC/flyover"
+              "route": "ENE PSM LWRNC",
+              "waypoints": "ENE/ho PSM LWRNC/flyover"
             }
           ],
           "MANCH..LWRNC.SAT": [
@@ -6514,8 +6514,8 @@
               "initial_altitude": 6000,
               "initial_controller": "MHT_E_APP",
               "initial_speed": 230,
-              "route": "PWM PSM LWRNC KBOS",
-              "waypoints": "PWM/ho PSM LWRNC/h182"
+              "route": "ENE PSM LWRNC KBOS",
+              "waypoints": "ENE/ho PSM LWRNC/h182"
             }
           ],
           "MANCH..LWRNC": [
@@ -7642,8 +7642,8 @@
               "sector_id": "4V"
             }
     },
-    "default_scenario": "Consolidated KBOS Land 4R/L Dep 9 KMHT North + Sat",
-    "name": "KBOS",
+    "default_scenario": "A90 Consolidated KBOS Land 4R/L Dep 9 KMHT North + Sat",
+    "name": "A90",
     "primary_airport": "KBOS",
     "scenarios": {
         "A90 Consolidated KBOS Land 4R/L Dep 9 KMHT North + Sat": {

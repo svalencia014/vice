@@ -576,7 +576,7 @@
       }
     },
     "default_scenario": "KACK Departing 6 Landing 6",
-    "name": "KBOS",
+    "name": "KACK",
     "primary_airport": "KBOS",
     "scenarios": {
         "KACK Departing 6 Landing 6": {
