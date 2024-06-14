@@ -6410,11 +6410,11 @@
       "sector_id": "1G"
     },
     "BDL_APP": {
-      "frequency": 123950,
+      "frequency": 119000,
       "full_name": "Yankee Approach",
-      "scope_char": "B",
-      "sector_id": "1B",
-      "facility_id": "1"
+      "scope_char": "2",
+      "sector_id": "1W",
+      "facility_id": "2"
     },
     "BED_TWR": {
         "frequency": 118500,
@@ -6551,7 +6551,7 @@
     "PVD_APP": {
       "frequency": 123675,
       "full_name": "Providence Approach",
-      "scope_char": "D",
+      "scope_char": "1",
       "sector_id": "1D",
       "facility_id": "1"
     },
