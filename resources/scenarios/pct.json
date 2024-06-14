@@ -1210,6 +1210,18 @@
       "full_name": "Washington Tower",
       "scope_char": "T",
       "sector_id": "4T"
+    },
+    "BWI_W_TWR": {
+      "frequency": 119400,
+      "full_name": "Baltimore Tower",
+      "scope_char": "T",
+      "sector_id": "1T"
+    },
+    "BWI_E_TWR": {
+      "frequency": 123750,
+      "full_name": "Baltimore Tower",
+      "scope_char": "T",
+      "sector_id": "2T"
     }
   },
   "default_scenario": "DCA North",
@@ -1228,6 +1240,10 @@
         {
           "airport": "KDCA",
           "runway": "33"
+        },
+        {
+          "airport": "KBWI",
+          "runway": "10"
         }
       ],
       "arrivals": {
