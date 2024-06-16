@@ -987,21 +987,626 @@
       },
       "departure_routes": {
         "9L": {
-          "WORMS,FSHUN,OSPRY,GDUNN": {
-            "cleared_altitude": 3000,
+          "FSHUN,OSPRY,GDUNN,RDSOX": {
+            "cleared_altitude": 2000,
             "sid": "SFB1",
-            "waypoints": "_SFB_27R/h095"
+            "waypoints": "_SFB_27R/h080"
+          },
+          "WORMS": {
+            "cleared_altitude": 2000,
+            "sid": "SFB1",
+            "waypoints": "SFB_27R/h080"
           }
         },
         "27R": {
-          "WORMS,FSHUN,OSPRY,GDUNN": {
-            "cleared_altitude": 3000,
+          "WORMS,FSHUN,OSPRY,GDUNN,RDSOX": {
+            "cleared_altitude": 2000,
             "sid": "SFB1",
-            "waypoints": "_SFB_9L/h275"
+            "waypoints": "_SFB_9L/h280"
           }
         }
       },
       "departures": [
+        {
+          "exit": "WORMS",
+          "destination": "KCVG",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q77 WIGVO IRQ J99 VXV JAKIE6",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "OSPRY",
+          "destination": "KLAS",
+          "altitude": 34000,
+          "route": "OSPRY GDUNN KNOST REMIS Y280 REDFN Q105 HRV J58 AEX J58 FUZ TXO J72 ABQ HAHAA RKSTR3",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KTUL",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS VNA LIT",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "RDSOX",
+          "destination": "KICT",
+          "altitude": 36000,
+          "route": "RDSOX JFRYS PATOY Q116 JAWJA MGMRY VLKNN Q116 MEMFS RZC JIPMA WAKOP",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KHTS",
+          "altitude": 32000,
+          "route": "WORMS GUANO BKENI VIYAP SAV CAE PSK",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KMEM",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q89 YANTI MCN VLKNN WASER VANZE3",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "RDSOX",
+          "destination": "KTUL",
+          "altitude": 36000,
+          "route": "RDSOX JFRYS PATOY Q116 JAWJA MGMRY LIT",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KMOT",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q89 HESPI RMG HITMN ENL MAGOO UFFDA",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WINNZ",
+          "destination": "KCGF",
+          "altitude": 11000,
+          "route": "KZLOV2 WINNZ BRWNZ4",
+          "airlines": [
+              {
+                  "icao": "LXJ",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "RDSOX",
+          "destination": "KICT",
+          "altitude": 36000,
+          "route": "RDSOX JFRYS PATOY Q116 JAWJA MGMRY VLKNN Q116 MEMFS RZC JIPMA WAKOP",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KIND",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q77 TEUFL IRQ J99 IIU HAGAL GIIBS3",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCKB",
+          "altitude": 37000,
+          "route": "WORMS GUANO BKENI VIYAP Q69 GURGE BLAAN Q69 RICCS",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "SFB",
+          "destination": "KTYS",
+          "altitude": 36000,
+          "route": "SFB WORMS JEEMY ACCHE PAINN SHRKS Q77 TEUFL ODF",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KGSP",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q77 WIGVO PROVN MCHLN2",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KSDF",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q77 TEUFL ODF VXV GREDY MAUDD6",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KFWA",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q77 TEUFL IRQ J99 VXV J43 FLM RID",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KMDT",
+          "altitude": 35000,
+          "route": "WORMS GUANO BKENI VIYAP Q69 GURGE BLAAN Q69 ILLSA COURG BAMMY T299 SCAPE T299 HAR",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "POBSE",
+          "destination": "KLCK",
+          "altitude": 36000,
+          "route": "POBSE OHIOS SPAYD J83 SPA QUIWE Q93 GIPPL Q85 LPERD TTHOR3",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "RDSOX",
+          "destination": "KAUS",
+          "altitude": 36000,
+          "route": "RDSOX JFRYS PATOY Q116 JAWJA CABLO DEFUN CEW J2 IAH LUKKN WLEEE7",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KABE",
+          "altitude": 35000,
+          "route": "WORMS GUANO BKENI VIYAP Q87 ALWZZ OGRAE Q99 SHIRY THEOO COURG BAMMY T299 SCAPE T299 DUMMR",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KPIT",
+          "altitude": 35000,
+          "route": "WORMS GUANO BKENI VIYAP Q69 GURGE BLAAN Q69 ILLSA Q69 RICCS LEJOY DEMME5",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "DDANY",
+          "destination": "KEYW",
+          "altitude": 22000,
+          "route": "DDANY MATLK HAXIN MERKS KARTR GIGIH",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KOMA",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q89 YANTI MCN BEATS J151 FAM LMN MARWI4",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "FSHUN",
+          "destination": "KPGD",
+          "altitude": 16000,
+          "route": "FSHUN ROGAN",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "ELVAE",
+          "destination": "KSAV",
+          "altitude": 43000,
+          "route": "ELVAE COL WHITE Q409 SESUE SOOOP",
+          "airlines": [
+              {
+                  "icao": "LXJ",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "KERMI",
+          "destination": "KMEM",
+          "altitude": 35000,
+          "route": "BBKNG7 KERMI VUZ ACORI Q104 CABLO BULZI BITTE SHREK2",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "RDSOX",
+          "destination": "KTUL",
+          "altitude": 36000,
+          "route": "RDSOX JFRYS PATOY Q116 JAWJA MGMRY LIT",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "ZALEA",
+          "destination": "KFLL",
+          "altitude": 45000,
+          "route": "LNDRE5 ZALEA HRV Q105 BLVNS Y290 OCHHO VNECK TEEKY3",
+          "airlines": [
+              {
+                  "icao": "LXJ",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCVG",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q77 WIGVO IRQ J99 VXV JAKIE6",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KLIT",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q89 YANTI MCN VUZ J14 LIT",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KJQF",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q77 WIGVO WANSA JOOLS1",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KFSD",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q89 YANTI MCN FLORS FAM IRK J45 FSD",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KTVC",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q89 YANTI VXV J43 FLM FWA VIO",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KBMI",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS YANTI THRSR BWG AXC",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "BASSS",
+          "destination": "KDAB",
+          "altitude": 3000,
+          "route": "BASSS",
+          "airlines": [
+              {
+                  "icao": "ERU",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "OSPRY",
+          "destination": "KLAS",
+          "altitude": 34000,
+          "route": "OSPRY GDUNN KNOST REMIS Y280 REDFN Q105 HRV J58 AEX J58 FUZ TXO J72 ABQ HAHAA RKSTR3",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KTYS",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q77 TEUFL ODF",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "FLO",
+          "destination": "KCKB",
+          "altitude": 36000,
+          "route": "FLO GSO ROA EKN",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "OHAGI",
+          "destination": "KSDF",
+          "altitude": 35000,
+          "route": "FEDRA5 OHAGI SOGEE Q65 KERLY KYLEG TTHOR3",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KMDT",
+          "altitude": 35000,
+          "route": "WORMS GUANO BKENI VIYAP Q69 GURGE BLAAN Q69 ILLSA COURG BAMMY T299 SCAPE T299 HAR",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KRFD",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q77 WIGVO IRQ J99 IIU MACES QUOTE1",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCVG",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q77 WIGVO IRQ J99 VXV JAKIE6",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KMLI",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q89 YANTI MCN RMG BNA J73 PXV AXC PIA MZV",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "RDSOX",
+          "destination": "KRAP",
+          "altitude": 36000,
+          "route": "RDSOX JFRYS PATOY Q116 DEEDA MGM SQS LIT TUL ICT MCK RAP",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KBNA",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS THRSR WESSN JAGIR SWFFT2",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "AEX",
+          "destination": "KOAK",
+          "altitude": 40000,
+          "route": "AEX NUBOY NDRUS TRISS UKW PNH CIM 3730N/11000W ROCCY WINEN 3800N/11400W RUMPS MONOH OAKES2",
+          "airlines": [
+              {
+                  "icao": "EJA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "RDSOX",
+          "destination": "KGPT",
+          "altitude": 36000,
+          "route": "RDSOX JFRYS PATOY Q116 JAWJA CABLO DEFUN CEW J2 SJI",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KABE",
+          "altitude": 35000,
+          "route": "WORMS GUANO BKENI VIYAP Q87 ALWZZ OGRAE Q99 SHIRY THEOO COURG BAMMY T299 SCAPE T299 DUMMR",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KAVL",
+          "altitude": 34000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q77 TEUFL TWINS PLYRR",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KBIS",
+          "altitude": 36000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS Q89 YANTI THRSR BNA FAM MCI SYTHH PECKS GUDDY DPR",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
         {
           "airlines": [
             {
@@ -1181,14 +1786,14 @@
       },
       "departure_routes": {
         "9R": {
-          "MLB,FSHUN,WORMS,RDSOX": {
+          "MLB,FSHUN,WORMS,RDSOX,MLB": {
             "cleared_altitude": 3000,
             "sid": "MLB7",
             "waypoints": "CAPEN/h360"
           }
         },
         "27L": {
-          "MLB,FSHUN,WORMS,RDSOX": {
+          "MLB,FSHUN,WORMS,RDSOX,MLB": {
             "cleared_altitude": 3000,
             "sid": "MLB7",
             "waypoints": "KMLB-27L/h275"
@@ -1196,6 +1801,378 @@
         }
       },
       "departures": [
+        {
+          "exit": "MLB",
+          "destination": "EGCC",
+          "altitude": 39000,
+          "route": "MLB V3 TRV ELDER SNAGY M203 PERDO KINER DRYED M201 NOVOK M201 CARAC GRUPI GRAYY JOOPY 4900N/05000W 5200N/04000W 5300N/03000W 5400N/02000W DOGAL BEXET DEVOL BOFUM Q37 MALUD MALUD1M",
+          "airlines": [
+              {
+                  "icao": "TOM",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 27000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 34000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "short"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 31000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 34000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 33000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 30000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 27000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 34000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 31000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 34000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "short"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 33000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 30000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 31000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 34000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 34000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 30000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "short"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 33000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 27000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 34000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "short"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 31000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 34000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "BASSS",
+          "destination": "KDAB",
+          "altitude": 3000,
+          "route": "BASSS",
+          "airlines": [
+              {
+                  "icao": "ERU",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KPIT",
+          "altitude": 35000,
+          "route": "WORMS GUANO BKENI VIYAP Q69 RICCS LEJOY DEMME5",
+          "airlines": [
+              {
+                  "icao": "AAY",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 30000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 33000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 33000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "short"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 27000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 34000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KCLT",
+          "altitude": 31000,
+          "route": "WORMS GUANO BKENI VIYAP CHECR STOCR4",
+          "airlines": [
+              {
+                  "icao": "JIA",
+                  "fleet": "default"
+              }
+          ]
+      },
+      {
+          "exit": "WORMS",
+          "destination": "KATL",
+          "altitude": 34000,
+          "route": "WORMS JEEMY ACCHE PAINN SHRKS LAIRI LARZZ JJEDI3",
+          "airlines": [
+              {
+                  "icao": "DAL",
+                  "fleet": "short"
+              }
+          ]
+      },
         {
           "airlines": [
             {
@@ -7462,6 +8439,55 @@
               "airport": "MPTO",
               "icao": "CMP"
             }
+          ],
+          "KSFB": [
+            {
+              "airport": "KFLL",
+              "icao": "AAY"
+            },
+            {
+              "airport": "KTMB",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KTMB",
+              "icao": "LXJ"
+            },
+            {
+              "airport": "KTMB",
+              "fleet": "fastGA",
+              "icao": "N"
+            }
+          ],
+          "KISM": [
+            {
+              "airport": "KTMB",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KTMB",
+              "icao": "LXJ"
+            },
+            {
+              "airport": "KTMB",
+              "fleet": "fastGA",
+              "icao": "N"
+            }
+          ],
+          "KORL": [
+            {
+              "airport": "KTMB",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KTMB",
+              "icao": "LXJ"
+            },
+            {
+              "airport": "KTMB",
+              "fleet": "fastGA",
+              "icao": "N"
+            }
           ]
         },
         "initial_altitude": 15000,
@@ -7478,6 +8504,21 @@
           "36R": "RIDES/a8000+ WISRD HAHNA/a6000/s210/h339",
           "35L": "RIDES/a8000+ WISRD HAHNA/a6000/s210/h339",
           "35R": "RIDES/a8000+ WISRD HAHNA/a6000/s210 SERAY/a4000 FESHA/a3000"
+          },
+          "KORL": {
+            "7":  "RIDES MPLEX/a12000/s250/h351",
+            "25": "RIDES MPLEX/a12000/s250/h351"
+          },
+          "KSFB": {
+            "9L":  "RIDES MPLEX/a12000/s250/h351",
+            "9R":  "RIDES MPLEX/a12000/s250/h351",
+            "27R": "RIDES MPLEX/a12000/s250/h351",
+            "27L": "RIDES MPLEX/a12000/s250/h351"
+          },
+          "KISM": {
+            "6":  "RIDES MPLEX/a12000/s250/h351",
+            "15": "RIDES MPLEX/a12000/s250/h351",
+            "33": "RIDES MPLEX/a12000/s250/h351"
           }
         },
         "speed_restriction": 250,
