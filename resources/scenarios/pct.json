@@ -596,7 +596,52 @@
     "ANTHM3": [
       {
         "airlines": {
-          
+          "KBWI": [
+            {
+              "airport": "KSEA",
+              "icao": "ASA"
+            },
+            {
+              "airport": "KORD",
+              "icao": "UAL"
+            },
+            {
+              "airport": "KMSP",
+              "icao": "DAL"
+            },
+            {
+              "airport": "KDEN",
+              "icao": "SWA"
+            },
+            {
+              "airport": "KMDW",
+              "icao": "SWA"
+            },
+            {
+              "airport": "KLAX",
+              "icao": "UAL"
+            },
+            {
+              "airport": "KCVG",
+              "icao": "GTI"
+            },
+            {
+              "airport": "KORD",
+              "icao": "SWA"
+            },
+            {
+              "airport": "KCOS",
+              "icao": "SWA"
+            },
+            {
+              "airport": "KLAX",
+              "icao": "NKS"
+            },
+            {
+              "airport": "KLAS",
+              "icao": "SWA"
+            }
+          ]
         },
         "cruise_altitude": 33000,
         "initial_altitude": 29000,
@@ -866,7 +911,7 @@
     "MIIDY2": [
       {
         "airlines": {
-
+          
         },
         "initial_altitude": 20000,
         "initial_controller": "DC_36_CTR",
