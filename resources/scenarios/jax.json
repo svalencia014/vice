@@ -1,6 +1,22 @@
 {
   "tracon": "JAX",
   "airports": {
+    "KCRG":{
+      "approaches": {
+        "I32": {
+          "cifp_id": "I32",
+          "tower_controller": "CRG_TWR"
+        },
+        "R14": {
+          "cifp_id": "R32",
+          "tower_controller": "CRG_TWR"
+        },
+        "R32": {
+          "cifp_id": "R32",
+          "tower_controller": "CRG_TWR"
+        }
+      }
+    },
     "KJAX": {
       "atpa_volumes": {
         "8":{
@@ -46,61 +62,32 @@
       },
       "approaches": {
         "I8": {
-          "runway": "8",
-          "type": "ILS",
-          "waypoints": [
-            "LIBBY/a2000 DINNS/a1900"
-          ]
+          "cifp_id": "IY8",
+          "tower_controller": "JAX_TWR"
         },
         "RZ8": {
-          "full_name": "RNAV Z Runway 8",
-          "runway": "8",
-          "type": "RNAV",
-          "waypoints": [
-            "UDAQI/a2000/hilpt/nopt180 IVTEF/a1900",
-            "ZOLUV/a2000/nopt UDAQI/a2000/hilpt/nopt180 IVTEF/a1900",
-            "IJAYU/a2000/nopt UDAQI/a2000/hilpt/nopt180 IVTEF/a1900"
-          ]
+          "cifp_id": "RZ8",
+          "tower_controller": "JAX_TWR"
         },
         "I14": {
-          "runway": "14",
-          "type": "ILS",
-          "waypoints": [
-            "ORTAR/a2000/if SONIA/a1700/faf KUYER/a480"
-          ]
+          "cifp_id": "I14",
+          "tower_controller": "JAX_TWR"
         },
         "R14": {
-          "runway": "14",
-          "type": "RNAV",
-          "waypoints": [
-            "OSBAJ/a2000/hilpt/nopt180 WOLQU/a1700",
-            "JIXOL/a2000/nopt OSBAJ/a2000/hilpt/nopt180 WOLQU/a1700",
-            "ZUDLI/a2000/nopt OSBAJ/a2000/hilpt/nopt180 WOLQU/a1700"
-          ]
+          "cifp_id": "R14",
+          "tower_controller": "JAX_TWR"
         },
         "I26": {
-          "runway": "26",
-          "type": "ILS",
-          "waypoints": [
-            "TIKRY/a2000 DALTN/a1600 ZETRI/a480"
-          ]
+          "cifp_id": "I26",
+          "tower_controller": "JAX_TWR"
         },
         "R26": {
-          "runway": "26",
-          "type": "RNAV",
-          "waypoints": [
-            "YEJWO/a2000/hilpt/nopt180 WOQTA/a1600 ZALDU/a740",
-            "CUSIB/a2000/nopt YEJWO/a2000/hilpt WOQTA/a1600 ZALDU/a740",
-            "ZIXIL/a2000/nopt YEJWO/a2000/hilpt WOQTA/a1600 ZALDU/a740"
-          ]
+          "cifp_id": "R26",
+          "tower_controller": "JAX_TWR"
         },
         "R32": {
-          "runway": "32",
-          "type": "RNAV",
-          "waypoints": [
-            "BUNDE/a2100 POTME/a2100 FIVOX/a1700 YUSKU/a740",
-            "POTME/a2100 FIVOX/a1700 YUSKU/a740"
-          ]
+          "cifp_id": "R32",
+          "tower_controller": "JAX_TWR"
         }
       },
       "approach_regions": {
@@ -465,65 +452,6 @@
       },
       "tower_list": 1
     },
-    "KFHB": {
-      "approaches": {
-        "R4": {
-          "runway": "4",
-          "tower_controller": "JAX_N_APP",
-          "type": "RNAV",
-          "waypoints": [
-            "WILNA/a2100-6000 SHOAT/a1800"
-          ]
-        }
-      },
-      "departure_routes": {
-        "4": {
-          "SSI": {
-            "cleared_altitude": 2000,
-            "waypoints": "KFHB-22/h010"
-          }
-        }
-      },
-      "departures": [
-        {
-          "airlines": [
-            {
-              "icao": "EJA"
-            }
-          ],
-          "altitude": 13000,
-          "destination": "KSAV",
-          "exit": "SSI",
-          "route": "SSI SAV"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "EJA"
-            }
-          ],
-          "altitude": 17000,
-          "destination": "KHXD",
-          "exit": "SSI",
-          "route": "SSI SAV"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "EJA"
-            }
-          ],
-          "altitude": 29000,
-          "destination": "KCHS",
-          "exit": "SSI",
-          "route": "SSI SAV CHS"
-        }
-      ],
-      "exit_categories": {
-        "SSI": "ALL"
-      },
-      "tower_list": 0
-    }
   },
   "airspace": {
     "boundaries": {
@@ -805,33 +733,6 @@
         "star": "MARQO2",
         "scratchpad": "I8",
         "waypoints": "COROE/a9000/s250 N030.28.36.167,W082.14.12.456/ho NATII/a5000-6000/s230 GUTTY/a3000/s210/h103"
-      }
-    ],
-    "MONIA": [
-      {
-        "airlines": {
-          "KFHB": [
-            {
-              "airport": "KDAL",
-              "icao": "EJA"
-            },
-            {
-              "airport": "KBFM",
-              "icao": "LXJ"
-            },
-            {
-              "airport": "KPNS",
-              "icao": "N",
-              "fleet": "fastGA"
-            }
-          ]
-        },
-          "assigned_altitude": 8000,
-          "initial_altitude": 10000,
-          "initial_controller": "JAX_77_CTR",
-          "initial_speed": 250,
-          "route": "/. MONIA",
-          "waypoints": "CAMJO MARQO/ho MONIA"
       }
     ],
     "OHDEA1": [
@@ -1297,117 +1198,6 @@
           "airport": "KJAX",
           "rate": 15,
           "runway": "8"
-        }
-      ],
-      "wind": {
-        "direction": 90,
-        "gust": 10,
-        "speed": 5
-      }
-    },
-    "KJAX East with Sat": {
-      "approach_airspace": [
-        "JAX_N_APP"
-      ],
-      "arrival_runways": [
-        {
-          "airport": "KJAX",
-          "runway": "8"
-        },
-        {
-          "airport": "KJAX",
-          "runway": "14"
-        },
-        {
-          "airport": "KFHB",
-          "runway": "4"
-        }
-      ],
-      "arrivals": {
-        "LUNNI1": {
-          "KJAX": 10
-        },
-        "MARQO2": {
-          "KJAX": 4
-        },
-        "OHDEA1": {
-          "KJAX": 10
-        },
-        "QUBEN1": {
-          "KJAX": 2
-        },
-        "TEBOW1": {
-          "KJAX": 5
-        },
-        "MONIA": {
-          "KFHB": 2
-        }
-      },
-      "solo_controller": "JAX_N_APP",
-      "multi_controllers": {
-          "default" : {
-              "JAX_N_APP": {
-                  "primary": true,
-                  "departures": ["KJAX", "KFHB"],
-                  "arrivals": [
-                      "LUNNI1"
-                  ]
-              },
-              "JAX_J_APP": {
-                  "backup": "JAX_R_APP"
-              },
-              "JAX_R_APP": {
-                  "backup": "JAX_N_APP",
-                  "arrivals": [
-                      "MARQO2",
-                      "OHDEA1",
-                      "MONIA"
-                  ]
-              },
-              "JAX_W_APP": {
-                  "backup": "JAX_R_APP",
-                  "arrivals": [
-                      "TEBOW1"
-                  ]
-              },
-              "JAX_V_APP": {
-                  "backup": "JAX_W_APP"
-              },
-              "JAX_E_APP": {
-                  "backup": "JAX_N_APP",
-                  "arrivals": [
-                      "QUBEN1"
-                  ]
-              },
-              "JAX_S_APP": {
-                  "backup": "JAX_E_APP"
-              }
-          }
-      },
-      "controllers": [
-        "JAX_57_CTR",
-        "JAX_54_CTR",
-        "JAX_15_CTR",
-        "JAX_77_CTR",
-        "JAX_79_CTR",
-        "DAB_N_APP",
-        "MCO_E_APP",
-        "JAX_TWR"
-      ],
-      "default_maps": [ "EAST FLOW" ],
-      "departure_airspace": [
-        "JAX_N_APP"
-      ],
-      "departure_runways": [
-        {
-          "airport": "KJAX",
-          "rate": 15,
-          "runway": "8"
-        },
-        {
-          "airport": "KFHB",
-          "rate": 2,
-          "runway": "4"
         }
       ],
       "wind": {
