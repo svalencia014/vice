@@ -1023,7 +1023,7 @@
           "KJAX": 5
         }
       },
-      "solo_controller": "JAX_N_APP",
+      "solo_controller": "JAX_S_APP",
       "multi_controllers": {
           "default" : {
               "JAX_N_APP": {
