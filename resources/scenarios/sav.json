@@ -441,6 +441,117 @@
         "GIPPL": "ALL"
       },
       "tower_list": 1
+    },
+    "KHXD": {
+      "approaches": {
+        "R21": {
+          "cifp_id": "R21"
+        },
+        "R3": {
+          "cifp_id": "R3"
+        }
+      },
+      "departure_routes": {
+        "3": {
+          "JROSS,SMALZ,GIPPL": {
+            "cleared_altitude": 2000,
+            "waypoints": "KHXD-21/h033"
+          }
+        },
+        "21": {
+          "JROSS,SMALZ,GIPPL": {
+            "cleared_altitude": 2000,
+            "waypoints": "KHXD-3/h213"
+          }
+        }
+      },
+      "departures": [
+        {
+            "exit": "SMALZ",
+            "destination": "KATL",
+            "altitude": 20000,
+            "route": "SMALZ TYFTR JJEDI3",
+            "airlines": [
+                {
+                    "icao": "RPA",
+                    "fleet": "default"
+                }
+            ]
+        },
+        {
+          "exit": "JROSS",
+          "destination": "KEWR",
+          "altitude": 33000,
+          "route": "JROSS Q87 ALWZZ OGRAE Q99 QUART PHLBO4",
+          "airlines": [
+            {
+              "icao": "RPA"
+            }
+          ]
+        },
+        {
+          "exit": "SMALZ",
+          "destination": "KPDK",
+          "altitude": 26000,
+          "route": "SMALZ MMMOE WRGNZ3",
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "TWY"
+            },
+            {
+              "icao": "EJM"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "N",
+              "fleet": "fastGA"
+            }
+          ]
+        },
+        {
+          "exit": "JROSS",
+          "destination": "KCLT",
+          "altitude": 23000,
+          "route": "JROSS ALD FISHO Q93 QUIWE BANKR BANKR5",
+          "airlines": [
+            {
+              "icao": "ENY"
+            }
+          ]
+        },
+        {
+          "exit": "GIPPL",
+          "destination": "KFLL",
+          "altitude": 38000,
+          "route": "GIPPL WOPNR PRMUS CUUDA3",
+          "airlines": [
+            {
+              "icao": "EJA"
+            },
+            {
+              "icao": "TWY"
+            },
+            {
+              "icao": "EJM"
+            },
+            {
+              "icao": "LXJ"
+            },
+            {
+              "icao": "N",
+              "fleet": "fastGA"
+            },
+            {
+              "icao": "CNS"
+            }
+          ]
+        }
+    ]
     }
   },
   "airspace": {
