@@ -113,7 +113,14 @@
           "exit": "SAWGY",
           "route": "SAWGY PRMUS DEBRL"
         }
-      ]
+      ],
+      "exit_categories": {
+        "AYS": "North",
+        "SAWGY": "South",
+        "GNV": "South",
+        "OCF": "South",
+        "TAY": "West"
+      }
     },
     "KJAX": {
       "atpa_volumes": {
@@ -521,7 +528,7 @@
               "icao": "SWA"
             }
           ],
-          "destination": "KMCO",
+          "destination": "KATL",
           "exit": "BAXLY",
           "route": "BAXLY LAIRI LARZZ SITTH2"
         },
@@ -619,6 +626,91 @@
     }
   },
   "arrival_groups": {
+    "WILON": [
+      {
+        "airlines": {
+          "KCRG": [
+            {
+              "airport": "KLZU",
+              "icao": "N"
+            }
+          ]
+        },
+        "initial_altitude": 14000,
+        "initial_controller": "JAX_15_CTR",
+        "route": "WILON",
+        "initial_speed": 250,
+        "waypoints": "N029.43.22.702,W082.17.48.255 N029.50.06.958,W082.09.14.617/a11000/ho KCRG"
+      }
+    ],
+    "OCF": [
+      {
+        "airlines": {
+          "KCRG": [
+            {
+              "airport": "KLAL",
+              "icao": "N"
+            }
+          ]
+        },
+        "initial_altitude": 5000,
+        "initial_controller": "JAX_V_APP",
+        "route": "OCF JEVAG",
+        "initial_speed": 250,
+        "waypoints": "N029.34.27.400,W081.53.11.033 N029.42.28.313,W081.46.15.695/ho JEVAG KCRG"
+      }
+    ],
+    "ALLMA": [
+      {
+        "airlines": {
+          "KCRG": [
+            {
+              "airport": "KRYY",
+              "icao": "N"
+            }
+          ]
+        },
+        "initial_altitude": 12200,
+        "initial_controller": "JAX_79_CTR",
+        "route": "ALLMA",
+        "initial_speed": 250,
+        "waypoints": "N031.16.42.172,W082.24.32.799 N031.06.25.908,W082.20.41.894/a11000/h165/ho CRG"
+      }
+    ],
+    "ORL": [
+      {
+        "airlines": {
+          "KCRG": [
+            {
+              "airport": "KMTH",
+              "icao": "N"
+            }
+          ]
+        },
+        "initial_altitude": 4000,
+        "initial_controller": "DAB_N_APP",
+        "route": "SWAGS ORL",
+        "initial_speed": 250,
+        "waypoints": "N029.29.47.688,W081.25.47.012 N029.39.48.414,W081.26.44.553/ho CRG"
+      }
+    ],
+    "ESENT": [
+      {
+        "airlines": {
+          "KCRG": [
+            {
+              "airport": "KALB",
+              "icao": "LXJ"
+            }
+          ]
+        },
+        "initial_altitude": 19500,
+        "initial_controller": "JAX_53_CTR",
+        "route": "WURFL ESENT",
+        "initial_speed": 250,
+        "waypoints": "N031.12.34.108,W081.11.12.692 N031.02.30.924,W081.14.51.842/a11000/ho CRG"
+      }
+    ],
     "ALCRN1": [
       {
         "airlines": {},
@@ -821,7 +913,7 @@
             }
           ]
         },
-        "initial_altitude": 24000,
+        "initial_altitude": 20400,
         "initial_controller": "JAX_57_CTR",
         "initial_speed": 250,
         "star": "QUBEN1",
@@ -833,7 +925,7 @@
             "32": "BETLE/a5000+/s230 GURDE/a3000/s210/h023"
           }
         },
-        "waypoints": "HAINY/a24000+/s280 SHINR/a16000-19000/ho BASSS POGIE/a12000-14000 QUBEN/a9000-12000/s250 BETLE/a5000+/s230"
+        "waypoints": "N029.25.17.438,W081.25.20.892 SHINR/a16000-19000/ho BASSS POGIE/a12000-14000 QUBEN/a9000-12000/s250 BETLE/a5000+/s230"
       }
     ],
     "TEBOW1": [
@@ -875,6 +967,14 @@
     ]
   },
   "control_positions": {
+    "JAX_15_CTR": {
+      "frequency": 133325,
+      "full_name": "Jacksonville Center",
+      "facility_id": "C",
+      "eram_facility": true,
+      "scope_char": "C",
+      "sector_id": "C15"
+    },
     "JAX_54_CTR": {
       "frequency": 124675,
       "full_name": "Jacksonville center",
@@ -885,14 +985,6 @@
     },
     "JAX_57_CTR": {
       "frequency": 134005,
-      "full_name": "Jacksonville Center",
-      "facility_id": "C",
-      "eram_facility": true,
-      "scope_char": "C",
-      "sector_id": "C57"
-    },
-    "JAX_15_CTR": {
-      "frequency": 133325,
       "full_name": "Jacksonville Center",
       "facility_id": "C",
       "eram_facility": true,
@@ -915,19 +1007,26 @@
       "scope_char": "C",
       "sector_id": "C79"
     },
-    "MCO_E_APP": {
-      "frequency": 124800,
-      "full_name": "Orlando approach",
-      "facility_id": "2",
-      "scope_char": "E",
-      "sector_id": "1E"
-    },
     "DAB_N_APP": {
       "frequency": 125800,
       "full_name": "Daytona Beach approach",
       "facility_id": "1",
       "scope_char": "1",
       "sector_id": "1N"
+    },
+    "MCO_N_APP": {
+      "frequency": 121100,
+      "full_name": "Orlando approach",
+      "facility_id": "2",
+      "scope_char": "2",
+      "sector_id": "1N"
+    },
+    "TPA_E_APP": {
+      "frequency": 118150,
+      "full_name": "Tampa approach",
+      "facility_id": "3",
+      "scope_char": "3",
+      "sector_id": "1E"
     },
     "JAX_N_APP": {
       "frequency": 127000,
@@ -1002,7 +1101,7 @@
       "sector_id": "3CT"
     }
   },
-  "default_scenario": "KJAX East",
+  "default_scenario": "KJAX East, No VITTS",
   "name": "KJAX",
   "primary_airport": "KJAX",
   "scenarios": {
@@ -1017,6 +1116,10 @@
         },
         {
           "airport": "KJAX",
+          "runway": "14"
+        },
+        {
+          "airport": "KCRG",
           "runway": "14"
         }
       ],
@@ -1035,6 +1138,21 @@
         },
         "TEBOW1": {
           "KJAX": 5
+        },
+        "WILON": {
+          "KCRG": 5
+        },
+        "OCF": {
+          "KCRG": 5
+        },
+        "ALLMA": {
+          "KCRG": 5
+        },
+        "ORL": {
+          "KCRG": 5
+        },
+        "ESENT": {
+          "KCRG": 5
         }
       },
       "solo_controller": "JAX_S_APP",
@@ -1043,16 +1161,21 @@
           "JAX_N_APP": {
             "primary": true,
             "departures": [
-              "KJAX"
+              "KJAX/BRSTL1",
+              "KJAX/CROSB2",
+              "KJAX/JETIN2"
             ],
             "arrivals": [
-              "LUNNI1"
+              "LUNNI1",
+              "ESENT"
             ]
           },
           "JAX_W_APP": {
             "backup": "JAX_R_APP",
             "arrivals": [
-              "TEBOW1"
+              "TEBOW1",
+              "WILON",
+              "OCF"
             ]
           },
           "JAX_E_APP": {
@@ -1065,7 +1188,8 @@
             "backup": "JAX_N_APP",
             "arrivals": [
               "MARQO2",
-              "OHDEA1"
+              "OHDEA1",
+              "ALLMA"
             ]
           },
           "JAX_J_APP": {
@@ -1074,7 +1198,12 @@
           "JAX_S_APP": {
             "backup": "JAX_E_APP",
             "departures": [
-              "KCRG"
+              "KCRG",
+              "KJAX/SAWGY3",
+              "KJAX/EXBOX2"
+            ],
+            "arrivals": [
+              "ORL"
             ]
           },
           "JAX_A_APP": {
@@ -1098,7 +1227,9 @@
         "JAX_77_CTR",
         "JAX_79_CTR",
         "DAB_N_APP",
-        "MCO_E_APP",
+        "MCO_N_APP",
+        "TPA_E_APP",
+        "JAX_V_APP",
         "JAX_TWR"
       ],
       "default_maps": [
@@ -1137,6 +1268,10 @@
         {
           "airport": "KJAX",
           "runway": "32"
+        },
+        {
+          "airport": "KCRG",
+          "runway": "14"
         }
       ],
       "arrivals": {
@@ -1154,6 +1289,9 @@
         },
         "TEBOW1": {
           "KJAX": 5
+        },
+        "WILON": {
+          "KCRG": 5
         }
       },
       "solo_controller": "JAX_S_APP",
@@ -1167,7 +1305,8 @@
             "arrivals": [
               "LUNNI1",
               "OHDEA1",
-              "MARQO2"
+              "MARQO2",
+              "WILON"
             ]
           },
           "JAX_J_APP": {
@@ -1203,8 +1342,10 @@
         "JAX_77_CTR",
         "JAX_79_CTR",
         "DAB_N_APP",
-        "MCO_E_APP",
-        "JAX_TWR"
+        "MCO_N_APP",
+        "TPA_E_APP",
+        "JAX_TWR",
+        "CRG_TWR"
       ],
       "default_maps": [
         "WEST FLOW"
@@ -1228,7 +1369,19 @@
   },
   "stars_config": {
     "center": "KJAX",
+    "force_ql_self": true,
     "airspace_awareness": [
+      {
+        "fixes": [
+          "OCF",
+          "GNV"
+        ],
+        "altitude_range": [
+          0,
+          999000
+        ],
+        "receiving_controller": "JAX_15_CTR"
+      },
       {
         "fixes": [
           "ALLMA",
@@ -1265,7 +1418,8 @@
       {
         "fixes": [
           "CAPPS",
-          "JAYJA"
+          "JAYJA",
+          "TAY"
         ],
         "altitude_range": [
           0,
