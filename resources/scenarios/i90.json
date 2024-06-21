@@ -152,6 +152,13 @@
             "full_name": "Galveston Tower",
             "scope_char": "T",
             "sector_id": "06"
+        },
+        "AUS_E_APP": {
+            "facility_id": "2",
+            "scope_char": "2",
+            "sector_id": "1E",
+            "frequency": 127225,
+            "full_name": "Austin Approach"
         }
     },
     "airports": {
@@ -3267,6 +3274,220 @@
                 "JCT": "BORRN6"
             },
             "tower_list": 1
+        },
+        "KCLL": {
+            "approaches": {
+                "I35": {
+                    "cifp_id": "I35"
+                },
+                "R11": {
+                    "cifp_id": "R11"
+                },
+                "R17": {
+                    "cifp_id": "R17"
+                },
+                "R29": {
+                    "cifp_id": "R29"
+                },
+                "R35": {
+                    "cifp_id": "R35"
+                }
+            },
+            "departure_routes": {
+                "17": {
+                    "STUFT,LOA,LCH,BYP,CRP,HAMAN,STELL": {
+                        "cleared_altitude": 2000,
+                        "waypoints": "KCLL-35/h166"
+                    }
+                },
+                "35": {
+                    "STUFT,LOA,LCH,BYP,CRP,HAMAN,STELL": {
+                        "cleared_altitude": 2000,
+                        "waypoints": "KCLL-17/h346"
+                    }
+                }
+            },
+            "departures": [
+                {
+                    "exit": "STUFT",
+                    "destination": "KDFW",
+                    "altitude": 24000,
+                    "route": "STUFT BEREE2",
+                    "airlines": [
+                        {
+                            "icao": "ENY"
+                        }
+                    ]
+                },
+                {
+                    "exit": "LOA",
+                    "destination": "KUES",
+                    "altitude": 41000,
+                    "route": "LOA MRSSH TXK HILTY STL PNT LEEDN GOPAC3",
+                    "airlines": [
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "JRE"
+                        }
+                    ]
+                },
+                {
+                    "exit": "LCH",
+                    "destination": "MYNN",
+                    "altitude": 39000,
+                    "route": "LCH LEV Y290 SAXXN ELQUE RAJAY",
+                    "airlines": [
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "XSR"
+                        }
+                    ]
+                },
+                {
+                    "exit": "BYP",
+                    "destination": "KOMA",
+                    "altitude": 37000,
+                    "route": "BYP HTHWY TIMMO1",
+                    "airlines": [
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "XSR"
+                        }
+                    ]
+                },
+                {
+                    "exit": "CRP",
+                    "destination": "KBRO",
+                    "altitude": 35000,
+                    "route": "CRP J25 BRO",
+                    "airlines": [
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "XSR"
+                        }
+                    ]
+                },
+                {
+                    "exit": "HAMAN",
+                    "destination": "73F",
+                    "altitude": 6000,
+                    "route": "HAMAN V15 OMOBE",
+                    "airlines": [
+                        {
+                            "icao": "N",
+                            "fleet": "slowGA"
+                        }
+                    ]
+                },
+                {
+                    "exit": "STELL",
+                    "destination": "KRDU",
+                    "altitude": 41000,
+                    "route": "STELL SWB VUZ RMG ODF SPA LIB",
+                    "airlines": [
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "XSR"
+                        }
+                    ]
+                }
+            ],
+            "exit_categories": {
+                "STUFT": "ALL",
+                "LOA": "ALL",
+                "LCH ": "ALL",
+                "BYP": "ALL",
+                "CRP": "ALL",
+                "HAMAN": "ALL",
+                "STELL": "ALL"
+            }
+        },
+        "KBPT": {
+            "approaches": {
+                "I12": {
+                    "cifp_id": "I12"
+                },
+                "R12": {
+                    "cifp_id": "R12"
+                },
+                "R16": {
+                    "cifp_id": "R16"
+                },
+                "R30": {
+                    "cifp_id": "R30"
+                },
+                "R34": {
+                    "cifp_id": "R34"
+                }
+            },
+            "departure_routes": {
+                "12": {
+
+                },
+                "30": {
+
+                }
+            }
         }
     },
     "arrival_groups": {
@@ -3971,6 +4192,138 @@
               "star": "LINKK1",
               "expect_approach": "I27",
               "waypoints": "GILLL/a9000/s240/ho RDFSH/a6000/s210"
+            }
+          ],
+          "ARDIA.CLL": [
+            {
+                "airlines": {
+                    "KCLL": [
+                        {
+                            "icao": "ENY"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "JRE"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        }
+                    ]
+                },
+                "initial_altitude": 15000,
+                "cleared_altitude": 9000,
+                "initial_controller": "HOU_81_CTR",
+                "initial_speed": 250,
+                "route": "ADRIA CLL",
+                "waypoints": "ADRIA ELLVR/ho CLL"
+            }
+          ],
+          "GIRLY.CLL": [
+            {
+                "airlines": {
+                    "KCLL": [
+                        {
+                            "icao": "ENY"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "JRE"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        }
+                    ]
+                },
+                "initial_altitude": 20000,
+                "assigned_altitude": 17000,
+                "initial_controller": "HOU_81_CTR",
+                "initial_speed": 250,
+                "route": "ADRIA CLL",
+                "waypoints": "N029.26.07.838,W092.47.07.908 GIRLY/ho RAECN JUDDY CLL"
+            }
+          ],
+          "RAECN.CLL": [
+            {
+                "airlines": {
+                    "KCLL": [
+                        {
+                            "icao": "ENY"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "JRE"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        }
+                    ]
+                },
+                "initial_altitude": 15000,
+                "cleared_altitude": 9000,
+                "initial_controller": "IAH_D_APP",
+                "initial_speed": 250,
+                "route": "ADRIA CLL",
+                "waypoints": "GIRLY RAECN/ho JUDDY CLL"
+            }
+          ],
+          "MUNCH.CLL": [
+            {
+                "airlines": {
+                    "KCLL": [
+                        {
+                            "icao": "ENY"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "JRE"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        }
+                    ]
+                },
+                "initial_altitude": 11000,
+                "cleared_altitude": 9000,
+                "initial_controller": "AUS_E_APP",
+                "initial_speed": 250,
+                "route": "MUNCH CLL",
+                "waypoints": "HOARY MUNCH/ho CLL"
             }
           ]
     },
