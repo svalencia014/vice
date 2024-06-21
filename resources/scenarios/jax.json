@@ -556,6 +556,165 @@
         "SAWGY": "South"
       },
       "tower_list": 1
+    },
+    "KSGJ": {
+      "approaches": {
+        "I31": {
+          "cifp_id": "I31",
+          "tower_controller": "SGJ_TWR"
+        },
+        "R31": {
+          "cifp_id": "R31",
+          "tower_controller": "SGJ_TWR"
+        },
+        "R13": {
+          "cifp_id": "R13",
+          "tower_controller": "SGJ_TWR"
+        }
+      },
+      "departure_routes": {
+        "13": {
+          "MMKAY": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-31/h130 MMKAY"
+          },
+          "FOXAM": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-31/h130 FOXAM"
+          },
+          "VIYAP": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-31/h130 VIYAP" 
+          },
+          "SSI": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-31/h130 SSI"
+          },
+          "HABLE": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-31/h130 HABLE"
+          },
+          "KENLL": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-31/h130 KENLL"
+          },
+          "OCF": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-31/h130 OCF"
+          }
+        },
+        "31": {
+          "MMKAY": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-13/h310 MMKAY"
+          },
+          "FOXAM": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-13/h310 FOXAM"
+          },
+          "VIYAP": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-13/h310 VIYAP" 
+          },
+          "SSI": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-13/h310 SSI"
+          },
+          "HABLE": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-13/h310 HABLE"
+          },
+          "KENLL": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-13/h310 KENLL"
+          },
+          "OCF": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSGJ-13/h310 OCF"
+          }
+        }
+      },
+      "departures": [
+        {
+          "airlines": [
+            {
+              "icao": "N"
+            }
+          ],
+          "destination": "KAPF",
+          "exit": "MMKAY",
+          "route": "MMKAY T210 PUNQU YOJIX T343 FEBRO QUNCY"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "N"
+            }
+          ],
+          "destination": "KMLB",
+          "exit": "FOXAM",
+          "route": "FOXAM T208 INDIA"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            }
+          ],
+          "destination": "KIAD",
+          "exit": "VIYAP",
+          "route": "VIYAP Q87 JROSS FLO RDU DORRN CAVLR5"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "N"
+            }
+          ],
+          "destination": "KMJX",
+          "exit": "SSI",
+          "route": "SSI WISPR RUBYS V1 INLET RAPVY JOSCH CVI ARICE V139 RADDS"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "N"
+            }
+          ],
+          "destination": "KGKT",
+          "exit": "HABLE",
+          "route": "HABLE"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "EJA"
+            }
+          ],
+          "destination": "KPBI",
+          "exit": "KENLL",
+          "route": "KENLL CPTAN3"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "N"
+            }
+          ],
+          "destination": "KSRQ",
+          "exit": "OCF",
+          "route": "OCF VARZE BREKR"
+        }
+      ],
+      "exit_categories": {
+        "MMKAY": "South",
+        "FOXAM": "South",
+        "VIYAP": "North",
+        "SSI": "North",
+        "HABLE": "North",
+        "KENLL": "South",
+        "OCF": "South"
+      }
     }
   },
   "airspace": {
@@ -626,6 +785,23 @@
     }
   },
   "arrival_groups": {
+    "AYS": [
+      {
+        "airlines": {
+          "KSGJ": [
+            {
+              "airport": "KBHM",
+              "icao": "N"
+            }
+          ]
+        },
+        "initial_altitude": 14000,
+        "initial_controller": "JAX_57_CTR",
+        "route": "LGC AYS CRG",
+        "initial_speed": 250,
+        "waypoints": "LGC AYS CRG SGJ"
+      }
+    ],
     "WILON": [
       {
         "airlines": {
@@ -641,6 +817,38 @@
         "route": "WILON",
         "initial_speed": 250,
         "waypoints": "N029.43.22.702,W082.17.48.255 N029.50.06.958,W082.09.14.617/a11000/ho KCRG"
+      },
+      {
+        "airlines": {
+          "KSGJ": [
+            {
+              "airport": "KTPA",
+              "icao": "N"
+            }
+          ]
+        },
+        "initial_altitude": 14000,
+        "initial_controller": "JAX_15_CTR",
+        "route": "WILON",
+        "initial_speed": 250,
+        "waypoints": "KTPA WILON SGJ"
+      }
+    ],
+    "OMN": [
+      {
+        "airlines": {
+          "KSGJ": [
+            {
+              "airport": "KMLB",
+              "icao": "N"
+            }
+          ]
+        },
+        "initial_altitude": 14000,
+        "initial_controller": "JAX_57_CTR",
+        "route": "SMYRA OMN",
+        "initial_speed": 250,
+        "waypoints": "SMYRA OMN SGJ"
       }
     ],
     "OCF": [
@@ -658,6 +866,25 @@
         "route": "OCF JEVAG",
         "initial_speed": 250,
         "waypoints": "N029.34.27.400,W081.53.11.033 N029.42.28.313,W081.46.15.695/ho JEVAG KCRG"
+      },
+      {
+        "airlines": {
+          "KSGJ": [
+            {
+              "airport": "KAPF",
+              "icao": "N"
+            },
+            {
+              "airport": "KSRQ",
+              "icao": "N"
+            }
+          ]
+        },
+        "initial_altitude": 10000,
+        "initial_controller": "JAX_V_APP",
+        "route": "VARZE OCF",
+        "initial_speed": 250,
+        "waypoints": "N029.42.19.592,W081.45.01.345/ho/h045 SGJ"
       }
     ],
     "ALLMA": [
@@ -964,6 +1191,23 @@
         },
         "waypoints": "HILIS/a17000+/s280 FABES/a12000-15000/ho TEBOW/a9000-12000/s250"
       }
+    ],
+    "HOTAR1": [
+      {
+        "airlines": {
+          "KSGJ": [
+            {
+              "airport": "KJPX",
+              "icao": "EJA"
+            }
+          ]
+        },
+        "initial_altitude": 40000,
+        "initial_controller": "JAX_54_CTR",
+        "initial_speed": 250,
+        "star": "BASLE.HOTAR1",
+        "waypoints": "BASLE WYTOK JABOR HOTAR HEBIN HABIK/h203"
+      }
     ]
   },
   "control_positions": {
@@ -1099,6 +1343,12 @@
       "full_name": "Jacksonville Tower",
       "scope_char": "T",
       "sector_id": "3CT"
+    },
+    "SGJ_TWR": {
+      "frequency": 127625,
+      "full_name": "St. Augustine Tower",
+      "scope_char": "T",
+      "sector_id": "3ST"
     }
   },
   "default_scenario": "KJAX East, No VITTS",
@@ -1121,6 +1371,10 @@
         {
           "airport": "KCRG",
           "runway": "14"
+        },
+        {
+          "airport": "KSGJ",
+          "runway": "13"
         }
       ],
       "arrivals": {
@@ -1143,7 +1397,8 @@
           "KCRG": 2
         },
         "OCF": {
-          "KCRG": 2
+          "KCRG": 2,
+          "KSGJ": 2
         },
         "ALLMA": {
           "KCRG": 2
@@ -1200,7 +1455,8 @@
             "departures": [
               "KCRG",
               "KJAX/SAWGY3",
-              "KJAX/EXBOX2"
+              "KJAX/EXBOX2",
+              "KSGJ"
             ],
             "arrivals": [
               "ORL"
@@ -1230,7 +1486,9 @@
         "MCO_N_APP",
         "TPA_E_APP",
         "JAX_V_APP",
-        "JAX_TWR"
+        "JAX_TWR",
+        "CRG_TWR",
+        "SGJ_TWR"
       ],
       "default_maps": [
         "EAST FLOW"
@@ -1248,6 +1506,11 @@
           "airport": "KCRG",
           "rate": 10,
           "runway": "14"
+        },
+        {
+          "airport": "KSGJ",
+          "rate": 10,
+          "runway": "13"
         }
       ],
       "wind": {
@@ -1351,7 +1614,8 @@
             "departures": [
               "KCRG",
               "KJAX/SAWGY3",
-              "KJAX/EXBOX2"
+              "KJAX/EXBOX2",
+              "KSGJ"
             ],
             "arrivals": [
               "ORL"
@@ -1381,7 +1645,8 @@
         "MCO_N_APP",
         "TPA_E_APP",
         "JAX_TWR",
-        "CRG_TWR"
+        "CRG_TWR",
+        "SGJ_TWR"
       ],
       "default_maps": [
         "WEST FLOW"
@@ -1399,6 +1664,11 @@
           "airport": "KCRG",
           "rate": 10,
           "runway": "32"
+        },
+        {
+          "airport": "KSGJ",
+          "rate": 10,
+          "runway": "31"
         }
       ],
       "wind": {
@@ -1427,7 +1697,8 @@
         "fixes": [
           "ALLMA",
           "BAXLY",
-          "AYS"
+          "AYS",
+          "HABLE"
         ],
         "altitude_range": [
           0,
@@ -1437,7 +1708,9 @@
       },
       {
         "fixes": [
-          "WISPR"
+          "WISPR",
+          "VIYAP",
+          "SSI"
         ],
         "altitude_range": [
           0,
@@ -1529,7 +1802,13 @@
       "GNV": null,
       "OCF": null,
       "AYS": null,
-      "TAY": null
+      "TAY": null,
+      "MMKAY": null,
+      "FOXAM": null,
+      "VIYAP": null,
+      "SSI": null,
+      "HABLE": null,
+      "KENLL": null
     },
     "stars_maps": [
       "EAST FLOW",
