@@ -5837,17 +5837,12 @@
     },
     "stars_config": {
         "center": "KIAH",
-        "radar_sites": {
-            "I90": {
-              "char": "A",
-              "position": "KIAH",
-              "elevation": 96,
-              "primary_range": 150,
-              "secondary_range": 200,
-              "silence_angle": 30,
-              "slope_angle": 0.3
+        "airspace_awareness": [
+            {
+                "fixes": ["ALL"],
+                "receiving_controller": "HOU_81_CTR"
             }
-          },
+        ],
           "inhibit_ca_volumes": [
             {
                 "name": "IAH EAST",
@@ -5882,6 +5877,38 @@
                 "ceiling": 3000,
                 "radius": 5,
                 "center": "KHOU"
+            },
+            {
+                "name": "SGR NO CA",
+                "type": "circle",
+                "floor": 0,
+                "ceiling": 3000,
+                "radius": 5,
+                "center": "KSGR"
+            },
+            {
+                "name": "GLS NO CA",
+                "type": "circle",
+                "floor": 0,
+                "ceiling": 3000,
+                "radius": 5,
+                "center": "KGLS"
+            },
+            {
+                "name": "BPT NO CA",
+                "type": "circle",
+                "floor": 0,
+                "ceiling": 3000,
+                "radius": 5,
+                "center": "KBPT"
+            },
+            {
+                "name": "CLL NO CA",
+                "type": "circle",
+                "floor": 0,
+                "ceiling": 3000,
+                "radius": 5,
+                "center": "KCLL"
             }
           ],
           "scratchpads": {
