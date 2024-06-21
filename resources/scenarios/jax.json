@@ -791,7 +791,8 @@
           "KSGJ": [
             {
               "airport": "KBHM",
-              "icao": "N"
+              "icao": "N",
+              "fleet": "fastGA"
             }
           ]
         },
@@ -799,7 +800,7 @@
         "initial_controller": "JAX_57_CTR",
         "route": "LGC AYS CRG",
         "initial_speed": 250,
-        "waypoints": "LGC AYS CRG SGJ"
+        "waypoints": " AYS N031.05.33.510,W082.21.32.816/a11000/ho CRG SGJ"
       }
     ],
     "WILON": [
@@ -827,11 +828,11 @@
             }
           ]
         },
-        "initial_altitude": 14000,
-        "initial_controller": "JAX_15_CTR",
+        "initial_altitude": 6800,
+        "initial_controller": "JAX_V_APP",
         "route": "WILON",
         "initial_speed": 250,
-        "waypoints": "KTPA WILON SGJ"
+        "waypoints": "N029.42.01.224,W081.58.46.171 N029.46.14.336,W081.48.16.298/a5000/h72/ho SGJ"
       }
     ],
     "OMN": [
@@ -880,11 +881,11 @@
             }
           ]
         },
-        "initial_altitude": 10000,
+        "initial_altitude": 5000,
         "initial_controller": "JAX_V_APP",
         "route": "VARZE OCF",
         "initial_speed": 250,
-        "waypoints": "N029.42.19.592,W081.45.01.345/ho/h045 SGJ"
+        "waypoints": "N029.34.27.297,W081.52.17.667 N029.42.19.592,W081.45.01.345/ho/h045 SGJ"
       }
     ],
     "ALLMA": [
@@ -1202,11 +1203,11 @@
             }
           ]
         },
-        "initial_altitude": 40000,
+        "initial_altitude": 16500,
         "initial_controller": "JAX_54_CTR",
         "initial_speed": 250,
         "star": "BASLE.HOTAR1",
-        "waypoints": "BASLE WYTOK JABOR HOTAR HEBIN HABIK/h203"
+        "waypoints": "N030.58.51.994,W081.04.36.663 JABOR/a16000/ho HOTAR HEBIN HABIK/h203"
       }
     ]
   },
@@ -1393,8 +1394,12 @@
         "TEBOW1": {
           "KJAX": 3
         },
+        "HOTAR1": {
+          "KSGJ": 2
+        },
         "WILON": {
-          "KCRG": 2
+          "KCRG": 2,
+          "KSGJ": 2
         },
         "OCF": {
           "KCRG": 2,
@@ -1408,6 +1413,9 @@
         },
         "ESENT": {
           "KCRG": 2
+        },
+        "AYS": {
+          "KSGJ": 2
         }
       },
       "solo_controller": "JAX_S_APP",
@@ -1436,7 +1444,8 @@
           "JAX_E_APP": {
             "backup": "JAX_N_APP",
             "arrivals": [
-              "QUBEN1"
+              "QUBEN1",
+              "HOTAR1"
             ]
           },
           "JAX_R_APP": {
@@ -1444,7 +1453,8 @@
             "arrivals": [
               "MARQO2",
               "OHDEA1",
-              "ALLMA"
+              "ALLMA",
+              "AYS"
             ]
           },
           "JAX_J_APP": {
@@ -1535,6 +1545,10 @@
         {
           "airport": "KCRG",
           "runway": "32"
+        },
+        {
+          "airport": "KSGJ",
+          "runway": "31"
         }
       ],
       "arrivals": {
@@ -1553,11 +1567,16 @@
         "TEBOW1": {
           "KJAX": 3
         },
+        "HOTAR1": {
+          "KSGJ": 2
+        },
         "WILON": {
-          "KCRG": 2
+          "KCRG": 2,
+          "KSGJ": 2
         },
         "OCF": {
-          "KCRG": 2
+          "KCRG": 2,
+          "KSGJ": 2
         },
         "ALLMA": {
           "KCRG": 2
@@ -1567,6 +1586,9 @@
         },
         "ESENT": {
           "KCRG": 2
+        },
+        "AYS": {
+          "KSGJ": 2
         }
       },
       "solo_controller": "JAX_S_APP",
@@ -1595,7 +1617,8 @@
           "JAX_E_APP": {
             "backup": "JAX_N_APP",
             "arrivals": [
-              "QUBEN1"
+              "QUBEN1",
+              "HOTAR1"
             ]
           },
           "JAX_R_APP": {
@@ -1603,7 +1626,8 @@
             "arrivals": [
               "MARQO2",
               "OHDEA1",
-              "ALLMA"
+              "ALLMA",
+              "AYS"
             ]
           },
           "JAX_J_APP": {
