@@ -4593,26 +4593,6 @@
               "DOOBI2"
             ]
           },
-          "I90_M_DEP": {
-            "backup": "I90_D_APP",
-            "departures": [
-              "KIAH",
-              "KHOU"
-            ]
-          },
-          "I90_E_DEP": {
-            "backup": "I90_M_DEP",
-            "departures": [
-              "KSGR",
-              "KGLS"
-            ]
-          },
-          "I90_L_DEP": {
-            "backup": "I90_E_DEP"
-          },
-          "I90_W_DEP": {
-            "backup": "I90_L_DEP"
-          },
           "I90_N_APP": {
             "backup": "I90_D_APP",
             "arrivals": [
@@ -4635,6 +4615,26 @@
               "BAYYY5",
               "LINKK1"
             ]
+          },
+          "I90_M_DEP": {
+            "backup": "I90_D_APP",
+            "departures": [
+              "KIAH",
+              "KHOU"
+            ]
+          },
+          "I90_E_DEP": {
+            "backup": "I90_M_DEP",
+            "departures": [
+              "KSGR",
+              "KGLS"
+            ]
+          },
+          "I90_L_DEP": {
+            "backup": "I90_E_DEP"
+          },
+          "I90_W_DEP": {
+            "backup": "I90_L_DEP"
           },
           "I90_B_APP": {
             "backup": "I90_DEP",
