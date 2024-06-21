@@ -705,7 +705,7 @@
           ]
         },
         "initial_altitude": 19500,
-        "initial_controller": "JAX_53_CTR",
+        "initial_controller": "JAX_54_CTR",
         "route": "WURFL ESENT",
         "initial_speed": 250,
         "waypoints": "N031.12.34.108,W081.11.12.692 N031.02.30.924,W081.14.51.842/a11000/ho CRG"
@@ -1125,34 +1125,34 @@
       ],
       "arrivals": {
         "LUNNI1": {
-          "KJAX": 10
+          "KJAX": 3
         },
         "MARQO2": {
-          "KJAX": 4
+          "KJAX": 3
         },
         "OHDEA1": {
-          "KJAX": 10
+          "KJAX": 3
         },
         "QUBEN1": {
-          "KJAX": 2
+          "KJAX": 3
         },
         "TEBOW1": {
-          "KJAX": 5
+          "KJAX": 3
         },
         "WILON": {
-          "KCRG": 5
+          "KCRG": 2
         },
         "OCF": {
-          "KCRG": 5
+          "KCRG": 2
         },
         "ALLMA": {
-          "KCRG": 5
+          "KCRG": 2
         },
         "ORL": {
-          "KCRG": 5
+          "KCRG": 2
         },
         "ESENT": {
-          "KCRG": 5
+          "KCRG": 2
         }
       },
       "solo_controller": "JAX_S_APP",
@@ -1241,7 +1241,7 @@
       "departure_runways": [
         {
           "airport": "KJAX",
-          "rate": 25,
+          "rate": 10,
           "runway": "8"
         },
         {
@@ -1276,22 +1276,22 @@
       ],
       "arrivals": {
         "LUNNI1": {
-          "KJAX": 10
+          "KJAX": 3
         },
         "MARQO2": {
-          "KJAX": 4
+          "KJAX": 3
         },
         "OHDEA1": {
-          "KJAX": 10
+          "KJAX": 3
         },
         "QUBEN1": {
-          "KJAX": 2
+          "KJAX": 3
         },
         "TEBOW1": {
-          "KJAX": 5
+          "KJAX": 3
         },
         "WILON": {
-          "KCRG": 5
+          "KCRG": 2
         }
       },
       "solo_controller": "JAX_S_APP",
@@ -1491,21 +1491,43 @@
     },
     "stars_maps": [
       "EAST FLOW",
-      "WEST FLOW",
       "CLASS C AIRSPACE",
-      "CLASS D AIRSPACE",
       "GPS APPROACHES",
+      "WEST FLOW",
+      "CLASS D AIRSPACE",
       "MULTI MVA",
-      "SID WAYPOINTS (JAX)",
-      "LUNNI STAR",
+      "EMERGENCY",
+      "T-ROUTES",
+      "HOTAR STAR",
       "MARQO STAR",
-      "OHDEA STAR",
       "QUBEN STAR",
-      "TEBOW STAR",
-      "RNAV STARS RWY 14",
       "RNAV STARS RWY 26",
       "RNAV STARS RWY 08",
-      "RNAV STARS RWY 32"
+      "LOW ROUTES",
+      "JAX HIGH TACAN 14",
+      "JAX RNAV RNP Y 26",
+      "JAX RNAV RNP Y 14",
+      "GROUND",
+      "JAX RNAV APPROACHES",
+      "SGJ RNAV APPROACHES",
+      "FHB RNAV APPROACHES",
+      "NIP RNAV APPROACHES",
+      "MID AIRSPACE",
+      "SID WAYPOINTS (JAX)",
+      "LUNNI STAR",
+      "OHDEA STAR",
+      "TEBOW STAR",
+      "RNAV STARS RWY 32",
+      "RNAV STARS RWY 14",
+      "SGJ SHELF",
+      "IR ROUTES",
+      "JAX RNAV RNP Y 08",
+      "JAX RNAV RNP Y 32",
+      "VQQ/CGC APPROACHES",
+      "CRG RNAV APPROACHES",
+      "VQQ RNAV APPROACHES",
+      "HEG RNAV",
+      "GNV RNAV APPROACHES"
     ],
     "video_map_file": "videomaps/ZJX-videomaps.gob.zst"
   }
