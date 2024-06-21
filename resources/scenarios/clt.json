@@ -2324,9 +2324,15 @@
         "default": {
           "CLT_W_DEP": {
             "departures": [
-              "KCLT"
+              "KCLT/18L"
             ],
             "primary": true
+          },
+          "CLT_E_DEP": {
+            "backup": "CLT_W_DEP",
+            "departures": [
+              "KCLT/18C"
+            ]
           },
           "CLT_H_APP": {
             "backup": "CLT_W_DEP",
@@ -2343,9 +2349,6 @@
           },
           "CLT_F_APP": {
             "backup": "CLT_M_APP"
-          },
-          "CLT_E_DEP": {
-            "backup": "CLT_W_DEP"
           },
           "CLT_U_APP": {
             "backup": "CLT_H_APP",
