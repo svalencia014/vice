@@ -2787,6 +2787,14 @@
                     "N029.50.36.000,W094.47.58.000",
                     "N029.50.28.000,W095.20.32.000"
                 ]
+            },
+            {
+                "name": "HOU NO CA",
+                "type": "circle",
+                "floor": 0,
+                "ceiling": 3000,
+                "radius": 5,
+                "center": "KHOU"
             }
           ],
           "scratchpads": {
