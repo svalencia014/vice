@@ -1271,7 +1271,7 @@
         },
         {
           "airport": "KCRG",
-          "runway": "14"
+          "runway": "32"
         }
       ],
       "arrivals": {
@@ -1292,6 +1292,18 @@
         },
         "WILON": {
           "KCRG": 2
+        },
+        "OCF": {
+          "KCRG": 2
+        },
+        "ALLMA": {
+          "KCRG": 2
+        },
+        "ORL": {
+          "KCRG": 2
+        },
+        "ESENT": {
+          "KCRG": 2
         }
       },
       "solo_controller": "JAX_S_APP",
@@ -1300,29 +1312,22 @@
           "JAX_N_APP": {
             "primary": true,
             "departures": [
-              "KJAX"
+              "KJAX/BRSTL1",
+              "KJAX/CROSB2",
+              "KJAX/JETIN2"
             ],
             "arrivals": [
               "LUNNI1",
-              "OHDEA1",
-              "MARQO2",
-              "WILON"
+              "ESENT"
             ]
-          },
-          "JAX_J_APP": {
-            "backup": "JAX_R_APP"
-          },
-          "JAX_R_APP": {
-            "backup": "JAX_N_APP"
           },
           "JAX_W_APP": {
-            "backup": "JAX_N_APP",
+            "backup": "JAX_R_APP",
             "arrivals": [
-              "TEBOW1"
+              "TEBOW1",
+              "WILON",
+              "OCF"
             ]
-          },
-          "JAX_V_APP": {
-            "backup": "JAX_W_APP"
           },
           "JAX_E_APP": {
             "backup": "JAX_N_APP",
@@ -1330,8 +1335,39 @@
               "QUBEN1"
             ]
           },
+          "JAX_R_APP": {
+            "backup": "JAX_N_APP",
+            "arrivals": [
+              "MARQO2",
+              "OHDEA1",
+              "ALLMA"
+            ]
+          },
+          "JAX_J_APP": {
+            "backup": "JAX_R_APP"
+          },
           "JAX_S_APP": {
-            "backup": "JAX_E_APP"
+            "backup": "JAX_E_APP",
+            "departures": [
+              "KCRG",
+              "KJAX/SAWGY3",
+              "KJAX/EXBOX2"
+            ],
+            "arrivals": [
+              "ORL"
+            ]
+          },
+          "JAX_A_APP": {
+            "backup": "JAX_V_APP"
+          },
+          "JAX_G_APP": {
+            "backup": "JAX_V_APP"
+          },
+          "JAX_D_APP": {
+            "backup": "JAX_V_APP"
+          },
+          "JAX_V_APP": {
+            "backup": "JAX_W_APP"
           }
         }
       },
@@ -1356,8 +1392,13 @@
       "departure_runways": [
         {
           "airport": "KJAX",
-          "rate": 15,
+          "rate": 10,
           "runway": "26"
+        },
+        {
+          "airport": "KCRG",
+          "rate": 10,
+          "runway": "32"
         }
       ],
       "wind": {
@@ -1385,7 +1426,8 @@
       {
         "fixes": [
           "ALLMA",
-          "BAXLY"
+          "BAXLY",
+          "AYS"
         ],
         "altitude_range": [
           0,
