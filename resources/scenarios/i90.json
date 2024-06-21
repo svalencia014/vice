@@ -3482,12 +3482,107 @@
             },
             "departure_routes": {
                 "12": {
-
+                    "SILBE,WASPY": {
+                        "cleared_altitude": 2000,
+                        "waypoints": "BPT-30/h120"
+                    }
                 },
                 "30": {
-
+                    "SILBE,WASPY": {
+                        "cleared_altitude": 2000,
+                        "waypoints": "BPT-12/h300"
+                    }
                 }
-            }
+            },
+            "departures": [
+                {
+                    "exit": "SILBE",
+                    "destination": "KDFW",
+                    "altitude": 30000,
+                    "route": "SILBE T485 ROMER CRIED BEREE2",
+                    "airlines": [
+                        {
+                            "icao": "SKW"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "WUP"
+                        },
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        },
+                        {
+                            "icao": "XSR"
+                        }
+                    ]
+                },
+                {
+                    "exit": "SILBE",
+                    "destination": "KABQ",
+                    "altitude": 40000,
+                    "route": "SILBE T485 ROMER",
+                    "airlines": [
+                        {
+                            "icao": "SKW"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "WUP"
+                        },
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        },
+                        {
+                            "icao": "XSR"
+                        }
+                    ]
+                },
+                {
+                    "exit": "WASPY",
+                    "destination": "KBTR",
+                    "altitude": 17000,
+                    "route": "WASPY T224 KNZLY",
+                    "airlines": [
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "WUP"
+                        },
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        },
+                        {
+                            "icao": "XSR"
+                        }
+                    ]
+                }
+            ]
         }
     },
     "arrival_groups": {
@@ -4325,13 +4420,79 @@
                 "route": "MUNCH CLL",
                 "waypoints": "HOARY MUNCH/ho CLL"
             }
+          ],
+          "ROMER.BPT": [
+            {
+                "airlines": {
+                    "KCLL": [
+                        {
+                            "icao": "SKW"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "JRE"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        }
+                    ]
+                },
+                "initial_altitude": 13000,
+                "cleared_altitude": 11000,
+                "initial_controller": "HOU_81_CTR",
+                "initial_speed": 250,
+                "route": "ROMER CESAN KBPT",
+                "waypoints": "N030.55.15.151,W094.27.47.010 ROMER/ho CESAN"
+            }
+          ],
+          "LCH.BPT": [
+            {
+                "airlines": {
+                    "KCLL": [
+                        {
+                            "icao": "SKW"
+                        },
+                        {
+                            "icao": "LXJ"
+                        },
+                        {
+                            "icao": "EJA"
+                        },
+                        {
+                            "icao": "EJM"
+                        },
+                        {
+                            "icao": "JRE"
+                        },
+                        {
+                            "icao": "N",
+                            "fleet": "fastGA"
+                        }
+                    ]
+                },
+                "initial_altitude": 13000,
+                "cleared_altitude": 7000,
+                "initial_controller": "HOU_81_CTR",
+                "initial_speed": 250,
+                "route": "ROMER CESAN KBPT",
+                "waypoints": "N030.09.22.966,W092.52.15.910 LCH/ho KBPT"
+            }
           ]
     },
     "default_scenario": "I90 Consolidated SW",
     "name": "I90",
     "primary_airport": "KIAH",
     "scenarios": {
-        "I90 Consolidated SW": {
+        "I90 Core SW": {
             "arrival_runways": [
                 {
                     "airport": "KIAH",
@@ -4591,7 +4752,7 @@
                 "speed": 7
             }
         },
-        "I90 Consolidated SE": {
+        "I90 Core SE": {
             "arrival_runways": [
                 {
                     "airport": "KIAH",
@@ -4849,6 +5010,592 @@
                 "speed": 9
             }
         },
+        "I90 Consolidated SW": {
+            "arrival_runways": [
+                {
+                    "airport": "KIAH",
+                    "runway": "26L"
+                },
+                {
+                    "airport": "KIAH",
+                    "runway": "26R"
+                },
+                {
+                    "airport": "KIAH",
+                    "runway": "27"
+                },
+                {
+                    "airport": "KHOU",
+                    "runway": "13R"
+                },
+                {
+                    "airport": "KHOU",
+                    "runway": "22"
+                },
+                {
+                    "airport": "KSGR",
+                    "runway": "35"
+                },
+                {
+                    "airport": "KGLS",
+                    "runway": "32"
+                },
+                {
+                    "airport": "KCLL",
+                    "runway": "35"
+                },
+                {
+                    "airport": "KCLL",
+                    "runway": "29"
+                },
+                {
+                    "airport": "KCLL",
+                    "runway": "30"
+                },
+                {
+                    "airport": "KBPT",
+                    "runway": "34"
+                }
+            ],
+            "arrivals": {
+                "DOOBI2": {
+                    "KIAH": 10
+                },
+                "DRLLR5": {
+                    "KIAH": 15
+                },
+                "LINKK1": {
+                    "KIAH": 10
+                },
+                "MSCOT4": {
+                    "KIAH": 5
+                },
+                "TEJAS5": {
+                    "KIAH": 10
+                },
+                "BAYYY5": {
+                    "KHOU": 3
+                },
+                "BELLR5": {
+                    "KHOU": 4
+                },
+                "CESAN4": {
+                    "KHOU": 1,
+                    "KSGR": 1,
+                    "KGLS": 1
+                },
+                "KIDDZ4": {
+                    "KHOU": 5
+                },
+                "TKNIQ3": {
+                    "KHOU": 1,
+                    "KSGR": 1,
+                    "KGLS": 1
+                },
+                "WAPPL6": {
+                    "KHOU": 2,
+                    "KSGR": 1,
+                    "KGLS": 1
+                },
+                "ARDIA.CLL": {
+                    "KCLL": 5
+                },
+                "GIRLY.CLL": {
+                    "KCLL": 5
+                },
+                "MUNCH.CLL": {
+                    "KCLL": 5
+                },
+                "ROMER.BPT": {
+                    "KBPT": 7
+                },
+                "LCH.BPT": {
+                    "KBPT": 5
+                }
+            },
+            "solo_controller": "I90_D_APP",
+            "multi_controllers": {
+                "default": {
+                    "I90_D_APP": {"primary": true, "arrivals": ["WAPPL6", "CESAN4", "DOOBI2"]},
+                    "I90_DEP": {"backup": "I90_D_APP", "departures": ["KIAH", "KHOU"]},
+                    "I90_N_APP": {"backup": "I90_D_APP", "arrivals": ["DRLLR5", "MSCOT4"]},
+                    "I90_X_APP": {"backup": "I90_N_APP", "arrivals": ["BELLR5", "KIDDZ4", "TKNIQ3", "TEJAS5"]},
+                    "I90_G_APP": {"backup": "I90_X_APP", "arrivals": ["BAYYY5", "LINKK1"]},
+                    "I90_B_APP": {"backup": "I90_DEP", "departures": ["KGLS"]},
+                    "I90_P_APP": {"backup": "I90_DEP", "departures": ["KSGR"]},
+                    "I90_A_APP": {"backup": "I90_D_APP"},
+                    "I90_I_APP": {"backup": "I90_A_APP"},
+                    "I90_O_APP": {"backup": "I90_I_APP"},
+                    "I90_H_APP": {"backup": "I90_O_APP"},
+                    "I90_E_DEP": {"backup": "", "arrivals": ["GIRLY.CLL"]},
+                    "I90_U_APP": {"backup": "", "arrivals": ["ARDIA.CLL","MUNCH.CLL"], "departures": ["KCLL"]},
+                    "I90_T_APP": {"backup": "I90_U_APP"},
+                    "I90_J_APP": {"backup": "", "departures": ["KBPT"], "arrivals": ["ROMER.BPT", "LCH.BPT"]}
+                }
+            },
+            "controllers": [
+                "HOU_81_CTR",
+                "IAH_C_TWR",
+                "HOU_TWR",
+                "CXO_TWR",
+                "SGR_TWR",
+                "DWH_TWR",
+                "GLS_TWR",
+                "BPT_TWR",
+                "CLL_TWR",
+                "AUS_E_APP"
+            ],
+            "default_maps": [
+                "I90 BASE MAP"
+            ],
+            "departure_runways": [
+                {
+                    "airport":"KIAH",
+                    "rate": 3,
+                    "runway":"15L",
+                    "category":"BLTWY7"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 4,
+                    "runway":"15R",
+                    "category":"BNDTO5"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 2,
+                    "runway":"15L",
+                    "category":"FLYZA5"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 5,
+                    "runway":"15L",
+                    "category":"MMUGS4"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 3,
+                    "runway":"15L",
+                    "category":"HOODO7"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 3,
+                    "runway":"15L",
+                    "category":"INDIE8"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 2,
+                    "runway":"15L",
+                    "category":"LURIC8"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 4,
+                    "runway":"15R",
+                    "category":"RITAA7"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 2,
+                    "runway":"15L",
+                    "category":"STRYA8"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 3,
+                    "runway":"15R",
+                    "category":"STYCK8"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 2,
+                    "runway":"15L",
+                    "category":"WYLSN8"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"22",
+                    "category":"BLTWY7"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"22",
+                    "category":"ELOCO6"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"22",
+                    "category":"HOODO7"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"22",
+                    "category":"INDIE8"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"22",
+                    "category":"LURIC8"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"22",
+                    "category":"PEECE6"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"22",
+                    "category":"PTRON9"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 4,
+                    "runway":"22",
+                    "category":"RETYR8"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"22",
+                    "category":"STYCK8"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 3,
+                    "runway":"22",
+                    "category":"WYLSN8"
+                },
+                {
+                    "airport":"KGLS",
+                    "rate": 1,
+                    "runway":"32",
+                    "category":"MMALT7"
+                },
+                {
+                    "airport":"KGLS",
+                    "rate": 1,
+                    "runway":"32",
+                    "category":"BORRN6"
+                },
+                {
+                    "airport":"KSGR",
+                    "rate": 1,
+                    "runway":"35",
+                    "category":"MMALT7"
+                },
+                {
+                    "airport":"KSGR",
+                    "rate": 1,
+                    "runway":"35",
+                    "category":"BORRN6"
+                },
+                {
+                    "airport": "KCLL",
+                    "runway": "35",
+                    "rate": 15
+                },
+                {
+                    "airport": "KBPT",
+                    "runway": "30",
+                    "rate": 15
+                }
+            ],
+            "wind": {
+                "direction": 200,
+                "speed": 7
+            }
+        },
+        "I90 Consolidated SE": {
+            "arrival_runways": [
+                {
+                    "airport": "KIAH",
+                    "runway": "8L"
+                },
+                {
+                    "airport": "KIAH",
+                    "runway": "8R"
+                },
+                {
+                    "airport": "KIAH",
+                    "runway": "9"
+                },
+                {
+                    "airport": "KHOU",
+                    "runway": "4"
+                },
+                {
+                    "airport": "KSGR",
+                    "runway": "17"
+                },
+                {
+                    "airport": "KGLS",
+                    "runway": "14"
+                },
+                {
+                    "airport": "KBPT",
+                    "runway": "12"
+                },
+                {
+                    "airport": "KBPT",
+                    "runway": "16"
+                }
+            ],
+            "arrivals": {
+                "GESNR1": {
+                    "KIAH": 10
+                },
+                "SKNRD4": {
+                    "KIAH": 15
+                },
+                "NNCEE2": {
+                    "KIAH": 10
+                },
+                "TTORO3": {
+                    "KIAH": 5
+                },
+                "HTOWN3": {
+                    "KIAH": 10
+                },
+                "GUSHR3": {
+                    "KIAH": 5
+                },
+                "BAYYY5": {
+                    "KHOU": 3
+                },
+                "BELLR5": {
+                    "KHOU": 4
+                },
+                "CESAN4": {
+                    "KHOU": 1,
+                    "KSGR": 1,
+                    "KGLS": 1
+                },
+                "KIDDZ4": {
+                    "KHOU": 5
+                },
+                "TKNIQ3": {
+                    "KHOU": 1,
+                    "KSGR": 1,
+                    "KGLS": 1
+                },
+                "WAPPL6": {
+                    "KHOU": 2,
+                    "KSGR": 1,
+                    "KGLS": 1
+                },
+                "ROMER.BPT": {
+                    "KBPT": 7
+                },
+                "LCH.BPT": {
+                    "KBPT": 5
+                }
+            },
+            "solo_controller": "I90_D_APP",
+            "multi_controllers": {
+                "default": {
+                    "I90_D_APP": {"primary": true, "arrivals": ["WAPPL6", "CESAN4", "DOOBI2"]},
+                    "I90_DEP": {"backup": "I90_D_APP", "departures": ["KIAH", "KHOU"]},
+                    "I90_N_APP": {"backup": "I90_D_APP", "arrivals": ["DRLLR5", "MSCOT4"]},
+                    "I90_X_APP": {"backup": "I90_N_APP", "arrivals": ["BELLR5", "KIDDZ4", "TKNIQ3", "TEJAS5"]},
+                    "I90_G_APP": {"backup": "I90_X_APP", "arrivals": ["BAYYY5", "LINKK1"]},
+                    "I90_B_APP": {"backup": "I90_DEP", "departures": ["KGLS"]},
+                    "I90_P_APP": {"backup": "I90_DEP", "departures": ["KSGR"]},
+                    "I90_A_APP": {"backup": "I90_D_APP"},
+                    "I90_I_APP": {"backup": "I90_A_APP"},
+                    "I90_O_APP": {"backup": "I90_I_APP"},
+                    "I90_H_APP": {"backup": "I90_O_APP"},
+                    "I90_E_DEP": {"backup": "", "arrivals": ["GIRLY.CLL"]},
+                    "I90_U_APP": {"backup": "", "arrivals": ["ARDIA.CLL","MUNCH.CLL"], "departures": ["KCLL"]},
+                    "I90_T_APP": {"backup": "I90_U_APP"},
+                    "I90_J_APP": {"backup": "", "departures": ["KBPT"], "arrivals": ["ROMER.BPT", "LCH.BPT"]}
+                }
+            },
+            "controllers": [
+                "HOU_81_CTR",
+                "IAH_C_TWR",
+                "HOU_TWR",
+                "CXO_TWR",
+                "SGR_TWR",
+                "DWH_TWR",
+                "GLS_TWR",
+                "BPT_TWR",
+                "CLL_TWR"
+            ],
+            "default_maps": [
+                "I90 BASE MAP"
+            ],
+            "departure_runways": [
+                {
+                    "airport":"KIAH",
+                    "rate": 3,
+                    "runway":"15L",
+                    "category":"BLTWY7"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 4,
+                    "runway":"15R",
+                    "category":"BNDTO5"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 2,
+                    "runway":"15L",
+                    "category":"FLYZA5"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 5,
+                    "runway":"15L",
+                    "category":"MMUGS4"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 3,
+                    "runway":"15L",
+                    "category":"HOODO7"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 3,
+                    "runway":"15L",
+                    "category":"INDIE8"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 2,
+                    "runway":"15L",
+                    "category":"LURIC8"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 4,
+                    "runway":"15R",
+                    "category":"RITAA7"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 2,
+                    "runway":"15L",
+                    "category":"STRYA8"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 3,
+                    "runway":"15R",
+                    "category":"STYCK8"
+                },
+                {
+                    "airport":"KIAH",
+                    "rate": 2,
+                    "runway":"15L",
+                    "category":"WYLSN8"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"13R",
+                    "category":"BLTWY7"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"13R",
+                    "category":"ELOCO6"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"13R",
+                    "category":"HOODO7"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"13R",
+                    "category":"INDIE8"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"13R",
+                    "category":"LURIC8"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"13R",
+                    "category":"PEECE6"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"13R",
+                    "category":"PTRON9"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 4,
+                    "runway":"13R",
+                    "category":"RETYR8"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 2,
+                    "runway":"13R",
+                    "category":"STYCK8"
+                },
+                {
+                    "airport":"KHOU",
+                    "rate": 3,
+                    "runway":"13R",
+                    "category":"WYLSN8"
+                },
+                {
+                    "airport":"KGLS",
+                    "rate": 1,
+                    "runway":"14",
+                    "category":"MMALT7"
+                },
+                {
+                    "airport":"KGLS",
+                    "rate": 1,
+                    "runway":"14",
+                    "category":"BORRN6"
+                },
+                {
+                    "airport":"KSGR",
+                    "rate": 1,
+                    "runway":"17",
+                    "category":"MMALT7"
+                },
+                {
+                    "airport":"KSGR",
+                    "rate": 1,
+                    "runway":"17",
+                    "category":"BORRN6"
+                },
+                {
+                    "airport": "KBPT",
+                    "runway": "12",
+                    "rate": 15
+                }
+            ],
+            "wind": {
+                "direction": 110,
+                "speed": 9
+            }
+        },
         "I90 CLL North": {
             "arrival_runways": [
                 {
@@ -4943,6 +5690,90 @@
                 {
                     "airport": "KCLL",
                     "runway": "17",
+                    "rate": 15
+                }
+            ],
+            "wind": {
+                "direction": 160,
+                "speed": 5
+            }
+        },
+        "I90 BPT Southeast": {
+            "arrival_runways": [
+                {
+                    "airport": "KBPT",
+                    "runway": "12"
+                },
+                {
+                    "airport": "KBPT",
+                    "runway": "16"
+                }
+            ],
+            "arrivals": {
+                "ROMER.BPT": {
+                    "KBPT": 7
+                },
+                "LCH.BPT": {
+                    "KBPT": 5
+                }
+            },
+            "solo_controller": "I90_J_APP",
+            "controllers": [
+                "HOU_81_CTR",
+                "CLL_TWR",
+                "AUS_E_APP",
+                "I90_D_APP",
+                "I90_Z_APP"
+            ],
+            "default_maps": [
+                "I90 BASE MAP"
+            ],
+            "departure_runways": [
+                {
+                    "airport": "KBPT",
+                    "runway": "12",
+                    "rate": 15
+                }
+            ],
+            "wind": {
+                "direction": 120,
+                "speed": 5
+            }
+        },
+        "I90 BPT Northwest": {
+            "arrival_runways": [
+                {
+                    "airport": "KCLL",
+                    "runway": "30"
+                },
+                {
+                    "airport": "KBPT",
+                    "runway": "34"
+                }
+            ],
+            "arrivals": {
+                "ROMER.BPT": {
+                    "KBPT": 7
+                },
+                "LCH.BPT": {
+                    "KBPT": 5
+                }
+            },
+            "solo_controller": "I90_J_APP",
+            "controllers": [
+                "HOU_81_CTR",
+                "CLL_TWR",
+                "AUS_E_APP",
+                "I90_D_APP",
+                "I90_Z_APP"
+            ],
+            "default_maps": [
+                "I90 BASE MAP"
+            ],
+            "departure_runways": [
+                {
+                    "airport": "KBPT",
+                    "runway": "30",
                     "rate": 15
                 }
             ],
