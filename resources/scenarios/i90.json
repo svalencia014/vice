@@ -4428,7 +4428,8 @@
                 "DWH_TWR",
                 "GLS_TWR",
                 "BPT_TWR",
-                "CLL_TWR"
+                "CLL_TWR",
+                "AUS_E_APP"
             ],
             "default_maps": [
                 "I90 BASE MAP"
@@ -4846,6 +4847,108 @@
             "wind": {
                 "direction": 110,
                 "speed": 9
+            }
+        },
+        "I90 CLL North": {
+            "arrival_runways": [
+                {
+                    "airport": "KCLL",
+                    "runway": "35"
+                },
+                {
+                    "airport": "KCLL",
+                    "runway": "29"
+                }
+            ],
+            "arrivals": {
+                "ARDIA.CLL": {
+                    "KCLL": 5
+                },
+                "RAECN.CLL": {
+                    "KCLL": 5
+                },
+                "MUNCH.CLL": {
+                    "KCLL": 5
+                }
+            },
+            "solo_controller": "I90_U_APP",
+            "multi_controllers": {
+                "default": {
+                    "I90_U_APP": {"primary": true, "arrivals": ["ARDIA.CLL", "RAECN.CLL", "MUNCH.CLL"], "departures": ["KCLL"]},
+                    "I90_T_APP": {"backup": "I90_U_APP"}
+                }
+            },
+            "controllers": [
+                "HOU_81_CTR",
+                "CLL_TWR",
+                "AUS_E_APP",
+                "I90_D_APP",
+                "I90_Z_APP"
+            ],
+            "default_maps": [
+                "I90 BASE MAP"
+            ],
+            "departure_runways": [
+                {
+                    "airport": "KCLL",
+                    "runway": "35",
+                    "rate": 15
+                }
+            ],
+            "wind": {
+                "direction": 320,
+                "speed": 5
+            }
+        },
+        "I90 CLL South": {
+            "arrival_runways": [
+                {
+                    "airport": "KCLL",
+                    "runway": "17"
+                },
+                {
+                    "airport": "KCLL",
+                    "runway": "11"
+                }
+            ],
+            "arrivals": {
+                "ARDIA.CLL": {
+                    "KCLL": 5
+                },
+                "RAECN.CLL": {
+                    "KCLL": 5
+                },
+                "MUNCH.CLL": {
+                    "KCLL": 5
+                }
+            },
+            "solo_controller": "I90_U_APP",
+            "multi_controllers": {
+                "default": {
+                    "I90_U_APP": {"primary": true, "arrivals": ["ARDIA.CLL", "RAECN.CLL", "MUNCH.CLL"], "departures": ["KCLL"]},
+                    "I90_T_APP": {"backup": "I90_U_APP"}
+                }
+            },
+            "controllers": [
+                "HOU_81_CTR",
+                "CLL_TWR",
+                "AUS_E_APP",
+                "I90_D_APP",
+                "I90_Z_APP"
+            ],
+            "default_maps": [
+                "I90 BASE MAP"
+            ],
+            "departure_runways": [
+                {
+                    "airport": "KCLL",
+                    "runway": "17",
+                    "rate": 15
+                }
+            ],
+            "wind": {
+                "direction": 320,
+                "speed": 5
             }
         },
         "IAH Finals West": {
