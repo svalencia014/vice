@@ -467,6 +467,606 @@
                 }
             },
             "departures": [
+                    {
+                        "exit": "CRP",
+                        "destination": "MMMY",
+                        "altitude": 34000,
+                        "route": "RITAA7 CRP FETMO CAMUI UJ13 ITPIS ITPIS1A",
+                        "airlines": [
+                            {
+                                "icao": "VIV",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "DOLEY",
+                        "destination": "KDEN",
+                        "altitude": 32000,
+                        "route": "STYCK8 DOLEY ADM MMB HALEN NIIXX3",
+                        "airlines": [
+                            {
+                                "icao": "FFT",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "LLA",
+                        "destination": "KMIA",
+                        "altitude": 39000,
+                        "route": "GUMBY3 LLA LEV Y290 BLVNS Y290 GAWKS FROGZ4",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "short"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "WWREN",
+                        "destination": "MMGL",
+                        "altitude": 38000,
+                        "route": "RITAA7 WWREN BRO MAM CVM J25 SLP UT147 AGU UT44 LIVRI LIVRI1D",
+                        "airlines": [
+                            {
+                                "icao": "VOI",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRGER",
+                        "destination": "KSLC",
+                        "altitude": 34000,
+                        "route": "PITZZ4 CRGER CNX DVC HELPR LEEHY5",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "short"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "LCH",
+                        "destination": "KATL",
+                        "altitude": 37000,
+                        "route": "GUMBY3 LCH Q24 PAYTN SHYRE GNDLF2",
+                        "airlines": [
+                            {
+                                "icao": "FFT",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "WTSON",
+                        "destination": "KDSM",
+                        "altitude": 30000,
+                        "route": "STYCK8 WTSON BYP TUL J25 DSM",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "TPAKK",
+                        "destination": "KCVG",
+                        "altitude": 37000,
+                        "route": "INDIE8 TPAKK LIT J131 PENBE TERGE SARGO4",
+                        "airlines": [
+                            {
+                                "icao": "ABX",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRGER",
+                        "destination": "KSFO",
+                        "altitude": 32000,
+                        "route": "PITZZ4 CRGER JCT TXSAS KA15S KA21Q NABOB Q15 SKANN RUSME ALWYS2",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "short"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "DOLEY",
+                        "destination": "KDEN",
+                        "altitude": 32000,
+                        "route": "STYCK8 DOLEY FUZ SPS TOTOE HALEN NIIXX3",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRGER",
+                        "destination": "KLAX",
+                        "altitude": 32000,
+                        "route": "PITZZ4 CRGER EWM Q2 ITUCO BXK ESTWD HLYWD1",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "TPAKK",
+                        "destination": "KSDF",
+                        "altitude": 35000,
+                        "route": "INDIE8 TPAKK LIT J131 PXV ALENN DAMEN5",
+                        "airlines": [
+                            {
+                                "icao": "UPS",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "TPAKK",
+                        "destination": "KIND",
+                        "altitude": 37000,
+                        "route": "INDIE8 TPAKK LIT J131 PENBE TERGE SMUKE2",
+                        "airlines": [
+                            {
+                                "icao": "FDX",
+                                "fleet": "long"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "TPAKK",
+                        "destination": "KRFD",
+                        "altitude": 35000,
+                        "route": "INDIE8 TPAKK LIT J101 STL BRL MZV V63 CVA VOGZZ FNLEE1",
+                        "airlines": [
+                            {
+                                "icao": "UPS",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "TPAKK",
+                        "destination": "KCMH",
+                        "altitude": 37000,
+                        "route": "INDIE8 TPAKK LIT J131 PXV JUDDI JAKTZ2",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRGER",
+                        "destination": "KLAS",
+                        "altitude": 32000,
+                        "route": "PITZZ4 CRGER ELP Q13 VERNO Q13 DRK ELLDA RKSTR3",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRGER",
+                        "destination": "KPHX",
+                        "altitude": 36000,
+                        "route": "PITZZ4 CRGER JCT J86 ELP DRRVR PINNG1",
+                        "airlines": [
+                            {
+                                "icao": "ASH",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "TPAKK",
+                        "destination": "KORD",
+                        "altitude": 35000,
+                        "route": "INDIE8 TPAKK LIT J180 FTZ SHAIN2",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "TPAKK",
+                        "destination": "LTFM",
+                        "altitude": 35000,
+                        "route": "INDIE8 TPAKK LIT CGI VHP FWA SVM YXI YBC ELSIR 5000N/05000W 5100N/04000W 5100N/03000W 4900N/02000W 4800N/01500W TAMEL EVBAK RATKA LARLA GANTO JSY TURDU TADUP TEPRI UN491 MELKO UN491 LUVAL BEGAR TRA GAMSA GEDSO LAPOV ETIDA RESLA SOPIS T390 RILEX",
+                        "airlines": [
+                            {
+                                "icao": "THY",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "HAWES",
+                        "destination": "EGLL",
+                        "altitude": 37000,
+                        "route": "LURIC8 HAWES SUTTN J29 MEM BWG HYK PSB CFB CABCI MIILS N563A NEEKO NATW 5400N/05000W NATW 5400N/02000W NATW MALOT NATW GISTI ENJEX AVZAC INFEC JETZI AMFUL OCTIZ P2 SIRIC SIRIC1H",
+                        "airlines": [
+                            {
+                                "icao": "BAW",
+                                "fleet": "b789"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRGER",
+                        "destination": "KSNA",
+                        "altitude": 36000,
+                        "route": "PITZZ4 CRGER EWM Q2 ITUCO BXK EMLLD DSNEE5",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRGER",
+                        "destination": "KLAX",
+                        "altitude": 30000,
+                        "route": "PITZZ4 CRGER EWM J4 WLVRN ESTWD HLYWD1",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "TPAKK",
+                        "destination": "KPHL",
+                        "altitude": 39000,
+                        "route": "INDIE8 TPAKK LIT BNA Q36 SWAPP Q34 GVE PAATS4",
+                        "airlines": [
+                            {
+                                "icao": "NKS",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRGER",
+                        "destination": "KSMF",
+                        "altitude": 34000,
+                        "route": "PITZZ4 CRGER CNX BOBYY INW ILC CRASY SLMMR5",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "MNURE",
+                        "destination": "KAUS",
+                        "altitude": 16000,
+                        "route": "PITZZ4 MNURE WLEEE7",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "short"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRIED",
+                        "destination": "KDFW",
+                        "altitude": 24000,
+                        "route": "BLTWY7 CRIED BEREE2",
+                        "airlines": [
+                            {
+                                "icao": "UPS",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "INDIE",
+                        "destination": "KXNA",
+                        "altitude": 27000,
+                        "route": "INDIE8 INDIE TXK RZC",
+                        "airlines": [
+                            {
+                                "icao": "UCA",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRIED",
+                        "destination": "KDFW",
+                        "altitude": 26000,
+                        "route": "BLTWY7 CRIED BEREE2",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "LURIC",
+                        "destination": "LFPG",
+                        "altitude": 37000,
+                        "route": "LURIC8 LURIC ELD KM39K KI48M KI57O ROD KLYNE Q29 DUTSH DJB ERI BUF ART SSENA BAREE N505A RIKAL NATX XETBO ARKIL ANNET UM25 UVSUV UM25 INGOR UM25 LUKIP LUKIP9W",
+                        "airlines": [
+                            {
+                                "icao": "AFR",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRGER",
+                        "destination": "KLBB",
+                        "altitude": 32000,
+                        "route": "PITZZ4 CRGER JCT SJT",
+                        "airlines": [
+                            {
+                                "icao": "UCA",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "LCH",
+                        "destination": "KATL",
+                        "altitude": 35000,
+                        "route": "GUMBY3 LCH COOUP GNDLF2",
+                        "airlines": [
+                            {
+                                "icao": "DAL",
+                                "fleet": "short"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "GUSTI",
+                        "destination": "KMSY",
+                        "altitude": 31000,
+                        "route": "GUMBY3 GUSTI AWDAD AWDAD1",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "short"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "INDIE",
+                        "destination": "KXNA",
+                        "altitude": 27000,
+                        "route": "INDIE8 INDIE TXK RZC",
+                        "airlines": [
+                            {
+                                "icao": "UCA",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "TPAKK",
+                        "destination": "KORD",
+                        "altitude": 33000,
+                        "route": "INDIE8 TPAKK LIT J180 FTZ SHAIN2",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "short"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "LLA",
+                        "destination": "KFLL",
+                        "altitude": 37000,
+                        "route": "GUMBY3 LLA LEV Y290 CIGAR Y290 OCHHO VNECK TEEKY3",
+                        "airlines": [
+                            {
+                                "icao": "NKS",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "LURIC",
+                        "destination": "KMEM",
+                        "altitude": 33000,
+                        "route": "LURIC8 LURIC ELD HOBRK3",
+                        "airlines": [
+                            {
+                                "icao": "ASH",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "GUSTI",
+                        "destination": "KECP",
+                        "altitude": 31000,
+                        "route": "GUMBY3 GUSTI AWDAD SJI J2 CEW",
+                        "airlines": [
+                            {
+                                "icao": "ASH",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "NGP",
+                        "destination": "KBRO",
+                        "altitude": 20000,
+                        "route": "RITAA7 NGP",
+                        "airlines": [
+                            {
+                                "icao": "SKW",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "DUCEN",
+                        "destination": "KEWR",
+                        "altitude": 35000,
+                        "route": "AGERS1 DUCEN Q87 ALWZZ OGRAE Q99 QUART PHLBO4",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "short"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRP",
+                        "destination": "MMMY",
+                        "altitude": 38000,
+                        "route": "RITAA7 CRP REX UJ13 ITPIS",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "GUSTI",
+                        "destination": "KMOB",
+                        "altitude": 35000,
+                        "route": "GUMBY3 GUSTI AWDAD SJI",
+                        "airlines": [
+                            {
+                                "icao": "ASH",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "PSX",
+                        "destination": "KCRP",
+                        "altitude": 16000,
+                        "route": "RITAA7 PSX V20 CRP",
+                        "airlines": [
+                            {
+                                "icao": "UCA",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "ORRTH",
+                        "destination": "KHSV",
+                        "altitude": 33000,
+                        "route": "LURIC8 ORRTH SQS",
+                        "airlines": [
+                            {
+                                "icao": "UCA",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "DOLEY",
+                        "destination": "KDEN",
+                        "altitude": 32000,
+                        "route": "STYCK8 DOLEY FUZ SPS TOTOE HALEN NIIXX3",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "CRGER",
+                        "destination": "KPHX",
+                        "altitude": 34000,
+                        "route": "PITZZ4 CRGER JCT ELP DRRVR PINNG1",
+                        "airlines": [
+                            {
+                                "icao": "AAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "JBULL",
+                        "destination": "KATL",
+                        "altitude": 27000,
+                        "route": "STRYA8 JBULL MERDN DUUCK ORRKK GNDLF2",
+                        "airlines": [
+                            {
+                                "icao": "UAL",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "DOLEY",
+                        "destination": "KOKC",
+                        "altitude": 34000,
+                        "route": "STYCK8 DOLEY ZEMMA TSDEL3",
+                        "airlines": [
+                            {
+                                "icao": "ASH",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "WAILN",
+                        "destination": "KSAT",
+                        "altitude": 26000,
+                        "route": "PITZZ4 WAILN QERVO1",
+                        "airlines": [
+                            {
+                                "icao": "ASH",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "NGP",
+                        "destination": "KHRL",
+                        "altitude": 20000,
+                        "route": "RITAA7 NGP DLBRT",
+                        "airlines": [
+                            {
+                                "icao": "UCA",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "exit": "DPATY",
+                        "destination": "KJAN",
+                        "altitude": 21000,
+                        "route": "STRYA8 DPATY MHZ",
+                        "airlines": [
+                            {
+                                "icao": "UCA",
+                                "fleet": "default"
+                            }
+                        ]
+                    },
                 {
                     "exit": "CRP",
                     "destination": "KLRD",
