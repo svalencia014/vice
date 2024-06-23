@@ -285,7 +285,7 @@
           "LCH": {
             "assigned_altitude": 4000,
             "sid": "GUMBY3",
-            "waypoints": "KAIH-33R JINIP CRTMN/s230 DWSUN/a4000- GUMBY/a5000- HOURN BLING"
+            "waypoints": "KIAH-33R JINIP CRTMN/s230 DWSUN/a4000- GUMBY/a5000- HOURN BLING"
           },
           "GUSTI": {
             "assigned_altitude": 4000,
@@ -2955,18 +2955,6 @@
           ]
         },
         {
-          "exit": "NOSUG",
-          "destination": "MMUN",
-          "altitude": 38000,
-          "route": "NOSUG UT27 OMVIP UT45 ALKIM KEHLI A766 KELPP BAYYY5",
-          "airlines": [
-            {
-              "icao": "SWA",
-              "fleet": "short"
-            }
-          ]
-        },
-        {
           "exit": "MLC",
           "destination": "KMDW",
           "altitude": 39000,
@@ -3355,9 +3343,6 @@
             },
             {
               "icao": "LXJ"
-            },
-            {
-              "icao": "JRE"
             }
           ]
         },
@@ -3379,9 +3364,6 @@
             },
             {
               "icao": "LXJ"
-            },
-            {
-              "icao": "XSR"
             }
           ]
         },
@@ -3403,9 +3385,6 @@
             },
             {
               "icao": "LXJ"
-            },
-            {
-              "icao": "XSR"
             }
           ]
         },
@@ -3427,21 +3406,6 @@
             },
             {
               "icao": "LXJ"
-            },
-            {
-              "icao": "XSR"
-            }
-          ]
-        },
-        {
-          "exit": "HAMAN",
-          "destination": "73F",
-          "altitude": 6000,
-          "route": "HAMAN V15 OMOBE",
-          "airlines": [
-            {
-              "icao": "N",
-              "fleet": "slowGA"
             }
           ]
         },
@@ -3463,9 +3427,6 @@
             },
             {
               "icao": "LXJ"
-            },
-            {
-              "icao": "XSR"
             }
           ]
         }
@@ -3502,13 +3463,13 @@
         "12": {
           "SILBE,WASPY": {
             "cleared_altitude": 2000,
-            "waypoints": "BPT-30/h120"
+            "waypoints": "KBPT-30/h120"
           }
         },
         "30": {
           "SILBE,WASPY": {
             "cleared_altitude": 2000,
-            "waypoints": "BPT-12/h300"
+            "waypoints": "KBPT-12/h300"
           }
         }
       },
@@ -3537,9 +3498,6 @@
             {
               "icao": "N",
               "fleet": "fastGA"
-            },
-            {
-              "icao": "XSR"
             }
           ]
         },
@@ -3567,9 +3525,6 @@
             {
               "icao": "N",
               "fleet": "fastGA"
-            },
-            {
-              "icao": "XSR"
             }
           ]
         },
@@ -3594,9 +3549,6 @@
             {
               "icao": "N",
               "fleet": "fastGA"
-            },
-            {
-              "icao": "XSR"
             }
           ]
         }
@@ -4324,20 +4276,17 @@
               "icao": "EJM"
             },
             {
-              "icao": "JRE"
-            },
-            {
               "icao": "N",
               "fleet": "fastGA"
             }
           ]
         },
         "initial_altitude": 15000,
-        "cleared_altitude": 9000,
+        "assigned_altitude": 9000,
         "initial_controller": "HOU_81_CTR",
         "initial_speed": 250,
-        "route": "ADRIA CLL",
-        "waypoints": "ADRIA ELLVR/ho CLL"
+        "route": "ARDIA CLL",
+        "waypoints": "ARDIA ELLVR/ho CLL"
       }
     ],
     "GIRLY.CLL": [
@@ -4357,9 +4306,6 @@
               "icao": "EJM"
             },
             {
-              "icao": "JRE"
-            },
-            {
               "icao": "N",
               "fleet": "fastGA"
             }
@@ -4369,7 +4315,7 @@
         "assigned_altitude": 17000,
         "initial_controller": "HOU_81_CTR",
         "initial_speed": 250,
-        "route": "ADRIA CLL",
+        "route": "ARDIA CLL",
         "waypoints": "N029.26.07.838,W092.47.07.908 GIRLY/ho RAECN JUDDY CLL"
       }
     ],
@@ -4390,19 +4336,16 @@
               "icao": "EJM"
             },
             {
-              "icao": "JRE"
-            },
-            {
               "icao": "N",
               "fleet": "fastGA"
             }
           ]
         },
         "initial_altitude": 15000,
-        "cleared_altitude": 9000,
-        "initial_controller": "IAH_D_APP",
+        "assigned_altitude": 9000,
+        "initial_controller": "I90_D_APP",
         "initial_speed": 250,
-        "route": "ADRIA CLL",
+        "route": "ARDIA CLL",
         "waypoints": "GIRLY RAECN/ho JUDDY CLL"
       }
     ],
@@ -4423,16 +4366,13 @@
               "icao": "EJM"
             },
             {
-              "icao": "JRE"
-            },
-            {
               "icao": "N",
               "fleet": "fastGA"
             }
           ]
         },
         "initial_altitude": 11000,
-        "cleared_altitude": 9000,
+        "assigned_altitude": 9000,
         "initial_controller": "AUS_E_APP",
         "initial_speed": 250,
         "route": "MUNCH CLL",
@@ -4456,16 +4396,13 @@
               "icao": "EJM"
             },
             {
-              "icao": "JRE"
-            },
-            {
               "icao": "N",
               "fleet": "fastGA"
             }
           ]
         },
         "initial_altitude": 13000,
-        "cleared_altitude": 11000,
+        "assigned_altitude": 11000,
         "initial_controller": "HOU_81_CTR",
         "initial_speed": 250,
         "route": "ROMER CESAN KBPT",
@@ -4489,16 +4426,13 @@
               "icao": "EJM"
             },
             {
-              "icao": "JRE"
-            },
-            {
               "icao": "N",
               "fleet": "fastGA"
             }
           ]
         },
         "initial_altitude": 13000,
-        "cleared_altitude": 7000,
+        "assigned_altitude": 7000,
         "initial_controller": "HOU_81_CTR",
         "initial_speed": 250,
         "route": "ROMER CESAN KBPT",
@@ -4619,22 +4553,43 @@
           "I90_M_DEP": {
             "backup": "I90_D_APP",
             "departures": [
-              "KIAH",
-              "KHOU"
+              "KIAH/BLTWY7",
+              "KIAH/INDIE8",
+              "KHOU/INDIE8",
+              "KIAH/LURIC8",
+              "KHOU/LURIC8",
+              "KIAH/STRYA8",
+              "KIAH/WYLSN8",
+              "KHOU/BLTWY7",
+              "KHOU/WYLSN8"
             ]
           },
           "I90_E_DEP": {
             "backup": "I90_M_DEP",
             "departures": [
-              "KSGR",
-              "KGLS"
+              "KIAH/GUMBY3",
+              "KIAH/MMUGS4",
+              "KHOU/ELOCO6"
             ]
           },
           "I90_L_DEP": {
-            "backup": "I90_E_DEP"
+            "backup": "I90_E_DEP",
+            "departures": [
+              "KIAH/FLYZA5",
+              "KIAH/RITAA",
+              "KIAH/HOODO7",
+              "KHOU/HOODO7",
+              "KHOU/PEECE6",
+              "KHOU/PTRON9"
+            ]
           },
           "I90_W_DEP": {
-            "backup": "I90_L_DEP"
+            "backup": "I90_L_DEP",
+            "departures": [
+              "KIAH/BNDTO5",
+              "KIAH/PITZZ4",
+              "KHOU/RETYR8"
+            ]
           },
           "I90_B_APP": {
             "backup": "I90_DEP",
@@ -6268,7 +6223,46 @@
       "MUSYL": "BOL",
       "HRV": "BOL",
       "MAJKK": "GOM",
-      "JCT": "PRA"
+      "JCT": "PRA",
+      "STUFT": null,
+      "LOA": null,
+      "BYP": null,
+      "HAMAN": null,
+      "STELL": null,
+      "WASPY": null,
+      "SILBE": null,
+      "WTSON": null,
+      "INDIE": null,
+      "LURIC": null,
+      "DUCEN": null,
+      "PSX": null,
+      "ORRTH": null,
+      "JBULL": null,
+      "OHAGI": null,
+      "BACEN": null,
+      "MOODY": null,
+      "DAAYE": null,
+      "CIKAN": null,
+      "KERMI": null,
+      "SLNNK": null,
+      "PSB": null,
+      "MOHAK": null,
+      "VIH": null,
+      "EAKER": null,
+      "COREZ": null,
+      "NOSUG": null,
+      "MLC": null,
+      "SJI": null,
+      "STREP": null,
+      "FST": null,
+      "ZALEA": null,
+      "FORCK": null,
+      "WLVRN": null,
+      "DANCO": null,
+      "JERES": null,
+      "EHF": null,
+      "DANLS": null,
+      "SKOTT": null
     },
     "stars_maps": [
       "I90 BASE MAP",
