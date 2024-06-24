@@ -6457,16 +6457,18 @@ func (sp *STARSPane) formatDatablocks(ctx *PaneContext, ac *Aircraft) []STARSDat
 		// as a placeholder in field 4 otherwise.
 		field3 := []string{alt}
 		field4 := []string{""}
+
+		if ac.Scratchpad != "" {
+			field3 = append(field3, ac.Scratchpad)
+			field4 = append(field4, "")
+		}
+		if ac.SecondaryScratchpad != "" {
+			field3 = append(field3, ac.SecondaryScratchpad)
+			field4 = append(field4, "+") // 2-67, "Field 4 Contents"
+		}
+
 		if !state.Ident(ctx.now) {
 			// Don't display these if they're identing: then it's just altitude and speed + "ID"
-			if ac.Scratchpad != "" {
-				field3 = append(field3, ac.Scratchpad)
-				field4 = append(field4, "")
-			}
-			if ac.SecondaryScratchpad != "" {
-				field3 = append(field3, ac.SecondaryScratchpad)
-				field4 = append(field4, "+") // 2-67, "Field 4 Contents"
-			}
 			if len(field3) == 1 {
 				if ap := ctx.world.GetAirport(ac.FlightPlan.ArrivalAirport); ap != nil && !ap.OmitArrivalScratchpad {
 					ap := ac.FlightPlan.ArrivalAirport
