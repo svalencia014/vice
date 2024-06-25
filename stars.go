@@ -6468,7 +6468,6 @@ func (sp *STARSPane) formatDatablocks(ctx *PaneContext, ac *Aircraft) []STARSDat
 		}
 
 		if !state.Ident(ctx.now) {
-			// Don't display these if they're identing: then it's just altitude and speed + "ID"
 			if len(field3) == 1 {
 				if ap := ctx.world.GetAirport(ac.FlightPlan.ArrivalAirport); ap != nil && !ap.OmitArrivalScratchpad {
 					ap := ac.FlightPlan.ArrivalAirport
