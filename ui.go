@@ -10,6 +10,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"image/png"
+	"log/slog"
 	"net/http"
 	"os"
 	"path"
@@ -22,7 +23,6 @@ import (
 
 	"github.com/mmp/imgui-go/v4"
 	"github.com/pkg/browser"
-	"golang.org/x/exp/slog"
 )
 
 var (
@@ -162,6 +162,49 @@ var (
 		"Added new syntax for issuing left/right turn in degrees: T10L, T20R, etc.",
 		"STARS: allow middle-click highlight of aircraft regardless of having their track",
 		"STARS: fixed bug with airport weather list flickering",
+		"Added new scenarios: SCT LAX (Jud Lopez), IND (Samuel Valencia), MKE (Yahya Nazimuddin), MIA (Mike K)",
+		"Scenario updates/bugfixes: TPA (Connor Allen), SCT ONT/SNA (Eli Thompson), A80, L30 (Michael Trokel)",
+		"STARS: added automated terminal proximity alert (ATPA) support",
+		"STARS: consolidated wake turbulence (CWT) categories are now shown in datablocks and used for ATPA in-trail requirements",
+		"Live weather can now be used in sims",
+		"STARS: fixed various small bugs related to when the FDB should be displayed",
+		"New scenarios: BDL (MerryArbitrary), D21 (Jackson Verdoorn), M98 (Jace Martin), P80 (Ethan Malimon)",
+		"Scenario updates: EWR (aq86_), LGA (Yi Zheng), MIA (Connor Allen), Y90 (MerryArbitrary, Nelson T)",
+		`Aircraft control commands (like "C80" for "climb and maintain 8,000") must now start with a comma`,
+		`Related: the scratchpad can now be set by entering text and slewing an aircraft`,
+		"Redirected handoffs are now supported and inter- and intra-facility handoffs are now handled more accurately",
+		`Added support for "force quicklook" to push a quicklook to another controller`,
+		`Added support for minimum safe altitude warnings (MSAW) for aircraft that are below the MVA`,
+		`CWT category updates and bugfixes`,
+		`Added support for global leader lines`,
+		`Limited datablocks are now supported (and used when appropriate)`,
+		`Handle various cases where the FDB should be displayed by default`,
+		`Fixed a bug where go-arounds would sometimes not contact departure`,
+		`Fixed a bug where live weather would occasionally cause vice to crash`,
+		`Fixed a bug where aircraft TAS would be too high at high altitudes`,
+		`Added support for ATC chat (prefix chat messages a '/' in the command prompt)`,
+		`Allow entering values for STARS DCB spinner using the keyboard`,
+		`Scenario Updates: D01 and COS (Andrew S), Y90 (Merry Arbitrary), C90 (Jud Lopez, Yahya Nazimuddin)`,
+		`Added "FC" command to tell aircraft to change to the next controller's frequency`,
+		`STARS: Add support for displaying requested altitude in FDB`,
+		`Fixed a bug where aircraft callsign numbers could start with 0`,
+		`STARS: use realistic fonts for the STARS display`,
+		`Improved sequencing of departures`,
+		`Added I90 scenario (Jace Martin)`,
+		`Added full-screen mode`,
+		`Updated command entry so keyboard focus returns to STARS after issuing a control command`,
+		`New scenarios: PIT (Gavin V), AVL, AGS, and GSO (Giovanni), ACK, BNA, BOS, CHS, MHT, OKC, RDU (Michael K)`,
+		`Updates to BUF, CLE, D21 (Gavin), BHM (Giovanni), JAX and F11 (Michael K), D01 (Jud Lopez, Andrew S)`,
+		`Even more scenario updates: C90 (Jud Lopez, Yahya Nazimuddin), A90 (Michael K)`,
+		`STARS: more realistic video map handling (per controller maps, map id #s)`,
+		`Fixed a bug where vice would crash on launch if it was exited while minimized`,
+		`STARS: multiple improvements to drawing aircraft tracks`,
+		`Added a short pause before aircraft ident`,
+		`Aircraft can now be sent 'direct' to their destination airport`,
+		`Fixed a bug where vice would sometimes crash at startup or when MAPS was clicked`,
+		`New scenario: SCT (Jud Lopez)`,
+		`Scenario updates: AVL (Giovanni), A90 and BOS (Michael K)`,
+		`Fixed "ID" flashing when aircraft ident`,
 	}
 )
 
@@ -237,6 +280,10 @@ func uiShowConnectDialog(allowCancel bool) {
 
 func uiShowDiscordOptInDialog() {
 	uiShowModalDialog(NewModalDialogBox(&DiscordOptInModalClient{}), true)
+}
+
+func uiShowNewCommandSyntaxDialog() {
+	uiShowModalDialog(NewModalDialogBox(&NewCommandSyntaxModalClient{}), true)
 }
 
 // If |b| is true, all following imgui elements will be disabled (and drawn
@@ -348,7 +395,7 @@ func drawUI(p Platform, r Renderer, w *World, eventStream *EventStream, stats *S
 		}
 
 		width, _ := ui.font.BoundText(FontAwesomeIconInfoCircle, 0)
-		imgui.SetCursorPos(imgui.Vec2{p.DisplaySize()[0] - float32(4*width+10), 0})
+		imgui.SetCursorPos(imgui.Vec2{p.DisplaySize()[0] - float32(6*width+15), 0})
 		if imgui.Button(FontAwesomeIconInfoCircle) {
 			ui.showAboutDialog = !ui.showAboutDialog
 		}
@@ -358,8 +405,12 @@ func drawUI(p Platform, r Renderer, w *World, eventStream *EventStream, stats *S
 		if imgui.Button(FontAwesomeIconDiscord) {
 			browser.OpenURL("https://discord.gg/y993vgQxhY")
 		}
+
+		if imgui.Button(Select(platform.IsFullScreen(), FontAwesomeIconCompressAlt, FontAwesomeIconExpandAlt)) {
+			platform.EnableFullScreen(!platform.IsFullScreen())
+		}
 		if imgui.IsItemHovered() {
-			imgui.SetTooltip("Join the vice discord")
+			imgui.SetTooltip(Select(platform.IsFullScreen(), "Exit", "Enter") + " full-screen mode")
 		}
 
 		imgui.PopStyleColor()
@@ -666,8 +717,62 @@ func (c *ConnectModalClient) Buttons() []ModalDialogButton {
 		b = append(b, ModalDialogButton{text: "Cancel"})
 	}
 
+	next := ModalDialogButton{
+		text:     c.config.UIButtonText(),
+		disabled: c.config.OkDisabled(),
+		action: func() bool {
+			if c.config.ShowRatesWindow() {
+				uiShowModalDialog(NewModalDialogBox(&RatesModalClient{
+					config:      c.config,
+					allowCancel: c.allowCancel}), false)
+				return true
+			} else {
+				c.config.displayError = c.config.Start()
+				return c.config.displayError == nil
+			}
+		},
+	}
+
+	return append(b, next)
+}
+
+func (c *ConnectModalClient) Draw() int {
+	if enter := c.config.DrawUI(); enter {
+		return 1
+	} else {
+		return -1
+	}
+}
+
+type RatesModalClient struct {
+	config      NewSimConfiguration
+	allowCancel bool
+}
+
+func (c *RatesModalClient) Title() string { return "Arrival / Departure Rates" }
+
+func (c *RatesModalClient) Opening() {}
+
+func (c *RatesModalClient) Buttons() []ModalDialogButton {
+	var b []ModalDialogButton
+
+	prev := ModalDialogButton{
+		text: "Previous",
+		action: func() bool {
+			uiShowModalDialog(NewModalDialogBox(&ConnectModalClient{
+				config:      c.config,
+				allowCancel: c.allowCancel}), false)
+			return true
+		},
+	}
+	b = append(b, prev)
+
+	if c.allowCancel {
+		b = append(b, ModalDialogButton{text: "Cancel"})
+	}
+
 	ok := ModalDialogButton{
-		text:     "Ok",
+		text:     "Create",
 		disabled: c.config.OkDisabled(),
 		action: func() bool {
 			c.config.displayError = c.config.Start()
@@ -678,8 +783,8 @@ func (c *ConnectModalClient) Buttons() []ModalDialogButton {
 	return append(b, ok)
 }
 
-func (c *ConnectModalClient) Draw() int {
-	if enter := c.config.DrawUI(); enter {
+func (c *RatesModalClient) Draw() int {
+	if enter := c.config.DrawRatesUI(); enter {
 		return 1
 	} else {
 		return -1
@@ -924,6 +1029,42 @@ func (d *DiscordOptInModalClient) Draw() int {
 	return -1
 }
 
+type NewCommandSyntaxModalClient struct{}
+
+func (d *NewCommandSyntaxModalClient) Title() string {
+	return "Aircraft Control Command Syntax Has Changed"
+}
+
+func (d *NewCommandSyntaxModalClient) Opening() {}
+
+func (d *NewCommandSyntaxModalClient) Buttons() []ModalDialogButton {
+	return []ModalDialogButton{
+		ModalDialogButton{
+			text: "Ok",
+			action: func() bool {
+				globalConfig.NotifiedNewCommandSyntax = true
+				return true
+			},
+		},
+	}
+}
+
+func (d *NewCommandSyntaxModalClient) Draw() int {
+	style := imgui.CurrentStyle()
+	spc := style.ItemSpacing()
+	spc.Y -= 4
+	imgui.PushStyleVarVec2(imgui.StyleVarItemSpacing, spc)
+
+	imgui.Text(`Aircraft control commands are now entered in the messages window`)
+	imgui.Text(`at the bottom of the screen. You can either click on that window`)
+	imgui.Text(`and the STARS window to set where keyboard input should go, or`)
+	imgui.Text(`pressing the TAB key switches between them.`)
+
+	imgui.PopStyleVar()
+
+	return -1
+}
+
 ///////////////////////////////////////////////////////////////////////////
 // "about" dialog box
 
@@ -963,19 +1104,30 @@ func showAboutDialog() {
 	// vertically maximized. So we hand-wrap the lines for the
 	// font we're using...
 	credits :=
-		`Additional credits: Thanks to Dennis Graiani and
-Samuel Valencia for contributing features to vice
-and to Connor Allen, Adam Bolek, Aaron Flett, Mike K,
-Jud Lopez, Jace Martin, Justin Nguyen, Arya T,
-Eli Thompson, Michael Trokel, and Samuel Valencia
-for developing scenarios. Video maps are thanks
-to the ZAU, ZBW, ZDC, ZDV, ZHU, ZID, ZJX, ZLA,
-ZNY, ZOB, ZSE, and ZTL VATSIM ARTCCs. Thanks
-also to OpenScope for the airline fleet and aircraft
-performance databases and to ourairports.com
-for the airport database. See the file CREDITS.txt
-in the vice source code distribution for third-party
-software, fonts, sounds, etc.`
+		`Additional credits:
+- Software Development: Artem Dorofeev,
+  Dennis Graiani, Michael Trokel, Samuel
+  Valencia, and Yi Zhang.
+- Facility engineering: Connor Allen, Adam
+  Bolek, Lucas Chan, Aaron Flett, Mike K,
+  Jonah Lefkoff, Jud Lopez, Ethan Malimon,
+  Jace Martin, Merry, Yahya Nazimuddin,
+  Justin Nguyen, Giovanni, Andrew S,
+  Arya T, Nelson T, Eli Thompson, Michael
+  Trokel, Samuel Valencia, Gavin Velicevic,
+  and Jackson Verdoorn.
+- Video maps: thanks to the ZAU, ZBW, ZDC,
+  ZDV, ZHU, ZID, ZJX, ZLA, ZMP, ZNY, ZOB,
+  ZSE, and ZTL VATSIM ARTCCs.
+- Additionally: OpenScope for the aircraft
+  performance and airline databases,
+  ourairports.com for the airport database,
+  and for the FAA for being awesome about
+  providing the CIFP, MVA specifications,
+  and other useful aviation data digitally.
+- One more thing: see the file CREDITS.txt
+  in the vice source code distribution for
+  third-party software, fonts, sounds, etc.`
 
 	imgui.Text(credits)
 
@@ -1182,6 +1334,24 @@ func (fs *FileSelectDialogBox) Draw() {
 
 		imgui.EndPopup()
 	}
+}
+
+type MessageModalClient struct {
+	title   string
+	message string
+}
+
+func (m *MessageModalClient) Title() string { return m.title }
+func (m *MessageModalClient) Opening()      {}
+
+func (m *MessageModalClient) Buttons() []ModalDialogButton {
+	return []ModalDialogButton{{text: "Ok", action: func() bool { return true }}}
+}
+
+func (m *MessageModalClient) Draw() int {
+	text, _ := wrapText(m.message, 80, 0, true)
+	imgui.Text("\n\n" + text + "\n\n")
+	return -1
 }
 
 type ErrorModalClient struct {
@@ -1536,11 +1706,12 @@ func (lc *LaunchControlWindow) spawnArrival(group, airport string) *Aircraft {
 			return ac
 		}
 	}
-	panic("unable to spawn a departure")
+	panic("unable to spawn an arrival")
 }
 
 func (lc *LaunchControlWindow) Draw(w *World, eventStream *EventStream) {
 	showLaunchControls := true
+	imgui.SetNextWindowSizeConstraints(imgui.Vec2{300, 100}, imgui.Vec2{-1, float32(platform.WindowSize()[1]) * 19 / 20})
 	imgui.BeginV("Launch Control", &showLaunchControls, imgui.WindowFlagsAlwaysAutoResize)
 
 	imgui.Text("Mode:")
@@ -1557,7 +1728,7 @@ func (lc *LaunchControlWindow) Draw(w *World, eventStream *EventStream) {
 	// Right-justify
 	imgui.SameLine()
 	//	imgui.SetCursorPos(imgui.Vec2{imgui.CursorPosX() + imgui.ContentRegionAvail().X - float32(3*width+10),
-	imgui.SetCursorPos(imgui.Vec2{imgui.WindowWidth() - float32(5*width), imgui.CursorPosY()})
+	imgui.SetCursorPos(imgui.Vec2{imgui.WindowWidth() - float32(7*width), imgui.CursorPosY()})
 	if lc.w != nil && lc.w.Connected() {
 		if lc.w.SimIsPaused {
 			if imgui.Button(FontAwesomeIconPlayCircle) {
@@ -1788,6 +1959,7 @@ altitude. (*TS* = 'then speed')`, "*TS210*"},
 	[3]string{"*E_appr", `"Expect the _appr_ approach."`, "*EI2L*"},
 	[3]string{"*C_appr", `"Cleared _appr_ approach."`, "*CI2L*"},
 	[3]string{"*TO*", `"Contact tower"`, "*TO*"},
+	[3]string{"*FC*", `"Contact _ctrl_ on _freq_, where _ctrl_ is the controller who has the track and _freq_ is their frequency."`, "*FC*"},
 	[3]string{"*X*", "(Deletes the aircraft.)", "*X*"},
 }
 

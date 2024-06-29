@@ -6,11 +6,10 @@ package main
 
 import (
 	"fmt"
+	"log/slog"
 	"runtime"
 	"sync"
 	"time"
-
-	"golang.org/x/exp/slog"
 )
 
 type EventSubscriberId int
@@ -43,6 +42,10 @@ func (e *EventsSubscription) LogValue() slog.Value {
 	return slog.GroupValue(
 		slog.Int("offset", e.offset),
 		slog.String("source", e.source))
+}
+
+func (e *EventsSubscription) PostEvent(event Event) {
+	e.stream.Post(event)
 }
 
 func NewEventStream() *EventStream {
@@ -183,23 +186,28 @@ const (
 	PointOutEvent
 	OfferedHandoffEvent
 	AcceptedHandoffEvent
+	AcceptedRedirectedHandoffEvent
 	CanceledHandoffEvent
 	RejectedHandoffEvent
 	RadioTransmissionEvent
 	StatusMessageEvent
 	ServerBroadcastMessageEvent
+	GlobalMessageEvent
 	AcknowledgedPointOutEvent
 	RejectedPointOutEvent
 	IdentEvent
 	HandoffControllEvent
+	SetGlobalLeaderLineEvent
+	TrackClickedEvent
 	NumEventTypes
 )
 
 func (t EventType) String() string {
 	return []string{"InitiatedTrack", "DroppedTrack", "PushedFlightStrip", "PointOut",
-		"OfferedHandoff", "AcceptedHandoff", "CanceledHandoff", "RejectedHandoff",
-		"RadioTransmission", "StatusMessage", "ServerBroadcastMessage",
-		"AcknowledgedPointOut", "RejectedPointOut", "Ident", "HandoffControll"}[t]
+		"OfferedHandoff", "AcceptedHandoff", "AcceptedRedirectedHandoffEvent", "CanceledHandoff", "RejectedHandoff",
+		"RadioTransmission", "StatusMessage", "ServerBroadcastMessage", "GlobalMessage",
+		"AcknowledgedPointOut", "RejectedPointOut", "Ident", "HandoffControll",
+		"SetGlobalLeaderLine", "TrackClicked"}[t]
 }
 
 type Event struct {
@@ -208,14 +216,18 @@ type Event struct {
 	FromController        string
 	ToController          string // For radio transmissions, the controlling controller.
 	Message               string
-	RadioTransmissionType RadioTransmissionType // For radio transmissions only
+	RadioTransmissionType RadioTransmissionType     // For radio transmissions only
+	LeaderLineDirection   *CardinalOrdinalDirection // SetGlobalLeaderLineEvent
 }
 
 func (e *Event) String() string {
-	if e.Type == RadioTransmissionEvent {
+	switch e.Type {
+	case RadioTransmissionEvent:
 		return fmt.Sprintf("%s: callsign %s controller %s->%s message %s type %v",
 			e.Type, e.Callsign, e.FromController, e.ToController, e.Message, e.RadioTransmissionType)
-	} else {
+	case TrackClickedEvent:
+		return fmt.Sprintf("%s: %s", e.Type, e.Callsign)
+	default:
 		return fmt.Sprintf("%s: callsign %s controller %s->%s message %s",
 			e.Type, e.Callsign, e.FromController, e.ToController, e.Message)
 	}

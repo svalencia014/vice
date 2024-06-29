@@ -16,6 +16,7 @@ import (
 	"image/draw"
 	"io"
 	"io/fs"
+	"log/slog"
 	"net"
 	"net/http"
 	"net/rpc"
@@ -36,7 +37,6 @@ import (
 	"github.com/iancoleman/orderedmap"
 	"github.com/klauspost/compress/zstd"
 	"golang.org/x/exp/constraints"
-	"golang.org/x/exp/slog"
 )
 
 ///////////////////////////////////////////////////////////////////////////
@@ -533,6 +533,24 @@ func SampleWeighted[T any](slice []T, weight func(T) int) int {
 	return idx
 }
 
+// Given a map from strings to some type T where the keys are assumed to be
+// of the form "foo,bar,bat", return a new map where each comma-delineated
+// string in the keys has its own entry in the returned map.  Panics if a
+// key is repeated.
+func CommaKeyExpand[T any](in map[string]T) map[string]T {
+	m := make(map[string]T)
+	for k, v := range in {
+		for _, s := range strings.Split(k, ",") {
+			s = strings.TrimSpace(s)
+			if _, ok := m[s]; ok {
+				panic("key repeated in map given to CommaKeyExpand")
+			}
+			m[s] = v
+		}
+	}
+	return m
+}
+
 ///////////////////////////////////////////////////////////////////////////
 // TransientMap
 
@@ -990,6 +1008,12 @@ func (c *CompressedConn) Write(b []byte) (n int, err error) {
 	return
 }
 
+func (c *CompressedConn) Close() error {
+	c.r.Close()
+	c.w.Close()
+	return c.Conn.Close()
+}
+
 var RXTotal, TXTotal int64
 
 type LoggingConn struct {
@@ -1356,7 +1380,7 @@ func updateDiscordStatus() {
 	// Sign in to the Vice app on Discord
 	discord_err := discord_client.Login("1158289394717970473")
 	if discord_err != nil {
-		lg.Error("Discord RPC Error", slog.String("error", discord_err.Error()))
+		lg.Warn("Discord RPC Error", slog.String("error", discord_err.Error()))
 		return
 	}
 	lg.Info("Successfully logged into Discord")

@@ -1,5 +1,5 @@
 {
-  "tracon": "D01 (Denver)",
+  "tracon": "D01",
   "airports": {
     "KGJT": {
       "approaches": {
@@ -7,8 +7,8 @@
           "runway": "11",
           "type": "ILS",
           "waypoints": [
-            "WINDO/a13000 BITAR/a12000 MACKS/iaf/a8200 LOMMA/if/a8200 JINNY/a6700 _GJT11/a4833",
-            "ZUKSO/a8200/arc13JNC JISIG/iaf/a8200/arc13JNC LOMMA/if/a8200 JINNY/a6700 _GJT11/a4833"
+            "WINDO/a13000 BITAR/a12000 MACKS/iaf/a8200 LOMMA/if/a8200 JINNY/a6700",
+            "ZUKSO/a8200/arc13JNC JISIG/iaf/a8200/arc13JNC LOMMA/if/a8200 JINNY/a6700"
           ]
         },
         "RY11": {
@@ -16,9 +16,9 @@
           "type": "RNAV",
           "full_name": "RNAV Y Runway 11",
           "waypoints": [
-            "MACKS/a9000 LOMMA/iaf/a8200 CARKU/if/a8200 ENIDE/a6300 WOPGU _GJT11/a4833",
-            "PACES/a9000 HASKI/iaf/a8200 CARKU/if/a8200 ENIDE/a6300 WOPGU _GJT11/a4833",
-            "JNC AVUXE/iaf/a8200 CARKU/if/a8200 ENIDE/a6300 WOPGU _GJT11/a4833"
+            "MACKS/a9000 LOMMA/iaf/a8200 CARKU/if/a8200 ENIDE/a6300 WOPGU",
+            "PACES/a9000 HASKI/iaf/a8200 CARKU/if/a8200 ENIDE/a6300 WOPGU",
+            "JNC AVUXE/iaf/a8200 CARKU/if/a8200 ENIDE/a6300 WOPGU"
           ]
         },
         "RZ11": {
@@ -26,10 +26,10 @@
           "type": "RNAV",
           "full_name": "RNAV Z Runway 11",
           "waypoints": [
-            "MACKS/iaf/a8900 LOMMA/a8200 CARKU/a6700/if VUXOH/a6700 KAREC/faf _GJT11/a4833",
-            "PACES/iaf/a9900 NATLL/a9300 CULIP/if/a8600 FEKVA/a7800 WURNI/a6700 VUXOH/a6700 KAREC/faf _GJT11/a4833",
-            "SINSY/a11000/iaf HONTU/a9900 IWUGO/a8900 TADUY/if/a8200 YOVCU/a6700 VUXOH/a6700 KAREC/faf _GJT11/a4833",
-            "SPADA/iaf/a8800 OLILE/a8500 HEBUT/if/a8200 YOVCU/a6700 VUXOH/a6700 KAREC/faf _GJT11/a4833"
+            "MACKS/iaf/a8900 LOMMA/a8200 CARKU/a6700/if VUXOH/a6700 KAREC/faf",
+            "PACES/iaf/a9900 NATLL/a9300 CULIP/if/a8600 FEKVA/a7800 WURNI/a6700 VUXOH/a6700 KAREC/faf",
+            "SINSY/a11000/iaf HONTU/a9900 IWUGO/a8900 TADUY/if/a8200 YOVCU/a6700 VUXOH/a6700 KAREC/faf",
+            "SPADA/iaf/a8800 OLILE/a8500 HEBUT/if/a8200 YOVCU/a6700 VUXOH/a6700 KAREC/faf"
           ]
         },
         "L29": {
@@ -37,7 +37,7 @@
           "type": "RNAV",
           "full_name": "LDA DME Runway 29",
           "waypoints": [
-            "SPADA/iaf/a8500/arc21JNC HRSON/a8500 ALVOJ/a6800 _GJT29/a4833"
+            "SPADA/iaf/a8500/arc21JNC HRSON/a8500 ALVOJ/a6800"
           ]
         },
         "R29": {
@@ -45,7 +45,7 @@
           "type": "RNAV",
           "full_name": "RNAV GPS Runway 29",
           "waypoints": [
-            "CESBA/iaf/a8500 HANSU/a8500 TELSE/a7800 EKIRE/a6900 _GJT29/a4833"
+            "CESBA/iaf/a8500 HANSU/a8500 TELSE/a7800 EKIRE/a6900"
           ]
         }
       },
@@ -54,39 +54,39 @@
           "SQUAT,PACES,DIRDY,BRICK,DBL": {
             "assigned_altitude": 8000,
             "sid": "GJT7",
-            "waypoints": "_GJT11 _GJT29/h110"
+            "waypoints": "_GJT29/h110"
           },
           "VEL,EKR,MTU.PUC,RIL,FQF,DVV,HBU,MTJ,DVC,HVE,OAB,ETL,JNC,CKW": {
             "assigned_altitude": 8000,
             "sid": "GRAND1",
-            "waypoints": "_GJT11 _GJT29/h110"
+            "waypoints": "_GJT29/h110"
           },
           "HAQHY": {
             "assigned_altitude": 8000,
             "sid": "NOKXI1",
-            "waypoints": "_GJT11 _GJT29 NOKXI MIRXE"
+            "waypoints": "NOKXI MIRXE"
           }
         },
         "29": {
           "TESSY": {
             "assigned_altitude": 8000,
             "sid": "RHONE2",
-            "waypoints": "_GJT29 _GJT11/h290 RHONE LOMMA"
+            "waypoints": "_GJT11/h290 RHONE LOMMA"
           },
           "SQUAT,PACES,DIRDY,BRICK,DBL": {
             "assigned_altitude": 6000,
             "sid": "GJT7",
-            "waypoints": "_GJT29 _GJT11/h290"
+            "waypoints": "_GJT11/h290"
           },
           "VEL,EKR,MTU.PUC,RIL,FQF,DVV,HBU,MTJ,DVC,HVE,OAB,ETL,JNC,CKW": {
             "assigned_altitude": 8000,
             "sid": "GRAND1",
-            "waypoints": "_GJT29 _GJT11/h290"
+            "waypoints": "_GJT11/h290"
           },
           "HAQHY": {
             "assigned_altitude": 8000,
             "sid": "NOKXI1",
-            "waypoints": "_GJT29 _GJT11/h290"
+            "waypoints": "_GJT11/h290"
           }
         }
     },
@@ -180,7 +180,6 @@
         "HAQHY": "HAQHY",
         "CKW": "CKW"
       },
-      "location": "KGJT",
       "tower_list": 1
    }
   },
@@ -543,7 +542,6 @@
       }
     ]
   },
-  "center": "KGJT",
   "control_positions": {
     "GJT_APP": {
       "frequency": 119700,
@@ -554,12 +552,16 @@
     "DEN_11_CTR": {
       "frequency": 120470,
       "full_name": "Denver Center",
+      "facility_id": "C",
+      "eram_facility": true,
       "scope_char": "C",
       "sector_id": "11"
     },
     "DEN_12_CTR": {
       "frequency": 125350,
       "full_name": "Denver Center",
+      "facility_id": "C",
+      "eram_facility": true,
       "scope_char": "C",
       "sector_id": "11"
     },
@@ -576,20 +578,8 @@
     "_GJT11": "N039.08.06.392,W108.32.39.768",
     "_GJT29": "N039.07.06.722,W108.30.51.141"
   },
-  "magnetic_variation": -9.7,
   "name": "KGJT",
   "primary_airport": "KGJT",
-  "radar_sites": {
-    "GJT": {
-      "char": "A",
-      "position": "KGJT",
-      "elevation": 4900,
-      "primary_range": 120,
-      "secondary_range": 120,
-      "silence_angle": 30,
-      "slope_angle": 0.3
-    }
-  },
   "reporting_points": [
     "KGJT"
   ],
@@ -691,6 +681,19 @@
       }
     }
   },
+  "stars_config": {
+  "center": "KGJT",
+  "radar_sites": {
+    "GJT": {
+      "char": "A",
+      "position": "KGJT",
+      "elevation": 4900,
+      "primary_range": 120,
+      "secondary_range": 120,
+      "silence_angle": 30,
+      "slope_angle": 0.3
+    }
+  },
   "scratchpads": {
     "SQUAT": "SQT",
     "PACES": "PCS",
@@ -716,61 +719,9 @@
     "CKW": "CKW"
   },
   "stars_maps": [
-    {
-      "group": 0,
-      "label": "ARWAYS",
-      "name": "GJT AIRWAYS"
-    },
-    {
-      "group": 0,
-      "label": "GJTBASE",
-      "name": "GJT BASE"
-    },
-    {
-    "group": 0,
-    "label": "GPS 29",
-    "name": "GJT GPS 29"
-    },
-    {
-      "group": 0,
-      "label": "GPSY 11",
-      "name": "GJT GPS Y 11"
-    },
-    {
-      "group": 0,
-      "label": "ILS 11",
-      "name": "GJT ILS 11"
-    },
-    {
-      "group": 1,
-      "label": "GJT MVA",
-      "name": "GJT MVA"
-    },
-    {
-      "group": 0,
-      "label": "NOKXI1",
-      "name": "GJT NOKXI1"
-  },
-  {
-    "group": 0,
-    "label": "RHONE2",
-    "name": "GJT RHONE2"
-  },
-  {
-    "group": 0,
-    "label": "RNP Z",
-    "name": "GJT RNP Z"
-},
-{
-  "group": 0,
-  "label": "GJT SAT",
-  "name": "GJT SATS"
-},
-{
-  "group": 1,
-  "label": "GJT VFR",
-  "name": "GJT VFR"
-}
+      "GJT AIRWAYS", "GJT BASE", "GJT GPS 29", "GJT GPS Y 11", "GJT ILS 11", "GJT MVA", "GJT NOKXI1",
+      "GJT RHONE2", "GJT RNP Z", "GJT SATS", "GJT VFR"
   ],
-  "video_map_file": "videomaps/ZDV-videomaps.json.zst"
+  "video_map_file": "videomaps/ZDV-videomaps.gob.zst"
+  }
   }

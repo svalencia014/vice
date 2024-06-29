@@ -120,6 +120,10 @@ func pow(a, b float32) float32 {
 	return float32(math.Pow(float64(a), float64(b)))
 }
 
+func exp(x float32) float32 {
+	return float32(math.Exp(float64(x)))
+}
+
 func sqr[V constraints.Integer | constraints.Float](v V) V { return v * v }
 
 func clamp[T constraints.Ordered](x T, low T, high T) T {
@@ -148,6 +152,14 @@ func gcd(a, b int) int {
 // least common multiple
 func lcm(a, b int) int {
 	return a / gcd(a, b) * b
+}
+
+func GenRange[T constraints.Integer | constraints.Float](low, high, step T) []T {
+	var r []T
+	for i := low; i < high; i += step {
+		r = append(r, i)
+	}
+	return r
 }
 
 ///////////////////////////////////////////////////////////////////////////
@@ -362,7 +374,7 @@ func EquilateralTriangleVertices(height float32) [3][2]float32 {
 // PointInPolygon checks whether the given point is inside the given polygon;
 // it assumes that the last vertex does not repeat the first one, and so includes
 // the edge from pts[len(pts)-1] to pts[0] in its test.
-func PointInPolygon(p Point2LL, pts []Point2LL) bool {
+func PointInPolygon(p [2]float32, pts [][2]float32) bool {
 	inside := false
 	for i := 0; i < len(pts); i++ {
 		p0, p1 := pts[i], pts[(i+1)%len(pts)]
@@ -374,6 +386,50 @@ func PointInPolygon(p Point2LL, pts []Point2LL) bool {
 		}
 	}
 	return inside
+}
+
+func PointInPolygon2LL(p Point2LL, pts []Point2LL) bool {
+	inside := false
+	for i := 0; i < len(pts); i++ {
+		p0, p1 := pts[i], pts[(i+1)%len(pts)]
+		if (p0[1] <= p[1] && p[1] < p1[1]) || (p1[1] <= p[1] && p[1] < p0[1]) {
+			x := p0[0] + (p[1]-p0[1])*(p1[0]-p0[0])/(p1[1]-p0[1])
+			if x > p[0] {
+				inside = !inside
+			}
+		}
+	}
+	return inside
+}
+
+var (
+	// So that we can efficiently draw circles with various tessellations,
+	// circlePoints caches vertex positions of a unit circle at the origin
+	// for specified tessellation rates.
+	circlePoints map[int][][2]float32
+)
+
+// GetCirclePoints returns the vertices for a unit circle at the origin
+// with the given number of segments; it creates the vertex slice if this
+// tessellation rate hasn't been seen before and otherwise returns a
+// preexisting one.
+func GetCirclePoints(nsegs int) [][2]float32 {
+	if circlePoints == nil {
+		circlePoints = make(map[int][][2]float32)
+	}
+	if _, ok := circlePoints[nsegs]; !ok {
+		// Evaluate the vertices of the circle to initialize a new slice.
+		var pts [][2]float32
+		for d := 0; d < nsegs; d++ {
+			angle := radians(float32(d) / float32(nsegs) * 360)
+			pt := [2]float32{sin(angle), cos(angle)}
+			pts = append(pts, pt)
+		}
+		circlePoints[nsegs] = pts
+	}
+
+	// One way or another, it's now available in the map.
+	return circlePoints[nsegs]
 }
 
 ///////////////////////////////////////////////////////////////////////////

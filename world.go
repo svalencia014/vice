@@ -6,15 +6,15 @@ package main
 
 import (
 	"fmt"
+	"log/slog"
 	"math"
+	"slices"
 	"strconv"
 	"strings"
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/mmp/imgui-go/v4"
-	"golang.org/x/exp/slices"
-	"golang.org/x/exp/slog"
 )
 
 const initialSimSeconds = 45
@@ -45,6 +45,9 @@ type World struct {
 
 	missingPrimaryDialog *ModalDialogBox
 
+	sameGateDepartures int
+	sameDepartureCap   int
+
 	// Scenario routes to draw on the scope
 	scopeDraw struct {
 		arrivals   map[string]map[int]bool               // group->index
@@ -54,37 +57,35 @@ type World struct {
 
 	// This is all read-only data that we expect other parts of the system
 	// to access directly.
-	LaunchConfig      LaunchConfig
-	PrimaryController string
-	MultiControllers  SplitConfiguration
-	SimIsPaused       bool
-	SimRate           float32
-	SimName           string
-	SimDescription    string
-	SimTime           time.Time
-	MagneticVariation float32
-	NmPerLongitude    float32
-	Airports          map[string]*Airport
-	Fixes             map[string]Point2LL
-	PrimaryAirport    string
-	RadarSites        map[string]*RadarSite
-	Center            Point2LL
-	Range             float32
-	DefaultMaps       []string
-	STARSMaps         []STARSMap
-	InhibitCAVolumes  []AirspaceVolume
-	Wind              Wind
-	Callsign          string
-	ApproachAirspace  []ControllerAirspaceVolume
-	DepartureAirspace []ControllerAirspaceVolume
-	DepartureRunways  []ScenarioGroupDepartureRunway
-	ArrivalRunways    []ScenarioGroupArrivalRunway
-	Scratchpads       map[string]string
-	ArrivalGroups     map[string][]Arrival
-	TotalDepartures   int
-	TotalArrivals     int
-
-	STARSInputOverride string
+	TRACON                   string
+	LaunchConfig             LaunchConfig
+	PrimaryController        string
+	MultiControllers         SplitConfiguration
+	SimIsPaused              bool
+	SimRate                  float32
+	SimName                  string
+	SimDescription           string
+	SimTime                  time.Time
+	MagneticVariation        float32
+	NmPerLongitude           float32
+	Airports                 map[string]*Airport
+	Fixes                    map[string]Point2LL
+	PrimaryAirport           string
+	RadarSites               map[string]*RadarSite
+	Center                   Point2LL
+	Range                    float32
+	Wind                     Wind
+	Callsign                 string
+	ScenarioDefaultVideoMaps []string
+	ApproachAirspace         []ControllerAirspaceVolume
+	DepartureAirspace        []ControllerAirspaceVolume
+	DepartureRunways         []ScenarioGroupDepartureRunway
+	ArrivalRunways           []ScenarioGroupArrivalRunway
+	Scratchpads              map[string]string
+	ArrivalGroups            map[string][]Arrival
+	TotalDepartures          int
+	TotalArrivals            int
+	STARSFacilityAdaptation  STARSFacilityAdaptation
 }
 
 func NewWorld() *World {
@@ -93,45 +94,6 @@ func NewWorld() *World {
 		METAR:       make(map[string]*METAR),
 		Controllers: make(map[string]*Controller),
 	}
-}
-
-func (w *World) Assign(other *World) {
-	w.Aircraft = DuplicateMap(other.Aircraft)
-	w.METAR = DuplicateMap(other.METAR)
-	w.Controllers = DuplicateMap(other.Controllers)
-
-	w.DepartureAirports = other.DepartureAirports
-	w.ArrivalAirports = other.ArrivalAirports
-
-	w.LaunchConfig = other.LaunchConfig
-	w.PrimaryController = other.PrimaryController
-	w.MultiControllers = DuplicateMap(other.MultiControllers)
-	w.SimIsPaused = other.SimIsPaused
-	w.SimRate = other.SimRate
-	w.SimName = other.SimName
-	w.SimDescription = other.SimDescription
-	w.SimTime = other.SimTime
-	w.MagneticVariation = other.MagneticVariation
-	w.NmPerLongitude = other.NmPerLongitude
-	w.Airports = other.Airports
-	w.Fixes = other.Fixes
-	w.PrimaryAirport = other.PrimaryAirport
-	w.RadarSites = other.RadarSites
-	w.Center = other.Center
-	w.Range = other.Range
-	w.DefaultMaps = other.DefaultMaps
-	w.STARSMaps = other.STARSMaps
-	w.InhibitCAVolumes = other.InhibitCAVolumes
-	w.Wind = other.Wind
-	w.Callsign = other.Callsign
-	w.ApproachAirspace = other.ApproachAirspace
-	w.DepartureAirspace = other.DepartureAirspace
-	w.DepartureRunways = other.DepartureRunways
-	w.ArrivalRunways = other.ArrivalRunways
-	w.Scratchpads = other.Scratchpads
-	w.ArrivalGroups = other.ArrivalGroups
-	w.TotalDepartures = other.TotalDepartures
-	w.TotalArrivals = other.TotalArrivals
 }
 
 func (w *World) GetWindVector(p Point2LL, alt float32) Point2LL {
@@ -218,6 +180,14 @@ func (w *World) LaunchAircraft(ac Aircraft) {
 		})
 }
 
+func (w *World) SendGlobalMessage(global GlobalMessage) {
+	w.pendingCalls = append(w.pendingCalls,
+		&PendingCall{
+			Call:      w.simProxy.GlobalMessage(global),
+			IssueTime: time.Now(),
+		})
+}
+
 func (w *World) SetScratchpad(callsign string, scratchpad string, success func(any), err func(error)) {
 	if ac := w.Aircraft[callsign]; ac != nil && ac.TrackingController == w.Callsign {
 		ac.Scratchpad = scratchpad
@@ -262,6 +232,16 @@ func (w *World) SetTemporaryAltitude(callsign string, alt int, success func(any)
 
 func (w *World) AmendFlightPlan(callsign string, fp FlightPlan) error {
 	return nil // UNIMPLEMENTED
+}
+
+func (w *World) SetGlobalLeaderLine(callsign string, dir *CardinalOrdinalDirection, success func(any), err func(error)) {
+	w.pendingCalls = append(w.pendingCalls,
+		&PendingCall{
+			Call:      w.simProxy.SetGlobalLeaderLine(callsign, dir),
+			IssueTime: time.Now(),
+			OnSuccess: success,
+			OnErr:     err,
+		})
 }
 
 func (w *World) InitiateTrack(callsign string, success func(any), err func(error)) {
@@ -309,16 +289,6 @@ func (w *World) HandoffTrack(callsign string, controller string, success func(an
 		})
 }
 
-func (w *World) HandoffControl(callsign string, success func(any), err func(error)) {
-	w.pendingCalls = append(w.pendingCalls,
-		&PendingCall{
-			Call:      w.simProxy.HandoffControl(callsign),
-			IssueTime: time.Now(),
-			OnSuccess: success,
-			OnErr:     err,
-		})
-}
-
 func (w *World) AcceptHandoff(callsign string, success func(any), err func(error)) {
 	if ac := w.Aircraft[callsign]; ac != nil && ac.HandoffTrackController == w.Callsign {
 		ac.HandoffTrackController = ""
@@ -335,10 +305,20 @@ func (w *World) AcceptHandoff(callsign string, success func(any), err func(error
 		})
 }
 
-func (w *World) RejectHandoff(callsign string, success func(any), err func(error)) {
+func (w *World) RedirectHandoff(callsign, controller string, success func(any), err func(error)) {
 	w.pendingCalls = append(w.pendingCalls,
 		&PendingCall{
-			Call:      w.simProxy.RejectHandoff(callsign),
+			Call:      w.simProxy.RedirectHandoff(callsign, controller),
+			IssueTime: time.Now(),
+			OnSuccess: success,
+			OnErr:     err,
+		})
+}
+
+func (w *World) AcceptRedirectedHandoff(callsign string, success func(any), err func(error)) {
+	w.pendingCalls = append(w.pendingCalls,
+		&PendingCall{
+			Call:      w.simProxy.AcceptRedirectedHandoff(callsign),
 			IssueTime: time.Now(),
 			OnSuccess: success,
 			OnErr:     err,
@@ -349,6 +329,26 @@ func (w *World) CancelHandoff(callsign string, success func(any), err func(error
 	w.pendingCalls = append(w.pendingCalls,
 		&PendingCall{
 			Call:      w.simProxy.CancelHandoff(callsign),
+			IssueTime: time.Now(),
+			OnSuccess: success,
+			OnErr:     err,
+		})
+}
+
+func (w *World) ForceQL(callsign, controller string, success func(any), err func(error)) {
+	w.pendingCalls = append(w.pendingCalls,
+		&PendingCall{
+			Call:      w.simProxy.ForceQL(callsign, controller),
+			IssueTime: time.Now(),
+			OnSuccess: success,
+			OnErr:     err,
+		})
+}
+
+func (w *World) RemoveForceQL(callsign, controller string, success func(any), err func(error)) {
+	w.pendingCalls = append(w.pendingCalls,
+		&PendingCall{
+			Call:      w.simProxy.RemoveForceQL(callsign, controller),
 			IssueTime: time.Now(),
 			OnSuccess: success,
 			OnErr:     err,
@@ -385,6 +385,20 @@ func (w *World) RejectPointOut(callsign string, success func(any), err func(erro
 		})
 }
 
+func (w *World) ToggleSPCOverride(callsign string, spc string, success func(any), err func(error)) {
+	if ac := w.Aircraft[callsign]; ac != nil && ac.TrackingController == w.Callsign {
+		ac.ToggleSPCOverride(spc)
+	}
+
+	w.pendingCalls = append(w.pendingCalls,
+		&PendingCall{
+			Call:      w.simProxy.ToggleSPCOverride(callsign, spc),
+			IssueTime: time.Now(),
+			OnSuccess: success,
+			OnErr:     err,
+		})
+}
+
 func (w *World) ChangeControlPosition(callsign string, keepTracks bool) error {
 	err := w.simProxy.ChangeControlPosition(callsign, keepTracks)
 	if err == nil {
@@ -401,11 +415,32 @@ func (w *World) Disconnect() {
 	w.Controllers = nil
 }
 
-func (w *World) GetAircraft(callsign string) *Aircraft {
+// Bool is if the callsign can be abbreviated
+func (w *World) GetAircraft(callsign string, abbreviated bool) *Aircraft { // If the callsign can be abbreivated (for radio commands, not STARS commands)
 	if ac, ok := w.Aircraft[callsign]; ok {
 		return ac
 	}
+	if abbreviated {
+		ac := w.GetAllAircraft()
+		aircraft := w.findAircraft(callsign, ac)
+		return aircraft
+	}
+
 	return nil
+}
+
+func (w *World) findAircraft(sample string, aircraft []*Aircraft) *Aircraft {
+	var final []*Aircraft
+	for _, icao := range aircraft {
+		if icao.ControllingController == w.Callsign && strings.Contains(icao.Callsign, sample) {
+			final = append(final, icao)
+		}
+	}
+	if len(final) == 1 {
+		return final[0]
+	} else {
+		return nil
+	}
 }
 
 func (w *World) GetFilteredAircraft(filter func(*Aircraft) bool) []*Aircraft {
@@ -429,31 +464,14 @@ func (w *World) GetFlightStrip(callsign string) *FlightStrip {
 	return nil
 }
 
-func (w *World) AddAirportForWeather(airport string) {
-	// UNIMPLEMENTED
-}
-
 func (w *World) GetMETAR(location string) *METAR {
 	return w.METAR[location]
 }
 
-func (w *World) GetAirportATIS(airport string) []ATIS {
-	// UNIMPLEMENTED
-	return nil
-}
-
-func (w *World) GetController(callsign string) *Controller {
+func (w *World) GetControllerByCallsign(callsign string) *Controller {
 	if ctrl := w.Controllers[callsign]; ctrl != nil {
 		return ctrl
 	}
-
-	// Look up by id
-	for _, ctrl := range w.Controllers {
-		if ctrl.SectorId == callsign {
-			return ctrl
-		}
-	}
-
 	return nil
 }
 
@@ -462,12 +480,16 @@ func (w *World) GetAllControllers() map[string]*Controller {
 }
 
 func (w *World) DepartureController(ac *Aircraft) string {
-	callsign := w.MultiControllers.ResolveController(ac.DepartureContactController,
-		func(callsign string) bool {
-			ctrl, ok := w.Controllers[callsign]
-			return ok && ctrl.IsHuman
-		})
-	return Select(callsign != "", callsign, w.PrimaryController)
+	if len(w.MultiControllers) > 0 {
+		callsign := w.MultiControllers.ResolveController(ac.DepartureContactController,
+			func(callsign string) bool {
+				ctrl, ok := w.Controllers[callsign]
+				return ok && ctrl.IsHuman
+			})
+		return Select(callsign != "", callsign, w.PrimaryController)
+	} else {
+		return w.PrimaryController
+	}
 }
 
 func (w *World) GetUpdates(eventStream *EventStream, onErr func(error)) {
@@ -482,8 +504,8 @@ func (w *World) GetUpdates(eventStream *EventStream, onErr func(error)) {
 
 	w.checkPendingRPCs(eventStream)
 
-	// Wait in seconds between update fetches; no less than 100ms
-	rate := clamp(1/w.SimRate, 0.1, 1)
+	// Wait in seconds between update fetches; no less than 50ms
+	rate := clamp(1/w.SimRate, 0.05, 1)
 	if d := time.Since(w.lastUpdateRequest); d > time.Duration(rate*float32(time.Second)) {
 		if w.updateCall != nil {
 			lg.Warnf("GetUpdates still waiting for %s on last update call", d)
@@ -520,6 +542,14 @@ func (w *World) Connected() bool {
 
 func (w *World) GetSerializeSim() (*Sim, error) {
 	return w.simProxy.GetSerializeSim()
+}
+
+func (w *World) PreSave() {
+	w.STARSFacilityAdaptation.PreSave()
+}
+
+func (w *World) PostLoad(ml *VideoMapLibrary) error {
+	return w.STARSFacilityAdaptation.PostLoad(ml)
 }
 
 func (w *World) ToggleSimPause() {
@@ -599,6 +629,31 @@ func (w *World) GetWindowTitle() string {
 	}
 }
 
+func (w *World) GetVideoMaps() ([]STARSMap, []string) {
+	if config, ok := w.STARSFacilityAdaptation.ControllerConfigs[w.Callsign]; ok {
+		return config.VideoMaps, config.DefaultMaps
+	}
+	return w.STARSFacilityAdaptation.VideoMaps, w.ScenarioDefaultVideoMaps
+}
+
+func (w *World) GetInitialRange() float32 {
+	if config, ok := w.STARSFacilityAdaptation.ControllerConfigs[w.Callsign]; ok && config.Range != 0 {
+		return config.Range
+	}
+	return w.Range
+}
+
+func (w *World) GetInitialCenter() Point2LL {
+	if config, ok := w.STARSFacilityAdaptation.ControllerConfigs[w.Callsign]; ok && !config.Center.IsZero() {
+		return config.Center
+	}
+	return w.Center
+}
+
+func (w *World) InhibitCAVolumes() []AirspaceVolume {
+	return w.STARSFacilityAdaptation.InhibitCAVolumes
+}
+
 func (w *World) PrintInfo(ac *Aircraft) {
 	lg.Info("print aircraft", slog.String("callsign", ac.Callsign),
 		slog.Any("aircraft", ac))
@@ -622,12 +677,18 @@ func (w *World) DeleteAircraft(ac *Aircraft, onErr func(err error)) {
 	}
 }
 
-func (w *World) RunAircraftCommands(ac *Aircraft, cmds string, onErr func(err error)) {
+func (w *World) RunAircraftCommands(callsign string, cmds string, handleResult func(message string, remainingInput string)) {
+	var result AircraftCommandsResult
 	w.pendingCalls = append(w.pendingCalls,
 		&PendingCall{
-			Call:      w.simProxy.RunAircraftCommands(ac.Callsign, cmds),
+			Call:      w.simProxy.RunAircraftCommands(callsign, cmds, &result),
 			IssueTime: time.Now(),
-			OnErr:     onErr,
+			OnSuccess: func(any) {
+				handleResult(result.ErrorMessage, result.RemainingInput)
+			},
+			OnErr: func(err error) {
+				lg.Errorf("%s: %v", callsign, err)
+			},
 		})
 }
 
@@ -717,17 +778,20 @@ func (w *World) sampleAircraft(icao, fleet string) (*Aircraft, string) {
 		}
 
 		id := ""
-		for _, ch := range format {
+		for i, ch := range format {
 			switch ch {
 			case '#':
-				id += strconv.Itoa(rand.Intn(10))
+				if i == 0 {
+					// Don't start with a 0.
+					id += strconv.Itoa(1 + rand.Intn(9))
+				} else {
+					id += strconv.Itoa(rand.Intn(10))
+				}
 			case '@':
 				id += string(rune('A' + rand.Intn(26)))
 			}
 		}
-		if id == "0" || id == "00" || id == "000" || id == "0000" {
-			continue // bleh, try again
-		} else if _, ok := w.Aircraft[callsign+id]; ok {
+		if _, ok := w.Aircraft[callsign+id]; ok {
 			continue // it already exits
 		} else if _, ok := badCallsigns[callsign+id]; ok {
 			continue // nope
@@ -783,7 +847,7 @@ func (w *World) CreateArrival(arrivalGroup string, arrivalAirport string, goArou
 	// handoff happens, so that it can reflect which controllers are
 	// actually signed in at that point.
 	arrivalController := w.PrimaryController
-	if w.MultiControllers != nil {
+	if len(w.MultiControllers) > 0 {
 		arrivalController = w.MultiControllers.GetArrivalController(arrivalGroup)
 		if arrivalController == "" {
 			arrivalController = w.PrimaryController
@@ -814,13 +878,17 @@ func (w *World) CreateDeparture(departureAirport, runway, category string, chall
 	rwy := &w.DepartureRunways[idx]
 
 	var dep *Departure
-	if rand.Float32() < challenge && lastDeparture != nil {
+	if w.sameDepartureCap == 0 {
+		w.sameDepartureCap = rand.Intn(3) + 1 // Set the initial max same departure cap (1-3)
+	}
+	if rand.Float32() < challenge && lastDeparture != nil && w.sameGateDepartures < w.sameDepartureCap {
 		// 50/50 split between the exact same departure and a departure to
 		// the same gate as the last departure.
 		pred := Select(rand.Float32() < .5,
 			func(d Departure) bool { return d.Exit == lastDeparture.Exit },
 			func(d Departure) bool {
-				return ap.ExitCategories[d.Exit] == ap.ExitCategories[lastDeparture.Exit]
+				_, ok := rwy.ExitRoutes[d.Exit] // make sure the runway handles the exit
+				return ok && ap.ExitCategories[d.Exit] == ap.ExitCategories[lastDeparture.Exit]
 			})
 
 		if idx := SampleFiltered(ap.Departures, pred); idx == -1 {
@@ -829,13 +897,15 @@ func (w *World) CreateDeparture(departureAirport, runway, category string, chall
 		} else {
 			dep = &ap.Departures[idx]
 		}
+
 	}
 
 	if dep == nil {
 		// Sample uniformly, minding the category, if specified
 		idx := SampleFiltered(ap.Departures,
 			func(d Departure) bool {
-				return rwy.Category == "" || rwy.Category == ap.ExitCategories[d.Exit]
+				_, ok := rwy.ExitRoutes[d.Exit] // make sure the runway handles the exit
+				return ok && (rwy.Category == "" || rwy.Category == ap.ExitCategories[d.Exit])
 			})
 		if idx == -1 {
 			// This shouldn't ever happen...
@@ -843,6 +913,20 @@ func (w *World) CreateDeparture(departureAirport, runway, category string, chall
 				departureAirport, rwy.Runway)
 		}
 		dep = &ap.Departures[idx]
+	}
+
+	if lastDeparture != nil && (dep.Exit == lastDeparture.Exit && w.sameGateDepartures >= w.sameDepartureCap) {
+		return nil, nil, fmt.Errorf("couldn't make a departure")
+	}
+
+	// Same gate buffer is a random int between 3-4 that gives a period after a few same gate departures.
+	// For example, WHITE, WHITE, WHITE, DIXIE, NEWEL, GAYEL, MERIT, DIXIE, DIXIE
+	// Another same-gate departure will not be happen untill after MERIT (in this example) because of the buffer.
+	sameGateBuffer := rand.Intn(2) + 3
+
+	if w.sameGateDepartures >= w.sameDepartureCap+sameGateBuffer || (lastDeparture != nil && dep.Exit != lastDeparture.Exit) { // reset back to zero if its at 7 or if there is a new gate
+		w.sameDepartureCap = rand.Intn(3) + 1
+		w.sameGateDepartures = 0
 	}
 
 	airline := SampleSlice(dep.Airlines)
@@ -856,6 +940,10 @@ func (w *World) CreateDeparture(departureAirport, runway, category string, chall
 	if err := ac.InitializeDeparture(w, ap, departureAirport, dep, runway, exitRoute); err != nil {
 		return nil, nil, err
 	}
+
+	/* Keep adding to World sameGateDepartures number until the departure cap + the buffer so that no more
+	same-gate departures are launched, then reset it to zero. Once the buffer is reached, it will reset World sameGateDepartures to zero*/
+	w.sameGateDepartures += 1
 
 	return ac, dep, nil
 }
@@ -1093,7 +1181,8 @@ func (w *World) DrawScenarioInfoWindow() {
 						imgui.TableNextColumn()
 						imgui.Text(airport)
 						imgui.TableNextColumn()
-						imgui.Text(rwy)
+						rwyBase, _, _ := strings.Cut(rwy, ".")
+						imgui.Text(rwyBase)
 						imgui.TableNextColumn()
 						if len(routeToExit) == 1 {
 							// If we only saw a single departure route, no
@@ -1126,7 +1215,8 @@ func (w *World) DrawScenarioRoutes(transforms ScopeTransformations, font *Font, 
 	defer ReturnTextDrawBuilder(td)
 	ld := GetLinesDrawBuilder()
 	defer ReturnLinesDrawBuilder(ld)
-	pd := &PointsDrawBuilder{}
+	pd := GetTrianglesDrawBuilder() // for circles
+	defer ReturnTrianglesDrawBuilder(pd)
 	ldr := GetLinesDrawBuilder() // for restrictions--in window coords...
 	defer ReturnLinesDrawBuilder(ldr)
 
@@ -1139,7 +1229,6 @@ func (w *World) DrawScenarioRoutes(transforms ScopeTransformations, font *Font, 
 	style := TextStyle{
 		Font:           font,
 		Color:          color,
-		DropShadow:     true,
 		DrawBackground: true}
 
 	// STARS
@@ -1154,27 +1243,29 @@ func (w *World) DrawScenarioRoutes(transforms ScopeTransformations, font *Font, 
 				continue
 			}
 
-			w.drawWaypoints(arr.Waypoints, drawnWaypoints, transforms, td, style, ld, pd, ldr, color)
+			w.drawWaypoints(arr.Waypoints, drawnWaypoints, transforms, td, style, ld, pd, ldr)
 
 			// Draw runway-specific waypoints
-			for _, rwy := range SortedMapKeys(arr.RunwayWaypoints) {
-				wp := arr.RunwayWaypoints[rwy]
-				w.drawWaypoints(wp, drawnWaypoints, transforms, td, style, ld, pd, ldr, color)
+			for _, ap := range SortedMapKeys(arr.RunwayWaypoints) {
+				for _, rwy := range SortedMapKeys(arr.RunwayWaypoints[ap]) {
+					wp := arr.RunwayWaypoints[ap][rwy]
+					w.drawWaypoints(wp, drawnWaypoints, transforms, td, style, ld, pd, ldr)
 
-				if len(wp) > 1 {
-					// Draw the runway number in the middle of the line
-					// between the first two waypoints.
-					pmid := mid2ll(wp[0].Location, wp[1].Location)
-					td.AddTextCentered(rwy, transforms.WindowFromLatLongP(pmid), style)
-				} else if wp[0].Heading != 0 {
-					// This should be the only other case... The heading arrow is drawn
-					// up to 2nm out, so put the runway 1nm along its axis.
-					a := radians(float32(wp[0].Heading) - w.MagneticVariation)
-					v := [2]float32{sin(a), cos(a)}
-					pend := ll2nm(wp[0].Location, w.NmPerLongitude)
-					pend = add2f(pend, v)
-					pell := nm2ll(pend, w.NmPerLongitude)
-					td.AddTextCentered(rwy, transforms.WindowFromLatLongP(pell), style)
+					if len(wp) > 1 {
+						// Draw the runway number in the middle of the line
+						// between the first two waypoints.
+						pmid := mid2ll(wp[0].Location, wp[1].Location)
+						td.AddTextCentered(rwy, transforms.WindowFromLatLongP(pmid), style)
+					} else if wp[0].Heading != 0 {
+						// This should be the only other case... The heading arrow is drawn
+						// up to 2nm out, so put the runway 1nm along its axis.
+						a := radians(float32(wp[0].Heading) - w.MagneticVariation)
+						v := [2]float32{sin(a), cos(a)}
+						pend := ll2nm(wp[0].Location, w.NmPerLongitude)
+						pend = add2f(pend, v)
+						pell := nm2ll(pend, w.NmPerLongitude)
+						td.AddTextCentered(rwy, transforms.WindowFromLatLongP(pell), style)
+					}
 				}
 			}
 		}
@@ -1190,7 +1281,7 @@ func (w *World) DrawScenarioRoutes(transforms ScopeTransformations, font *Font, 
 			appr := ap.Approaches[name]
 			if appr.Runway == rwy.Runway && w.scopeDraw.approaches[rwy.Airport][name] {
 				for _, wp := range appr.Waypoints {
-					w.drawWaypoints(wp, drawnWaypoints, transforms, td, style, ld, pd, ldr, color)
+					w.drawWaypoints(wp, drawnWaypoints, transforms, td, style, ld, pd, ldr)
 				}
 			}
 		}
@@ -1212,7 +1303,7 @@ func (w *World) DrawScenarioRoutes(transforms ScopeTransformations, font *Font, 
 			for _, exit := range SortedMapKeys(exitRoutes) {
 				if w.scopeDraw.departures[name][rwy][exit] {
 					w.drawWaypoints(exitRoutes[exit].Waypoints, drawnWaypoints, transforms,
-						td, style, ld, pd, ldr, color)
+						td, style, ld, pd, ldr)
 				}
 			}
 		}
@@ -1224,10 +1315,9 @@ func (w *World) DrawScenarioRoutes(transforms ScopeTransformations, font *Font, 
 	transforms.LoadLatLongViewingMatrices(cb)
 	cb.LineWidth(2)
 	ld.GenerateCommands(cb)
-	cb.PointSize(5)
-	pd.GenerateCommands(cb)
 
 	transforms.LoadWindowViewingMatrices(cb)
+	pd.GenerateCommands(cb)
 	td.GenerateCommands(cb)
 	cb.LineWidth(1)
 	ldr.GenerateCommands(cb)
@@ -1278,7 +1368,7 @@ func calculateOffset(font *Font, pt func(int) ([2]float32, bool)) [2]float32 {
 
 func (w *World) drawWaypoints(waypoints []Waypoint, drawnWaypoints map[string]interface{},
 	transforms ScopeTransformations, td *TextDrawBuilder, style TextStyle,
-	ld *LinesDrawBuilder, pd *PointsDrawBuilder, ldr *LinesDrawBuilder, color RGB) {
+	ld *LinesDrawBuilder, pd *TrianglesDrawBuilder, ldr *LinesDrawBuilder) {
 
 	// Draw an arrow at the point p (in nm coordinates) pointing in the
 	// direction given by the angle a.
@@ -1459,7 +1549,9 @@ func (w *World) drawWaypoints(waypoints []Waypoint, drawnWaypoints map[string]in
 		drawnWaypoints[wp.Fix] = nil
 
 		// Draw a circle at the waypoint's location
-		pd.AddPoint([2]float32(wp.Location), color)
+		const pointRadius = 2.5
+		const nSegments = 8
+		pd.AddCircle(transforms.WindowFromLatLongP(wp.Location), pointRadius, nSegments)
 
 		offset := calculateOffset(style.Font, func(j int) ([2]float32, bool) {
 			idx := i + j
@@ -1598,6 +1690,31 @@ func (w *World) DrawSettingsWindow() {
 
 	if imgui.CollapsingHeader("Audio") {
 		globalConfig.Audio.DrawUI()
+	}
+	if imgui.CollapsingHeader("Display") {
+		if imgui.Checkbox("Enable anti-aliasing", &globalConfig.EnableMSAA) {
+			uiShowModalDialog(NewModalDialogBox(
+				&MessageModalClient{
+					title: "Alert",
+					message: "You must restart vice for changes to the anti-aliasing " +
+						"mode to take effect.",
+				}), true)
+		}
+
+		imgui.Checkbox("Start in full-screen", &globalConfig.StartInFullScreen)
+
+		monitorNames := platform.GetAllMonitorNames()
+		if imgui.BeginComboV("Monitor", monitorNames[globalConfig.FullScreenMonitor], imgui.ComboFlagsHeightLarge) {
+			for index, monitor := range monitorNames {
+				if imgui.SelectableV(monitor, monitor == monitorNames[globalConfig.FullScreenMonitor], 0, imgui.Vec2{}) {
+					globalConfig.FullScreenMonitor = index
+
+					platform.EnableFullScreen(platform.IsFullScreen())
+				}
+			}
+
+			imgui.EndCombo()
+		}
 	}
 	if fsp != nil && imgui.CollapsingHeader("Flight Strips") {
 		fsp.DrawUI()

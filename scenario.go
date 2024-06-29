@@ -5,85 +5,75 @@
 package main
 
 import (
-	"bufio"
-	"bytes"
 	"fmt"
-	"io"
 	"io/fs"
+	"log/slog"
 	"os"
 	"path/filepath"
 	"regexp"
+	"slices"
 	"sort"
 	"strconv"
 	"strings"
 	"time"
 
 	"github.com/iancoleman/orderedmap"
-	"github.com/klauspost/compress/zstd"
-	"golang.org/x/exp/slices"
-	"golang.org/x/exp/slog"
 )
 
 type ScenarioGroup struct {
 	TRACON           string                 `json:"tracon"`
 	Name             string                 `json:"name"`
 	Airports         map[string]*Airport    `json:"airports"`
-	VideoMapFile     string                 `json:"video_map_file"`
 	Fixes            map[string]Point2LL    `json:"-"`
 	FixesStrings     orderedmap.OrderedMap  `json:"fixes"`
 	Scenarios        map[string]*Scenario   `json:"scenarios"`
 	DefaultScenario  string                 `json:"default_scenario"`
 	ControlPositions map[string]*Controller `json:"control_positions"`
-	Scratchpads      map[string]string      `json:"scratchpads"`
 	Airspace         Airspace               `json:"airspace"`
 	ArrivalGroups    map[string][]Arrival   `json:"arrival_groups"`
 
-	Center           Point2LL              `json:"-"`
-	CenterString     string                `json:"center"`
-	Range            float32               `json:"range"`
-	PrimaryAirport   string                `json:"primary_airport"`
-	RadarSites       map[string]*RadarSite `json:"radar_sites"`
-	STARSMaps        []STARSMap            `json:"stars_maps"`
-	InhibitCAVolumes []AirspaceVolume      `json:"inhibit_ca_volumes"`
+	PrimaryAirport string `json:"primary_airport"`
 
 	ReportingPointStrings []string         `json:"reporting_points"`
 	ReportingPoints       []ReportingPoint // not in JSON
 
-	NmPerLatitude     float32 // Always 60
-	NmPerLongitude    float32 // Derived from Center
-	MagneticVariation float32 `json:"magnetic_variation"`
+	NmPerLatitude           float32 // Always 60
+	NmPerLongitude          float32 // Derived from Center
+	MagneticVariation       float32
+	MagneticAdjustment      float32                 `json:"magnetic_adjustment"`
+	STARSFacilityAdaptation STARSFacilityAdaptation `json:"stars_config"`
 }
 
-type ReportingPoint struct {
-	Fix      string
-	Location Point2LL
+type AirspaceAwareness struct {
+	Fix                 []string `json:"fixes"`
+	AltitudeRange       [2]int   `json:"altitude_range"`
+	ReceivingController string   `json:"receiving_controller"`
+	AircraftType        []string `json:"aircraft_type"`
 }
 
-type Arrival struct {
-	Waypoints       WaypointArray            `json:"waypoints"`
-	RunwayWaypoints map[string]WaypointArray `json:"runway_waypoints"`
-	CruiseAltitude  float32                  `json:"cruise_altitude"`
-	Route           string                   `json:"route"`
-	STAR            string                   `json:"star"`
-
-	InitialController   string  `json:"initial_controller"`
-	InitialAltitude     float32 `json:"initial_altitude"`
-	AssignedAltitude    float32 `json:"assigned_altitude"`
-	InitialSpeed        float32 `json:"initial_speed"`
-	SpeedRestriction    float32 `json:"speed_restriction"`
-	ExpectApproach      string  `json:"expect_approach"`
-	Scratchpad          string  `json:"scratchpad"`
-	SecondaryScratchpad string  `json:"secondary_scratchpad"`
-	Description         string  `json:"description"`
-
-	// Airport -> arrival airlines
-	Airlines map[string][]ArrivalAirline `json:"airlines"`
+type STARSFacilityAdaptation struct {
+	AirspaceAwareness   []AirspaceAwareness `json:"airspace_awareness"`
+	ForceQLToSelf       bool                `json:"force_ql_self"`
+	AllowLongScratchpad [2]bool             `json:"allow_long_scratchpad"` // [0] is for the primary. [1] is for the secondary
+	VideoMapNames       []string            `json:"stars_maps"`
+	VideoMaps           []STARSMap
+	ControllerConfigs   map[string]STARSControllerConfig `json:"controller_configs"`
+	InhibitCAVolumes    []AirspaceVolume                 `json:"inhibit_ca_volumes"`
+	RadarSites          map[string]*RadarSite            `json:"radar_sites"`
+	Center              Point2LL                         `json:"-"`
+	CenterString        string                           `json:"center"`
+	Range               float32                          `json:"range"`
+	Scratchpads         map[string]string                `json:"scratchpads"`
+	VideoMapFile        string                           `json:"video_map_file"`
 }
 
-type ArrivalAirline struct {
-	ICAO    string `json:"icao"`
-	Airport string `json:"airport"`
-	Fleet   string `json:"fleet,omitempty"`
+type STARSControllerConfig struct {
+	VideoMapNames []string `json:"video_maps"`
+	VideoMaps     []STARSMap
+	DefaultMaps   []string `json:"default_maps"`
+	Center        Point2LL `json:"-"`
+	CenterString  string   `json:"center"`
+	Range         float32  `json:"range"`
 }
 
 type Airspace struct {
@@ -175,8 +165,14 @@ func (s *Scenario) PostDeserialize(sg *ScenarioGroup, e *ErrorLogger) {
 		}
 	})
 
+	airportExits := make(map[string]map[string]interface{}) // airport -> exit -> is it covered
 	for i, rwy := range s.DepartureRunways {
 		e.Push("Departure runway " + rwy.Airport + " " + rwy.Runway)
+
+		if airportExits[rwy.Airport] == nil {
+			airportExits[rwy.Airport] = make(map[string]interface{})
+		}
+
 		if ap, ok := sg.Airports[rwy.Airport]; !ok {
 			e.ErrorString("airport not found")
 		} else {
@@ -184,6 +180,14 @@ func (s *Scenario) PostDeserialize(sg *ScenarioGroup, e *ErrorLogger) {
 				e.ErrorString("runway departure routes not found")
 			} else {
 				s.DepartureRunways[i].ExitRoutes = routes
+				for exit := range routes {
+					// It's fine if multiple active runways cover the exit.
+					airportExits[rwy.Airport][exit] = nil
+				}
+			}
+
+			if len(ap.Departures) == 0 {
+				e.ErrorString("no \"departures\" specified for airport")
 			}
 
 			if rwy.Category != "" {
@@ -201,6 +205,24 @@ func (s *Scenario) PostDeserialize(sg *ScenarioGroup, e *ErrorLogger) {
 		}
 		e.Pop()
 	}
+	for icao, exits := range airportExits {
+		// We already gave an error above if the airport is unknown, so
+		// don't need to again here..
+		if ap, ok := sg.Airports[icao]; ok {
+			for _, dep := range ap.Departures {
+				if _, ok := exits[dep.Exit]; !ok {
+					e.ErrorString("No active runway at %s covers in-use exit \"%s\"", icao, dep.Exit)
+				}
+			}
+		}
+	}
+
+	// Make sure all of the controllers used in airspace awareness will be there.
+	for _, aa := range sg.STARSFacilityAdaptation.AirspaceAwareness {
+		if !slices.Contains(s.VirtualControllers, aa.ReceivingController) {
+			s.VirtualControllers = append(s.VirtualControllers, aa.ReceivingController)
+		}
+	}
 
 	sort.Slice(s.ArrivalRunways, func(i, j int) bool {
 		if s.ArrivalRunways[i].Airport == s.ArrivalRunways[j].Airport {
@@ -209,11 +231,15 @@ func (s *Scenario) PostDeserialize(sg *ScenarioGroup, e *ErrorLogger) {
 		return s.ArrivalRunways[i].Airport < s.ArrivalRunways[j].Airport
 	})
 
+	activeAirports := make(map[*Airport]interface{}) // all airports with departures or arrivals
 	for _, rwy := range s.ArrivalRunways {
 		e.Push("Arrival runway " + rwy.Airport + " " + rwy.Runway)
+
 		if ap, ok := sg.Airports[rwy.Airport]; !ok {
 			e.ErrorString("airport not found")
 		} else {
+			activeAirports[ap] = nil
+
 			found := false
 			for _, appr := range ap.Approaches {
 				if appr.Runway == rwy.Runway {
@@ -241,23 +267,67 @@ func (s *Scenario) PostDeserialize(sg *ScenarioGroup, e *ErrorLogger) {
 	activeAirportSIDs := make(map[string]map[string]interface{})
 	activeAirportRunways := make(map[string]map[string]interface{})
 	for _, rwy := range s.DepartureRunways {
-		if ap, ok := sg.Airports[rwy.Airport]; ok && ap.DepartureController != "" {
-			// If a virtual controller will take the initial track then
-			// we don't need a human-controller to be covering it.
-			continue
+		e.Push("departure runway " + rwy.Runway)
+
+		ap, ok := sg.Airports[rwy.Airport]
+		if !ok {
+			e.ErrorString("%s: airport unknown", rwy.Airport)
 		}
 
-		ap := sg.Airports[rwy.Airport]
-		for fix, route := range rwy.ExitRoutes {
-			if rwy.Category == "" || ap.ExitCategories[fix] == rwy.Category {
-				if activeAirportSIDs[rwy.Airport] == nil {
-					activeAirportSIDs[rwy.Airport] = make(map[string]interface{})
+		activeAirports[ap] = nil
+
+		if ap.DepartureController == "" {
+			// Only check for a human controller to be covering the track if there isn't
+			// a virtual controller assigned to it.
+			for fix, route := range rwy.ExitRoutes {
+				if rwy.Category == "" || ap.ExitCategories[fix] == rwy.Category {
+					if activeAirportSIDs[rwy.Airport] == nil {
+						activeAirportSIDs[rwy.Airport] = make(map[string]interface{})
+					}
+					if activeAirportRunways[rwy.Airport] == nil {
+						activeAirportRunways[rwy.Airport] = make(map[string]interface{})
+					}
+					activeAirportSIDs[rwy.Airport][route.SID] = nil
+					activeAirportRunways[rwy.Airport][rwy.Runway] = nil
 				}
-				if activeAirportRunways[rwy.Airport] == nil {
-					activeAirportRunways[rwy.Airport] = make(map[string]interface{})
+			}
+		}
+
+		e.Pop()
+	}
+
+	// Do any active airports have CRDA?
+	haveCRDA := false
+	for ap := range activeAirports {
+		if len(ap.ConvergingRunways) > 0 {
+			haveCRDA = true
+			break
+		}
+	}
+	if haveCRDA {
+		// Make sure all of the controllers involved have a valid default airport
+		check := func(ctrl *Controller) {
+			if ctrl.DefaultAirport == "" {
+				if ap, _, ok := strings.Cut(ctrl.Callsign, "_"); ok { // see if the first part of the callsign is an airport
+					if _, ok := sg.Airports["K"+ap]; ok {
+						ctrl.DefaultAirport = "K" + ap
+					} else {
+						e.ErrorString("%s: controller must have \"default_airport\" specified (required for CRDA).", ctrl.Callsign)
+						return
+					}
 				}
-				activeAirportSIDs[rwy.Airport][route.SID] = nil
-				activeAirportRunways[rwy.Airport][rwy.Runway] = nil
+			}
+			if _, ok := sg.Airports[ctrl.DefaultAirport]; !ok {
+				e.ErrorString("%s: controller's \"default_airport\" \"%s\" is unknown", ctrl.Callsign, ctrl.DefaultAirport)
+			}
+		}
+
+		if ctrl, ok := sg.ControlPositions[s.SoloController]; ok {
+			check(ctrl)
+		}
+		for _, callsign := range s.SplitConfigurations.Splits() {
+			if ctrl, ok := sg.ControlPositions[callsign]; ok {
+				check(ctrl)
 			}
 		}
 	}
@@ -290,6 +360,10 @@ func (s *Scenario) PostDeserialize(sg *ScenarioGroup, e *ErrorLogger) {
 				} else {
 					primaryController = callsign
 				}
+			}
+
+			if _, ok := sg.ControlPositions[callsign]; !ok {
+				e.ErrorString("controller \"%s\" not defined in the scenario group's \"control_positions\"", callsign)
 			}
 
 			// Make sure any airports claimed for departures are valid
@@ -477,12 +551,30 @@ func (s *Scenario) PostDeserialize(sg *ScenarioGroup, e *ErrorLogger) {
 		}
 	}
 
-	if len(s.DefaultMaps) == 0 {
-		e.ErrorString("must specify at least one default video map using \"default_maps\"")
-	} else {
+	fa := sg.STARSFacilityAdaptation
+	if len(s.DefaultMaps) > 0 {
+		if len(fa.ControllerConfigs) > 0 {
+			e.ErrorString("\"default_maps\" is not allowed when \"controller_configs\" is set in \"stars_config\"")
+		}
+
 		for _, dm := range s.DefaultMaps {
-			if !slices.ContainsFunc(sg.STARSMaps, func(m STARSMap) bool { return m.Name == dm }) {
+			if !slices.ContainsFunc(fa.VideoMapNames,
+				func(m string) bool { return m == dm }) {
 				e.ErrorString("video map \"%s\" not found in \"stars_maps\"", dm)
+			}
+		}
+	} else if len(fa.ControllerConfigs) > 0 {
+		// Make sure that each controller in the scenario is represented in
+		// "controller_configs".
+		if _, ok := fa.ControllerConfigs[s.SoloController]; !ok {
+			e.ErrorString("control position \"%s\" is not included in \"controller_configs\"",
+				s.SoloController)
+		}
+		for _, conf := range s.SplitConfigurations {
+			for pos := range conf {
+				if _, ok := fa.ControllerConfigs[pos]; !ok {
+					e.ErrorString("control position \"%s\" is not included in \"controller_configs\"", pos)
+				}
 			}
 		}
 	}
@@ -494,9 +586,7 @@ func (s *Scenario) PostDeserialize(sg *ScenarioGroup, e *ErrorLogger) {
 func (sg *ScenarioGroup) locate(s string) (Point2LL, bool) {
 	s = strings.ToUpper(s)
 	// ScenarioGroup's definitions take precedence...
-	if ap, ok := sg.Airports[s]; ok {
-		return ap.Location, true
-	} else if p, ok := sg.Fixes[s]; ok {
+	if p, ok := sg.Fixes[s]; ok {
 		return p, true
 	} else if n, ok := database.Navaids[strings.ToUpper(s)]; ok {
 		return n.Location, ok
@@ -506,28 +596,35 @@ func (sg *ScenarioGroup) locate(s string) (Point2LL, bool) {
 		return f.Location, ok
 	} else if p, err := ParseLatLong([]byte(s)); err == nil {
 		return p, true
-	} else {
-		return Point2LL{}, false
+	} else if len(s) > 5 && s[0] == 'K' && s[4] == '-' {
+		if rwy, ok := LookupRunway(s[:4], s[5:]); ok {
+			return rwy.Threshold, true
+		}
 	}
+
+	return Point2LL{}, false
 }
 
 var (
 	// "FIX@HDG/DIST"
-	reFixHeadingDistance = regexp.MustCompile(`^([\w]{3,})@([\d]{3})/(\d+(\.\d+)?)$`)
+	reFixHeadingDistance = regexp.MustCompile(`^([\w-]{3,})@([\d]{3})/(\d+(\.\d+)?)$`)
 )
 
 func (sg *ScenarioGroup) PostDeserialize(e *ErrorLogger, simConfigurations map[string]map[string]*SimConfiguration) {
-	// Do these first!
-	if sg.CenterString == "" {
-		e.ErrorString("No \"center\" specified")
-	} else if pos, ok := sg.locate(sg.CenterString); !ok {
-		e.ErrorString("unknown location \"%s\" specified for \"center\"", sg.CenterString)
-	} else {
-		sg.Center = pos
-	}
+	// stars_config items. This goes first because we need to initialize
+	// Center (and thence NmPerLongitude) ASAP.
+	sg.STARSFacilityAdaptation.PostDeserialize(e, sg)
 
 	sg.NmPerLatitude = 60
-	sg.NmPerLongitude = 60 * cos(radians(sg.Center[1]))
+	sg.NmPerLongitude = 60 * cos(radians(sg.STARSFacilityAdaptation.Center[1]))
+
+	if sg.TRACON == "" {
+		e.ErrorString("\"tracon\" must be specified")
+	} else if _, ok := database.TRACONs[sg.TRACON]; !ok {
+		e.ErrorString("TRACON %s is unknown; it must be a 3-letter identifier listed at "+
+			"https://www.faa.gov/about/office_org/headquarters_offices/ato/service_units/air_traffic_services/tracon.",
+			sg.TRACON)
+	}
 
 	sg.Fixes = make(map[string]Point2LL)
 	for _, fix := range sg.FixesStrings.Keys() {
@@ -543,10 +640,6 @@ func (sg *ScenarioGroup) PostDeserialize(e *ErrorLogger, simConfigurations map[s
 
 		if _, ok := sg.Fixes[fix]; ok {
 			e.ErrorString("fix has multiple definitions")
-		} else if pos, ok := sg.locate(location); ok {
-			// It's something simple, likely a latlong that we could parse
-			// directly.
-			sg.Fixes[fix] = pos
 		} else if strs := reFixHeadingDistance.FindStringSubmatch(location); len(strs) >= 4 {
 			// "FIX@HDG/DIST"
 			//fmt.Printf("A loc %s -> strs %+v\n", location, strs)
@@ -565,6 +658,12 @@ func (sg *ScenarioGroup) PostDeserialize(e *ErrorLogger, simConfigurations map[s
 				p = add2f(p, v)
 				sg.Fixes[fix] = nm2ll(p, sg.NmPerLongitude)
 			}
+		} else if pos, ok := sg.locate(location); ok {
+			// It's something simple. Check this after FIX@HDG/DIST,
+			// though, since the runway matching KJFK-31L discards stuff
+			// after the runway and we don't want that to match in that
+			// case.
+			sg.Fixes[fix] = pos
 		} else {
 			e.ErrorString("invalid location syntax \"%s\" for fix \"%s\"", location, fix)
 		}
@@ -597,19 +696,53 @@ func (sg *ScenarioGroup) PostDeserialize(e *ErrorLogger, simConfigurations map[s
 
 	if sg.PrimaryAirport == "" {
 		e.ErrorString("\"primary_airport\" not specified")
-	} else if _, ok := sg.locate(sg.PrimaryAirport); !ok {
+	} else if ap, ok := database.Airports[sg.PrimaryAirport]; !ok {
 		e.ErrorString("\"primary_airport\" \"%s\" unknown", sg.PrimaryAirport)
+	} else if mvar, err := database.MagneticGrid.Lookup(ap.Location); err != nil {
+		e.ErrorString("%s: unable to find magnetic declination: %v", sg.PrimaryAirport, err)
+	} else {
+		sg.MagneticVariation = mvar + sg.MagneticAdjustment
 	}
 
-	if sg.NmPerLatitude == 0 {
-		e.ErrorString("\"nm_per_latitude\" not specified")
-	}
-	if sg.NmPerLongitude == 0 {
-		e.ErrorString("\"nm_per_latitude\" not specified")
+	fa := sg.STARSFacilityAdaptation
+	if len(fa.VideoMapNames) == 0 {
+		if len(fa.ControllerConfigs) == 0 {
+			e.ErrorString("must provide one of \"stars_maps\" or \"controller_configs\" in \"stars_config\"")
+			fa.ControllerConfigs = CommaKeyExpand(fa.ControllerConfigs)
+		}
+	} else if len(fa.ControllerConfigs) > 0 {
+		e.ErrorString("cannot provide both \"stars_maps\" and \"controller_configs\" in \"stars_config\"")
 	}
 
 	if _, ok := sg.Scenarios[sg.DefaultScenario]; !ok {
 		e.ErrorString("default scenario \"%s\" not found in \"scenarios\"", sg.DefaultScenario)
+	}
+
+	for _, aa := range sg.STARSFacilityAdaptation.AirspaceAwareness {
+		e.Push("stars_adaptation")
+
+		for _, fix := range aa.Fix {
+			if _, ok := sg.locate(fix); !ok && fix != "ALL" {
+				e.ErrorString(fix + ": fix unknown")
+			}
+		}
+
+		if aa.AltitudeRange[0] > aa.AltitudeRange[1] {
+			e.ErrorString("lower end of \"altitude_range\" %d above upper end %d",
+				aa.AltitudeRange[0], aa.AltitudeRange[1])
+		}
+
+		if _, ok := sg.ControlPositions[aa.ReceivingController]; !ok {
+			e.ErrorString(aa.ReceivingController + ": controller unknown")
+		}
+
+		for _, t := range aa.AircraftType {
+			if t != "J" && t != "T" && t != "P" {
+				e.ErrorString("\"%s\": invalid \"aircraft_type\". Expected \"J\", \"T\", or \"P\".", t)
+			}
+		}
+
+		e.Pop()
 	}
 
 	for callsign, ctrl := range sg.ControlPositions {
@@ -632,117 +765,14 @@ func (sg *ScenarioGroup) PostDeserialize(e *ErrorLogger, simConfigurations map[s
 		e.Pop()
 	}
 
-	if sg.Range == 0 {
-		sg.Range = 50
-	}
-
-	for name, rs := range sg.RadarSites {
-		e.Push("Radar site " + name)
-		if p, ok := sg.locate(rs.PositionString); rs.PositionString == "" || !ok {
-			e.ErrorString("radar site position \"%s\" not found", rs.PositionString)
-		} else {
-			rs.Position = p
-		}
-		if rs.Char == "" {
-			e.ErrorString("radar site is missing \"char\"")
-		}
-		if rs.Elevation == 0 {
-			e.ErrorString("radar site is missing \"elevation\"")
-		}
-		e.Pop()
-	}
-
 	for name, arrivals := range sg.ArrivalGroups {
 		e.Push("Arrival group " + name)
 		if len(arrivals) == 0 {
 			e.ErrorString("no arrivals in arrival group")
 		}
 
-		for _, ar := range arrivals {
-			if ar.Route == "" && ar.STAR == "" {
-				e.ErrorString("neither \"route\" nor \"star\" specified")
-				continue
-			}
-
-			if ar.Route != "" {
-				e.Push("Route " + ar.Route)
-			} else {
-				e.Push("Route " + ar.STAR)
-			}
-
-			if len(ar.Waypoints) < 2 {
-				e.ErrorString("must provide at least two \"waypoints\" for approach " +
-					"(even if \"runway_waypoints\" are provided)")
-			} else {
-				sg.InitializeWaypointLocations(ar.Waypoints, e)
-
-				ar.Waypoints.CheckArrival(e)
-
-				for rwy, wp := range ar.RunwayWaypoints {
-					e.Push("Runway " + rwy)
-					sg.InitializeWaypointLocations(wp, e)
-
-					if wp[0].Fix != ar.Waypoints[len(ar.Waypoints)-1].Fix {
-						e.ErrorString("initial \"runway_waypoints\" fix must match " +
-							"last \"waypoints\" fix")
-					}
-
-					// For the check, splice together the last common
-					// waypoint and the runway waypoints.  This will give
-					// us a repeated first fix, but this way we can check
-					// compliance with restrictions at that fix...
-					ewp := append([]Waypoint{ar.Waypoints[len(ar.Waypoints)-1]}, wp...)
-					WaypointArray(ewp).CheckArrival(e)
-
-					e.Pop()
-				}
-			}
-
-			for arrivalAirport, airlines := range ar.Airlines {
-				e.Push("Arrival airport " + arrivalAirport)
-				if len(airlines) == 0 {
-					e.ErrorString("no \"airlines\" specified for arrivals to " + arrivalAirport)
-				}
-				for _, al := range airlines {
-					database.CheckAirline(al.ICAO, al.Fleet, e)
-					if _, ok := database.Airports[al.Airport]; !ok {
-						e.ErrorString("departure airport \"airport\" \"%s\" unknown", al.Airport)
-					}
-				}
-
-				ap, ok := sg.Airports[arrivalAirport]
-				if !ok {
-					e.ErrorString("arrival airport \"%s\" unknown", arrivalAirport)
-				} else if ar.ExpectApproach != "" {
-					if _, ok := ap.Approaches[ar.ExpectApproach]; !ok {
-						e.ErrorString("arrival airport \"%s\" doesn't have a \"%s\" approach",
-							arrivalAirport, ar.ExpectApproach)
-					}
-				}
-
-				e.Pop()
-			}
-
-			if ar.InitialAltitude == 0 {
-				e.ErrorString("must specify \"initial_altitude\"")
-			} else {
-				// Make sure the initial altitude isn't below any of
-				// altitude restrictions.
-				for _, wp := range ar.Waypoints {
-					if wp.AltitudeRestriction != nil &&
-						wp.AltitudeRestriction.TargetAltitude(ar.InitialAltitude) > ar.InitialAltitude {
-						e.ErrorString("\"initial_altitude\" is below altitude restriction at \"%s\"", wp.Fix)
-					}
-				}
-			}
-
-			if ar.InitialController == "" {
-				e.ErrorString("\"initial_controller\" missing")
-			} else if _, ok := sg.ControlPositions[ar.InitialController]; !ok {
-				e.ErrorString("controller \"%s\" not found for \"initial_controller\"", ar.InitialController)
-			}
-
-			e.Pop()
+		for i := range arrivals {
+			arrivals[i].PostDeserialize(sg, e)
 		}
 		e.Pop()
 	}
@@ -765,11 +795,140 @@ func (sg *ScenarioGroup) PostDeserialize(e *ErrorLogger, simConfigurations map[s
 		e.Pop()
 	}
 
-	if len(sg.STARSMaps) == 0 {
-		e.ErrorString("No \"stars_maps\" specified")
+	initializeSimConfigurations(sg, simConfigurations, *server)
+}
+
+func (s *STARSFacilityAdaptation) PostDeserialize(e *ErrorLogger, sg *ScenarioGroup) {
+	e.Push("stars_config")
+
+	// Video maps
+	if len(s.VideoMapNames) > 0 {
+		// Don't try to validate the map names here since we haven't loaded
+		// the video maps yet. (Chicken and egg: we use the map names when
+		// loading maps to figure out which ones we need rendering command
+		// buffers for, so hence we haven't loaded them at this point.)
+	} else if len(s.ControllerConfigs) > 0 {
+		s.ControllerConfigs = CommaKeyExpand(s.ControllerConfigs)
+
+		for ctrl, config := range s.ControllerConfigs {
+			if pos, ok := sg.locate(config.CenterString); !ok {
+				e.ErrorString("unknown location \"%s\" specified for \"center\"", s.CenterString)
+			} else {
+				config.Center = pos
+				s.ControllerConfigs[ctrl] = config
+			}
+		}
+
+		for ctrl, config := range s.ControllerConfigs {
+			if len(config.VideoMapNames) == 0 {
+				e.ErrorString("must provide \"video_maps\" for controller \"%s\"", ctrl)
+			}
+
+			for _, name := range config.DefaultMaps {
+				if !slices.Contains(config.VideoMapNames, name) {
+					e.ErrorString("default map \"%s\" for \"%s\" is not included in the controller's "+
+						"\"controller_maps\"", name, ctrl)
+				}
+			}
+			// Make sure all of the control positions are included in at least
+			// one of the scenarios.  As with VideoMapNames, don't try to
+			// validate the map names yet.
+			if !func() bool {
+				for _, sc := range sg.Scenarios {
+					if ctrl == sc.SoloController {
+						return true
+					}
+					for _, config := range sc.SplitConfigurations {
+						for pos := range config {
+							if ctrl == pos {
+								return true
+							}
+						}
+					}
+				}
+				return false
+			}() {
+				e.ErrorString("Control position \"%s\" in \"controller_configs\" not found in any of the scenarios", ctrl)
+			}
+		}
+	} else {
+		e.ErrorString("Must specify either \"controller_configs\" or \"stars_maps\"")
 	}
 
-	initializeSimConfigurations(sg, simConfigurations, *server)
+	if s.CenterString == "" {
+		e.ErrorString("No \"center\" specified")
+	} else if pos, ok := sg.locate(s.CenterString); !ok {
+		e.ErrorString("unknown location \"%s\" specified for \"center\"", s.CenterString)
+	} else {
+		s.Center = pos
+	}
+
+	if s.Range == 0 {
+		s.Range = 50
+	}
+
+	for name, rs := range s.RadarSites {
+		e.Push("Radar site " + name)
+		if p, ok := sg.locate(rs.PositionString); rs.PositionString == "" || !ok {
+			e.ErrorString("radar site position \"%s\" not found", rs.PositionString)
+		} else {
+			rs.Position = p
+		}
+		if rs.Char == "" {
+			e.ErrorString("radar site is missing \"char\"")
+		}
+		if rs.Elevation == 0 {
+			e.ErrorString("radar site is missing \"elevation\"")
+		}
+		e.Pop()
+	}
+
+	e.Pop() // stars_config
+}
+
+func (s *STARSFacilityAdaptation) PreSave() {
+	// Slim down STARSFacilityAdaptation before it is saved by discarding
+	// the video maps, which we can restore at load time through the
+	// VideoMapLibrary.
+	s.VideoMaps = nil
+	for ctrl, config := range s.ControllerConfigs {
+		config.VideoMaps = nil
+		s.ControllerConfigs[ctrl] = config
+	}
+}
+
+func (s *STARSFacilityAdaptation) PostLoad(ml *VideoMapLibrary) error {
+	// And conversely, PostLoad patches things up by restoring the
+	// STARSMaps for the video maps in the STARSFacilityAdaptation.
+	initMaps := func(names []string) ([]STARSMap, error) {
+		var maps []STARSMap
+		for _, name := range names {
+			if name == "" {
+				maps = append(maps, STARSMap{})
+			} else if m := ml.GetMap(s.VideoMapFile, name); m != nil {
+				maps = append(maps, *m)
+			} else {
+				return nil, fmt.Errorf("%s: map \"%s\" not found", s.VideoMapFile, name)
+			}
+		}
+		for len(maps) < NumSTARSMaps {
+			maps = append(maps, STARSMap{})
+		}
+
+		return maps, nil
+	}
+
+	var err error
+	if s.VideoMaps, err = initMaps(s.VideoMapNames); err != nil {
+		return err
+	}
+	for ctrl, config := range s.ControllerConfigs {
+		if config.VideoMaps, err = initMaps(config.VideoMapNames); err != nil {
+			return err
+		}
+		s.ControllerConfigs[ctrl] = config
+	}
+	return nil
 }
 
 func initializeSimConfigurations(sg *ScenarioGroup,
@@ -788,6 +947,7 @@ func initializeSimConfigurations(sg *ScenarioGroup,
 			Wind:             scenario.Wind,
 			DepartureRunways: scenario.DepartureRunways,
 			ArrivalRunways:   scenario.ArrivalRunways,
+			PrimaryAirport:   sg.PrimaryAirport,
 		}
 
 		if multiController {
@@ -865,35 +1025,53 @@ func (sg *ScenarioGroup) InitializeWaypointLocations(waypoints []Waypoint, e *Er
 		if i+1 == len(waypoints) {
 			if e != nil {
 				e.ErrorString("can't have DME arc starting at the final waypoint")
+				e.Pop()
 			}
 			break
 		}
 
+		// Which way are we turning as we depart p0? Use either the
+		// previous waypoint or the next one after the end of the arc
+		// to figure it out.
+		var v0, v1 [2]float32
+		p0, p1 := ll2nm(wp.Location, sg.NmPerLongitude), ll2nm(waypoints[i+1].Location, sg.NmPerLongitude)
+		if i > 0 {
+			v0 = sub2f(p0, ll2nm(waypoints[i-1].Location, sg.NmPerLongitude))
+			v1 = sub2f(p1, p0)
+		} else {
+			if i+2 == len(waypoints) {
+				if e != nil {
+					e.ErrorString("must have at least one waypoint before or after arc to determine its orientation")
+					e.Pop()
+				}
+				continue
+			}
+			v0 = sub2f(p1, p0)
+			v1 = sub2f(ll2nm(waypoints[i+2].Location, sg.NmPerLongitude), p1)
+		}
+		// cross product
+		x := v0[0]*v1[1] - v0[1]*v1[0]
+		wp.Arc.Clockwise = x < 0
+
 		if wp.Arc.Fix != "" {
 			// Center point was specified
-			if pos, ok := sg.locate(wp.Arc.Fix); !ok {
+			var ok bool
+			if wp.Arc.Center, ok = sg.locate(wp.Arc.Fix); !ok {
 				if e != nil {
 					e.ErrorString("unable to locate arc center \"" + wp.Arc.Fix + "\"")
+					e.Pop()
 				}
-				break
-			} else {
-				wp.Arc.Center = pos
-
-				hpre := headingp2ll(wp.Arc.Center, waypoints[i].Location, 60 /* nm per */, 0 /* mag */)
-				hpost := headingp2ll(wp.Arc.Center, waypoints[i+1].Location, 60 /* nm per */, 0 /* mag */)
-
-				h := NormalizeHeading(hpost - hpre)
-				wp.Arc.Clockwise = h < 180
+				continue
 			}
 		} else {
 			// Just the arc length was specified; need to figure out the
 			// center and radius of the circle that gives that.
-			p0, p1 := ll2nm(wp.Location, sg.NmPerLongitude), ll2nm(waypoints[i+1].Location, sg.NmPerLongitude)
 			d := distance2f(p0, p1)
 			if d >= wp.Arc.Length {
 				if e != nil {
 					e.ErrorString("distance between waypoints %.2fnm is greater than specified arc length %.2fnm",
 						d, wp.Arc.Length)
+					e.Pop()
 				}
 				continue
 			}
@@ -901,30 +1079,10 @@ func (sg *ScenarioGroup) InitializeWaypointLocations(waypoints []Waypoint, e *Er
 				// No circle is possible to give an arc that long
 				if e != nil {
 					e.ErrorString("no valid circle will give a distance between waypoints %.2fnm", wp.Arc.Length)
+					e.Pop()
 				}
 				continue
 			}
-
-			// Which way are we turning as we depart p0? Use either the
-			// previous waypoint or the next one after the end of the arc
-			// to figure it out.
-			var v0, v1 [2]float32
-			if i > 0 {
-				v0 = sub2f(p0, ll2nm(waypoints[i-1].Location, sg.NmPerLongitude))
-				v1 = sub2f(p1, p0)
-			} else {
-				if i+2 == len(waypoints) {
-					if e != nil {
-						e.ErrorString("must have at least one waypoint before or after arc to determine its orientation")
-					}
-					return
-				}
-				v0 = sub2f(p1, p0)
-				v1 = sub2f(ll2nm(waypoints[i+1].Location, sg.NmPerLongitude), p1)
-			}
-			// cross product
-			x := v0[0]*v1[1] - v0[1]*v1[0]
-			wp.Arc.Clockwise = x < 0
 
 			// Now search for a center point of a circle that goes through
 			// p0 and p1 and has the desired arc length.  We will search
@@ -966,6 +1124,7 @@ func (sg *ScenarioGroup) InitializeWaypointLocations(waypoints []Waypoint, e *Er
 			if t >= limit {
 				if e != nil {
 					e.ErrorString("unable to find valid circle radius for arc")
+					e.Pop()
 				}
 				continue
 			}
@@ -991,7 +1150,7 @@ func InAirspace(p Point2LL, alt float32, volumes []ControllerAirspaceVolume) (bo
 	for _, v := range volumes {
 		inside := false
 		for _, pts := range v.Boundaries {
-			if PointInPolygon(p, pts) {
+			if PointInPolygon2LL(p, pts) {
 				inside = !inside
 			}
 		}
@@ -1031,262 +1190,6 @@ func InAirspace(p Point2LL, alt float32, volumes []ControllerAirspaceVolume) (bo
 
 ///////////////////////////////////////////////////////////////////////////
 // LoadScenarioGroups
-
-type LoadedVideoMap struct {
-	path        string
-	commandBufs map[string]CommandBuffer
-	err         error
-}
-
-func loadVideoMaps(filesystem fs.FS, path string, referencedVideoMaps map[string]map[string]interface{}, result chan LoadedVideoMap) {
-	start := time.Now()
-	lvm := LoadedVideoMap{path: path}
-
-	fr, err := filesystem.Open(path)
-	if err != nil {
-		lvm.err = err
-		result <- lvm
-		return
-	}
-	defer fr.Close()
-
-	var r io.Reader
-	r = fr
-	if strings.HasSuffix(strings.ToLower(path), ".zst") {
-		r, _ = zstd.NewReader(r, zstd.WithDecoderConcurrency(0))
-	}
-
-	if referenced, ok := referencedVideoMaps[path]; !ok {
-		fmt.Printf("%s: video map not used in any scenarios\n", path)
-	} else {
-		lvm.commandBufs, err = loadVideoMapFile(r, referenced)
-		if err != nil {
-			lvm.err = err
-			result <- lvm
-			return
-		}
-	}
-	lg.Infof("%s: video map loaded in %s\n", path, time.Since(start))
-
-	result <- lvm
-}
-
-func loadVideoMapFile(ir io.Reader, referenced map[string]interface{}) (map[string]CommandBuffer, error) {
-	r := bufio.NewReader(ir)
-
-	// For debugging, enable check here; the file will also be parsed using
-	// encoding/json and the result will be compared to what we get out of
-	// our parser.
-	check := false
-	var checkJSONMaps map[string][]Point2LL
-	if check {
-		buf, err := io.ReadAll(ir)
-		if err != nil {
-			panic(err)
-		}
-		if err := UnmarshalJSON(buf, &checkJSONMaps); err != nil {
-			return nil, err
-		}
-		r = bufio.NewReader(bytes.NewReader(buf))
-	}
-
-	cur, err := r.ReadByte()
-	if err != nil {
-		return nil, err
-	}
-
-	eof := false
-	advance := func() bool {
-		var err error
-		cur, err = r.ReadByte()
-		eof = err == io.EOF
-		return err == nil
-	}
-
-	// Custom "just enough" JSON parser below. This expects only vice JSON
-	// video map files but is ~2x faster than using encoding/json.
-	line := 1
-	skipWhitespace := func() {
-		for !eof {
-			if cur == '\n' {
-				line++
-			}
-			if cur != ' ' && cur != '\n' && cur != '\t' && cur != '\f' && cur != '\r' && cur != '\v' {
-				break
-			}
-			advance()
-		}
-	}
-	// Called when we expect the given character as the next token.
-	expect := func(ch byte) error {
-		skipWhitespace()
-		if !eof && cur == ch {
-			advance()
-			return nil
-		}
-		return fmt.Errorf("expected '%s' at line %d, found '%s'", string(ch), line, string(cur))
-	}
-	// tryQuoted tries to return a quoted string; nil is returned if the
-	// first non-whitespace character found is not a quotation mark.
-	tryQuoted := func(buf []byte) []byte {
-		buf = buf[:0]
-		skipWhitespace()
-		if !eof && cur != '"' {
-			return buf
-		}
-		advance()
-
-		// Scan ahead to the closing quote
-		for !eof && cur != '"' {
-			if cur == '\n' {
-				panic(fmt.Sprintf("unterminated string at line %d", line))
-			}
-			buf = append(buf, cur)
-			advance()
-		}
-		if eof {
-			panic("unterminated string")
-		}
-		advance()
-		return buf
-	}
-	// tryChar returns true and advances pos if the next non-whitespace
-	// character matches the one given.
-	tryChar := func(ch byte) bool {
-		skipWhitespace()
-		ok := !eof && cur == ch
-		if ok {
-			advance()
-		}
-		return ok
-	}
-
-	tryNull := func() bool {
-		if !tryChar('n') {
-			return false
-		}
-		for _, ch := range []byte{'u', 'l', 'l'} {
-			if eof || cur != ch {
-				return false
-			}
-			advance()
-		}
-		return true
-	}
-
-	m := make(map[string]CommandBuffer)
-
-	// Video map JSON files encode a JSON object where members are arrays
-	// of strings, where each string encodes a lat-long position.
-	if err := expect('{'); err != nil {
-		return nil, err
-	}
-	var nameBuf, ll []byte
-	for {
-		// Is there another member in the object?
-		nameBuf = tryQuoted(nameBuf)
-		if len(nameBuf) == 0 {
-			break
-		}
-		// Handle escaped unicode characters \uXXXX
-		name, _ := strconv.Unquote(`"` + string(nameBuf) + `"`)
-
-		if err := expect(':'); err != nil {
-			return nil, err
-		}
-
-		_, doparse := referenced[name]
-		doparse = doparse || check
-
-		// Expect an array for its value.
-		var segs []Point2LL
-		// Allow "null" for an empty array but ignore it
-		if tryNull() {
-			// don't try to parse the array...
-		} else {
-			if err := expect('['); err != nil {
-				return nil, err
-			}
-
-			for {
-				// Parse an element of the array, which should be a string
-				// representing a position.
-				ll = tryQuoted(ll)
-				if len(ll) == 0 {
-					break
-				}
-
-				if doparse {
-					// Skip this work if this video map isn't used
-					p, err := ParseLatLong(ll)
-					if err != nil {
-						return nil, err
-					}
-					segs = append(segs, p)
-				}
-
-				// Is there another entry after this one?
-				if !tryChar(',') {
-					break
-				}
-			}
-			// Array close.
-			if err := expect(']'); err != nil {
-				return nil, err
-			}
-		}
-
-		if check {
-			// Make sure we have the same number of points and that they
-			// are equal to the reference deserialized by encoding/json.
-			jsegs, ok := checkJSONMaps[name]
-			if !ok {
-				return nil, fmt.Errorf("%s: not found in encoding/json deserialized maps", name)
-			}
-			if len(jsegs) != len(segs) {
-				return nil, fmt.Errorf("%s: encoding/json returned %d segments, we found %d", name, len(jsegs), len(segs))
-			}
-			for i := range jsegs {
-				if jsegs[i][0] != segs[i][0] || jsegs[i][1] != segs[i][1] {
-					return nil, fmt.Errorf("%s: %d'th point mismatch: encoding/json %v ours %v", name, i, jsegs[i], segs[i])
-				}
-			}
-			delete(checkJSONMaps, name)
-		}
-
-		// Generate the command buffer to draw this video map.
-		if doparse {
-			ld := GetLinesDrawBuilder()
-
-			for i := 0; i < len(segs)/2; i++ {
-				ld.AddLine(segs[2*i], segs[2*i+1])
-			}
-			var cb CommandBuffer
-			ld.GenerateCommands(&cb)
-
-			m[name] = cb
-			ReturnLinesDrawBuilder(ld)
-		}
-
-		// Is there another video map in the object?
-		if !tryChar(',') {
-			break
-		}
-	}
-	if err := expect('}'); err != nil {
-		return nil, err
-	}
-
-	if check && len(checkJSONMaps) > 0 {
-		var s []string
-		for k := range checkJSONMaps {
-			s = append(s, k)
-		}
-		return nil, fmt.Errorf("encoding/json found maps that we did not: %s", strings.Join(s, ", "))
-	}
-
-	return m, nil
-}
 
 func loadScenarioGroup(filesystem fs.FS, path string, e *ErrorLogger) *ScenarioGroup {
 	e.Push("File " + path)
@@ -1332,13 +1235,27 @@ func (r RootFS) Open(filename string) (fs.File, error) {
 // continue on in the presence of errors; all errors will be printed and
 // the program will exit if there are any.  We'd rather force any errors
 // due to invalid scenario definitions to be fixed...
-func LoadScenarioGroups(e *ErrorLogger) (map[string]map[string]*ScenarioGroup, map[string]map[string]*SimConfiguration) {
+func LoadScenarioGroups(e *ErrorLogger) (map[string]map[string]*ScenarioGroup, map[string]map[string]*SimConfiguration, *VideoMapLibrary) {
 	start := time.Now()
 
 	// First load the scenarios.
 	scenarioGroups := make(map[string]map[string]*ScenarioGroup)
 	simConfigurations := make(map[string]map[string]*SimConfiguration)
 	referencedVideoMaps := make(map[string]map[string]interface{}) // filename -> map name -> used
+	updateReferencedMaps := func(fa STARSFacilityAdaptation) {
+		if referencedVideoMaps[fa.VideoMapFile] == nil {
+			referencedVideoMaps[fa.VideoMapFile] = make(map[string]interface{})
+		}
+		for _, m := range fa.VideoMapNames {
+			referencedVideoMaps[fa.VideoMapFile][m] = nil
+		}
+		for _, config := range fa.ControllerConfigs {
+			for _, m := range config.VideoMapNames {
+				referencedVideoMaps[fa.VideoMapFile][m] = nil
+			}
+		}
+	}
+
 	err := fs.WalkDir(resourcesFS, "scenarios", func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			lg.Errorf("error walking scenarios/: %v", err)
@@ -1353,6 +1270,15 @@ func LoadScenarioGroups(e *ErrorLogger) (map[string]map[string]*ScenarioGroup, m
 			return nil
 		}
 
+		// This is a terrible hack, but the Windows WIX installer toolkit
+		// is even more so, so here we go. For reasons not understood, it's
+		// not removing the old bdl.json file on an upgrade install; since
+		// it got renamed to y90.json, having both gives errors about
+		// scenarios being redefined. So cull it here instead...
+		if strings.ToLower(filepath.Base(path)) == "bdl.json" {
+			return nil
+		}
+
 		lg.Infof("%s: loading scenario", path)
 		s := loadScenarioGroup(resourcesFS, path, e)
 		if s != nil {
@@ -1364,13 +1290,7 @@ func LoadScenarioGroups(e *ErrorLogger) (map[string]map[string]*ScenarioGroup, m
 				}
 				scenarioGroups[s.TRACON][s.Name] = s
 			}
-
-			if referencedVideoMaps[s.VideoMapFile] == nil {
-				referencedVideoMaps[s.VideoMapFile] = make(map[string]interface{})
-			}
-			for _, m := range s.STARSMaps {
-				referencedVideoMaps[s.VideoMapFile][m.Name] = nil
-			}
+			updateReferencedMaps(s.STARSFacilityAdaptation)
 		}
 		return nil
 	})
@@ -1379,7 +1299,7 @@ func LoadScenarioGroups(e *ErrorLogger) (map[string]map[string]*ScenarioGroup, m
 	}
 	if e.HaveErrors() {
 		// Don't keep going since we'll likely crash in the following
-		return nil, nil
+		return nil, nil, nil
 	}
 
 	// Load the scenario specified on command line, if any.
@@ -1401,28 +1321,20 @@ func LoadScenarioGroups(e *ErrorLogger) (map[string]map[string]*ScenarioGroup, m
 
 			// These may have an empty "video_map_file" member, which
 			// is automatically patched up here...
-			if s.VideoMapFile == "" {
+			if s.STARSFacilityAdaptation.VideoMapFile == "" {
 				if *videoMapFilename != "" {
-					s.VideoMapFile = *videoMapFilename
+					s.STARSFacilityAdaptation.VideoMapFile = *videoMapFilename
 				} else {
 					e.ErrorString("%s: no \"video_map_file\" in scenario and -videomap not specified",
 						*scenarioFilename)
 				}
 			}
-
-			if referencedVideoMaps[s.VideoMapFile] == nil {
-				referencedVideoMaps[s.VideoMapFile] = make(map[string]interface{})
-			}
-			for _, m := range s.STARSMaps {
-				referencedVideoMaps[s.VideoMapFile][m.Name] = nil
-			}
+			updateReferencedMaps(s.STARSFacilityAdaptation)
 		}
 	}
 
-	// Next load the video maps.
-	videoMapCommandBuffers := make(map[string]map[string]CommandBuffer)
-	vmChan := make(chan LoadedVideoMap, 16)
-	launches := 0
+	// Next load the video maps; we will kick off work to load
+	maplib := MakeVideoMapLibrary()
 	err = fs.WalkDir(resourcesFS, "videomaps", func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			lg.Errorf("error walking videomaps: %v", err)
@@ -1433,12 +1345,10 @@ func LoadScenarioGroups(e *ErrorLogger) (map[string]map[string]*ScenarioGroup, m
 			return nil
 		}
 
-		if filepath.Ext(path) != ".json" && filepath.Ext(path) != ".zst" {
-			return nil
+		if strings.HasSuffix(path, "-videomaps.gob") || strings.HasSuffix(path, "-videomaps.gob.zst") {
+			maplib.AddFile(resourcesFS, path, referencedVideoMaps[path], e)
 		}
 
-		launches++
-		go loadVideoMaps(resourcesFS, path, referencedVideoMaps, vmChan)
 		return nil
 	})
 	if err != nil {
@@ -1446,24 +1356,7 @@ func LoadScenarioGroups(e *ErrorLogger) (map[string]map[string]*ScenarioGroup, m
 		os.Exit(1)
 	}
 
-	receiveLoadedVideoMap := func() {
-		lvm := <-vmChan
-		if lvm.err != nil {
-			e.Push("File " + lvm.path)
-			e.Error(lvm.err)
-			e.Pop()
-		} else {
-			videoMapCommandBuffers[lvm.path] = lvm.commandBufs
-		}
-	}
-
-	// Get all of the loaded video map command buffers
-	for launches > 0 {
-		receiveLoadedVideoMap()
-		launches--
-	}
-
-	lg.Infof("video map load time: %s\n", time.Since(start))
+	lg.Infof("scenario/video map manifest load time: %s\n", time.Since(start))
 
 	// Load the video map specified on the command line, if any.
 	if *videoMapFilename != "" {
@@ -1474,8 +1367,7 @@ func LoadScenarioGroups(e *ErrorLogger) (map[string]map[string]*ScenarioGroup, m
 				return os.DirFS(".")
 			}
 		}()
-		loadVideoMaps(fs, *videoMapFilename, referencedVideoMaps, vmChan)
-		receiveLoadedVideoMap()
+		maplib.AddFile(fs, *videoMapFilename, referencedVideoMaps[*videoMapFilename], e)
 	}
 
 	// Final tidying before we return the loaded scenarios.
@@ -1497,19 +1389,23 @@ func LoadScenarioGroups(e *ErrorLogger) (map[string]map[string]*ScenarioGroup, m
 				scenarioNames[scenarioName] = groupName
 			}
 
-			// Initialize the CommandBuffers in the scenario's STARSMaps.
-			if sgroup.VideoMapFile == "" {
+			// Make sure we have what we need in terms of video maps
+			fa := &sgroup.STARSFacilityAdaptation
+			if vf := fa.VideoMapFile; vf == "" {
 				e.ErrorString("no \"video_map_file\" specified")
+			} else if !maplib.HaveFile(vf) {
+				e.ErrorString("no manifest for video map \"%s\" found. Options: %s", vf,
+					strings.Join(maplib.AvailableFiles(), ", "))
 			} else {
-				if bufferMap, ok := videoMapCommandBuffers[sgroup.VideoMapFile]; !ok {
-					e.ErrorString("video map file \"%s\" unknown", sgroup.VideoMapFile)
-				} else {
-					for i, sm := range sgroup.STARSMaps {
-						if cb, ok := bufferMap[sm.Name]; !ok {
-							e.ErrorString("video map \"%s\" not found", sm.Name)
-						} else {
-							sgroup.STARSMaps[i].CommandBuffer = cb
-						}
+				if len(fa.VideoMapNames) > NumSTARSMaps {
+					e.ErrorString("too many \"stars_maps\": %d provided but only %d are allowed",
+						len(fa.VideoMapNames), NumSTARSMaps)
+				}
+
+				for _, name := range fa.VideoMapNames {
+					if name != "" && !maplib.HaveMap(vf, name) {
+						e.ErrorString("video map \"%s\" not found. Use -listmaps <ARTCC> to show available video maps.",
+							name)
 					}
 				}
 			}
@@ -1524,6 +1420,7 @@ func LoadScenarioGroups(e *ErrorLogger) (map[string]map[string]*ScenarioGroup, m
 	// Walk all of the scenario groups to get all of the possible departing aircraft
 	// types to see where V2 is needed in the performance database..
 	acTypes := make(map[string]struct{})
+
 	for _, tracon := range scenarioGroups {
 		for _, sg := range tracon {
 			for _, ap := range sg.Airports {
@@ -1546,7 +1443,27 @@ func LoadScenarioGroups(e *ErrorLogger) (map[string]map[string]*ScenarioGroup, m
 	}
 	lg.Warnf("Missing V2 in performance database: %s", strings.Join(missing, ", "))
 
-	return scenarioGroups, simConfigurations
+	if *listScenarios {
+		scenarioAirports := make(map[string]map[string]interface{})
+		for tracon, scenarios := range scenarioGroups {
+			if scenarioAirports[tracon] == nil {
+				scenarioAirports[tracon] = make(map[string]interface{})
+			}
+			for _, sg := range scenarios {
+				for name := range sg.Airports {
+					scenarioAirports[tracon][name] = nil
+				}
+			}
+		}
+
+		for _, tracon := range SortedMapKeys(scenarioAirports) {
+			airports := SortedMapKeys(scenarioAirports[tracon])
+			fmt.Printf("%s (%s),\n", tracon, strings.Join(airports, ", "))
+		}
+		os.Exit(0)
+	}
+
+	return scenarioGroups, simConfigurations, maplib
 }
 
 ///////////////////////////////////////////////////////////////////////////

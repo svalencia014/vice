@@ -13,22 +13,24 @@ import (
 	"flag"
 	"fmt"
 	"io/fs"
+	"log/slog"
+	_ "net/http/pprof"
 	"os"
 	"os/signal"
+	"path"
 	"runtime"
 	"runtime/debug"
 	"runtime/pprof"
-	"strconv"
+	"sort"
 	"time"
 
 	"github.com/apenwarr/fixconsole"
-	discord_client "github.com/hugolgst/rich-go/client"
+	"github.com/checkandmate1/AirportWeatherData"
 	"github.com/mmp/imgui-go/v4"
-	"golang.org/x/exp/slog"
 )
 
 const ViceServerAddress = "vice.pharr.org"
-const ViceServerPort = 8000
+const ViceServerPort = 8001
 
 var (
 	// There are a handful of widely-used global variables in vice, all
@@ -43,12 +45,13 @@ var (
 	database     *StaticDatabase
 	lg           *Logger
 	resourcesFS  fs.StatFS
-	simStartTime time.Time
 
 	// client only
 	newWorldChan chan *World
 	localServer  *SimServer
 	remoteServer *SimServer
+	airportWind  map[string]Wind
+	windRequest  map[string]chan getweather.MetarData
 
 	//go:embed resources/version.txt
 	buildVersion string
@@ -66,6 +69,9 @@ var (
 	broadcastMessage  = flag.String("broadcast", "", "message to broadcast to all active clients on the server")
 	broadcastPassword = flag.String("password", "", "password to authenticate with server for broadcast message")
 	resetSim          = flag.Bool("resetsim", false, "discard the saved simulation and do not try to resume it")
+	showRoutes        = flag.String("routes", "", "display the STARS, SIDs, and approaches known for the given airport")
+	listMaps          = flag.String("listmaps", "", "path to a video map file to list maps of (e.g., resources/videomaps/ZNY-videomaps.gob.zst)")
+	listScenarios     = flag.Bool("listscenarios", false, "list all of the available scenarios")
 )
 
 func init() {
@@ -90,6 +96,21 @@ func main() {
 
 	// Initialize the logging system first and foremost.
 	lg = NewLogger(*server, *logLevel)
+
+	// If the path is non-absolute, convert it to an absolute path
+	// w.r.t. the current directory.  (This is to work around that vice
+	// changes the working directory to above where the resources are,
+	// which in turn was causing profiling data to be written in an
+	// unexpected place...)
+	absPath := func(p *string) {
+		if p != nil && *p != "" && !path.IsAbs(*p) {
+			if cwd, err := os.Getwd(); err == nil {
+				*p = path.Join(cwd, *p)
+			}
+		}
+	}
+	absPath(memprofile)
+	absPath(cpuprofile)
 
 	writeMemProfile := func() {
 		f, err := os.Create(*memprofile)
@@ -143,7 +164,7 @@ func main() {
 
 	if *lintScenarios {
 		var e ErrorLogger
-		_, _ = LoadScenarioGroups(&e)
+		_, _, _ = LoadScenarioGroups(&e)
 		if e.HaveErrors() {
 			e.PrintErrors(nil)
 			os.Exit(1)
@@ -152,8 +173,56 @@ func main() {
 		BroadcastMessage(*serverAddress, *broadcastMessage, *broadcastPassword)
 	} else if *server {
 		RunSimServer()
+	} else if *showRoutes != "" {
+		ap, ok := database.Airports[*showRoutes]
+		if !ok {
+			fmt.Printf("%s: airport not present in database\n", *showRoutes)
+			os.Exit(1)
+		}
+		fmt.Printf("STARs:\n")
+		for _, s := range SortedMapKeys(ap.STARs) {
+			ap.STARs[s].Print(s)
+		}
+		fmt.Printf("\nApproaches:\n")
+		for _, appr := range SortedMapKeys(ap.Approaches) {
+			fmt.Printf("%-5s: ", appr)
+			for i, wp := range ap.Approaches[appr] {
+				if i > 0 {
+					fmt.Printf("       ")
+				}
+				fmt.Println(wp.Encode())
+			}
+		}
+	} else if *listMaps != "" {
+		var e ErrorLogger
+		lib := MakeVideoMapLibrary()
+		path := *listMaps
+		lib.AddFile(os.DirFS("."), path, make(map[string]interface{}), &e)
+
+		if e.HaveErrors() {
+			e.PrintErrors(lg)
+			os.Exit(1)
+		}
+
+		var videoMaps []STARSMap
+		for _, name := range lib.AvailableMaps(path) {
+			videoMaps = append(videoMaps, *lib.GetMap(path, name))
+		}
+
+		sort.Slice(videoMaps, func(i, j int) bool {
+			vi, vj := videoMaps[i], videoMaps[j]
+			if vi.Id != vj.Id {
+				return vi.Id < vj.Id
+			}
+			return vi.Name < vj.Name
+		})
+
+		fmt.Printf("%5s\t%20s\t%s\n", "Id", "Label", "Name")
+		for _, m := range videoMaps {
+			fmt.Printf("%5d\t%20s\t%s\n", m.Id, m.Label, m.Name)
+		}
 	} else {
-		localSimServerChan, err := LaunchLocalSimServer()
+		localSimServerChan, mapLibrary, err := LaunchLocalSimServer()
 		if err != nil {
 			lg.Errorf("error launching local SimServer: %v", err)
 			os.Exit(1)
@@ -214,16 +283,20 @@ func main() {
 		localServer = <-localSimServerChan
 
 		if globalConfig.Sim != nil && !*resetSim {
-			var result NewSimResult
-			if err := localServer.Call("SimManager.Add", globalConfig.Sim, &result); err != nil {
-				lg.Errorf("error restoring saved Sim: %v", err)
+			if err := globalConfig.Sim.PostLoad(mapLibrary); err != nil {
+				lg.Errorf("Error in Sim PostLoad: %v", err)
 			} else {
-				world = result.World
-				world.simProxy = &SimProxy{
-					ControllerToken: result.ControllerToken,
-					Client:          localServer.RPCClient,
+				var result NewSimResult
+				if err := localServer.Call("SimManager.Add", globalConfig.Sim, &result); err != nil {
+					lg.Errorf("error restoring saved Sim: %v", err)
+				} else {
+					world = result.World
+					world.simProxy = &SimProxy{
+						ControllerToken: result.ControllerToken,
+						Client:          localServer.RPCClient,
+					}
+					world.ToggleShowScenarioInfoWindow()
 				}
-				world.ToggleShowScenarioInfoWindow()
 			}
 		}
 
@@ -237,46 +310,26 @@ func main() {
 			uiShowConnectDialog(false)
 		}
 
-		//Initialize discord RPC
-		simStartTime = time.Now()
-		discord_err := discord_client.Login("1158289394717970473")
-		if discord_err != nil {
-			lg.Error("Discord RPC Error: ", slog.String("error", discord_err.Error()))
+		if !globalConfig.AskedDiscordOptIn {
+			uiShowDiscordOptInDialog()
 		}
-		//Set intial activity
-		discord_err = discord_client.SetActivity(discord_client.Activity{
-			State: "In the main menu",
-			Details: "On Break",
-			LargeImage: "towerlarge",
-			LargeText: "Vice ATC",
-			Timestamps: &discord_client.Timestamps{
-				Start: &simStartTime,
-			},
-		})
-		if discord_err != nil {
-			lg.Error("Discord RPC Error: ", slog.String("error", discord_err.Error()))
+		if !globalConfig.NotifiedNewCommandSyntax {
+			uiShowNewCommandSyntaxDialog()
 		}
+
+		simStartTime := time.Now()
 
 		///////////////////////////////////////////////////////////////////////////
 		// Main event / rendering loop
 		lg.Info("Starting main loop")
+		// Init the wind maps
+		airportWind = make(map[string]Wind)
+		windRequest = make(map[string]chan getweather.MetarData)
+
 		stopConnectingRemoteServer := false
 		frameIndex := 0
 		stats.startTime = time.Now()
-		lastDiscordUpdate := time.Now()
 		for {
-			if time.Since(lastDiscordUpdate) > 5 * time.Second {
-				discord_client.SetActivity(discord_client.Activity{
-					State: "In the main menu",
-					Details: "On Break",
-					LargeImage: "towerlarge",
-					LargeText: "Vice ATC",
-					Timestamps: &discord_client.Timestamps{
-						Start: &simStartTime,
-					},
-				})
-				lastDiscordUpdate = time.Now()
-			}
 			select {
 			case nw := <-newWorldChan:
 				if world != nil {
@@ -322,15 +375,12 @@ func main() {
 				SetDiscordStatus(discordStatus{start: simStartTime})
 			} else {
 				platform.SetWindowTitle("vice: " + world.GetWindowTitle())
-				//Update discord RPC
-				discord_client.SetActivity(discord_client.Activity{
-					State: strconv.Itoa(world.TotalDepartures) + " departures" + " | " + strconv.Itoa(world.TotalArrivals) + " arrivals",
-					Details: "Controlling " + world.Callsign,
-					LargeImage: "towerlarge",
-					LargeText: "Vice ATC",
-					Timestamps: &discord_client.Timestamps{
-						Start: &simStartTime,
-					},
+				// Update discord RPC
+				SetDiscordStatus(discordStatus{
+					totalDepartures: world.TotalDepartures,
+					totalArrivals:   world.TotalArrivals,
+					callsign:        world.Callsign,
+					start:           simStartTime,
 				})
 			}
 
@@ -410,7 +460,6 @@ func main() {
 				if world != nil {
 					world.Disconnect()
 				}
-				discord_client.Logout()
 				break
 			}
 		}

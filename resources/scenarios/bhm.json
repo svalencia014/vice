@@ -1,5 +1,5 @@
 {
-  "tracon": "BHM (Birmingham)",
+  "tracon": "BHM",
   "airports": {
     "KBHM": {
       "approaches": {
@@ -7,7 +7,7 @@
           "runway": "24",
           "type": "ILS",
           "waypoints": [
-            "SPATT/iaf/a4000 HUKEV/a2700 LOWGA/faf/a2200 CUXOB/a1740 _BHM_24/a650"
+            "SPATT/iaf/a4000 HUKEV/a2700 LOWGA/faf/a2200 CUXOB/a1740"
           ]
         },
         "Y24": {
@@ -15,7 +15,7 @@
           "runway": "24",
           "type": "RNAV",
           "waypoints": [
-            "SPATT/iaf/a3300 HUKEV/a2700 LOWGA/a2200 CUXOB/a1740 _BHM_24/a650"
+            "SPATT/iaf/a3300 HUKEV/a2700 LOWGA/a2200 CUXOB/a1740"
           ]
         },
         "Z24": {
@@ -23,17 +23,17 @@
           "runway": "24",
           "type" : "RNAV",
           "waypoints": [
-            "MREKK/iaf/a6000 SPATT/if/a4000 HUKEV/a2700 LOWGA/a2200 _BHM_24/a650",
-            "MOKEE NOCIM LOWGA/faf/a2200 _BHM_24/a650",
-            "VLKNN/a3000 MOPVE/a2500 ERIGE/a2200 LOWGA/s180/a2200 _BHM_24/a650",
-            "HESGA/a3000 MOPVE/a2500 ERIGE/a2200 LOWGA/s180/a2200 _BHM_24/a650"
+            "MREKK/iaf/a6000 SPATT/if/a4000 HUKEV/a2700 LOWGA/a2200",
+            "MOKEE NOCIM LOWGA/faf/a2200",
+            "VLKNN/a3000 MOPVE/a2500 ERIGE/a2200 LOWGA/s180/a2200",
+            "HESGA/a3000 MOPVE/a2500 ERIGE/a2200 LOWGA/s180/a2200"
           ]
         },
         "I6": {
           "runway": "6",
           "type": "ILS",
           "waypoints": [
-            "OKW/a3000 GUFLO/if/a2600 CEMPO/a2200 _BHM_6/a650"
+            "OKW/a3000 GUFLO/if/a2600 CEMPO/a2200"
           ]
         },
         "Z6": {
@@ -41,11 +41,11 @@
           "runway": "6",
           "type": "RNAV",
           "waypoints": [
-            "GUFLO/if/a2300 LELNE/faf/a2300 _BHM_6/a650",
-            "CRMSN/a9000 JAVJA/a6000 WOSIX/a4000 GUFLO/a2300 LELNE/faf/a2300 _BHM_6/a650",
-            "VLKNN/iaf/a3000 AYUCE/s180/a3000 CEWFA/s180/a2300 LELNE/faf/a2300 _BHM_6/a650",
-            "WENDO/a6000 MREKK/iaf/a4000 EMIZI/if/s180/a3000 AYUCE/s180/a2300 CEWFA/s180/a2300 LELNE/faf/s180/a2300 _BHM_6/a650",
-            "BAMTE/if/s180/a3000 RAVPE/s180/a2300 LELNE/faf/a2300 _BHM_6/a650"
+            "GUFLO/if/a2300 LELNE/faf/a2300",
+            "CRMSN/a9000 JAVJA/a6000 WOSIX/a4000 GUFLO/a2300 LELNE/faf/a2300",
+            "VLKNN/iaf/a3000 AYUCE/s180/a3000 CEWFA/s180/a2300 LELNE/faf/a2300",
+            "WENDO/a6000 MREKK/iaf/a4000 EMIZI/if/s180/a3000 AYUCE/s180/a2300 CEWFA/s180/a2300 LELNE/faf/s180/a2300",
+            "BAMTE/if/s180/a3000 RAVPE/s180/a2300 LELNE/faf/a2300"
           ]
         },
         "Y6": {
@@ -53,9 +53,9 @@
           "runway": "6",
           "type": "RNAV",
           "waypoints": [
-            "OKW/a3000 GUFLO/if/a3000 CEMPO/a2600 JUSGO/faf/a2200 _BHM_6/a650",
-            "HEENA/iaf/a3000 GUFLO/if/a3000 CEMPO/a2600 JUSGO/faf/a2200 _BHM_6/a650",
-            "RIMZO/a3000 GUFLO/if/a3000 CEMPO/a2600 JUSGO/faf/a2200 _BHM_6/a650"
+            "OKW/a3000 GUFLO/if/a3000 CEMPO/a2600 JUSGO/faf/a2200",
+            "HEENA/iaf/a3000 GUFLO/if/a3000 CEMPO/a2600 JUSGO/faf/a2200",
+            "RIMZO/a3000 GUFLO/if/a3000 CEMPO/a2600 JUSGO/faf/a2200"
           ]
         },
         "G18": {
@@ -63,9 +63,9 @@
           "runway": "18",
           "type": "RNAV",
           "waypoints": [
-            "CAPUN/iaf/a3500 COLIG/if/a3500 BIDPE/a2600 BASKN/faf/a2300 _BHM_18/a650",
-            "ALEPE/iaf/a3500 COLIG/if/a3500 BIDPE/a2600 BASKN/faf/a2300 _BHM_18/a650",
-            "COLIG/iaf/a3500 BIDPE/a2600 BASKN/faf/a2300 _BHM_18/a650"
+            "CAPUN/iaf/a3500 COLIG/if/a3500 BIDPE/a2600 BASKN/faf/a2300",
+            "ALEPE/iaf/a3500 COLIG/if/a3500 BIDPE/a2600 BASKN/faf/a2300",
+            "COLIG/iaf/a3500 BIDPE/a2600 BASKN/faf/a2300"
           ]
         },
         "G36": {
@@ -73,8 +73,8 @@
           "runway": "36",
           "type": "RNAV",
           "waypoints": [
-            "OKW/a3000 JAPAM/iaf/a3000 GOTBY/if/a3000 IMOBY/a2800 BERFY/a2300 _BHM_36/a650",
-            "GOTBY/iaf/a3000 IMOBY/a2800 BERFY/a2300 _BHM_36/a650"
+            "OKW/a3000 JAPAM/iaf/a3000 GOTBY/if/a3000 IMOBY/a2800 BERFY/a2300",
+            "GOTBY/iaf/a3000 IMOBY/a2800 BERFY/a2300"
           ]
         },
         "I18": {
@@ -82,7 +82,7 @@
           "runway": "18",
           "type": "ILS",
           "waypoints": [
-            "COLIG/iaf/a3500 BASKN/faf/a2300 IMTOY/a1380 _BHM_18/a650"
+            "COLIG/iaf/a3500 BASKN/faf/a2300 IMTOY/a1380"
           ]
         }
       },
@@ -91,74 +91,74 @@
           "DAYVS": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_24 _BHM_6/h238"
+            "waypoints": "_BHM_6/h238"
           },
           "JOEYE": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_24 _BHM_6/h238"
+            "waypoints": "_BHM_6/h238"
           },
           "KELCC": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_24 _BHM_6/h238"
+            "waypoints": "_BHM_6/h238"
           },
           "RHETT": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_24 _BHM_6/h238"
+            "waypoints": "_BHM_6/h238"
           },
           "MRICA": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_24 _BHM_6/h238"
+            "waypoints": "_BHM_6/h238"
           },
           "CHEHA": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_24 _BHM_6/h238"
+            "waypoints": "_BHM_6/h238"
           },
           "GUMMP": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_24 _BHM_6/h238"
+            "waypoints": "_BHM_6/h238"
           }
         },
         "6": {
           "DAYVS": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_6 _BHM_24/h058"
+            "waypoints": "_BHM_24/h058"
           },
           "JOEYE": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_6 _BHM_24/h058"
+            "waypoints": "_BHM_24/h058"
           },
           "KELCC": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_6 _BHM_24/h058"
+            "waypoints": "_BHM_24/h058"
           },
           "RHETT": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_6 _BHM_24/h058"
+            "waypoints": "_BHM_24/h058"
           },
           "MRICA": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_6 _BHM_24/h058"
+            "waypoints": "_BHM_24/h058"
           },
           "CHEHA": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_6 _BHM_24/h058"
+            "waypoints": "_BHM_24/h058"
           },
           "GUMMP": {
             "cleared_altitude": 4000,
             "sid": "BHM8",
-            "waypoints": "_BHM_6 _BHM_24/h058"
+            "waypoints": "_BHM_24/h058"
           }
         }
       },
@@ -343,7 +343,6 @@
         "GUMMP": "ALL",
         "DAYVS": "ALL"
       },
-      "location":"N33.34.26.023,W86.45.22.674",
       "tower_list": 1
     }
   },
@@ -744,19 +743,22 @@
       }
     ]
   },
-  "center": "KBHM",
   "control_positions": {
     "ATL_CTR": {
       "frequency": 132975,
       "full_name": "Atlanta Center",
       "scope_char": "C",
-      "sector_id": "C43"
+      "sector_id": "C43",
+      "facility_id": "C",
+      "eram_facility": true
     },
     "MEM_CTR": {
       "frequency": 132550,
       "full_name": "Memphis Center",
       "scope_char": "C",
-      "sector_id": "M22"
+      "sector_id": "M22",
+      "facility_id": "M",
+      "eram_facility": true
     },
     "BHM_TWR": {
       "frequency": 119900,
@@ -803,46 +805,9 @@
     "_BHM_24": "N33.34.24.480,W86.44.20.840",
     "KBHM": "N33.33.49.992,W86.45.08.294"
   },
-  "inhibit_ca_volumes": [
-    {
-      "name": "BHM NO CA",
-      "type": "polygon",
-      "floor": 0,
-      "ceiling": 3500,
-      "vertices": [
-          "-86.897208,33.532504",
-          "-86.641151,33.677967",
-          "-86.584176,33.611529",
-          "-86.839472,33.462847"
-      ]
-  },
-  {
-    "name": "BHM NO CA",
-    "type": "polygon",
-    "floor": 0,
-    "ceiling": 3500,
-    "vertices": [
-        "-86.695616,33.672883",
-        "-86.695274,33.453065",
-        "-86.79461,33.453311",
-        "-86.794879,33.672271"
-    ]
-}
-  ],
-  "magnetic_variation": 13.3,
+  "magnetic_adjustment": -1,
   "name": "KBHM",
   "primary_airport": "KBHM",
-  "radar_sites": {
-    "BHM": {
-      "char": "B",
-      "position": "33.573611,-86.75611",
-      "elevation": 705,
-      "primary_range": 100,
-      "secondary_range": 150,
-      "silence_angle": 50.4,
-      "slope_angle": 0.3
-    }
-  },
   "reporting_points": [
     "KIOSK",
     "DIODE",
@@ -893,8 +858,9 @@
       "solo_controller": "BHM_S_APP",
       "multi_controllers": {
         "default" : {
-            "BHM_S_APP": {"primary": true, "arrivals": ["KIOSK24", "WANDS", "HERKO24"], "departures": ["KBHM"]},
-            "BHM_N_APP": {"backup": "BHM_S_APP", "arrivals": ["NULLS24", "SHIMS", "NESTS24", "DIODE24", "LYMPH24"]}
+          "BHM_S_APP": {"primary": true, "arrivals": ["KIOSK24", "WANDS", "HERKO24"], "departures": ["KBHM"]},
+          "BHM_N_APP": {"backup": "BHM_S_APP", "arrivals": ["NULLS24", "SHIMS", "NESTS24", "DIODE24","LYMPH24"]},
+          "BHM_F_APP": {"backup": "BHM_S_APP"}
         }
     },
       "controllers": [
@@ -957,8 +923,9 @@
       "solo_controller": "BHM_S_APP",
       "multi_controllers": {
         "default" : {
-            "BHM_S_APP": {"primary": true, "arrivals": ["KIOSK6", "WANDS", "HERKO6"], "departures": ["KBHM"]},
-            "BHM_N_APP": {"backup": "BHM_S_APP", "arrivals": ["NULLS6", "SHIMS", "NESTS6", "DIODE6", "LYMPH6"]}
+          "BHM_S_APP": {"primary": true, "arrivals": ["KIOSK6", "WANDS", "HERKO6"], "departures": ["KBHM"]},
+          "BHM_N_APP": {"backup": "BHM_S_APP", "arrivals": ["NULLS6", "SHIMS", "NESTS6", "DIODE6","LYMPH6"]},
+          "BHM_F_APP": {"backup": "BHM_S_APP"}
         }
     },
       "controllers": [
@@ -983,6 +950,45 @@
       }
     }
   },
+    "stars_config": {
+  "center": "KBHM",
+  "inhibit_ca_volumes": [
+    {
+      "name": "BHM NO CA",
+      "type": "polygon",
+      "floor": 0,
+      "ceiling": 3500,
+      "vertices": [
+          "-86.897208,33.532504",
+          "-86.641151,33.677967",
+          "-86.584176,33.611529",
+          "-86.839472,33.462847"
+      ]
+  },
+  {
+    "name": "BHM NO CA",
+    "type": "polygon",
+    "floor": 0,
+    "ceiling": 3500,
+    "vertices": [
+        "-86.695616,33.672883",
+        "-86.695274,33.453065",
+        "-86.79461,33.453311",
+        "-86.794879,33.672271"
+    ]
+}
+  ],
+  "radar_sites": {
+    "BHM": {
+      "char": "B",
+      "position": "33.573611,-86.75611",
+      "elevation": 705,
+      "primary_range": 100,
+      "secondary_range": 150,
+      "silence_angle": 50.4,
+      "slope_angle": 0.3
+    }
+  },
     "scratchpads": {
       "RHETT": "RHETT",
       "MRICA": "MRICA",
@@ -1004,111 +1010,11 @@
       "MEM": "MEM"
   },
   "stars_maps": [
-    {
-      "group": 0,
-      "label": "MAIN",
-      "name": "BHM MAIN"
-    },
-    {
-      "group": 0,
-      "label": "CLASS C",
-      "name": "BHM CLASS C"
-    },
-    {
-      "group": 1,
-      "label": "EMRGCY",
-      "name": "BHM EMERGENCY"
-    },
-    {
-      "group": 0,
-      "label": "RNV0624",
-      "name": "BHM RNAV RUNWAY 06/24 APPROACH"
-    },
-    {
-      "group": 0,
-      "label": "ANNEX",
-      "name": "BHM/TCL ANNEX"
-    },
-    {
-      "group": 1,
-      "label": "MVA",
-      "name": "BHM MINIMUM VECTORING ALTITUDE"
-    },
-    {
-      "group": 1,
-      "label": "IR RTE",
-      "name": "BHM IFR MILITARY TRAINING ROUTES"
-    },
-    {
-      "group": 1,
-      "label": "EOVM",
-      "name": "BHM EMERGENCY OBSTRUCTION VIDEO MAP"
-    },
-    {
-      "group": 0,
-      "label": "INTXN",
-      "name": "BHM INTERSECTIONS"
-    },
-    {
-      "group": 0,
-      "label": "STADIUM",
-      "name": "BHM STADIUMS"
-    },
-    {
-      "group": 0,
-      "label": "RNV1836",
-      "name": "BHM RNAV RUNWAY 18/36 APPROACHES"
-    },
-    {
-      "group": 0,
-      "label": "VORS",
-      "name": "BHM VORS WITHIN 250NM"
-    },
-    {
-      "group": 0,
-      "label": "ARR FIX",
-      "name": "BHM ARRIVAL FIXES"
-    },
-    {
-      "group": 1,
-      "label": "DEP FIX",
-      "name": "BHM DEPARTURE FIX LABELS"
-    },
-    {
-      "group": 1,
-      "label": "ARR LBL",
-      "name": "BHM ARRIVAL FIX LABELS"
-    },
-    {
-      "group": 0,
-      "label": "RNP24",
-      "name": "BHM RNAV (RNP) Z RWY 24 APPROACH"
-    },
-    {
-      "group": 0,
-      "label": "2436BDY",
-      "name": "RWY 24/36 FINAL BOUNDARY"
-    },
-    {
-      "group": 0,
-      "label": "RNP6",
-      "name": "BHM RNAV (RNP) Z RWY 6 APPROACH"
-    },
-    {
-      "group": 0,
-      "label": "2418BDY",
-      "name": "RWY 24/18 FINAL BOUNDARY"
-    },
-    {
-      "group": 1,
-      "label": "INTXNAM",
-      "name": "BHM INTERSECTIONS WITH NAMES"
-    },
-    {
-      "group": 0,
-      "label": "SAT BDY",
-      "name": "BHM SAT BOUNDARY"
-    }
+      "BHM MAIN", "BHM CLASS C", "BHM EMERGENCY", "BHM RNAV RUNWAY 06/24 APPROACH", "BHM/TCL ANNEX", "BHM MINIMUM VECTORING ALTITUDE",
+      "BHM IFR MILITARY TRAINING ROUTES", "BHM EMERGENCY OBSTRUCTION VIDEO MAP", "BHM INTERSECTIONS", "BHM STADIUMS", "BHM RNAV RUNWAY 18/36 APPROACHES",
+      "BHM VORS WITHIN 250NM", "BHM ARRIVAL FIXES", "BHM DEPARTURE FIX LABELS", "BHM ARRIVAL FIX LABELS", "BHM RNAV (RNP) Z RWY 24 APPROACH",
+      "RWY 24/36 FINAL BOUNDARY", "BHM RNAV (RNP) Z RWY 6 APPROACH", "RWY 24/18 FINAL BOUNDARY", "BHM INTERSECTIONS WITH NAMES", "BHM SAT BOUNDARY"
   ],
-"video_map_file": "videomaps/ZTL-videomaps.json.zst"
+"video_map_file": "videomaps/ZTL-videomaps.gob.zst"
+    }
 }

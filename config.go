@@ -28,10 +28,27 @@ import (
 // 16: cleared/assigned alt for departures, minor nav changes
 // 17: weather intensity default bool
 // 18: STARS ATPA
-const CurrentConfigVersion = 18
+// 19: runway waypoints now per-airport
+// 20: "stars_config" and various scenario fields moved there, plus STARSFacilityAdaptation
+// 21: STARS DCB drawing changes, so system list positions changed
+// 22: draw points using triangles, remove some CommandBuffer commands
+// 23: video map format update
+const CurrentConfigVersion = 23
 
+// Slightly convoluted, but the full GlobalConfig definition is split into
+// the part with the Sim and the rest of it.  In this way, we can first
+// deserialize the non-Sim part and then only try to deserialize the Sim if
+// its version matches CurrentConfigVersion.  This saves us from displaying
+// errors about corrupt JSON in cases where fields in the Sim have changed
+// (and we're going to throw it away anyway...)
 type GlobalConfig struct {
+	GlobalConfigNoSim
+	GlobalConfigSim
+}
+
+type GlobalConfigNoSim struct {
 	Version               int
+	FullScreenMonitor     int
 	InitialWindowSize     [2]int
 	InitialWindowPosition [2]int
 	ImGuiSettings         string
@@ -39,20 +56,25 @@ type GlobalConfig struct {
 	LastServer            string
 	LastTRACON            string
 	UIFontSize            int
+	EnableMSAA            bool
 
 	Audio AudioEngine
 
 	DisplayRoot *DisplayNode
 
-	AskedDiscordOptIn      bool
-	InhibitDiscordActivity AtomicBool
+	AskedDiscordOptIn        bool
+	InhibitDiscordActivity   AtomicBool
+	NotifiedNewCommandSyntax bool
+	StartInFullScreen        bool
 
-	// This is only for serialize / deserialize
-	Sim      *Sim
 	Callsign string
 
 	highlightedLocation        Point2LL
 	highlightedLocationEndTime time.Time
+}
+
+type GlobalConfigSim struct {
+	Sim *Sim
 }
 
 func configFilePath() string {
@@ -95,6 +117,7 @@ func (gc *GlobalConfig) SaveIfChanged(renderer Renderer, platform Platform, w *W
 		if sim, err := w.GetSerializeSim(); err != nil {
 			lg.Errorf("%v", err)
 		} else {
+			sim.PreSave()
 			gc.Sim = sim
 			gc.Callsign = w.Callsign
 		}
@@ -135,6 +158,7 @@ func SetDefaultConfig() {
 	globalConfig.Version = CurrentConfigVersion
 	globalConfig.WhatsNewIndex = len(whatsNew)
 	globalConfig.InitialWindowPosition = [2]int{100, 100}
+	globalConfig.NotifiedNewCommandSyntax = true // don't warn for new installs
 }
 
 func LoadOrMakeDefaultConfig() {
@@ -146,7 +170,8 @@ func LoadOrMakeDefaultConfig() {
 		r := bytes.NewReader(config)
 		d := json.NewDecoder(r)
 
-		if err := d.Decode(globalConfig); err != nil {
+		globalConfig = &GlobalConfig{}
+		if err := d.Decode(&globalConfig.GlobalConfigNoSim); err != nil {
 			SetDefaultConfig()
 			ShowErrorDialog("Configuration file is corrupt: %v", err)
 		}
@@ -156,7 +181,6 @@ func LoadOrMakeDefaultConfig() {
 			globalConfig.DisplayRoot = nil
 		}
 		if globalConfig.Version < 5 {
-			globalConfig.Sim = nil
 			globalConfig.Callsign = ""
 		}
 		if globalConfig.Version < 15 && globalConfig.Audio.AudioEnabled {
@@ -164,15 +188,22 @@ func LoadOrMakeDefaultConfig() {
 				globalConfig.Audio.EffectEnabled[i] = true
 			}
 		}
-		if globalConfig.Version < CurrentConfigVersion {
-			globalConfig.Sim = nil
 
+		if globalConfig.Version < CurrentConfigVersion {
 			if globalConfig.DisplayRoot != nil {
 				globalConfig.DisplayRoot.VisitPanes(func(p Pane) {
 					if up, ok := p.(PaneUpgrader); ok {
 						up.Upgrade(globalConfig.Version, CurrentConfigVersion)
 					}
 				})
+			}
+		}
+
+		if globalConfig.Version == CurrentConfigVersion {
+			// Go ahead and deserialize the Sim
+			r.Seek(0, io.SeekStart)
+			if err := d.Decode(&globalConfig.GlobalConfigSim); err != nil {
+				ShowErrorDialog("Configuration file is corrupt: %v", err)
 			}
 		}
 	}

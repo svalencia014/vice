@@ -6,9 +6,10 @@ package main
 
 import (
 	"fmt"
+	"log/slog"
+	"slices"
 	"strings"
-
-	"golang.org/x/exp/slog"
+	"time"
 )
 
 type Aircraft struct {
@@ -20,17 +21,16 @@ type Aircraft struct {
 	Mode                TransponderMode
 	TempAltitude        int
 	FlightPlan          *FlightPlan
+	ForceQLControllers  []string
+	PointOutHistory     []string
 
-	// Who has the radar track
-	TrackingController string
-	// Who has control of the aircraft; may not be the same as
-	// TrackingController, e.g. after an aircraft has been flashed but
-	// before they have been instructed to contact the new tracking
-	// controller.
-	ControllingController string
-
-	// Handoff offered but not yet accepted
-	HandoffTrackController string
+	// STARS-related state that is globally visible
+	TrackingController        string // Who has the radar track
+	ControllingController     string // Who has control; not necessarily the same as TrackingController
+	HandoffTrackController    string // Handoff offered but not yet accepted
+	GlobalLeaderLineDirection *CardinalOrdinalDirection
+	RedirectedHandoff         RedirectedHandoff
+	SPCOverrides              map[string]interface{}
 
 	// The controller who gave approach clearance
 	ApproachController string
@@ -57,6 +57,12 @@ type Aircraft struct {
 	WaypointHandoffController string
 }
 
+type RedirectedHandoff struct {
+	OriginalOwner string   // Controller callsign
+	Redirector    []string // Controller callsign
+	RedirectedTo  string   // Controller callsign
+}
+
 type PilotResponse struct {
 	Message    string
 	Unexpected bool // should it be highlighted in the UI
@@ -69,8 +75,8 @@ func (ac *Aircraft) TAS() float32 {
 	return ac.Nav.TAS()
 }
 
-func (a *Aircraft) IsAssociated() bool {
-	return a.FlightPlan != nil && a.Squawk == a.AssignedSquawk && a.Mode == Charlie
+func (ac *Aircraft) IsAssociated() bool {
+	return ac.FlightPlan != nil && ac.Squawk == ac.AssignedSquawk && ac.Mode == Charlie
 }
 
 func (ac *Aircraft) HandleControllerDisconnect(callsign string, w *World) {
@@ -154,22 +160,26 @@ func (ac *Aircraft) Update(w *World, ep EventPoster, simlg *Logger) *Waypoint {
 	if passedWaypoint != nil {
 		lg.Info("passed", slog.Any("waypoint", passedWaypoint))
 
-		if passedWaypoint.Delete && ac.Nav.Approach.Cleared {
+		if passedWaypoint.Delete {
 			lg.Info("deleting aircraft after landing")
 			w.DeleteAircraft(ac, nil)
 		}
 	}
 
 	if ac.GoAroundDistance != nil {
-		if d, err := ac.Nav.finalApproachDistance(); err == nil && d < *ac.GoAroundDistance {
+		if d, err := ac.Nav.distanceToEndOfApproach(); err == nil && d < *ac.GoAroundDistance {
 			lg.Info("randomly going around")
 			ac.GoAroundDistance = nil // only go around once
 			rt := ac.GoAround()
+			ac.ControllingController = w.DepartureController(ac)
 			PostRadioEvents(ac.Callsign, rt, ep)
 
 			// If it was handed off to tower, hand it back to us
 			if ac.TrackingController != "" && ac.TrackingController != ac.ApproachController {
-				ac.HandoffTrackController = ac.ApproachController
+				ac.HandoffTrackController = w.DepartureController(ac)
+				if ac.HandoffTrackController == "" {
+					ac.HandoffTrackController = ac.ApproachController
+				}
 				ep.PostEvent(Event{
 					Type:           OfferedHandoffEvent,
 					Callsign:       ac.Callsign,
@@ -185,7 +195,6 @@ func (ac *Aircraft) Update(w *World, ep EventPoster, simlg *Logger) *Waypoint {
 
 func (ac *Aircraft) GoAround() []RadioTransmission {
 	resp := ac.Nav.GoAround()
-
 	return []RadioTransmission{RadioTransmission{
 		Controller: ac.ControllingController,
 		Message:    resp.Message,
@@ -209,6 +218,10 @@ func (ac *Aircraft) MaintainSlowestPractical() []RadioTransmission {
 
 func (ac *Aircraft) MaintainMaximumForward() []RadioTransmission {
 	return ac.transmitResponse(ac.Nav.MaintainMaximumForward())
+}
+
+func (ac *Aircraft) SaySpeed() []RadioTransmission {
+	return ac.transmitResponse(ac.Nav.SaySpeed())
 }
 
 func (ac *Aircraft) ExpediteDescent() []RadioTransmission {
@@ -475,11 +488,11 @@ func (ac *Aircraft) InitializeDeparture(w *World, ap *Airport, departureAirport 
 	} else {
 		// human controller will be first
 		ctrl := w.PrimaryController
-		if w.MultiControllers != nil {
+		if len(w.MultiControllers) > 0 {
 			ctrl = w.MultiControllers.GetDepartureController(departureAirport, runway, exitRoute.SID)
-			if ctrl == "" {
-				ctrl = w.PrimaryController
-			}
+		}
+		if ctrl == "" {
+			ctrl = w.PrimaryController
 		}
 
 		ac.DepartureContactAltitude =
@@ -548,8 +561,12 @@ func (ac *Aircraft) GS() float32 {
 	return ac.Nav.FlightState.GS
 }
 
-func (ac *Aircraft) OnApproach() bool {
-	return ac.Nav.OnApproach()
+func (ac *Aircraft) OnApproach(checkAltitude bool) bool {
+	return ac.Nav.OnApproach(checkAltitude)
+}
+
+func (ac *Aircraft) OnExtendedCenterline(maxNmDeviation float32) bool {
+	return ac.Nav.OnExtendedCenterline(maxNmDeviation)
 }
 
 func (ac *Aircraft) DepartureAirportElevation() float32 {
@@ -558,4 +575,69 @@ func (ac *Aircraft) DepartureAirportElevation() float32 {
 
 func (ac *Aircraft) ArrivalAirportElevation() float32 {
 	return ac.Nav.FlightState.ArrivalAirportElevation
+}
+
+func (ac *Aircraft) ATPAVolume() *ATPAVolume {
+	return ac.Nav.Approach.ATPAVolume
+}
+
+func (ac *Aircraft) MVAsApply() bool {
+	if ac.IsDeparture() {
+		// Start issuing MVAs 5 miles from the field
+		// TODO: are there better criteria?
+		return nmdistance2ll(ac.Position(), ac.Nav.FlightState.DepartureAirportLocation) > 5
+	} else {
+		// If they're established on the approach, they're good.
+		return !ac.OnApproach(true)
+	}
+}
+
+func (ac *Aircraft) ToggleSPCOverride(spc string) {
+	if ac.SPCOverrides == nil {
+		ac.SPCOverrides = make(map[string]interface{})
+	}
+	if _, ok := ac.SPCOverrides[spc]; ok {
+		delete(ac.SPCOverrides, spc)
+	} else {
+		ac.SPCOverrides[spc] = nil
+	}
+}
+
+func (ac *Aircraft) AircraftPerformance() AircraftPerformance {
+	return ac.Nav.Perf
+}
+
+func (ac *Aircraft) RouteIncludesFix(fix string) bool {
+	return slices.ContainsFunc(ac.Nav.Waypoints, func(w Waypoint) bool { return w.Fix == fix })
+}
+
+///////////////////////////////////////////////////////////////////////////
+// RedirectedHandoff methods
+
+func (rd *RedirectedHandoff) GetLastRedirector() string {
+	if length := len(rd.Redirector); length > 0 {
+		return rd.Redirector[length-1]
+	} else {
+		return ""
+	}
+}
+
+func (rd *RedirectedHandoff) ShowRDIndicator(callsign string, RDIndicatorEnd time.Time) bool {
+	// Show "RD" to the redirect target, last redirector until the RD is accepted.
+	// Show "RD" to the original owner up to 30 seconds after the RD is accepted.
+	return rd.RedirectedTo == callsign || rd.GetLastRedirector() == callsign ||
+		rd.OriginalOwner == callsign || time.Until(RDIndicatorEnd) > 0
+}
+
+func (rd *RedirectedHandoff) ShouldFallbackToHandoff(ctrl, octrl string) bool {
+	// True if the 2nd redirector redirects back to the 1st redirector
+	return (len(rd.Redirector) == 1 || (len(rd.Redirector) > 1) && rd.Redirector[1] == ctrl) && octrl == rd.Redirector[0]
+}
+
+func (rd *RedirectedHandoff) AddRedirector(ctrl *Controller) {
+	if len(rd.Redirector) == 0 || rd.Redirector[len(rd.Redirector)-1] != ctrl.Callsign {
+		// Don't append the same controller multiple times
+		// (the case in which the last redirector recalls and then redirects again)
+		rd.Redirector = append(rd.Redirector, ctrl.Callsign)
+	}
 }

@@ -19,6 +19,8 @@ var (
 	ErrInvalidAltitude              = errors.New("Altitude above aircraft's ceiling")
 	ErrInvalidApproach              = errors.New("Invalid approach")
 	ErrInvalidCommandSyntax         = errors.New("Invalid command syntax")
+	ErrInvalidController            = errors.New("Invalid controller")
+	ErrInvalidFacility              = errors.New("Invalid facility")
 	ErrInvalidHeading               = errors.New("Invalid heading")
 	ErrNoAircraftForCallsign        = errors.New("No aircraft exists with specified callsign")
 	ErrNoController                 = errors.New("No controller with that callsign")
@@ -57,6 +59,8 @@ var errorStringToError = map[string]error{
 	ErrInvalidAltitude.Error():              ErrInvalidAltitude,
 	ErrInvalidApproach.Error():              ErrInvalidApproach,
 	ErrInvalidCommandSyntax.Error():         ErrInvalidCommandSyntax,
+	ErrInvalidController.Error():            ErrInvalidController,
+	ErrInvalidFacility.Error():              ErrInvalidFacility,
 	ErrInvalidHeading.Error():               ErrInvalidHeading,
 	ErrNoAircraftForCallsign.Error():        ErrNoAircraftForCallsign,
 	ErrNoController.Error():                 ErrNoController,
@@ -109,16 +113,21 @@ var (
 	ErrSTARSIllegalCode       = NewSTARSError("ILL CODE")
 	ErrSTARSIllegalFix        = NewSTARSError("ILL FIX")
 	ErrSTARSIllegalFlight     = NewSTARSError("ILL FLIGHT")
+	ErrSTARSIllegalFunc       = NewSTARSError("ILL FUNC")
+	ErrSTARSIllegalFunction   = NewSTARSError("ILL FNCT")
 	ErrSTARSIllegalLine       = NewSTARSError("ILL LINE")
 	ErrSTARSIllegalMap        = NewSTARSError("ILL MAP")
 	ErrSTARSIllegalParam      = NewSTARSError("ILL PARAM")
 	ErrSTARSIllegalPosition   = NewSTARSError("ILL POS")
+	ErrSTARSIllegalRPC        = NewSTARSError("ILL RPC") // CRDA runway pair config
+	ErrSTARSIllegalRunway     = NewSTARSError("ILL RWY")
 	ErrSTARSIllegalScratchpad = NewSTARSError("ILL SCR")
 	ErrSTARSIllegalSector     = NewSTARSError("ILL SECTOR")
 	ErrSTARSIllegalText       = NewSTARSError("ILL TEXT")
 	ErrSTARSIllegalTrack      = NewSTARSError("ILL TRK")
 	ErrSTARSIllegalValue      = NewSTARSError("ILL VALUE")
 	ErrSTARSNoFlight          = NewSTARSError("NO FLIGHT")
+	ErrSTARSRangeLimit        = NewSTARSError("RANGE LIMIT")
 )
 
 var starsErrorRemap = map[error]*STARSError{
@@ -127,6 +136,8 @@ var starsErrorRemap = map[error]*STARSError{
 	ErrInvalidAltitude:              ErrSTARSIllegalValue,
 	ErrInvalidApproach:              ErrSTARSIllegalValue,
 	ErrInvalidCommandSyntax:         ErrSTARSCommandFormat,
+	ErrInvalidController:            ErrSTARSIllegalPosition,
+	ErrInvalidFacility:              ErrSTARSIllegalTrack,
 	ErrInvalidHeading:               ErrSTARSIllegalValue,
 	ErrNoAircraftForCallsign:        ErrSTARSNoFlight,
 	ErrNoController:                 ErrSTARSIllegalSector,
