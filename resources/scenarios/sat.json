@@ -3148,6 +3148,717 @@
         "waypoints": "MOPPP AIRBL/ho FOLLK/a9000-13000 DNKIN",
         "speed_restriction": 250
       }
-    ]
-  }
-}
+    ],
+    "POPPO1": [
+      {
+        "airlines": {
+          "KSAT": [
+            {
+              "airport": "KDEN",
+              "fleet": "short",
+              "icao": "UAL"
+            },
+            {
+              "airport": "KPHX",
+              "fleet": "short",
+              "icao": "AAL"
+            },
+            {
+              "airport": "KDEN",
+              "fleet": "short",
+              "icao": "UAL"
+            },
+            {
+              "airport": "KDEN",
+              "icao": "FFT"
+            },
+            {
+              "airport": "KDEN",
+              "icao": "SWA"
+            },
+            {
+              "airport": "KLAS",
+              "icao": "SWA"
+            },
+            {
+              "airport": "KLAS",
+              "icao": "NKS"
+            }
+          ],
+          "KSKF": [
+            {
+              "airport": "KELP",
+              "icao": "LXJ"
+            },
+            {
+              "airport": "KELP",
+              "icao": "EJM"
+            },
+            {
+              "airport": "KELP",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KELP",
+              "icao": "N",
+              "fleet": "fastGA"
+            },
+            {
+              "airport": "KELP",
+              "icao": "TWY"
+            },
+            {
+              "airport": "KELP",
+              "icao": "TIV"
+            }
+          ],
+          "KSSF": [
+            {
+              "airport": "KELP",
+              "icao": "LXJ"
+            },
+            {
+              "airport": "KELP",
+              "icao": "EJM"
+            },
+            {
+              "airport": "KELP",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KELP",
+              "icao": "N",
+              "fleet": "fastGA"
+            },
+            {
+              "airport": "KELP",
+              "icao": "TWY"
+            },
+            {
+              "airport": "KELP",
+              "icao": "TIV"
+            }
+          ]
+        },
+        "initial_altitude": 17000,
+        "initial_controller": "HOU_CTR",
+        "initial_speed": 280,
+        "star": "POPPO1",
+        "runway_waypoints": {
+          "KSAT": {
+            "4":   "POPPO/a10000 VIICH/a9000-/s250 PRKKR DYNMO/a7000/s230 DIIAW/a6000/s210 TIMYY LOWWN/a6000/s210/h217",
+            "22":  "POPPO/a10000 VIICH/a9000-/s250 GERVN/a6000/s210 ADDYY IXION/a6000/s210/h037",
+            "31L": "POPPO/a10000 VIICH/a9000-/s250 PRKKR BEKKK/a8000+ PATII/a7000+ KEENM/a6000/s210/h130",
+            "13R": "POPPO/a10000 VIICH/a9000-/s250 SWUPZ/a7000/s210/flyover"
+          },
+          "KSKF": {
+            "16": "POPPO/a10000 VIICH/a9000-/s250 GAYMS/a9000/h179",
+            "34": "POPPO/a10000 VIICH/a9000-/s250 GAYMS/a9000/h179"
+          },
+          "KSSF": {
+            "14": "POPPO/a10000 VIICH/a9000-/s250 GAYMS/a9000/h179",
+            "32": "POPPO/a10000 VIICH/a9000-/s250 GAYMS/a9000/h179"
+          }
+        },
+        "waypoints": "PPNUT POPPO/a10000 VIICH/a9000-/s250",
+        "speed_restriction": 250
+      }
+    ],
+    "QERVO1": [
+      {
+        "airlines": {
+          "KSAT": [
+            {
+              "airport": "KATL",
+              "fleet": "short",
+              "icao": "DAL"
+            },
+            {
+              "airport": "KATL",
+              "icao": "NKS"
+            },
+            {
+              "airport": "KATL",
+              "icao": "SWA"
+            },
+            {
+              "airport": "KATL",
+              "icao": "FFT"
+            },
+            {
+              "airport": "KIAH",
+              "icao": "ASH"
+            },
+            {
+              "airport": "KIAH",
+              "icao": "SKW"
+            }
+          ],
+          "KSKF": [
+            {
+              "airport": "KELP",
+              "icao": "LXJ"
+            },
+            {
+              "airport": "KELP",
+              "icao": "EJM"
+            },
+            {
+              "airport": "KELP",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KELP",
+              "icao": "N",
+              "fleet": "fastGA"
+            },
+            {
+              "airport": "KELP",
+              "icao": "TWY"
+            },
+            {
+              "airport": "KELP",
+              "icao": "TIV"
+            }
+          ],
+          "KSSF": [
+            {
+              "airport": "KELP",
+              "icao": "LXJ"
+            },
+            {
+              "airport": "KELP",
+              "icao": "EJM"
+            },
+            {
+              "airport": "KELP",
+              "icao": "EJA"
+            },
+            {
+              "airport": "KELP",
+              "icao": "N",
+              "fleet": "fastGA"
+            },
+            {
+              "airport": "KELP",
+              "icao": "TWY"
+            },
+            {
+              "airport": "KELP",
+              "icao": "TIV"
+            }
+          ]
+        },
+        "initial_altitude": 24000,
+        "initial_controller": "HOU_CTR",
+        "initial_speed": 280,
+        "star": "QERVO1",
+        "runway_waypoints": {
+          "KSAT": {
+            "4":   "QERVO TEXNN/a8000+ JEFRE/a7000+ MCRTY/a6000/s210/h217",
+            "13R": "QERVO TAHKO/a11000- FJITA/a8000- TRTLA SALZA/a6000/s210 CARNE/a6000/s210/h308",
+            "22":  "QERVO TRITP/a7000/s210/h274",
+            "31L": "QERVO DERRR COMUT/a6000/s210 ALRGIA XLANT/a6000/s210"
+          },
+          "KSKF": {
+            "16": "QERVO POYYO/a10000/h245",
+            "34": "QERVO POYYO/a10000/h245"
+          },
+          "KSSF": {
+            "16": "QERVO POYYO/a10000/h245",
+            "34": "QERVO POYYO/a10000/h245"
+                 }
+              }
+            }
+          ]
+        },
+        "control_positions": {
+          "HOU_CTR": {
+            "frequency": 134425,
+            "full_name": "Houston Center",
+            "facility_id": "C",
+            "eram_facility": true,
+            "scope_char": "C",
+            "sector_id": "C81"
+          },
+          "SKF_TWR": {
+            "frequency": 124300,
+            "full_name": "Kelly Tower",
+            "scope_char": "K",
+            "sector_id": "1K"
+          },
+          "SSF_TWR": {
+            "frequency": 118200,
+            "full_name": "Stinson Tower",
+            "scope_char": "Z",
+            "sector_id": "1Z"
+          },
+          "SAT_TWR": {
+            "frequency": 119800,
+            "full_name": "San Antonio Tower",
+            "scope_char": "T",
+            "sector_id": "1T"
+          },
+          "SAT_N_APP": {
+            "frequency": 127100,
+            "full_name": "San Antonio Approach",
+            "scope_char": "N",
+            "sector_id": "1N"
+          },
+          "SAT_Q_APP": {
+            "frequency": 124450,
+            "full_name": "San Antonio Approach",
+            "scope_char": "Q",
+            "sector_id": "1Q"
+          },
+          "SAT_L_APP": {
+            "frequency": 120050,
+            "full_name": "San Antonio Approach",
+            "scope_char": "L",
+            "sector_id": "1L"
+          },
+          "SAT_K_APP": {
+            "frequency": 118050,
+            "full_name": "San Antonio Approach",
+            "scope_char": "K",
+            "sector_id": "1K"
+          },
+          "SAT_R_APP": {
+            "frequency": 128050,
+            "full_name": "San Antonio Approach",
+            "scope_char": "R",
+            "sector_id": "1R"
+          },
+          "SAT_S_APP": {
+            "frequency": 125700,
+            "full_name": "San Antonio Approach",
+            "scope_char": "S",
+            "sector_id": "1S"
+          },
+          "SAT_W_APP": {
+            "frequency": 125100,
+            "full_name": "San Antonio Approach",
+            "scope_char": "W",
+            "sector_id": "1W"
+          }
+        },
+        "default_scenario": "KSAT North + Sats North",
+        "name": "KSAT",
+        "primary_airport": "KSAT",
+        "reporting_points": [
+          "BENEY",
+          "CRVZA",
+          "DNKIN",
+          "POPPO",
+          "QERVO"
+        ],
+        "scenarios": {
+          "KSAT North + Sats North": {
+            "arrival_runways": [
+              {
+                "airport": "KSAT",
+                "runway": "31L"
+              },
+              {
+                "airport": "KSKF",
+                "runway": "34"
+              },
+              {
+                "airport": "KSSF",
+                "runway": "32"
+              }
+            ],
+            "arrivals": {
+              "CSI2": {
+                "KSAT": 2,
+                "KSKF": 1,
+                "KSSF": 1
+              },
+              "CRVZA1": {
+                "KSAT": 8,
+                "KSKF": 2,
+                "KSSF": 2
+              },
+              "DNKIN1": {
+                "KSAT": 2,
+                "KSKF": 1,
+                "KSSF": 2
+              },
+              "POPPO1": {
+                "KSAT": 2,
+                "KSKF": 2,
+                "KSSF": 1
+              },
+              "QERVO1": {
+                "KSAT": 2,
+                "KSKF": 2,
+                "KSSF": 2
+              }
+            },
+            "solo_controller": "SAT_N_APP",
+            "multi_controllers": {
+              "default": {
+                "SAT_N_APP": {"primary": true, "arrivals": ["QERVO1"]},
+                "SAT_W_APP": {"backup": "SAT_N_APP", "arrivals": ["POPPO1"],"departures": ["KSAT/ALAMO3", "KSAT/ALISS6", "KSAT/LEJON4", "KSAT/SNIDR1", "KSAT/YODUH1"]},
+                "SAT_S_APP": {"backup": "SAT_N_APP", "arrivals": ["CSI2","CRVZA1", "DNKIN1"],"departures": ["KSKF", "KSAT/BOWIE7", "KSAT/SLENA1", "KSAT/TJANO1"]},
+                "SAT_K_APP": {"backup": "SAT_S_APP", "departures": ["KSSF"]},
+                "SAT_L_APP": {"backup": "SAT_S_APP"}
+              }
+            },
+            "controllers": [
+              "SKF_TWR",
+              "SSF_TWR",
+              "SAT_TWR",
+              "HOU_CTR"
+            ],
+            "default_maps" :[
+              "SAT BASE", "SAT RWY 31"
+            ],
+            "departure_runways": [
+              {
+                "airport": "KSAT",
+                "rate": 30,
+                "runway": "31L"
+              },
+              {
+                "airport": "KSKF",
+                "runway": "34",
+                "rate": 5
+              },
+              {
+                "airport": "KSSF",
+                "runway": "32",
+                "rate": 5
+              }
+            ],
+            "wind": {
+              "direction": 320,
+              "gust": 13,
+              "speed": 8
+            }
+          },
+          "KSAT South + Sats South": {
+            "arrival_runways": [
+              {
+                "airport": "KSAT",
+                "runway": "13R"
+              },
+              {
+                "airport": "KSKF",
+                "runway": "16"
+              },
+              {
+                "airport": "KSSF",
+                "runway": "14"
+              }
+            ],
+            "arrivals": {
+              "CSI2": {
+                "KSAT": 2,
+                "KSKF": 1,
+                "KSSF": 1
+              },
+              "CRVZA1": {
+                "KSAT": 8,
+                "KSKF": 2,
+                "KSSF": 2
+              },
+              "DNKIN1": {
+                "KSAT": 2,
+                "KSKF": 1,
+                "KSSF": 2
+              },
+              "POPPO1": {
+                "KSAT": 2,
+                "KSKF": 2,
+                "KSSF": 1
+              },
+              "QERVO1": {
+                "KSAT": 2,
+                "KSKF": 2,
+                "KSSF": 2
+              }
+            },
+            "solo_controller": "SAT_N_APP",
+            "multi_controllers": {
+              "default": {
+                "SAT_N_APP": {"primary": true,  "departures": ["KSAT/ALAMO3", "KSAT/SNIDR1", "KSAT/YODUH1"], "arrivals": ["QERVO1"]},
+                "SAT_S_APP": {"backup": "SAT_W_APP", "departures": ["KSAT/ALISS6", "KSAT/BOWIE7", "KSAT/LEJON4", "KSAT/SLENA1", "KSAT/TJANO1"], "arrivals": ["CRVZA1"]},
+                "SAT_W_APP": {"backup": "SAT_N_APP", "arrivals": ["DNKIN1", "POPPO1", "CSI2"]},
+                "SAT_K_APP": {"backup": "SAT_S_APP", "departures": ["KSKF", "KSSF"] }
+              }
+            },
+            "controllers": [
+              "SKF_TWR",
+              "SSF_TWR",
+              "SAT_TWR",
+              "HOU_CTR"
+            ],
+            "default_maps" :[
+              "SAT BASE", "SAT RWY 13"
+            ],
+            "departure_runways": [
+              {
+                "airport": "KSAT",
+                "rate": 30,
+                "runway": "13R"
+              },
+              {
+                "airport": "KSKF",
+                "runway": "16",
+                "rate": 5
+              },
+              {
+                "airport": "KSSF",
+                "runway": "14",
+                "rate": 5
+              }
+            ],
+            "wind": {
+              "direction": 140,
+              "gust": 13,
+              "speed": 8
+            }
+          },
+          "KSAT East + Sats South": {
+            "arrival_runways": [
+              {
+                "airport": "KSAT",
+                "runway": "4"
+              },
+              {
+                "airport": "KSKF",
+                "runway": "16"
+              },
+              {
+                "airport": "KSSF",
+                "runway": "14"
+              }
+            ],
+            "arrivals": {
+              "CSI2": {
+                "KSAT": 2,
+                "KSKF": 1,
+                "KSSF": 1
+              },
+              "CRVZA1": {
+                "KSAT": 8,
+                "KSKF": 2,
+                "KSSF": 2
+              },
+              "DNKIN1": {
+                "KSAT": 2,
+                "KSKF": 1,
+                "KSSF": 2
+              },
+              "POPPO1": {
+                "KSAT": 2,
+                "KSKF": 2,
+                "KSSF": 1
+              },
+              "QERVO1": {
+                "KSAT": 2,
+                "KSKF": 2,
+                "KSSF": 2
+              }
+            },
+            "solo_controller": "SAT_N_APP",
+            "multi_controllers": {
+              "default": {
+                "SAT_N_APP": {"primary": true, "arrivals": ["QERVO1"],"departures": ["KSAT/BOWIE7", "KSAT/SLENA1", "KSAT/TJANO1","KSAT/SNIDR1", "KSAT/YODUH1"]},
+                "SAT_W_APP": {"backup": "SAT_N_APP", "arrivals": ["POPPO1"],"departures": ["KSAT/ALAMO3", "KSAT/ALISS6", "KSAT/LEJON4"]},
+                "SAT_S_APP": {"backup": "SAT_N_APP", "arrivals": ["CSI2","CRVZA1", "DNKIN1"]},
+                "SAT_K_APP": {"backup": "SAT_S_APP", "departures": ["KSSF", "KSKF"]},
+                "SAT_L_APP": {"backup": "SAT_S_APP"}
+              }
+            },
+            "controllers": [
+              "SKF_TWR",
+              "SSF_TWR",
+              "SAT_TWR",
+              "HOU_CTR"
+            ],
+            "default_maps" :[
+              "SAT BASE", "SAT RWY 4"
+            ],
+            "departure_runways": [
+              {
+                "airport": "KSAT",
+                "rate": 30,
+                "runway": "4"
+              },
+              {
+                "airport": "KSKF",
+                "runway": "16",
+                "rate": 5
+              },
+              {
+                "airport": "KSSF",
+                "runway": "14",
+                "rate": 5
+              }
+            ],
+            "wind": {
+              "direction": 110,
+              "gust": 13,
+              "speed": 8
+            }
+          },
+          "KSAT West + Sats North": {
+            "arrival_runways": [
+              {
+                "airport": "KSAT",
+                "runway": "22"
+              },
+              {
+                "airport": "KSKF",
+                "runway": "34"
+              },
+              {
+                "airport": "KSSF",
+                "runway": "32"
+              }
+            ],
+            "arrivals": {
+              "CSI2": {
+                "KSAT": 2,
+                "KSKF": 1,
+                "KSSF": 1
+              },
+              "CRVZA1": {
+                "KSAT": 8,
+                "KSKF": 2,
+                "KSSF": 2
+              },
+              "DNKIN1": {
+                "KSAT": 2,
+                "KSKF": 1,
+                "KSSF": 2
+              },
+              "POPPO1": {
+                "KSAT": 2,
+                "KSKF": 2,
+                "KSSF": 1
+              },
+              "QERVO1": {
+                "KSAT": 2,
+                "KSKF": 2,
+                "KSSF": 2
+              }
+            },
+            "solo_controller": "SAT_N_APP",
+            "multi_controllers": {
+              "default": {
+                "default": {
+                  "SAT_N_APP": {"primary": true, "arrivals": ["QERVO1"]},
+                  "SAT_S_APP": {"backup": "SAT_W_APP", "departures": ["KSAT/BOWIE7", "KSAT/SLENA1", "KSAT/TJANO1"], "arrivals": ["CRVZA1"]},
+                  "SAT_W_APP": {"backup": "SAT_N_APP", "departures": ["KSAT/ALAMO3", "KSAT/ALISS6", "KSAT/LEJON4", "KSAT/SNIDR1", "KSAT/YODUH1"], "arrivals": ["CSI2", "DNKIN1", "POPPO1"]},
+                  "SAT_K_APP": {"backup": "SAT_S_APP", "departures": ["KSKF", "KSSF"] }
+                }
+              }
+            },
+            "controllers": [
+              "SKF_TWR",
+              "SSF_TWR",
+              "SAT_TWR",
+              "HOU_CTR"
+            ],
+            "default_maps" :[
+              "SAT BASE", "SAT RWY 22"
+            ],
+            "departure_runways": [
+              {
+                "airport": "KSAT",
+                "rate": 30,
+                "runway": "22"
+              },
+              {
+                "airport": "KSKF",
+                "runway": "34",
+                "rate": 5
+              },
+              {
+                "airport": "KSSF",
+                "runway": "32",
+                "rate": 5
+              }
+            ],
+            "wind": {
+              "direction": 280,
+              "gust": 13,
+              "speed": 8
+            }
+          }
+        },
+        "stars_config": {
+          "center":  "KSAT",
+          "range": 60,
+          "inhibit_ca_volumes": [
+            {
+              "name" : "SAT NO CA",
+              "type": "circle",
+              "floor": 0,
+              "ceiling": 3000,
+              "radius": 7,
+              "center": "KSAT"
+            },
+            {
+              "name" : "SKF NO CA",
+              "type": "circle",
+              "floor": 0,
+              "ceiling": 2000,
+              "radius": 5,
+              "center": "KSKF"
+            },
+            {
+              "name" : "SSF NO CA",
+              "type": "circle",
+              "floor": 0,
+              "ceiling": 2000,
+              "radius": 5,
+              "center": "KSSF"
+            }
+          ],
+          "allow_long_scratchpad": [
+            false, 
+            false
+          ],
+          "force_ql_self": true,
+          "scratchpads": {
+            "ALISS": "TAT",
+            "TJANO": "LVA",
+            "ZANNI": "LVA",
+            "KAHAN": "LVA",
+            "BRENI": "YEN",
+            "SLENA": "YEN",
+            "MOLLR": "SNI",
+            "BLUMS": "SNI",
+            "CAAGE": "SNI",
+            "WYLSN": "SNI",
+            "WHAEL": "SNI",
+            "FFSSH": "SNI",
+            "WENAR": "SNI",
+            "SEEDS": "SNI",
+            "PRTZY": "YOD",
+            "KLNGR": "YOD",
+            "LEJON": "TAT",
+            "JUMBO": "HEN",
+            "AGJ": "GOB",
+            "HENLY": "HEN",
+            "GOBBY": "GOB",
+            "LRD": "MIL",
+            "CRP": "YEN"
+          },
+          "stars_maps": [
+            "SAT BASE", "SAT RWY 13", "SAT RWY 4", "SAT RWY 31", "SAT 3NM MVA",
+            "SAT VFR", "SAT CLASS AIRSPACES", "NORTH FINALS", "SOUTH FINALS", 
+            "PRIVATE AIRPORTS", "SAT OTHER SATELLITE GPS WAYPOINTS", "KSAT RNAV/GPS",
+            "SSF RNAV/GPS", "SKF RNAV/GPS", "SAT SID/STAR FIXES", "SAT ZHU SECTORS",
+            "KSAT SIDS", "STARS RWY 13", "STARS RWY 04", "STARS RWY 22",
+            "STARS RWY 31", "SAT COUNTIES", "AIRWAYS AND INTERSECTIONS", "SKF BREAKOUT BOX",
+            "SKF HIGH", "SAT MOA PRACTICE AREAS", "REYNOLDS PIPELINE", "ALAMO DOME TFR",
+            "DXEEE STAR"
+          ],
+          "video_map_file": "videpmaps/ZHU-videomaps.gob.zst"
+        }
+      }
