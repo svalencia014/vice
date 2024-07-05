@@ -3720,6 +3720,14 @@
               "ceiling": 2000,
               "radius": 5,
               "center": "KSSF"
+            },
+            {
+              "name": "STAR NO CA",
+              "type": "circle",
+              "floor": 10000,
+              "ceiling": 17000,
+              "radius": 8,
+              "center": "N029.56.11.415,W099.14.20.531"
             }
           ],
           "allow_long_scratchpad": [
