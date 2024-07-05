@@ -141,6 +141,25 @@
     }
   },
   {
+    "icao": "tiv",
+    "name": "Thrive",
+    "callsign": {
+      "name": "Thrive",
+      "callsignFormats": [
+        "##",
+        "###"
+      ]
+    },
+    "fleets": {
+      "default": [
+        [
+          "F2TH",
+          1
+        ]
+      ]
+    }
+  },
+  {
     "icao": "TMB",
     "name": "Volato",
     "callsign": {

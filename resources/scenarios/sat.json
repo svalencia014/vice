@@ -98,6 +98,11 @@
             "sid": "SNIDR1",
             "waypoints": "KSAT-22/h037 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL BLUMS BALIO"
           },
+          "SNIDR": {
+            "cleared_altitude": 5000,
+            "sid": "SNIDR1",
+            "waypoints": "KSAT-22/h037 WRKIT/a5000+ CHURN"
+          },
           "BLUMS": {
             "cleared_altitude": 5000,
             "sid": "SNIDR1",
@@ -121,9 +126,9 @@
           "FFSSH": {
             "cleared_altitude": 5000,
             "sid": "SNIDR1",
-            "waypoints": "KSAT-22/h037 WRKIT/a5000+ CHURN SNIDR SEEDS WENAR"
+            "waypoints": "KSAT-22/h037 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR"
           },
-          "WENAR": {
+          "WEMAR": {
             "cleared_altitude": 5000,
             "sid": "SNIDR1",
             "waypoints": "KSAT-22/h037 WRKIT/a5000+ CHURN SNIDR SEEDS"
@@ -152,6 +157,11 @@
             "cleared_altitude": 5000,
             "sid": "YODUH1",
             "waypoints": "KSAT-22/h037 SITHH/a5000+ YODUH GJACK"
+          },
+          "YODUH": {
+            "cleared_altitude": 5000,
+            "sid": "YODUH1",
+            "waypoints": "KSAT-22/h037 SITHH/a5000+"
           }
         },
         "13R": {  
@@ -210,6 +220,11 @@
             "sid": "SNIDR1",
             "waypoints": "KSAT-31L/h128 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL BLUMS BALIO"
           },
+          "SNIDR": {
+            "cleared_altitude": 5000,
+            "sid": "SNIDR1",
+            "waypoints": "KSAT-31L/h128 WRKIT/a5000+ CHURN"
+          },
           "BLUMS": {
             "cleared_altitude": 5000,
             "sid": "SNIDR1",
@@ -233,9 +248,9 @@
           "FFSSH": {
             "cleared_altitude": 5000,
             "sid": "SNIDR1",
-            "waypoints": "KSAT-31L/h128 WRKIT/a5000+ CHURN SNIDR SEEDS WENAR"
+            "waypoints": "KSAT-31L/h128 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR"
           },
-          "WENAR": {
+          "WEMAR": {
             "cleared_altitude": 5000,
             "sid": "SNIDR1",
             "waypoints": "KSAT-31L/h128 WRKIT/a5000+ CHURN SNIDR SEEDS"
@@ -264,6 +279,11 @@
             "cleared_altitude": 5000,
             "sid": "YODUH1",
             "waypoints": "KSAT-31L/h128 SITHH/a5000+ YODUH GJACK"
+          },
+          "YODUH": {
+            "cleared_altitude": 5000,
+            "sid": "YODUH1",
+            "waypoints": "KSAT-31L/h128 SITHH/a5000+"
           }
         },
         "22": {
@@ -345,12 +365,17 @@
           "FFSSH": {
             "cleared_altitude": 5000,
             "sid": "SNIDR1",
-            "waypoints": "KSAT-4/h217 WRKIT/a5000+ CHURN SNIDR SEEDS WENAR"
+            "waypoints": "KSAT-4/h217 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR"
           },
-          "WENAR": {
+          "WEMAR": {
             "cleared_altitude": 5000,
             "sid": "SNIDR1",
             "waypoints": "KSAT-4/h217 WRKIT/a5000+ CHURN SNIDR SEEDS"
+          },
+          "SNIDR": {
+            "cleared_altitude": 5000,
+            "sid": "SNIDR1",
+            "waypoints": "KSAT-4/h217 WRKIT/a5000+ CHURN"
           },
           "SEEDS": {
             "cleared_altitude": 5000,
@@ -376,9 +401,14 @@
             "cleared_altitude": 5000,
             "sid": "YODUH1",
             "waypoints": "KSAT-4/h217 SITHH/a5000+ YODUH GJACK"
+          },
+          "YODUH": {
+            "cleared_altitude": 5000,
+            "sid": "YODUH1",
+            "waypoints": "KSAT-4/h217 SITHH/a5000+"
           }
         },
-        "31R": {
+        "31L": {
           "JUMBO": {
             "cleared_altitude": 5000,
             "sid": "ALAMO3",
@@ -457,9 +487,9 @@
           "FFSSH": {
             "cleared_altitude": 5000,
             "sid": "SNIDR1",
-            "waypoints": "KSAT-13R/h308 WRKIT/a5000+ CHURN SNIDR SEEDS WENAR"
+            "waypoints": "KSAT-13R/h308 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR"
           },
-          "WENAR": {
+          "WEMAR": {
             "cleared_altitude": 5000,
             "sid": "SNIDR1",
             "waypoints": "KSAT-13R/h308 WRKIT/a5000+ CHURN SNIDR SEEDS"
@@ -468,6 +498,11 @@
             "cleared_altitude": 5000,
             "sid": "SNIDR1",
             "waypoints": "KSAT-13R/h308 WRKIT/a5000+ CHURN SNIDR"
+          },
+          "SNIDR": {
+            "cleared_altitude": 5000,
+            "sid": "SNIDR1",
+            "waypoints": "KSAT-13R/h308 WRKIT/a5000+ CHURN"
           },
           "ZANNI,KAHAN": {
             "cleared_altitude": 5000,
@@ -488,6 +523,11 @@
             "cleared_altitude": 5000,
             "sid": "YODUH1",
             "waypoints": "KSAT-13R/h308 SITHH/a5000+ YODUH GJACK"
+          },
+          "YODUH": {
+            "cleared_altitude": 5000,
+            "sid": "YODUH1",
+            "waypoints": "KSAT-13R/h308 SITHH/a5000+"
           }
         }
       },
@@ -644,18 +684,6 @@
           "airlines": [
               {
                   "icao": "VIV",
-                  "fleet": "default"
-              }
-          ]
-      },
-      {
-          "exit": "LLA",
-          "destination": "KMCO",
-          "altitude": 35000,
-          "route": "GUMBY3 LLA LEV Y280 CHRGE PRICY3",
-          "airlines": [
-              {
-                  "icao": "UAL",
                   "fleet": "default"
               }
           ]
@@ -836,18 +864,6 @@
           "airlines": [
               {
                   "icao": "UAL",
-                  "fleet": "default"
-              }
-          ]
-      },
-      {
-          "exit": "FORCK",
-          "destination": "KBHM",
-          "altitude": 39000,
-          "route": "LNDRE5 FORCK ELD IZAAC SKNRR NESTS",
-          "airlines": [
-              {
-                  "icao": "SWA",
                   "fleet": "default"
               }
           ]
@@ -1105,30 +1121,6 @@
           ]
       },
       {
-          "exit": "RRSTA",
-          "destination": "KLAS",
-          "altitude": 24000,
-          "route": "ZEPER2 RRSTA ELLDA RKSTR3",
-          "airlines": [
-              {
-                  "icao": "AAL",
-                  "fleet": "default"
-              }
-          ]
-      },
-      {
-          "exit": "MRICA",
-          "destination": "KBOS",
-          "altitude": 45000,
-          "route": "MRICA GAD ADEIN RHODE BSERK Q419 JFK ROBUC3",
-          "airlines": [
-              {
-                  "icao": "LXJ",
-                  "fleet": "default"
-              }
-          ]
-      },
-      {
           "exit": "YODUH",
           "destination": "KDFW",
           "altitude": 29000,
@@ -1213,42 +1205,6 @@
           ]
       },
       {
-          "exit": "DOLEY",
-          "destination": "KDEN",
-          "altitude": 34000,
-          "route": "STYCK8 DOLEY FUZ SPS TOTOE HALEN NIIXX3",
-          "airlines": [
-              {
-                  "icao": "UAL",
-                  "fleet": "short"
-              }
-          ]
-      },
-      {
-          "exit": "OROSZ",
-          "destination": "KOAK",
-          "altitude": 40000,
-          "route": "PADRZ2 OROSZ COREZ RGOOD EMZOH3",
-          "airlines": [
-              {
-                  "icao": "SWA",
-                  "fleet": "short"
-              }
-          ]
-      },
-      {
-          "exit": "SWAPP",
-          "destination": "KDCA",
-          "altitude": 37000,
-          "route": "CHADM3 SWAPP Q34 NEALS SITTR TRUPS5",
-          "airlines": [
-              {
-                  "icao": "SWA",
-                  "fleet": "default"
-              }
-          ]
-      },
-      {
           "exit": "ALISS",
           "destination": "KLAX",
           "altitude": 36000,
@@ -1297,18 +1253,6 @@
           ]
       },
       {
-          "exit": "DUFEE",
-          "destination": "KCLE",
-          "altitude": 33000,
-          "route": "DUFEE LOGGR DETMR BRWNZ4",
-          "airlines": [
-              {
-                  "icao": "UAL",
-                  "fleet": "default"
-              }
-          ]
-      },
-      {
           "exit": "YODUH",
           "destination": "KDFW",
           "altitude": 29000,
@@ -1321,18 +1265,6 @@
           ]
       },
       {
-          "exit": "BIGGY",
-          "destination": "KCLT",
-          "altitude": 38000,
-          "route": "BIGGY Q75 GVE AIROW CHSLY6",
-          "airlines": [
-              {
-                  "icao": "UAL",
-                  "fleet": "default"
-              }
-          ]
-      },
-      {
           "exit": "BLUMS",
           "destination": "KATL",
           "altitude": 31000,
@@ -1340,18 +1272,6 @@
           "airlines": [
               {
                   "icao": "DAL",
-                  "fleet": "default"
-              }
-          ]
-      },
-      {
-          "exit": "PWL",
-          "destination": "KBWI",
-          "altitude": 28000,
-          "route": "PWL BIZEX Q75 MXE V378 NUGGY TRISH3",
-          "airlines": [
-              {
-                  "icao": "SWA",
                   "fleet": "default"
               }
           ]
@@ -1585,18 +1505,6 @@
           ]
       },
       {
-          "exit": "CKB",
-          "destination": "KRSW",
-          "altitude": 38000,
-          "route": "CKB COBBE PSK SLOJO Q103 CYNTA SHFTY5",
-          "airlines": [
-              {
-                  "icao": "SWA",
-                  "fleet": "default"
-              }
-          ]
-      },
-      {
           "exit": "YODUH",
           "destination": "KDFW",
           "altitude": 29000,
@@ -1616,42 +1524,6 @@
           "airlines": [
               {
                   "icao": "FFT",
-                  "fleet": "default"
-              }
-          ]
-      },
-      {
-          "exit": "SSOXS",
-          "destination": "KBWI",
-          "altitude": 36000,
-          "route": "SSOXS7 SSOXS Q167 ZIZZI KNUKK ATR LAFLN MIIDY2",
-          "airlines": [
-              {
-                  "icao": "SWA",
-                  "fleet": "short"
-              }
-          ]
-      },
-      {
-          "exit": "ABQ",
-          "destination": "KDEN",
-          "altitude": 31000,
-          "route": "ABQ3 ABQ FIREY GNDLA TBARR3",
-          "airlines": [
-              {
-                  "icao": "SWA",
-                  "fleet": "short"
-              }
-          ]
-      },
-      {
-          "exit": "SEARS",
-          "destination": "KLAS",
-          "altitude": 38000,
-          "route": "SEARS YARNS IFI GUP HAHAA RKSTR3",
-          "airlines": [
-              {
-                  "icao": "SWA",
                   "fleet": "default"
               }
           ]
@@ -1679,18 +1551,6 @@
                   "fleet": "default"
               }
           ]
-      },
-      {
-          "exit": "KENNO",
-          "destination": "KEUG",
-          "altitude": 38000,
-          "route": "JOHKR3 KENNO OAL J92 YERIN LMT",
-          "airlines": [
-              {
-                  "icao": "SWA",
-                  "fleet": "short"
-              }
-          ]
       }
       ],
       "exit_categories": {
@@ -1710,7 +1570,7 @@
         "WYLSN": "All",
         "WHAEL": "All",
         "FFSSH": "All",
-        "WENAR": "All",
+        "WEMAR": "All",
         "SEEDS": "All",
         "ZANNI": "All",
         "KAHAN": "All",
@@ -1781,226 +1641,246 @@
       "departure_routes": {
         "14": {
           "JUMBO": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "ALAMO3",
             "waypoints": "KSSF-32/h317 SAT HENLY"
           },
           "HENLY": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "ALAMO3",
             "waypoints": "KSSF-32/h317 SAT"
           },
           "GOBBY": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "ALAMO3",
             "waypoints": "KSSF-32/h317 SAT"
           },
           "AGJ": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "ALAMO3",
             "waypoints": "KSSF-32/h317 SAT GOBBY"
           },
           "ALISS": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "ALISS6",
             "waypoints": "KSSF-32/h317 TREVA/a5000+ TATAR"
           },
           "CRP": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "BOWIE7",
             "waypoints": "KSSF-32/h317 SAT YENNS THX"
           },
           "LRD": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "BOWIE7",
             "waypoints": "KSSF-32/h317 SAT MILET"
           },
           "LEJON": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "LEJON4",
             "waypoints": "KSSF-32/h317 SAT TATAR"
           },
           "BRENI": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SLENA1",
             "waypoints": "KSSF-32/h317 YENNS/a5000+ LILJO SLENA"
           },
           "SLENA": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SLENA1",
             "waypoints": "KSSF-32/h317 YENNS/a5000+ LILJO"
           },
           "MOLLR": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-32/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL BLUMS BALIO"
           },
           "BLUMS": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-32/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL"
           },
           "CAAGE": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-32/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL"
           },
           "WYLSN": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-32/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR WHAEL"
           },
           "WHAEL": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-32/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH"
           },
           "FFSSH": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
-            "waypoints": "KSSF-32/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WENAR"
+            "waypoints": "KSSF-32/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR"
           },
-          "WENAR": {
-            "cleared_altitude": 5000,
+          "WEMAR": {
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-32/h317 WRKIT/a5000+ CHURN SNIDR SEEDS"
           },
           "SEEDS": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-32/h317 WRKIT/a5000+ CHURN SNIDR"
           },
+          "SNIDR": {
+            "cleared_altitude": 2000,
+            "sid": "SNIDR1",
+            "waypoints": "KSSF-32/h317 WRKIT/a5000+ CHURN"
+          },
           "ZANNI,KAHAN": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "TJANO1",
             "waypoints": "KSSF-32/h317 LVACA/a5000+ TJANO TEEPY"
           },
           "TJANO": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "TJANO1",
             "waypoints": "KSSF-32/h317 LVACA/a5000+"
           },
           "KLNGR": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "YODUH1",
             "waypoints": "KSSF-32/h317 SITHH/a5000+ YODUH"
           },
           "PRTZY": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "YODUH1",
             "waypoints": "KSSF-32/h317 SITHH/a5000+ YODUH GJACK"
+          },
+          "YODUH": {
+            "cleared_altitude": 2000,
+            "sid": "YODUH1",
+            "waypoints": "KSSF-32/h317 SITHH/a5000+"
           }
         },
         "32": {
           "JUMBO": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "ALAMO3",
             "waypoints": "KSSF-14/h137 SAT HENLY"
           },
           "HENLY": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "ALAMO3",
             "waypoints": "KSSF-14/h137 SAT"
           },
           "GOBBY": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "ALAMO3",
             "waypoints": "KSSF-14/h137 SAT"
           },
           "AGJ": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "ALAMO3",
             "waypoints": "KSSF-14/h137 SAT GOBBY"
           },
           "ALISS": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "ALISS6",
             "waypoints": "KSSF-14/h137 TREVA/a5000+ TATAR"
           },
           "CRP": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "BOWIE7",
             "waypoints": "KSSF-14/h137 SAT YENNS THX"
           },
           "LRD": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "BOWIE7",
             "waypoints": "KSSF-14/h137 SAT MILET"
           },
           "LEJON": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "LEJON4",
             "waypoints": "KSSF-14/h137 SAT TATAR"
           },
           "BRENI": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SLENA1",
             "waypoints": "KSSF-14/h137 YENNS/a5000+ LILJO SLENA"
           },
           "SLENA": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SLENA1",
             "waypoints": "KSSF-14/h137 YENNS/a5000+ LILJO"
           },
           "MOLLR": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-14/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL BLUMS BALIO"
           },
           "BLUMS": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-14/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL"
           },
           "CAAGE": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-14/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL"
           },
           "WYLSN": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-14/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR WHAEL"
           },
           "WHAEL": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-14/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH"
           },
           "FFSSH": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
-            "waypoints": "KSSF-14/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WENAR"
+            "waypoints": "KSSF-14/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR"
           },
-          "WENAR": {
-            "cleared_altitude": 5000,
+          "WEMAR": {
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-14/h137 WRKIT/a5000+ CHURN SNIDR SEEDS"
           },
           "SEEDS": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSSF-14/h137 WRKIT/a5000+ CHURN SNIDR"
           },
+          "SNIDR": {
+            "cleared_altitude": 2000,
+            "sid": "SNIDR1",
+            "waypoints": "KSSF-14/h137 WRKIT/a5000+ CHURN"
+          },
           "ZANNI,KAHAN": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "TJANO1",
             "waypoints": "KSSF-14/h137 LVACA/a5000+ TJANO TEEPY"
           },
           "TJANO": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "TJANO1",
             "waypoints": "KSSF-14/h137 LVACA/a5000+"
           },
           "KLNGR": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "YODUH1",
             "waypoints": "KSSF-14/h137 SITHH/a5000+ YODUH"
           },
           "PRTZY": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "YODUH1",
             "waypoints": "KSSF-14/h137 SITHH/a5000+ YODUH GJACK"
+          },
+          "YODUH": {
+            "cleared_altitude": 2000,
+            "sid": "YODUH1",
+            "waypoints": "KSSF-14/h137 SITHH/a5000+"
           }
         }
       },
@@ -2293,7 +2173,7 @@
         "WYLSN": "All",
         "WHAEL": "All",
         "FFSSH": "All",
-        "WENAR": "All",
+        "WEMAR": "All",
         "SEEDS": "All",
         "ZANNI": "All",
         "KAHAN": "All",
@@ -2310,8 +2190,8 @@
           "type": "ILS",
           "full_name": "ILS Runway 16",
           "waypoints": [
-            "FAMDO/a3100+/if FEGSA/a2400+/faf FERPET/a1360",
-            "TASME/a3100-4000/iaf/arc13 FAMDO/a3100+/if FEGSA/a2400+/faf FERPET/a1360"
+            "FAMDO/a3100+/if FEGSA/a2400+/faf FEPET/a1360",
+            "TASME/a3100-4000/iaf/arc13 FAMDO/a3100+/if FEGSA/a2400+/faf FEPET/a1360"
           ]
         },
         "I34": {
@@ -2343,157 +2223,175 @@
       },
       "departure_routes": {
         "16": {
+          "LEJON,CRP,LRD,JUMBO,GOBBY,SNIDR": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSKF-34/h137"
+          },
           "ALISS": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "ALISS6",
             "waypoints": "KSKF-34/h137 TREVA/a5000+ TATAR"
           },
           "BRENI": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SLENA1",
             "waypoints": "KSKF-34/h137 YENNS/a5000+ LILJO SLENA"
           },
           "SLENA": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SLENA1",
             "waypoints": "KSKF-34/h137 YENNS/a5000+ LILJO"
           },
           "MOLLR": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-34/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL BLUMS BALIO"
           },
           "BLUMS": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-34/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL"
           },
           "CAAGE": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-34/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL"
           },
           "WYLSN": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-34/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR WHAEL"
           },
           "WHAEL": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-34/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH"
           },
           "FFSSH": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
-            "waypoints": "KSKF-34/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WENAR"
+            "waypoints": "KSKF-34/h137 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR"
           },
-          "WENAR": {
-            "cleared_altitude": 5000,
+          "WEMAR": {
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-34/h137 WRKIT/a5000+ CHURN SNIDR SEEDS"
           },
           "SEEDS": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-34/h137 WRKIT/a5000+ CHURN SNIDR"
           },
           "ZANNI,KAHAN": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "TJANO1",
             "waypoints": "KSKF-34/h137 LVACA/a5000+ TJANO TEEPY"
           },
           "TJANO": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "TJANO1",
             "waypoints": "KSKF-34/h137 LVACA/a5000+"
           },
           "KLNGR": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "YODUH1",
             "waypoints": "KSKF-34/h137 SITHH/a5000+ YODUH"
           },
           "PRTZY": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "YODUH1",
             "waypoints": "KSKF-34/h137 SITHH/a5000+ YODUH GJACK"
+          },
+          "YODUH": {
+            "cleared_altitude": 2000,
+            "sid": "YODUH1",
+            "waypoints": "KSKF-34/h137 SITHH/a5000+"
           }
         },
         "34": {
+          "LEJON,CRP,LRD,JUMBO,GOBBY,SNIDR": {
+            "cleared_altitude": 2000,
+            "waypoints": "KSKF-16/h317"
+          },
           "ALISS": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "ALISS6",
             "waypoints": "KSKF-16/h317 TREVA/a5000+ TATAR"
           },
           "BRENI": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SLENA1",
             "waypoints": "KSKF-16/h317 YENNS/a5000+ LILJO SLENA"
           },
           "SLENA": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SLENA1",
             "waypoints": "KSKF-16/h317 YENNS/a5000+ LILJO"
           },
           "MOLLR": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-16/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL BLUMS BALIO"
           },
           "BLUMS": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-16/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL"
           },
           "CAAGE": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-16/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH WHAEL"
           },
           "WYLSN": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-16/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR WHAEL"
           },
           "WHAEL": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-16/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR FFSSH"
           },
           "FFSSH": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
-            "waypoints": "KSKF-16/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WENAR"
+            "waypoints": "KSKF-16/h317 WRKIT/a5000+ CHURN SNIDR SEEDS WEMAR"
           },
-          "WENAR": {
-            "cleared_altitude": 5000,
+          "WEMAR": {
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-16/h317 WRKIT/a5000+ CHURN SNIDR SEEDS"
           },
           "SEEDS": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "SNIDR1",
             "waypoints": "KSKF-16/h317 WRKIT/a5000+ CHURN SNIDR"
           },
           "ZANNI,KAHAN": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "TJANO1",
             "waypoints": "KSKF-16/h317 LVACA/a5000+ TJANO TEEPY"
           },
           "TJANO": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "TJANO1",
             "waypoints": "KSKF-16/h317 LVACA/a5000+"
           },
           "KLNGR": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "YODUH1",
             "waypoints": "KSKF-16/h317 SITHH/a5000+ YODUH"
           },
           "PRTZY": {
-            "cleared_altitude": 5000,
+            "cleared_altitude": 2000,
             "sid": "YODUH1",
             "waypoints": "KSKF-16/h317 SITHH/a5000+ YODUH GJACK"
+          },
+          "YODUH": {
+            "cleared_altitude": 2000,
+            "sid": "YODUH1",
+            "waypoints": "KSKF-16/h317 SITHH/a5000+"
           }
         } 
       },
@@ -2813,7 +2711,7 @@
         "WYLSN": "All",
         "WHAEL": "All",
         "FFSSH": "All",
-        "WENAR": "All",
+        "WEMAR": "All",
         "SEEDS": "All",
         "ZANNI": "All",
         "KAHAN": "All",
@@ -2911,10 +2809,10 @@
         },
         "cruise_altitude": 29000,
         "initial_altitude": 17000,
-        "cleared_altitude": 10000,
+        "assigned_altitude": 10000,
         "initial_controller": "HOU_CTR",
-        "star": "CIS2",
-        "speed_restriction": null, 
+        "star": "CSI2", 
+        "initial_speed": 250,
         "waypoints": "JCT CSI/ho BENEY/a10000 MEDIN/s250 REUBE/h105"
       }
     ],
@@ -3041,7 +2939,7 @@
             },
             {
               "airport": "KSAN",
-              "icao": "KELP"
+              "icao": "SWA"
             },
             {
               "airport": "KBUR",
@@ -3137,12 +3035,12 @@
             "31L": "DNKIN MANOO/a9000- PATII/a7000+ KEENM/a6000/s210/h130"
           },
           "KSKF": {
-            "16": "DNKIN RESST/a9000s210/h121",
-            "34": "DNKIN RESST/a9000s210/h121"
+            "16": "DNKIN RESST/a9000/s210/h121",
+            "34": "DNKIN RESST/a9000/s210/h121"
           },
           "KSSF": {
-            "14": "DNKIN RESST/a9000s210/h121",
-            "32": "DNKIN RESST/a9000s210/h121"
+            "14": "DNKIN RESST/a9000/s210/h121",
+            "32": "DNKIN RESST/a9000/s210/h121"
           }
         },
         "waypoints": "MOPPP AIRBL/ho FOLLK/a9000-13000 DNKIN",
@@ -3246,18 +3144,18 @@
         "star": "POPPO1",
         "runway_waypoints": {
           "KSAT": {
-            "4":   "POPPO/a10000 VIICH/a9000-/s250 PRKKR DYNMO/a7000/s230 DIIAW/a6000/s210 TIMYY LOWWN/a6000/s210/h217",
-            "22":  "POPPO/a10000 VIICH/a9000-/s250 GERVN/a6000/s210 ADDYY IXION/a6000/s210/h037",
-            "31L": "POPPO/a10000 VIICH/a9000-/s250 PRKKR BEKKK/a8000+ PATII/a7000+ KEENM/a6000/s210/h130",
-            "13R": "POPPO/a10000 VIICH/a9000-/s250 SWUPZ/a7000/s210/flyover"
+            "4":   "VIICH/a9000-/s250 PRKKR DYNMO/a7000/s230 DIIAW/a6000/s210 TIMYY LOWWN/a6000/s210/h217",
+            "22":  "VIICH/a9000-/s250 GERVN/a6000/s210 ADDYY IXION/a6000/s210/h037",
+            "31L": "VIICH/a9000-/s250 PRKKR BEKKK/a8000+ PATII/a7000+ KEENM/a6000/s210/h130",
+            "13R": "VIICH/a9000-/s250 SWUPZ/a7000/s210/flyover"
           },
           "KSKF": {
-            "16": "POPPO/a10000 VIICH/a9000-/s250 GAYMS/a9000/h179",
-            "34": "POPPO/a10000 VIICH/a9000-/s250 GAYMS/a9000/h179"
+            "16": "VIICH/a9000-/s250 GAYMS/a9000/h179",
+            "34": "VIICH/a9000-/s250 GAYMS/a9000/h179"
           },
           "KSSF": {
-            "14": "POPPO/a10000 VIICH/a9000-/s250 GAYMS/a9000/h179",
-            "32": "POPPO/a10000 VIICH/a9000-/s250 GAYMS/a9000/h179"
+            "14": "VIICH/a9000-/s250 GAYMS/a9000/h179",
+            "32": "VIICH/a9000-/s250 GAYMS/a9000/h179"
           }
         },
         "waypoints": "PPNUT POPPO/a10000 VIICH/a9000-/s250",
@@ -3358,17 +3256,18 @@
             "4":   "QERVO TEXNN/a8000+ JEFRE/a7000+ MCRTY/a6000/s210/h217",
             "13R": "QERVO TAHKO/a11000- FJITA/a8000- TRTLA SALZA/a6000/s210 CARNE/a6000/s210/h308",
             "22":  "QERVO TRITP/a7000/s210/h274",
-            "31L": "QERVO DERRR COMUT/a6000/s210 ALRGIA XLANT/a6000/s210"
+            "31L": "QERVO DERRR COMUT/a6000/s210 ALRGI XLANT/a6000/s210"
           },
           "KSKF": {
             "16": "QERVO POYYO/a10000/h245",
             "34": "QERVO POYYO/a10000/h245"
           },
           "KSSF": {
-            "16": "QERVO POYYO/a10000/h245",
-            "34": "QERVO POYYO/a10000/h245"
+            "14": "QERVO POYYO/a10000/h245",
+            "32": "QERVO POYYO/a10000/h245"
                  }
-              }
+              },
+              "waypoints": "RODIO MARCS/a13000-15000/ho PGOUT/a11000-13000/s280 QERVO"
             }
           ]
         },
@@ -3549,7 +3448,7 @@
               },
               {
                 "airport": "KSSF",
-                "runway": "14"
+                "runway": "32"
               }
             ],
             "arrivals": {
@@ -3632,7 +3531,7 @@
               },
               {
                 "airport": "KSSF",
-                "runway": "14"
+                "runway": "32"
               }
             ],
             "arrivals": {
@@ -3749,12 +3648,10 @@
             "solo_controller": "SAT_N_APP",
             "multi_controllers": {
               "default": {
-                "default": {
                   "SAT_N_APP": {"primary": true, "arrivals": ["QERVO1"]},
                   "SAT_S_APP": {"backup": "SAT_W_APP", "departures": ["KSAT/BOWIE7", "KSAT/SLENA1", "KSAT/TJANO1"], "arrivals": ["CRVZA1"]},
                   "SAT_W_APP": {"backup": "SAT_N_APP", "departures": ["KSAT/ALAMO3", "KSAT/ALISS6", "KSAT/LEJON4", "KSAT/SNIDR1", "KSAT/YODUH1"], "arrivals": ["CSI2", "DNKIN1", "POPPO1"]},
                   "SAT_K_APP": {"backup": "SAT_S_APP", "departures": ["KSKF", "KSSF"] }
-                }
               }
             },
             "controllers": [
@@ -3837,10 +3734,12 @@
             "WYLSN": "SNI",
             "WHAEL": "SNI",
             "FFSSH": "SNI",
-            "WENAR": "SNI",
+            "WEMAR": "SNI",
             "SEEDS": "SNI",
+            "SNIDR": "SNI",
             "PRTZY": "YOD",
             "KLNGR": "YOD",
+            "YODUH": "YOD",
             "LEJON": "TAT",
             "JUMBO": "HEN",
             "AGJ": "GOB",
@@ -3850,15 +3749,15 @@
             "CRP": "YEN"
           },
           "stars_maps": [
-            "SAT BASE", "SAT RWY 13", "SAT RWY 4", "SAT RWY 31", "SAT 3NM MVA",
+            "SAT BASE", "SAT RWY 13", "SAT RWY 4", "SAT RWY 31", "SAT RWY 22","SAT 3NM MVA",
             "SAT VFR", "SAT CLASS AIRSPACES", "NORTH FINALS", "SOUTH FINALS", 
-            "PRIVATE AIRPORTS", "SAT OTHER SATELLITE GPS WAYPOINTS", "KSAT RNAV/GPS",
+            "PRIVATE AIRPORTS", "KSAT RNAV/GPS",
             "SSF RNAV/GPS", "SKF RNAV/GPS", "SAT SID/STAR FIXES", "SAT ZHU SECTORS",
             "KSAT SIDS", "STARS RWY 13", "STARS RWY 04", "STARS RWY 22",
             "STARS RWY 31", "SAT COUNTIES", "AIRWAYS AND INTERSECTIONS", "SKF BREAKOUT BOX",
             "SKF HIGH", "SAT MOA PRACTICE AREAS", "REYNOLDS PIPELINE", "ALAMO DOME TFR",
             "DXEEE STAR"
           ],
-          "video_map_file": "videpmaps/ZHU-videomaps.gob.zst"
+          "video_map_file": "videomaps/ZHU-videomaps.gob.zst"
         }
       }
