@@ -2813,7 +2813,7 @@
         "initial_controller": "HOU_CTR",
         "star": "CSI2", 
         "initial_speed": 250,
-        "waypoints": "JCT CSI/ho BENEY/a10000 MEDIN/s250 REUBE/h105"
+        "waypoints": "N030.01.28.769,W099.18.11.326 CSI/ho BENEY/a10000 MEDIN/s250 REUBE/h105"
       }
     ],
     "CRVZA1": [
@@ -2925,7 +2925,7 @@
             "32": "CRVZA/a11000-17000/s250 LLISA/a8000"
           }
         },
-        "waypoints": "GYTON PECOZ/ho CRVZA/a11000-17000/s250",
+        "waypoints": "N028.33.11.773,W098.46.47.089PECOZ/ho CRVZA/a11000-17000/s250",
         "speed_restriction": 250
       }
     ],
@@ -3043,7 +3043,7 @@
             "32": "DNKIN RESST/a9000/s210/h121"
           }
         },
-        "waypoints": "MOPPP AIRBL/ho FOLLK/a9000-13000 DNKIN",
+        "waypoints": "N029.57.13.557,W099.18.20.637 AIRBL/ho FOLLK/a9000-13000 DNKIN",
         "speed_restriction": 250
       }
     ],
@@ -3158,7 +3158,7 @@
             "32": "VIICH/a9000-/s250 GAYMS/a9000/h179"
           }
         },
-        "waypoints": "PPNUT POPPO/a10000 VIICH/a9000-/s250",
+        "waypoints": "N030.21.03.400,W098.51.01.395 N030.13.26.575,W098.47.28.535 POPPO/a10000 VIICH/a9000-/s250",
         "speed_restriction": 250
       }
     ],
@@ -3267,7 +3267,7 @@
             "32": "QERVO POYYO/a10000/h245"
                  }
               },
-              "waypoints": "RODIO MARCS/a13000-15000/ho PGOUT/a11000-13000/s280 QERVO"
+              "waypoints": "RODIO N029.53.16.369,W097.42.59.891/ho MARCS/a13000-15000 PGOUT/a11000-13000/s280 QERVO"
             }
           ]
         },
