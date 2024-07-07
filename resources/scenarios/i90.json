@@ -1604,6 +1604,11 @@
             "sid": "LURIC8",
             "waypoints": "N29.37.43.203,W95.17.50.533 N29.37.03.003,W95.16.06.362 N29.38.49.752,W95.15.03.495/h350 KNTKY PEETY DARTR MUSIQ CLAVN VELCO ENJOY LURIC"
           },
+          "ORRTH": {
+            "assigned_altitude": 5000,
+            "sid": "LURIC8",
+            "waypoints": "N29.37.43.203,W95.17.50.533 N29.37.03.003,W95.16.06.362 N29.38.49.752,W95.15.03.495/h350 KNTKY PEETY DARTR MUSIQ CLAVN VELCO ENJOY LURIC"
+          },
           "MUSYL": {
             "assigned_altitude": 5000,
             "sid": "PEECE6",
@@ -1625,6 +1630,21 @@
             "waypoints": "KHOU-4/h220 RETYR MNNKE BOCCK"
           },
           "DOLEY": {
+            "assigned_altitude": 5000,
+            "sid": "STYCK8",
+            "waypoints": "N29.37.43.203,W95.17.50.533 N29.37.03.003,W95.16.06.362 N29.38.49.752,W95.15.03.495/h350 BBYSE SPICR WLLIS STYCK"
+          },
+          "DPATY": {
+            "assigned_altitude": 5000,
+            "sid": "STYCK8",
+            "waypoints": "N29.37.43.203,W95.17.50.533 N29.37.03.003,W95.16.06.362 N29.38.49.752,W95.15.03.495/h350 KNTKY PEETY DARTR MUSIQ CLAVN STYRA"
+          },
+          "JBULL": {
+            "assigned_altitude": 5000,
+            "sid": "STYCK8",
+            "waypoints": "N29.37.43.203,W95.17.50.533 N29.37.03.003,W95.16.06.362 N29.38.49.752,W95.15.03.495/h350 KNTKY PEETY DARTR MUSIQ CLAVN STYRA"
+          },
+          "WTSON": {
             "assigned_altitude": 5000,
             "sid": "STYCK8",
             "waypoints": "N29.37.43.203,W95.17.50.533 N29.37.03.003,W95.16.06.362 N29.38.49.752,W95.15.03.495/h350 BBYSE SPICR WLLIS STYCK"
@@ -1661,6 +1681,11 @@
             "sid": "LURIC8",
             "waypoints": "N29.37.44.433,W95.15.17.706 N29.39.04.286,W95.14.06.819/h340 KNTKY PEETY DARTR MUSIQ CLAVN VELCO ENJOY LURIC"
           },
+          "ORRTH": {
+            "assigned_altitude": 5000,
+            "sid": "LURIC8",
+            "waypoints": "N29.37.44.433,W95.15.17.706 N29.39.04.286,W95.14.06.819/h340 KNTKY PEETY DARTR MUSIQ CLAVN VELCO ENJOY LURIC"
+          },
           "MUSYL": {
             "assigned_altitude": 5000,
             "sid": "PEECE6",
@@ -1682,6 +1707,11 @@
             "waypoints": "N29.37.44.433,W95.15.17.706 N29.39.04.286,W95.14.06.819/h280 RETYR MNNKE BOCCK"
           },
           "DOLEY": {
+            "assigned_altitude": 5000,
+            "sid": "STYCK8",
+            "waypoints": "N29.37.44.433,W95.15.17.706 N29.39.04.286,W95.14.06.819/h340 BBYSE SPICR WLLIS STYCK"
+          },
+          "WTSON": {
             "assigned_altitude": 5000,
             "sid": "STYCK8",
             "waypoints": "N29.37.44.433,W95.15.17.706 N29.39.04.286,W95.14.06.819/h340 BBYSE SPICR WLLIS STYCK"
@@ -1888,30 +1918,6 @@
         },
         {
           "exit": "JCT",
-          "destination": "KMAF",
-          "altitude": 36000,
-          "route": "RETYR8 JCT",
-          "airlines": [
-            {
-              "icao": "SWA",
-              "fleet": "default"
-            }
-          ]
-        },
-        {
-          "exit": "JCT",
-          "destination": "KPHX",
-          "altitude": 38000,
-          "route": "RETYR8 JCT ELP DRRVR PINNG1",
-          "airlines": [
-            {
-              "icao": "SWA",
-              "fleet": "short"
-            }
-          ]
-        },
-        {
-          "exit": "JCT",
           "destination": "KLAS",
           "altitude": 38000,
           "route": "RETYR8 JCT J86 VERNO J86 INW HAHAA RKSTR3",
@@ -1999,18 +2005,6 @@
           "destination": "KBWI",
           "altitude": 37000,
           "route": "LURIC8 ORRTH HARES HITMN SWAPP Q34 NEALS BKW RAVNN6",
-          "airlines": [
-            {
-              "icao": "SWA",
-              "fleet": "default"
-            }
-          ]
-        },
-        {
-          "exit": "OHAGI",
-          "destination": "KMCO",
-          "altitude": 37000,
-          "route": "FEDRA5 OHAGI WINNA NOTWO WALET ZJAYX GRNCH5",
           "airlines": [
             {
               "icao": "SWA",
@@ -2447,18 +2441,6 @@
             {
               "icao": "SWA",
               "fleet": "default"
-            }
-          ]
-        },
-        {
-          "exit": "VIH",
-          "destination": "KBUR",
-          "altitude": 40000,
-          "route": "BGOOD5 VIH PER PNH CNX J74 SJN J18 PXR BXK PHRED THRNE3",
-          "airlines": [
-            {
-              "icao": "SWA",
-              "fleet": "short"
             }
           ]
         },
@@ -4264,20 +4246,25 @@
         "airlines": {
           "KCLL": [
             {
-              "icao": "ENY"
+              "icao": "ENY",
+              "airport": "KDFW"
             },
             {
-              "icao": "LXJ"
+              "icao": "LXJ",
+              "airport": "KDFW"
             },
             {
-              "icao": "EJA"
+              "icao": "EJA",
+              "airport": "KDFW"
             },
             {
-              "icao": "EJM"
+              "icao": "EJM",
+              "airport": "KDFW"
             },
             {
               "icao": "N",
-              "fleet": "fastGA"
+              "fleet": "fastGA",
+              "airport": "KDFW"
             }
           ]
         },
@@ -4294,20 +4281,25 @@
         "airlines": {
           "KCLL": [
             {
-              "icao": "ENY"
+              "icao": "ENY",
+              "airport": "KDFW"
             },
             {
-              "icao": "LXJ"
+              "icao": "LXJ",
+              "airport": "KDFW"
             },
             {
-              "icao": "EJA"
+              "icao": "EJA",
+              "airport": "KDFW"
             },
             {
-              "icao": "EJM"
+              "icao": "EJM",
+              "airport": "KDFW"
             },
             {
               "icao": "N",
-              "fleet": "fastGA"
+              "fleet": "fastGA",
+              "airport": "KDFW"
             }
           ]
         },
@@ -4324,20 +4316,25 @@
         "airlines": {
           "KCLL": [
             {
-              "icao": "ENY"
+              "icao": "ENY",
+              "airport": "KDFW"
             },
             {
-              "icao": "LXJ"
+              "icao": "LXJ",
+              "airport": "KDFW"
             },
             {
-              "icao": "EJA"
+              "icao": "EJA",
+              "airport": "KDFW"
             },
             {
-              "icao": "EJM"
+              "icao": "EJM",
+              "airport": "KDFW"
             },
             {
               "icao": "N",
-              "fleet": "fastGA"
+              "fleet": "fastGA",
+              "airport": "KDFW"
             }
           ]
         },
@@ -4354,20 +4351,25 @@
         "airlines": {
           "KCLL": [
             {
-              "icao": "ENY"
+              "icao": "ENY",
+              "airport": "KDFW"
             },
             {
-              "icao": "LXJ"
+              "icao": "LXJ",
+              "airport": "KDFW"
             },
             {
               "icao": "EJA"
+              ,"airport": "KDFW"
             },
             {
-              "icao": "EJM"
+              "icao": "EJM",
+              "airport": "KDFW"
             },
             {
               "icao": "N",
-              "fleet": "fastGA"
+              "fleet": "fastGA",
+              "airport": "KDFW"
             }
           ]
         },
@@ -4384,20 +4386,25 @@
         "airlines": {
           "KCLL": [
             {
-              "icao": "SKW"
+              "icao": "SKW",
+              "airport": "KDFW"
             },
             {
-              "icao": "LXJ"
+              "icao": "LXJ",
+              "airport": "KDFW"
             },
             {
-              "icao": "EJA"
+              "icao": "EJA",
+              "airport": "KDFW"
             },
             {
-              "icao": "EJM"
+              "icao": "EJM",
+              "airport": "KDFW"
             },
             {
               "icao": "N",
-              "fleet": "fastGA"
+              "fleet": "fastGA",
+              "airport": "KDFW"
             }
           ]
         },
@@ -4414,20 +4421,25 @@
         "airlines": {
           "KCLL": [
             {
-              "icao": "SKW"
+              "icao": "SKW",
+              "airport": "KDFW"
             },
             {
-              "icao": "LXJ"
+              "icao": "LXJ",
+              "airport": "KDFW"
             },
             {
-              "icao": "EJA"
+              "icao": "EJA",
+              "airport": "KDFW"
             },
             {
-              "icao": "EJM"
+              "icao": "EJM",
+              "airport": "KDFW"
             },
             {
               "icao": "N",
-              "fleet": "fastGA"
+              "fleet": "fastGA",
+              "airport": "KDFW"
             }
           ]
         },
@@ -4598,7 +4610,7 @@
             ]
           },
           "I90_R_APP": {
-            "backup": "I90_R_APP"
+            "backup": "I90_B_APP"
           },
           "I90_P_APP": {
             "backup": "I90_DEP",
