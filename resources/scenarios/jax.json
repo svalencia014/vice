@@ -1177,12 +1177,6 @@
       "sector_id": "1V"
     },
     "JAX_TWR": {
-      "frequency": 118100,
-      "full_name": "Fernandia Tower",
-      "scope_char": "T",
-      "sector_id": "1F"
-    },
-    "FHB_TWR": {
       "frequency": 118300,
       "full_name": "Jacksonville tower",
       "scope_char": "T",
@@ -1275,6 +1269,9 @@
               },
               "JAX_S_APP": {
                   "backup": "JAX_E_APP"
+              },
+              "JAX_TWR": {
+                "backup": "JAX_S_APP"
               }
           }
       },
