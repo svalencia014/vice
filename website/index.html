@@ -124,12 +124,10 @@
 	<article class="docs-article" id="section-using">
 	  <header class="docs-header">
             <div class="text-center">
-              <img src="vice-demo.gif" srcset="vice-demo-2x.gif 2x"
-                   width="1069" height="512" class="img-fluid" alt="screen
-                   capture of demo">
+              <img src="vice-demo.gif" srcset="vice-demo-2x.gif 2x" width="1250" height="619" class="img-fluid" alt="screen capture of demo">
             </div>
             <br>
-	    <h1 class="docs-heading">About Vice <span class="docs-time">Last updated: 2023-10-10</span></h1>
+	    <h1 class="docs-heading">About Vice</h1>
 
 	    <section class="docs-intro">
 	      <p><i>vice</i> is an air traffic control simulator, focused on TRACON.
@@ -578,6 +576,16 @@ Y90.
                     <td><code>SS</code></td>
                   </tr>
                   <tr>
+                    <td><code>SH</code></td>
+                    <td>Directs the aircraft to say its current heading.</td>
+                    <td><code>SH</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>SA</code></td>
+                    <td>Directs the aircraft to say its current altitude.</td>
+                    <td><code>SA</code></td>
+                  </tr>
+                  <tr>
                     <td><code>E</code><i>approach</i></td>
                     <td>Tells the aircraft to expect the specified
                     approach. This command must be used before an aircraft
@@ -713,7 +721,7 @@ Y90.
                 <p>Your browser may warn about the installer being from an unknown publisher and when you run the installer, Windows will put up a window informing you that it has protected your PC and prevented the installer from running. Click "More Info" and then "Run anyway" to proceed with installation.</p>
               </div><!--//callout-block-->
             </div><!--//content-->
-            <a href="https://github.com/mmp/vice/releases/download/v0.10.26/Vice-v0.10.26-installer.msi" class="btn btn-primary"><i class="fas fa-download me-2"></i> Download Vice v0.10.26 for Windows</a>
+            <a href="https://github.com/mmp/vice/releases/download/v0.10.27/Vice-v0.10.27-installer.msi" class="btn btn-primary"><i class="fas fa-download me-2"></i> Download Vice v0.10.27 for Windows</a>
           </section><!--//section-->
           
           <section class="docs-section" id="install-mac">
@@ -722,7 +730,7 @@ Y90.
             <p>On a Mac, download the <i>zip</i> file below; it contains a universal binary that runs
               on both Intel and Apple CPUs. Note that MacOS Big Sur or a more recent version of OSX is required.
               After opening the <i>zip</i> file, drag <i>Vice.app</i> to your <i>Applications</i> folder to install it.</p>
-            <a href="https://github.com/mmp/vice/releases/download/v0.10.26/Vice-v0.10.26-osx.zip" class="btn btn-primary"><i class="fas fa-download me-2"></i> Download Vice v0.10.26 for Mac</a>
+            <a href="https://github.com/mmp/vice/releases/download/v0.10.27/Vice-v0.10.27-osx.zip" class="btn btn-primary"><i class="fas fa-download me-2"></i> Download Vice v0.10.27 for Mac</a>
           </section><!--//section-->
 
           <section class="docs-section" id="install-linux">
@@ -748,6 +756,39 @@ how it simulates aircraft or the STARS interface.
 
           <section class="docs-section" id="releases">
             <h2 class="section-heading">Release History</h2>
+
+            <h3>0.10.27 (4 July 2024)</h3>
+            <ul>
+	      <li>New scenarios: MCI (Brody Carty), P31 (Josh Lambert).</li>
+              <li>Scenario updates: F11, JAX (Samuel Valencia), Y90 (Merry Aribrary).</li>
+              <li>Added "say altitude" (SA) and "say heading" commands (SH) (Samuel Valencia).</li>
+              <li>Aircraft delete is now a CLI command, not a STARS command (Samuel Valencia).</li>
+              <li>"Paste" is now supported in the messages pane (Michael Trokel).</li>
+              <li>The "\" key can be used in place of END to activate the
+                STARS minimum separation tool.</li>
+              <li>Bug fixes:
+                <ul>
+                  <li>Clicking the discord icon in the menubar no longer
+                    endlessly opens web browser tabs.</li>
+                  <li>Fixed a bug where runway-specific routes in STARs
+                    would be followed too early.</li>
+                  <li>Fixed a bug where handoffs from virtual controllers would sometimes
+                    not be made.</li>
+                </ul>
+              </li>
+              <li>Facility engineering changes / fixes:
+                <ul>
+                  <li>Point outs from virtual controllers can be specified
+                    via "/po<i>TCP-id</i>" in routes.</li>
+                  <li>"center" is now handled as intended: per-controller takes
+                    precedence over per-scenario, with the scenario group "center"
+                    as the lowest priority.</li>
+                </ul>
+              </li>
+              <li>Anti-aliasing is disabled by default
+                (but can be re-enabled via the "settings" menu).</li>
+	      <li>Multiple fixes to improve accuracy of drawing in STARS.</li>
+            </ul>
 
             <h3>0.10.26 (16 June 2024)</h3>
             <ul>
@@ -1496,7 +1537,7 @@ how it simulates aircraft or the STARS interface.
                 </thead>
                 <tbody>
                   <tr><td><code>[TRIANGLE] / ∆</code></td><td>`</td></tr>
-                  <tr><td><code>[MIN]</code></td><td>[End]</td></tr>
+                  <tr><td><code>[MIN]</code></td><td>[End] or \</td></tr>
                   <tr><td><code>[INIT CNTL]</code></td><td>[F3] or [CTRL][SHIFT]</td></tr>
                   <tr><td><code>[TERM CNTL]</code></td><td>[F4]</td></tr>
                   <tr><td><code>[HND OFF]</code></td><td>[F5]</td></tr>
@@ -2980,6 +3021,10 @@ above</a> for information about the CRDA system list.</p>
               <li> <code>/h</code><i>heading</i>: depart the fix at specified heading</li>
               <li> <code>/s</code><i>speed</i>: cross the fix at the given speed</li>
               <li> <code>/ho</code>: the aircraft should be handed off from the virtual controller to the user when it departs the fix</li>       
+              <li> <code>/po</code><i>TCP id</i>: when the aircraft passes the waypoint
+                and if it is under the control of a virtual controller,
+                issue a point out to the controller identified by the given TCP id (i.e., the
+                controller ID that would be used when doing a point out in STARS.)</li>
               <li> <code>/iaf</code>: indicates that the fix is an IAF (initial approach fix)</li>
               <li> <code>/if</code>: indicates that the fix is the IF (intermediate fix)</li>
               <li> <code>/faf</code>: indicates that the fix is the FAF (final approach fix)</li>
