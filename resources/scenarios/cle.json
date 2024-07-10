@@ -833,6 +833,9 @@
                             "SNNOH": "NORTH"
                         },
                         "tower_list": 1
+                    },
+                    "KBKL": {
+
                     }
                 },
                 "airspace": {
@@ -2954,55 +2957,102 @@
                                 "frequency": 124000,
                                 "full_name": "Cleveland Approach",
                                 "scope_char": "A",
-                                "sector_id": "2A"
+                                "sector_id": "1A"
                             },
                             "CLE_F_APP": {
                                 "frequency": 119625,        
                                 "full_name": "Cleveland Approach",              
                                 "scope_char": "F",
-                                "sector_id": "2F"
+                                "sector_id": "1F"
                             },
                             "CLE_D_DEP": {
                                 "frequency": 128250,
                                 "full_name": "Cleveland Approach",
                                 "scope_char": "D",
-                                "sector_id": "2D"
+                                "sector_id": "1D"
                             },
                             "CLE_R_DEP": {
                                 "frequency": 135875,
                                 "full_name": "Cleveland Approach",
                                 "scope_char": "R",
-                                "sector_id": "2R"
+                                "sector_id": "1R"
                             },
                             "CLE_N_APP": {
                                 "frequency": 125350,
                                 "full_name": "Cleveland Approach",
                                 "scope_char": "N",
-                                "sector_id": "2N"
+                                "sector_id": "1N"
                             },
                             "CLE_66_CTR": {
                                 "frequency": 125425,
                                 "full_name": "Cleveland Center",
                                 "scope_char": "C",
-                                "sector_id": "66"
+                                "sector_id": "C66"
+                            },
+                            "CLE_08_CTR": {
+                                "frequency": 127900,
+                                "full_name": "Cleveland Center",
+                                "scope_char": "C",
+                                "facility_id": "C",
+                                "eram_facility": true,
+                                "sector_id": "C08"
+                            },
+                            "CLE_04_CTR": {
+                                "frequency": 134900,
+                                "full_name": "Cleveland Center",
+                                "scope_char": "C",
+                                "facility_id": "C",
+                                "eram_facility": true,
+                                "sector_id": "C04"
+                            },
+                            "CLE_06_CTR": {
+                                "frequency": 120600,
+                                "full_name": "Cleveland Center",
+                                "scope_char": "C",
+                                "facility_id": "C",
+                                "eram_facility": true,
+                                "sector_id": "C06"
+                            },
+                            "CLE_75_CTR": {
+                                "frequency": 120775,
+                                "full_name": "Cleveland Center",
+                                "scope_char": "C",
+                                "facility_id": "C",
+                                "eram_facility": true,
+                                "sector_id": "C75"
+                            },
+                            "CLE_21_CTR": {
+                                "frequency": 132450,
+                                "full_name": "Cleveland Center",
+                                "scope_char": "C",
+                                "facility_id": "C",
+                                "eram_facility": true,
+                                "sector_id": "C04"
                             },
                             "CLE_TWR": {
                                 "frequency": 124500,
                                 "full_name": "Cleveland Tower",
                                 "scope_char": "T",
-                                "sector_id": "2CT"
+                                "sector_id": "1T"
                             },
                             "CGF_TWR": {
                                 "frequency": 118500,
                                 "full_name": "County Tower",
-                                "scope_char": "T",
-                                "sector_id": "3T"
+                                "scope_char": "C",
+                                "sector_id": "1C"
+                            },
+                            "BKL_TWR": {
+                                "frequency": 124300,
+                                "full_name": "Lakefront Tower",
+                                "scope_char": "B",
+                                "sector_id": "1B"
                             },
                             "DTW_F_APP": {
                                 "frequency": 126225,
                                 "full_name": "Detroit Approach",
                                 "scope_char": "F",
-                                "sector_id": "1F"
+                                "sector_id": "1F",
+                                "facility_id": "1"
                             }
                         },
                         "default_scenario": "KCLE North",
