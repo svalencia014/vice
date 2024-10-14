@@ -1,1163 +1,432 @@
 {
-    "tracon": "CLT",
-    "airports": {
-        "KCLT": {
-            "approaches": {
-                "I8L": {
-                    "runway": "18L",
-                    "type": "ILS",
-                    "waypoints": [
-                        "N35.41.27.768,W80.58.32.946/a8000 CAVVI/a6000 SNAKK/a5000 GILGE/a4000 QUWED/a3000 EGUUL/a2400 ZIMOG/a1260"
-                    ]
-                },
-                "I8C": {
-                    "runway": "18C",
-                    "type": "ILS",
-                    "waypoints": [
-                        "N35.41.36.112,W80.59.32.857/a8000 JEDKO/a8000 LERDY/a7000 FERSA/a6000 TOMME/a5000 HAGUL/a4000 OZEJI/a3000 CYLOW/a2400"
-                    ]
-                },
-                "I8R": {
-                    "runway": "18R",
-                    "type": "ILS",
-                    "waypoints": [
-                        "N35.41.38.023,W81.00.25.138/a7000 RUDKY/a7000 NELLA/a6000 WOVEN/a5000 EMERS/a4000 JHUNT/a3000 AUUDD/a2400 CILOV/a1200"
-                    ]
-                },
-                "I6L": {
-                    "runway": "36L",
-                    "type": "ILS",
-                    "waypoints": [
-                        "N34.42.03.982,W80.55.20.726/a8000 WELET/a7000 NUXXY/a6000 LONIA/a5000 CUNUK/a4000 DEFOX/a3000 NLSON/a2500"
-                    ]
-                },
-                "I6C": {
-                    "runway": "36C",
-                    "type": "ILS",
-                    "waypoints": [
-                        "N34.42.05.982,W80.54.31.772/a8000 SOLMN/a8000 KRISL/a7000 HUNEX/a6000 DENNE/a5000 MARJO/a4000 NIVSE/a3000 GLASI/a2500"
-                    ]
-                },
-                "I6R": {
-                    "runway": "36R",
-                    "type": "ILS",
-                    "waypoints": [
-                        "N34.42.06.563,W80.53.23.254/a8000 HEKAM/a6000 JENDA/a5000 LANSR/a4000 CIKDU/a3000 HAYOU/a2500"
-                    ]
-                }
+  "tracon": "CLT",
+  "airports": {
+    "KCLT": {
+      "approaches": {
+        "I8L": {
+          "runway": "18L",
+          "type": "ILS",
+          "waypoints": [
+            "N35.41.27.768,W80.58.32.946/a8000 CAVVI/a6000 SNAKK/a5000 GILGE/a4000 QUWED/a3000 EGUUL/a2400 ZIMOG/a1260"
+          ]
+        },
+        "I8C": {
+          "runway": "18C",
+          "type": "ILS",
+          "waypoints": [
+            "N35.41.36.112,W80.59.32.857/a8000 JEDKO/a8000 LERDY/a7000 FERSA/a6000 TOMME/a5000 HAGUL/a4000 OZEJI/a3000 CYLOW/a2400"
+          ]
+        },
+        "I8R": {
+          "runway": "18R",
+          "type": "ILS",
+          "waypoints": [
+            "N35.41.38.023,W81.00.25.138/a7000 RUDKY/a7000 NELLA/a6000 WOVEN/a5000 EMERS/a4000 JHUNT/a3000 AUUDD/a2400 CILOV/a1200"
+          ]
+        },
+        "I6L": {
+          "runway": "36L",
+          "type": "ILS",
+          "waypoints": [
+            "N34.42.03.982,W80.55.20.726/a8000 WELET/a7000 NUXXY/a6000 LONIA/a5000 CUNUK/a4000 DEFOX/a3000 NLSON/a2500"
+          ]
+        },
+        "I6C": {
+          "runway": "36C",
+          "type": "ILS",
+          "waypoints": [
+            "N34.42.05.982,W80.54.31.772/a8000 SOLMN/a8000 KRISL/a7000 HUNEX/a6000 DENNE/a5000 MARJO/a4000 NIVSE/a3000 GLASI/a2500"
+          ]
+        },
+        "I6R": {
+          "runway": "36R",
+          "type": "ILS",
+          "waypoints": [
+            "N34.42.06.563,W80.53.23.254/a8000 HEKAM/a6000 JENDA/a5000 LANSR/a4000 CIKDU/a3000 HAYOU/a2500"
+          ]
+        }
+      },
+      "departure_routes": {
+        "18L": {
+          "RDU,TYI,NUTZE": {
+            "cleared_altitude": 8000,
+            "sid": "BARMY4",
+            "waypoints": "_CLT_18L_183_2/h140 MESHY GULFY BARMY BATTA"
+          },
+          "AUDII": {
+            "cleared_altitude": 8000,
+            "sid": "KILNS4",
+            "waypoints": "_CLT_18L_183_2/h140 MUNBE LILIC KILNS DURST"
+          },
+          "LILLS": {
+            "cleared_altitude": 8000,
+            "sid": "LILLS2",
+            "waypoints": "_CLT_18L_183_2/h140 LAMDE"
+          },
+          "NOOKS": {
+            "cleared_altitude": 8000,
+            "sid": "ICONS4",
+            "waypoints": "_CLT_36R/h183 GILFN ICONS"
+          },
+          "PITRW": {
+            "cleared_altitude": 8000,
+            "sid": "KWEEN4",
+            "waypoints": "_CLT_36R/h183 HMMPY KWEEN UNJAM TASTY"
+          },
+          "JENDO,GANDT": {
+            "cleared_altitude": 8000,
+            "sid": "BEAVY5",
+            "waypoints": "_CLT_36C/h183 UGANG BEAVY ANDYS"
+          },
+          "TNSLY": {
+            "cleared_altitude": 8000,
+            "sid": "BOBZY4",
+            "waypoints": "_CLT_18C_183_2/h240 LACHN YNGUN BOBZY"
+          },
+          "BNA": {
+            "cleared_altitude": 8000,
+            "sid": "BOBZY4",
+            "waypoints": "_CLT_18C_183_2/h240 LACHN YNGUN BOBZY BRAYN REWET N35.30.21.805,W83.40.13.558 N35.34.23.264,W83.58.12.992 HALLS BAZOO"
+          },
+          "IPTAY": {
+            "cleared_altitude": 8000,
+            "sid": "ESTRR4",
+            "waypoints": "_CLT_18C_183_2/h240 GINNN ESTRR DEBIE"
+          },
+          "CUBIM": {
+            "cleared_altitude": 8000,
+            "sid": "JOJJO4",
+            "waypoints": "_CLT_18C_183_2/h240 WAYDS LONEE JOJJO WLLGO BENBY N35.59.16.749,W82.09.07.761 N36.18.34.759,W82.08.06.608 TIELR"
+          },
+          "DOOGE": {
+            "cleared_altitude": 8000,
+            "sid": "JOJJO4",
+            "waypoints": "_CLT_18C_183_2/h240 WAYDS LONEE JOJJO MTCHL"
+          },
+          "NOONN": {
+            "cleared_altitude": 8000,
+            "sid": "JOJJO4",
+            "waypoints": "_CLT_18C_183_2/h240 WAYDS LONEE JOJJO WLLGO BENBY SLEPP"
+          },
+          "FILDS,SMIAM": {
+            "cleared_altitude": 8000,
+            "sid": "KRITR5",
+            "waypoints": "_CLT_18C_183_2/h240 JDEAN KRITR"
+          },
+          "CLAWD": {
+            "cleared_altitude": 8000,
+            "sid": "WEAZL4",
+            "waypoints": "_CLT_18C_183_2/h240 WHFRD WEAZL"
+          }
+        },
+        "36R": {
+          "RDU,TYI,NUTZE": {
+            "cleared_altitude": 8000,
+            "sid": "BARMY4",
+            "waypoints": "_CLT_18L/h025 MESHY GULFY BARMY BATTA"
+          },
+          "AUDII": {
+            "cleared_altitude": 8000,
+            "sid": "KILNS4",
+            "waypoints": "_CLT_18L/h025 MUNBE LILIC KILNS DURST"
+          },
+          "LILLS": {
+            "cleared_altitude": 8000,
+            "sid": "LILLS2",
+            "waypoints": "_CLT_18L/h025 LAMDE LILLS"
+          },
+          "NOOKS": {
+            "cleared_altitude": 8000,
+            "sid": "ICONS4",
+            "waypoints": "_CLT_18L/h025 GILFN ICONS NOOKS"
+          },
+          "PITRW": {
+            "cleared_altitude": 8000,
+            "sid": "KWEEN4",
+            "waypoints": "_CLT_18L/h025 HMMPY KWEEN UNJAM TASTY"
+          },
+          "JENDO,GANDT": {
+            "cleared_altitude": 8000,
+            "sid": "BEAVY5",
+            "waypoints": "_CLT_18C/h330 UGANG BEAVY ANDYS"
+          },
+          "TNSLY": {
+            "cleared_altitude": 8000,
+            "sid": "BOBZY4",
+            "waypoints": "_CLT_36C_330_2/h290 LACHN YNGUN BOBZY"
+          },
+          "BNA": {
+            "cleared_altitude": 8000,
+            "sid": "BOBZY4",
+            "waypoints": "_CLT_36C_330_2/h290 LACHN YNGUN BOBZY BRAYN REWET N35.30.21.805,W83.40.13.558 N35.34.23.264,W83.58.12.992 HALLS BAZOO"
+          },
+          "IPTAY": {
+            "cleared_altitude": 8000,
+            "sid": "ESTRR4",
+            "waypoints": "_CLT_36C_330_2/h290 GINNN ESTRR DEBIE IPTAY"
+          },
+          "CUBIM": {
+            "cleared_altitude": 8000,
+            "sid": "JOJJO4",
+            "waypoints": "_CLT_36C_330_2/h310 WAYDS LONEE JOJJO WLLGO BENBY N35.59.16.749,W82.09.07.761 N36.18.34.759,W82.08.06.608 TIELR"
+          },
+          "DOOGE": {
+            "cleared_altitude": 8000,
+            "sid": "JOJJO4",
+            "waypoints": "_CLT_36C_330_2/h310 WAYDS LONEE JOJJO MTCHL"
+          },
+          "NOONN": {
+            "cleared_altitude": 8000,
+            "sid": "JOJJO4",
+            "waypoints": "_CLT_36C_330_2/h310 WAYDS LONEE JOJJO WLLGO BENBY SLEPP"
+          },
+          "FILDS,SMIAM": {
+            "cleared_altitude": 8000,
+            "sid": "KRITR5",
+            "waypoints": "_CLT_36C_330_2/h360 JDEAN KRITR"
+          },
+          "CLAWD": {
+            "cleared_altitude": 8000,
+            "sid": "WEAZL4",
+            "waypoints": "_CLT_36C_330_2/h360 WHFRD WEAZL"
+          }
+        },
+        "18C": {
+          "JENDO,GANDT": {
+            "cleared_altitude": 8000,
+            "sid": "BEAVY5",
+            "waypoints": "_CLT_36C/h183 UGANG BEAVY ANDYS"
+          },
+          "TNSLY": {
+            "cleared_altitude": 8000,
+            "sid": "BOBZY4",
+            "waypoints": "_CLT_18C_183_2/h240 LACHN YNGUN BOBZY"
+          },
+          "BNA": {
+            "cleared_altitude": 8000,
+            "sid": "BOBZY4",
+            "waypoints": "_CLT_18C_183_2/h240 LACHN YNGUN BOBZY BRAYN REWET N35.30.21.805,W83.40.13.558 N35.34.23.264,W83.58.12.992 HALLS BAZOO"
+          },
+          "IPTAY": {
+            "cleared_altitude": 8000,
+            "sid": "ESTRR4",
+            "waypoints": "_CLT_18C_183_2/h240 GINNN ESTRR DEBIE"
+          },
+          "CUBIM": {
+            "cleared_altitude": 8000,
+            "sid": "JOJJO4",
+            "waypoints": "_CLT_18C_183_2/h240 WAYDS LONEE JOJJO WLLGO BENBY N35.59.16.749,W82.09.07.761 N36.18.34.759,W82.08.06.608 TIELR"
+          },
+          "DOOGE": {
+            "cleared_altitude": 8000,
+            "sid": "JOJJO4",
+            "waypoints": "_CLT_18C_183_2/h240 WAYDS LONEE JOJJO MTCHL"
+          },
+          "NOONN": {
+            "cleared_altitude": 8000,
+            "sid": "JOJJO4",
+            "waypoints": "_CLT_18C_183_2/h240 WAYDS LONEE JOJJO WLLGO BENBY SLEPP"
+          },
+          "FILDS,SMIAM": {
+            "cleared_altitude": 8000,
+            "sid": "KRITR5",
+            "waypoints": "_CLT_18C_183_2/h240 JDEAN KRITR"
+          },
+          "CLAWD": {
+            "cleared_altitude": 8000,
+            "sid": "WEAZL4",
+            "waypoints": "_CLT_18C_183_2/h240 WHFRD WEAZL"
+          },
+          "RDU,TYI,NUTZE": {
+            "cleared_altitude": 8000,
+            "sid": "BARMY4",
+            "waypoints": "_CLT_18L_183_2/h140 MESHY GULFY BARMY BATTA"
+          },
+          "AUDII": {
+            "cleared_altitude": 8000,
+            "sid": "KILNS4",
+            "waypoints": "_CLT_18L_183_2/h140 MUNBE LILIC KILNS DURST"
+          },
+          "LILLS": {
+            "cleared_altitude": 8000,
+            "sid": "LILLS2",
+            "waypoints": "_CLT_18L_183_2/h140 LAMDE"
+          },
+          "NOOKS": {
+            "cleared_altitude": 8000,
+            "sid": "ICONS4",
+            "waypoints": "_CLT_36R/h183 GILFN ICONS"
+          },
+          "PITRW": {
+            "cleared_altitude": 8000,
+            "sid": "KWEEN4",
+            "waypoints": "_CLT_36R/h183 HMMPY KWEEN UNJAM TASTY"
+          }
+        },
+        "36C": {
+          "JENDO,GANDT": {
+            "cleared_altitude": 8000,
+            "sid": "BEAVY5",
+            "waypoints": "_CLT_18C/h330 UGANG BEAVY ANDYS"
+          },
+          "TNSLY": {
+            "cleared_altitude": 8000,
+            "sid": "BOBZY4",
+            "waypoints": "_CLT_36C_330_2/h290 LACHN YNGUN BOBZY"
+          },
+          "BNA": {
+            "cleared_altitude": 8000,
+            "sid": "BOBZY4",
+            "waypoints": "_CLT_36C_330_2/h290 LACHN YNGUN BOBZY BRAYN REWET N35.30.21.805,W83.40.13.558 N35.34.23.264,W83.58.12.992 HALLS BAZOO"
+          },
+          "IPTAY": {
+            "cleared_altitude": 8000,
+            "sid": "ESTRR4",
+            "waypoints": "_CLT_36C_330_2/h290 GINNN ESTRR DEBIE IPTAY"
+          },
+          "CUBIM": {
+            "cleared_altitude": 8000,
+            "sid": "JOJJO4",
+            "waypoints": "_CLT_36C_330_2/h310 WAYDS LONEE JOJJO WLLGO BENBY N35.59.16.749,W82.09.07.761 N36.18.34.759,W82.08.06.608 TIELR"
+          },
+          "DOOGE": {
+            "cleared_altitude": 8000,
+            "sid": "JOJJO4",
+            "waypoints": "_CLT_36C_330_2/h310 WAYDS LONEE JOJJO MTCHL"
+          },
+          "NOONN": {
+            "cleared_altitude": 8000,
+            "sid": "JOJJO4",
+            "waypoints": "_CLT_36C_330_2/h310 WAYDS LONEE JOJJO WLLGO BENBY SLEPP"
+          },
+          "FILDS,SMIAM": {
+            "cleared_altitude": 8000,
+            "sid": "KRITR5",
+            "waypoints": "_CLT_36C_330_2/h360 JDEAN KRITR"
+          },
+          "CLAWD": {
+            "cleared_altitude": 8000,
+            "sid": "WEAZL4",
+            "waypoints": "_CLT_36C_330_2/h360 WHFRD WEAZL"
+          },
+          "RDU,TYI,NUTZE": {
+            "cleared_altitude": 8000,
+            "sid": "BARMY4",
+            "waypoints": "_CLT_18L/h025 MESHY GULFY BARMY BATTA"
+          },
+          "AUDII": {
+            "cleared_altitude": 8000,
+            "sid": "KILNS4",
+            "waypoints": "_CLT_18L/h025 MUNBE LILIC KILNS DURST"
+          },
+          "LILLS": {
+            "cleared_altitude": 8000,
+            "sid": "LILLS2",
+            "waypoints": "_CLT_18L/h025 LAMDE LILLS"
+          },
+          "NOOKS": {
+            "cleared_altitude": 8000,
+            "sid": "ICONS4",
+            "waypoints": "_CLT_18L/h025 GILFN ICONS NOOKS"
+          },
+          "PITRW": {
+            "cleared_altitude": 8000,
+            "sid": "KWEEN4",
+            "waypoints": "_CLT_18L/h025 HMMPY KWEEN UNJAM TASTY"
+          }
+        }
+      },
+      "departures": [
+        {
+          "airlines": [
+            {
+              "fleet": "short",
+              "icao": "ACA"
+            }
+          ],
+          "destination": "CYYZ",
+          "exit": "FILDS",
+          "route": "FILDS ILLSA Q69 RICCS OXMAN LINNG3"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "VTE"
+            }
+          ],
+          "destination": "KBKW",
+          "exit": "CLAWD",
+          "route": "CLAWD"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "VTE"
+            }
+          ],
+          "destination": "KCKB",
+          "exit": "CLAWD",
+          "route": "CLAWD"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "VTE"
+            }
+          ],
+          "destination": "KLWB",
+          "exit": "FILDS",
+          "route": "FILDS"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "VTE"
+            }
+          ],
+          "destination": "KMSL",
+          "exit": "TNSLY",
+          "route": "TNSLY GQO"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "VTE"
+            }
+          ],
+          "destination": "KPAH",
+          "exit": "BNA",
+          "route": "BNA"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "VTE"
+            }
+          ],
+          "destination": "KSHD",
+          "exit": "CLAWD",
+          "route": "CLAWD"
+        },
+        {
+          "airlines": [
+            {
+              "fleet": "short",
+              "icao": "DAL"
             },
-            "departure_routes": {
-                "18L": {
-                    "RDU,TYI,NUTZE": {
-                        "cleared_altitude": 8000,
-                        "sid": "BARMY4",
-                        "waypoints": "_CLT_18L_183_2/h140 MESHY GULFY BARMY BATTA"
-                    },
-                    "AUDII": {
-                        "cleared_altitude": 8000,
-                        "sid": "KILNS4",
-                        "waypoints": "_CLT_18L_183_2/h140 MUNBE LILIC KILNS DURST"
-                    },
-                    "LILLS": {
-                        "cleared_altitude": 8000,
-                        "sid": "LILLS2",
-                        "waypoints": "_CLT_18L_183_2/h140 LAMDE"
-                    },
-                    "NOOKS": {
-                        "cleared_altitude": 8000,
-                        "sid": "ICONS4",
-                        "waypoints": "_CLT_36R/h183 GILFN ICONS"
-                    },
-                    "PITRW": {
-                        "cleared_altitude": 8000,
-                        "sid": "KWEEN4",
-                        "waypoints": "_CLT_36R/h183 HMMPY KWEEN UNJAM TASTY"
-                    },
-                    "JENDO,GANDT": {
-                        "cleared_altitude": 8000,
-                        "sid": "BEAVY5",
-                        "waypoints": "_CLT_36C/h183 UGANG BEAVY ANDYS"
-                    },
-                    "TNSLY": {
-                        "cleared_altitude": 8000,
-                        "sid": "BOBZY4",
-                        "waypoints": "_CLT_18C_183_2/h240 LACHN YNGUN BOBZY"
-                    },
-                    "BNA": {
-                        "cleared_altitude": 8000,
-                        "sid": "BOBZY4",
-                        "waypoints": "_CLT_18C_183_2/h240 LACHN YNGUN BOBZY BRAYN REWET N35.30.21.805,W83.40.13.558 N35.34.23.264,W83.58.12.992 HALLS BAZOO"
-                    },
-                    "IPTAY": {
-                        "cleared_altitude": 8000,
-                        "sid": "ESTRR4",
-                        "waypoints": "_CLT_18C_183_2/h240 GINNN ESTRR DEBIE"
-                    },
-                    "CUBIM": {
-                        "cleared_altitude": 8000,
-                        "sid": "JOJJO4",
-                        "waypoints": "_CLT_18C_183_2/h240 WAYDS LONEE JOJJO WLLGO BENBY N35.59.16.749,W82.09.07.761 N36.18.34.759,W82.08.06.608 TIELR"
-                    },
-                    "DOOGE": {
-                        "cleared_altitude": 8000,
-                        "sid": "JOJJO4",
-                        "waypoints": "_CLT_18C_183_2/h240 WAYDS LONEE JOJJO MTCHL"
-                    },
-                    "NOONN": {
-                        "cleared_altitude": 8000,
-                        "sid": "JOJJO4",
-                        "waypoints": "_CLT_18C_183_2/h240 WAYDS LONEE JOJJO WLLGO BENBY SLEPP"
-                    },
-                    "FILDS,SMIAM": {
-                        "cleared_altitude": 8000,
-                        "sid": "KRITR5",
-                        "waypoints": "_CLT_18C_183_2/h240 JDEAN KRITR"
-                    },
-                    "CLAWD": {
-                        "cleared_altitude": 8000,
-                        "sid": "WEAZL4",
-                        "waypoints": "_CLT_18C_183_2/h240 WHFRD WEAZL"
-                    }
-                    },
-                    "36R": {
-                        "RDU,TYI,NUTZE": {
-                            "cleared_altitude": 8000,
-                            "sid": "BARMY4",
-                            "waypoints": "_CLT_18L/h025 MESHY GULFY BARMY BATTA"
-                        },
-                        "AUDII": {
-                            "cleared_altitude": 8000,
-                            "sid": "KILNS4",
-                            "waypoints": "_CLT_18L/h025 MUNBE LILIC KILNS DURST"
-                        },
-                        "LILLS": {
-                            "cleared_altitude": 8000,
-                            "sid": "LILLS2",
-                            "waypoints": "_CLT_18L/h025 LAMDE LILLS"
-                        },
-                        "NOOKS": {
-                            "cleared_altitude": 8000,
-                            "sid": "ICONS4",
-                            "waypoints": "_CLT_18L/h025 GILFN ICONS NOOKS"
-                        },
-                        "PITRW": {
-                            "cleared_altitude": 8000,
-                            "sid": "KWEEN4",
-                            "waypoints": "_CLT_18L/h025 HMMPY KWEEN UNJAM TASTY"
-                        },
-                        "JENDO,GANDT": {
-                            "cleared_altitude": 8000,
-                            "sid": "BEAVY5",
-                            "waypoints": "_CLT_18C/h330 UGANG BEAVY ANDYS"
-                        },
-                        "TNSLY": {
-                            "cleared_altitude": 8000,
-                            "sid": "BOBZY4",
-                            "waypoints": "_CLT_36C_330_2/h290 LACHN YNGUN BOBZY"
-                        },
-                        "BNA": {
-                            "cleared_altitude": 8000,
-                            "sid": "BOBZY4",
-                            "waypoints": "_CLT_36C_330_2/h290 LACHN YNGUN BOBZY BRAYN REWET N35.30.21.805,W83.40.13.558 N35.34.23.264,W83.58.12.992 HALLS BAZOO"
-                        },
-                        "IPTAY": {
-                            "cleared_altitude": 8000,
-                            "sid": "ESTRR4",
-                            "waypoints": "_CLT_36C_330_2/h290 GINNN ESTRR DEBIE IPTAY"
-                        },
-                        "CUBIM": {
-                            "cleared_altitude": 8000,
-                            "sid": "JOJJO4",
-                            "waypoints": "_CLT_36C_330_2/h310 WAYDS LONEE JOJJO WLLGO BENBY N35.59.16.749,W82.09.07.761 N36.18.34.759,W82.08.06.608 TIELR"
-                        },
-                        "DOOGE": {
-                            "cleared_altitude": 8000,
-                            "sid": "JOJJO4",
-                            "waypoints": "_CLT_36C_330_2/h310 WAYDS LONEE JOJJO MTCHL"
-                        },
-                        "NOONN": {
-                            "cleared_altitude": 8000,
-                            "sid": "JOJJO4",
-                            "waypoints": "_CLT_36C_330_2/h310 WAYDS LONEE JOJJO WLLGO BENBY SLEPP"
-                        },
-                        "FILDS,SMIAM": {
-                            "cleared_altitude": 8000,
-                            "sid": "KRITR5",
-                            "waypoints": "_CLT_36C_330_2/h360 JDEAN KRITR"
-                        },
-                        "CLAWD": {
-                            "cleared_altitude": 8000,
-                            "sid": "WEAZL4",
-                            "waypoints": "_CLT_36C_330_2/h360 WHFRD WEAZL"
-                        }
-                        },
-                    "18C": {
-                        "JENDO,GANDT": {
-                            "cleared_altitude": 8000,
-                            "sid": "BEAVY5",
-                            "waypoints": "_CLT_36C/h183 UGANG BEAVY ANDYS"
-                        },
-                        "TNSLY": {
-                            "cleared_altitude": 8000,
-                            "sid": "BOBZY4",
-                            "waypoints": "_CLT_18C_183_2/h240 LACHN YNGUN BOBZY"
-                        },
-                        "BNA": {
-                            "cleared_altitude": 8000,
-                            "sid": "BOBZY4",
-                            "waypoints": "_CLT_18C_183_2/h240 LACHN YNGUN BOBZY BRAYN REWET N35.30.21.805,W83.40.13.558 N35.34.23.264,W83.58.12.992 HALLS BAZOO"
-                        },
-                        "IPTAY": {
-                            "cleared_altitude": 8000,
-                            "sid": "ESTRR4",
-                            "waypoints": "_CLT_18C_183_2/h240 GINNN ESTRR DEBIE"
-                        },
-                        "CUBIM": {
-                            "cleared_altitude": 8000,
-                            "sid": "JOJJO4",
-                            "waypoints": "_CLT_18C_183_2/h240 WAYDS LONEE JOJJO WLLGO BENBY N35.59.16.749,W82.09.07.761 N36.18.34.759,W82.08.06.608 TIELR"
-                        },
-                        "DOOGE": {
-                            "cleared_altitude": 8000,
-                            "sid": "JOJJO4",
-                            "waypoints": "_CLT_18C_183_2/h240 WAYDS LONEE JOJJO MTCHL"
-                        },
-                        "NOONN": {
-                            "cleared_altitude": 8000,
-                            "sid": "JOJJO4",
-                            "waypoints": "_CLT_18C_183_2/h240 WAYDS LONEE JOJJO WLLGO BENBY SLEPP"
-                        },
-                        "FILDS,SMIAM": {
-                            "cleared_altitude": 8000,
-                            "sid": "KRITR5",
-                            "waypoints": "_CLT_18C_183_2/h240 JDEAN KRITR"
-                        },
-                        "CLAWD": {
-                            "cleared_altitude": 8000,
-                            "sid": "WEAZL4",
-                            "waypoints": "_CLT_18C_183_2/h240 WHFRD WEAZL"
-                        },
-                        "RDU,TYI,NUTZE": {
-                            "cleared_altitude": 8000,
-                            "sid": "BARMY4",
-                            "waypoints": "_CLT_18L_183_2/h140 MESHY GULFY BARMY BATTA"
-                        },
-                        "AUDII": {
-                            "cleared_altitude": 8000,
-                            "sid": "KILNS4",
-                            "waypoints": "_CLT_18L_183_2/h140 MUNBE LILIC KILNS DURST"
-                        },
-                        "LILLS": {
-                            "cleared_altitude": 8000,
-                            "sid": "LILLS2",
-                            "waypoints": "_CLT_18L_183_2/h140 LAMDE"
-                        },
-                        "NOOKS": {
-                            "cleared_altitude": 8000,
-                            "sid": "ICONS4",
-                            "waypoints": "_CLT_36R/h183 GILFN ICONS"
-                        },
-                        "PITRW": {
-                            "cleared_altitude": 8000,
-                            "sid": "KWEEN4",
-                            "waypoints": "_CLT_36R/h183 HMMPY KWEEN UNJAM TASTY"
-                        }
-                        },
-                        "36C": {
-                            "JENDO,GANDT": {
-                                "cleared_altitude": 8000,
-                                "sid": "BEAVY5",
-                                "waypoints": "_CLT_18C/h330 UGANG BEAVY ANDYS"
-                            },
-                            "TNSLY": {
-                                "cleared_altitude": 8000,
-                                "sid": "BOBZY4",
-                                "waypoints": "_CLT_36C_330_2/h290 LACHN YNGUN BOBZY"
-                            },
-                            "BNA": {
-                                "cleared_altitude": 8000,
-                                "sid": "BOBZY4",
-                                "waypoints": "_CLT_36C_330_2/h290 LACHN YNGUN BOBZY BRAYN REWET N35.30.21.805,W83.40.13.558 N35.34.23.264,W83.58.12.992 HALLS BAZOO"
-                            },
-                            "IPTAY": {
-                                "cleared_altitude": 8000,
-                                "sid": "ESTRR4",
-                                "waypoints": "_CLT_36C_330_2/h290 GINNN ESTRR DEBIE IPTAY"
-                            },
-                            "CUBIM": {
-                                "cleared_altitude": 8000,
-                                "sid": "JOJJO4",
-                                "waypoints": "_CLT_36C_330_2/h310 WAYDS LONEE JOJJO WLLGO BENBY N35.59.16.749,W82.09.07.761 N36.18.34.759,W82.08.06.608 TIELR"
-                            },
-                            "DOOGE": {
-                                "cleared_altitude": 8000,
-                                "sid": "JOJJO4",
-                                "waypoints": "_CLT_36C_330_2/h310 WAYDS LONEE JOJJO MTCHL"
-                            },
-                            "NOONN": {
-                                "cleared_altitude": 8000,
-                                "sid": "JOJJO4",
-                                "waypoints": "_CLT_36C_330_2/h310 WAYDS LONEE JOJJO WLLGO BENBY SLEPP"
-                            },
-                            "FILDS,SMIAM": {
-                                "cleared_altitude": 8000,
-                                "sid": "KRITR5",
-                                "waypoints": "_CLT_36C_330_2/h360 JDEAN KRITR"
-                            },
-                            "CLAWD": {
-                                "cleared_altitude": 8000,
-                                "sid": "WEAZL4",
-                                "waypoints": "_CLT_36C_330_2/h360 WHFRD WEAZL"
-                            },
-                            "RDU,TYI,NUTZE": {
-                                "cleared_altitude": 8000,
-                                "sid": "BARMY4",
-                                "waypoints": "_CLT_18L/h025 MESHY GULFY BARMY BATTA"
-                            },
-                            "AUDII": {
-                                "cleared_altitude": 8000,
-                                "sid": "KILNS4",
-                                "waypoints": "_CLT_18L/h025 MUNBE LILIC KILNS DURST"
-                            },
-                            "LILLS": {
-                                "cleared_altitude": 8000,
-                                "sid": "LILLS2",
-                                "waypoints": "_CLT_18L/h025 LAMDE LILLS"
-                            },
-                            "NOOKS": {
-                                "cleared_altitude": 8000,
-                                "sid": "ICONS4",
-                                "waypoints": "_CLT_18L/h025 GILFN ICONS NOOKS"
-                            },
-                            "PITRW": {
-                                "cleared_altitude": 8000,
-                                "sid": "KWEEN4",
-                                "waypoints": "_CLT_18L/h025 HMMPY KWEEN UNJAM TASTY"
-                            }
-                            }
-                    },
-                    "departures": [
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "ACA"
-                                }
-                            ],
-                            "destination": "CYYZ",
-                            "exit": "FILDS",
-                            "route": "FILDS ILLSA Q69 RICCS OXMAN LINNG3"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "VTE"
-                                }
-                            ],
-                            "destination": "KBKW",
-                            "exit": "CLAWD",
-                            "route": "CLAWD"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "VTE"
-                                }
-                            ],
-                            "destination": "KCKB",
-                            "exit": "CLAWD",
-                            "route": "CLAWD"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "VTE"
-                                }
-                            ],
-                            "destination": "KLWB",
-                            "exit": "FILDS",
-                            "route": "FILDS"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "VTE"
-                                }
-                            ],
-                            "destination": "KMSL",
-                            "exit": "TNSLY",
-                            "route": "TNSLY GQO"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "VTE"
-                                }
-                            ],
-                            "destination": "KPAH",
-                            "exit": "BNA",
-                            "route": "BNA"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "VTE"
-                                }
-                            ],
-                            "destination": "KSHD",
-                            "exit": "CLAWD",
-                            "route": "CLAWD"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "DAL"
-                                },
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KATL",
-                            "exit": "TNSLY",
-                            "route": "TNSLY LEAVI OZZZI1"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "RPA"
-                                },
-                                {
-                                    "icao": "JBU"
-                                },
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KBOS",
-                            "exit": "RDU",
-                            "route": "RDU NOWAE Q87 GEARS BBOBO Q22 RBV JFK ROBUC3"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "DAL"
-                                },
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KDTW",
-                            "exit": "CLAWD",
-                            "route": "CLAWD JAMOX BONZZ2"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "DAL"
-                                },
-                                {
-                                    "icao": "SCX"
-                                }
-                            ],
-                            "destination": "KMSP",
-                            "exit": "DOOGE",
-                            "route": "DOOGE OCASE Q93 HEVAN COLNO KAMMA KKILR3"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "EDV"
-                                }
-                            ],
-                            "destination": "KJFK",
-                            "exit": "TYI",
-                            "route": "TYI Q64 SAWED Q97 DLAAY RADDS SIE CARMN4"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "DAL"
-                                }
-                            ],
-                            "destination": "KSLC",
-                            "exit": "TNSLY",
-                            "route": "TNSLY REWET VXV LVT BWG SGF OATHE DANDD J154 DVV EKR LEEHY5"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "FFT"
-                                },
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KCLE",
-                            "exit": "CLAWD",
-                            "route": "CLAWD HVQ JANYS ROLLN2"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "FFT"
-                                },
-                                {
-                                    "icao": "SWA"
-                                },
-                                {
-                                    "fleet": "short",
-                                    "icao": "UAL"
-                                },
-                                {
-                                    "icao": "NKS"
-                                },
-                                {
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KDEN",
-                            "exit": "BNA",
-                            "route": "BNA BUM HYS J24 OATHE CLASH4"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "FFT"
-                                },
-                                {
-                                    "icao": "NKS"
-                                }
-                            ],
-                            "destination": "KLAS",
-                            "exit": "BNA",
-                            "route": "BNA FAM BUM GCK J110 ALS TYEGR CHOWW2"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "FFT"
-                                },
-                                {
-                                    "icao": "NKS"
-                                }
-                            ],
-                            "destination": "KMCO",
-                            "exit": "NOOKS",
-                            "route": "NOOKS WURFL Q83 ROYCO Q85 LPERD SNFLD3"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "FFT"
-                                }
-                            ],
-                            "destination": "KPHL",
-                            "exit": "AUDII",
-                            "route": "AUDII BBDOL PAATS4"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "FFT"
-                                }
-                            ],
-                            "destination": "KTTN",
-                            "exit":"AUDII",
-                            "route": "AUDII BBDOL PAATS4"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "long",
-                                    "icao": "DLH"
-                                }
-                            ],
-                            "destination": "EDDM",
-                            "exit": "AUDII",
-                            "route": "AUDII FAK RBV Q22 FOXWD TAFFY N711A IRLOK NATW ETARI NATW MOGLO NIBOG BELOX BUKUT L603 LAMSO EVELI DOJOH DODEN TABUM HAREM T104 ROKIL ROKIL1B"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "SWA"
-                                },
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KBWI",
-                            "exit": "AUDII",
-                            "route": "AUDII THHMP RAVNN6"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "SWA"
-                                }
-                            ],
-                            "destination": "KMDW",
-                            "exit": "DOOGE",
-                            "route": "DOOGE FLM DROSE FISSK5"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "SWA"
-                                },
-                                {
-                                    "icao": "SWQ"
-                                }
-                            ],
-                            "destination": "KDAL",
-                            "exit": "TNSLY",
-                            "route": "TNSLY GQO MEMFS DIRRK HIBIL3"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "SWA"
-                                },
-                                {
-                                    "icao": "NKS"
-                                }
-                            ],
-                            "destination": "KBNA",
-                            "exit": "TNSLY",
-                            "route": "TNSLY VXV SWFFT2"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "SWA"
-                                }
-                            ],
-                            "destination": "KSTL",
-                            "exit": "DOOGE",
-                            "route": "DOOGE IIU PXV BOOSH3"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "NKS"
-                                },
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KDFW",
-                            "exit": "IPTAY",
-                            "route": "IPTAY CHOPZ MGM MCB J50 AEX PNUTS BEREE2"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "NKS"
-                                }
-                            ],
-                            "destination": "KFLL",
-                            "exit": "NOOKS",
-                            "route": "NOOKS WURFL Q83 JEVED Q97 PRMUS CUUDA2"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "NKS"
-                                }
-                            ],
-                            "destination": "KLAX",
-                            "exit": "GANDT",
-                            "route": "GANDT DBN MGM IGB LIT J6 ZUN J6 DPK J231 HIPPI GABBL HLYWD1"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "NKS"
-                                }
-                            ],
-                            "destination": "KMIA",
-                            "exit": "NOOKS",
-                            "route": "NOOKS WURFL Q83 JEVED Q97 DEBRL CSTAL2"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "NKS"
-                                },
-                                {
-                                    "icao": "EDV"
-                                }
-                            ],
-                            "destination": "KLGA",
-                            "exit": "RDU",
-                            "route": "RDU NOWAE Q87 HURTS HUBBS PXT KORRY4"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                   "fleet": "short",
-                                    "icao": "UAL"
-                                },
-                                {
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KORD",
-                            "exit": "DOOGE",
-                            "route": "DOOGE Q93 HEVAN BONNT VEECK5"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "UAL"
-                                }
-                            ],
-                            "destination": "KIAH",
-                            "exit": "IPTAY",
-                            "route": "IPTAY CHOPZ THRSR MERDN AEX DOOBI2"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "UAL"
-                                },
-                                {
-                                    "icao": "RPA"
-                                }
-                            ],
-                            "destination": "KEWR",
-                            "exit": "AUDII",
-                            "route": "AUDII QUART PHLBO4"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "ASH"
-                                },
-                                {
-                                    "icao": "SKW"
-                                }
-                            ],
-                            "destination": "KIAD",
-                            "exit": "AUDII",
-                            "route": "AUDII DORRN CAVLR4"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "VOI"
-                                }
-                            ],
-                            "destination": "MMGL",
-                            "exit": "IPTAY",
-                            "route": "IPTAY CHOPZ MGM J590 LSU Q24 LCH J22 CRP J29 DEVOE J29 MTY UJ11 LIVRI LIVRI1D"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KCAK",
-                            "exit": "CLAWD",
-                            "route": "CLAWD JPU ZZIPS1"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KALB",
-                            "exit": "FILDS",
-                            "route": "FILDS PSK EKN EMNEM PSB CFB J190 RKA"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KABE",
-                            "exit": "FILDS",
-                            "route": "FILDS ILLSA COURG LOYDD SCAPE HAR V162 DUMMR"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "TAPA",
-                            "exit": "PITRW",
-                            "route": "PITRW Y436 JAINS L451 IORIO FIPEK Y355 ELOPO B520 ANU"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "TNCA",
-                            "exit": "PITRW",
-                            "route": "PITRW Y436 RROOO Y436 HARON Y436 JAINS L451 LETON L450 SEKAR UL450 BEROX BERO2A"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                },
-                                {
-                                    "icao": "PDT"
-                                },
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KAVL",
-                            "exit": "TNSLY",
-                            "route": "TNSLY"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KAUS",
-                            "exit": "IPTAY",
-                            "route": "IPTAY CHOPZ THRSR JAMMR MERDN LCH LUKKN WLEEE7"
-                        }, 
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KBGR",
-                            "exit": "TYI",
-                            "route": "TYI Q64 SAWED Q97 BRIGS Q439 BEEKN ENE"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KBTR",
-                            "exit": "IPTAY",
-                            "route": "IPTAY CHOPZ MGM J590 LSU"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "MZBZ",
-                            "exit": "JENDO",
-                            "route": "JENDO MAVRC TEEEM Q75 ENEME EVANZ Q109 KNOST M219 NAVVL L465 SHARQ UM463 WALKY UB879 CUN UB881 CZM UB764 BUKKY BUKK1A"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "TXKF",
-                            "exit": "TYI",
-                            "route": "TYI ORF AR9 ZIBUT DARUX L459 DASER MOMOM1"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KBHM",
-                            "exit": "IPTAY",
-                            "route": "IPTAY CHOPZ THRSR KIOSK"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "TBPB",
-                            "exit": "NOOKS",
-                            "route": "NOOKS CHS OGGRE JAINS L451 LETON FIPEK Y355 PUYYA Y355 KOLAO ILURI A555 BGI1"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KBUF",
-                            "exit": "FILDS",
-                            "route": "FILDS ILLSA Q69 RICCS EWC DKK"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KBTV",
-                            "exit": "FILDS",
-                            "route": "FILDS ILLSA ESL PSB RKA"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "MMUN",
-                            "exit": "JENDO",
-                            "route": "JENDO MAVRC TEEEM Q75 ENEME EVANZ Q109 kNOST M219 NAVVL L465 SHARQ UM463 WALKY UB879 CUN"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                },
-                                {
-                                    "icao": "PDT"
-                                },
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KCID",
-                            "exit": "BNA",
-                            "route": "BNA J45 LAJUG J45 STL IOW"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                },
-                                {
-                                    "icao": "PDT"
-                                },
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KCHS",
-                            "exit": "PITRW",
-                            "route": "PITRW OSPRI7"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KCRW",
-                            "exit": "CLAWD",
-                            "route": "CLAWD HVQ"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "PDT"
-                                },
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KCHO",
-                            "exit": "RDU",
-                            "route": "RDU LYH"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "PDT"
-                                },
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KCHA",
-                            "exit": "TNSLY",
-                            "route": "TNSLY BALNN JILIS"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "ENY"
-                                },
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KCVG",
-                            "exit": "CUBIM",
-                            "route": "CUBIM JAKIE5"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "PDT"
-                                },
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KCAE",
-                            "exit": "NOOKS",
-                            "route": "NOOKS CAE"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "ENY"
-                                },
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KCMH",
-                            "exit": "CLAWD",
-                            "route": "CLAWD MCGNS SCRLT1"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "MMCZ",
-                            "exit": "JENDO",
-                            "route": "JENDO MAVRC TEEEM Q75 ENEME EVANZ Q109 KNOST M215 SNOMN M215 PISAD UM215 NUDIS UL214 CUN UB881 CZM"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "TNCC",
-                            "exit": "NOOKS",
-                            "route": "NOOKS WURFL Q83 JEVED Q97 PRMUS Q89 MANLE Y185 VENDS Y298 KNSLY Y398 JOSES UA315 VESKA VESK1B"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KDAY",
-                            "exit": "DOOGE",
-                            "route": "DOOGE FLM KEKEE4"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "KDAB",
-                            "exit": "NOOKS",
-                            "route": "NOOKS WURFL Q83 JEVED LPERD TTHOR3"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "short",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "KDSM",
-                            "exit": "DOOGE",
-                            "route": "DOOGE Q93 HEVAN BVT BDF MZV"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "fleet": "long",
-                                    "icao": "AAL"
-                                }
-                            ],
-                            "destination": "EIDW",
-                            "exit": "RDU",
-                            "route": "RDU NOWAE Q87 GEARS BBOBO Q22 SYFER Q22 FOXWD TAFFY N503A RIKAL NATU NETKI OLAPO OLAPO1X"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "JIA"
-                                }
-                            ],
-                            "destination": "MYEH",
-                            "exit": "NOOKS",
-                            "route": "NOOKS WURFL Q83 JEVED Q97 DEBRL Q97 EBAYY PBI BR21V ZFP BR10L MRRSH"
-                        },
-                        {
-                            "airlines": [
-                                {
-                                    "icao": "PDT"
-                                }
-                            ],
-                            "destination": "KERI",
-                            "exit": "FILDS",
-                            "route": "FILDS ROCKA EWC"
-                        }
-                    ],
-                    "exit_categories": {
-                        "RDU": "BARMY4",
-                        "TYI": "BARMY4",
-                        "NUTZE": "BARMY4",
-                        "AUDII": "KILNS4",
-                        "LILLS": "LILLS2",
-                        "NOOKS": "ICONS4",
-                        "PITRW": "KWEEN4",
-                        "JENDO": "BEAVY5",
-                        "GANDT": "BEAVY5",
-                        "TNSLY": "BOBZY4",
-                        "BNA": "BOBZY4",
-                        "IPTAY": "ESTRR4",
-                        "CUBIM": "JOJJO4",
-                        "DOOGE": "JOJJO4",
-                        "NOONN": "JOJJO4",
-                        "FILDS": "KRITR5",
-                        "SMIAM": "KRITR5",
-                        "CLAWD": "WEAZL4"
-                    },
-                    "tower_list": 1
-                }
+            {
+              "fleet": "short",
+              "icao": "AAL"
+            }
+          ],
+          "destination": "KATL",
+          "exit": "TNSLY",
+          "route": "TNSLY LEAVI OZZZI1"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "RPA"
             },
             "airspace": {
                 "boundaries": {
