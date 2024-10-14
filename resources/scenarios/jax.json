@@ -877,6 +877,101 @@
         "OCF": "South"
       },
       "hold_for_release": true
+    },
+    "KOCF": {
+      "approaches": {
+        "I36": {
+          "cifp_id": "I36",
+          "tower_controller": "OCF_TWR"
+        },
+        "R36": {
+          "cifp_id": "R36",
+          "tower_controller": "OCF_TWR"
+        },
+        "R18": {
+          "cifp_id": "R18",
+          "tower_controller": "OCF_TWR"
+        }
+      },
+      "departure_routes": {
+        "36": {
+          "LAL": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-18/h004 LAL"
+          },
+          "HEVVN": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-18/h004 HEVVN"
+          },
+          "TAY": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-18/h004 TAY"
+          }
+        },
+        "18": {
+          "LAL": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-36/h184 LAL"
+          },
+          "HEVVN": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-36/h184 HEVVN"
+          },
+          "TAY": {
+            "cleared_altitude": 2000,
+            "waypoints": "KOCF-36/h184 TAY"
+          }
+        }
+      },
+      "departures": [
+        {
+          "airlines": [
+            {
+              "icao": "N",
+              "fleet": "fastGA"
+            }
+          ],
+          "destination": "KOPF",
+          "exit": "LAL",
+          "route": "LAL SABEE CUURT1"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "N"
+            }
+          ],
+          "destination": "KPMP",
+          "exit": "LAL",
+          "route": "LAL RSW FORTL9"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "N"
+            }
+          ],
+          "destination": "KGPT",
+          "exit": "HEVVN",
+          "route": "HEVVN KOAST VARRE VICKR"
+        },
+        {
+          "airlines": [
+            {
+              "icao": "N",
+              "fleet": "fastGA"
+            }
+          ],
+          "destination": "KLEX",
+          "exit": "TAY",
+          "route": "TAY VXV"
+        }
+      ],
+      "exit_categories": {
+        "LAL": "South",
+        "HEVVN": "West",
+        "TAY": "North"
+      }
     }
   },
   "arrival_groups": {
@@ -938,7 +1033,7 @@
           "KOCF": [
             {
               "airport": "KPDK",
-              "icao": "LXJ"
+              "icao":"LXJ"
             }
           ]
         },
@@ -1932,8 +2027,7 @@
             "backup": "JAX_S_APP",
             "arrivals": [
               "TEBOW1",
-              "WILON",
-              "OCF"
+              "WILON"
             ]
           },
           "JAX_E_APP": {
@@ -1996,8 +2090,8 @@
             "departures": [
               "KOCF"
             ],
-            "arrivals": [
-              "OCF/KOCF"
+            "inbound_flows": [
+              "OCF"
             ]
           }
         }
@@ -2032,8 +2126,6 @@
     }
   },
   "stars_config": {
-    "center": "KJAX",
-    "force_ql_self": true,
     "airspace_awareness": [
       {
         "fixes": [
@@ -2099,6 +2191,20 @@
         "receiving_controller": "JAX_77_CTR"
       }
     ],
+    "center": "KJAX",
+    "coordination_lists":[
+      {
+        "name": "CRG",
+        "id": "A",
+        "airports": ["KCRG"]
+      },
+      {
+        "name": "SGJ",
+        "id": "B",
+        "airports": ["KSGJ"]
+      }
+    ],
+    "force_ql_self": true,
     "radar_sites": {
       "JAX": {
         "char": "J",
