@@ -19,7 +19,7 @@
       "departure_routes": {
         "32": {
           "GNV": {
-            "cleared_altitude": 2000,
+            "assigned_altitude": 2000,
             "waypoints": "KCRG-14/h321 GNV"
           },
           "OCF": {
@@ -120,7 +120,8 @@
         "GNV": "South",
         "OCF": "South",
         "TAY": "West"
-      }
+      },
+      "hold_for_release": true
     },
     "KJAX": {
       "atpa_volumes": {
@@ -584,7 +585,7 @@
           },
           "VIYAP": {
             "cleared_altitude": 2000,
-            "waypoints": "KSGJ-31/h130 VIYAP" 
+            "waypoints": "KSGJ-31/h130 VIYAP"
           },
           "SSI": {
             "cleared_altitude": 2000,
@@ -614,7 +615,7 @@
           },
           "VIYAP": {
             "cleared_altitude": 2000,
-            "waypoints": "KSGJ-13/h310 VIYAP" 
+            "waypoints": "KSGJ-13/h310 VIYAP"
           },
           "SSI": {
             "cleared_altitude": 2000,
@@ -714,7 +715,8 @@
         "HABLE": "North",
         "KENLL": "South",
         "OCF": "South"
-      }
+      },
+      "hold_for_release": true
     }
   },
   "airspace": {
@@ -1679,80 +1681,6 @@
     }
   },
   "stars_config": {
-    "center": "KJAX",
-    "force_ql_self": true,
-    "coordination_fixes": {
-          "PENSE": [
-              {
-                  "type": "route",
-                  "to": "JAX",
-                  "from": "ZJX"
-              }
-          ],
-          "NATII": [
-              {
-                  "type": "route",
-                  "to": "JAX",
-                  "from": "ZJX"
-              }
-          ],
-          "MAHKA": [
-              {
-                  "type": "route",
-                  "to": "JAX",
-                  "from": "ZJX"
-              }
-          ],
-          "BETLE": [
-              {
-                  "type": "route",
-                  "to": "JAX",
-                  "from": "ZJX"
-              }
-          ],
-          "JERZI": [
-              {
-                  "type": "route",
-                  "to": "JAX",
-                  "from": "ZJX"
-              }
-          ],
-          "GOTBE": [
-              {
-                  "type": "route",
-                  "to": "JAX",
-                  "from": "ZJX"
-              }
-          ],
-          "COROE": [
-              {
-                  "type": "route",
-                  "to": "JAX",
-                  "from": "ZJX"
-              }
-          ],
-          "OHDEA": [
-              {
-                  "type": "route",
-                  "to": "JAX",
-                  "from": "ZJX"
-              }
-          ],
-          "BASSS": [
-              {
-                  "type": "route",
-                  "to": "JAX",
-                  "from": "ZJX"
-              }
-          ],
-          "HILIS": [
-              {
-                  "type": "route",
-                  "to": "JAX",
-                  "from": "ZJX"
-              }
-          ]
-      },
     "airspace_awareness": [
       {
         "fixes": [
@@ -1815,6 +1743,92 @@
         "receiving_controller": "JAX_77_CTR"
       }
     ],
+    "center": "KJAX",
+    "coordination_fixes": {
+      "PENSE": [
+        {
+          "type": "route",
+          "to": "JAX",
+          "from": "ZJX"
+        }
+      ],
+      "NATII": [
+        {
+          "type": "route",
+          "to": "JAX",
+          "from": "ZJX"
+        }
+      ],
+      "MAHKA": [
+        {
+          "type": "route",
+          "to": "JAX",
+          "from": "ZJX"
+        }
+      ],
+      "BETLE": [
+        {
+          "type": "route",
+          "to": "JAX",
+          "from": "ZJX"
+        }
+      ],
+      "JERZI": [
+        {
+          "type": "route",
+          "to": "JAX",
+          "from": "ZJX"
+        }
+      ],
+      "GOTBE": [
+        {
+          "type": "route",
+          "to": "JAX",
+          "from": "ZJX"
+        }
+      ],
+      "COROE": [
+        {
+          "type": "route",
+          "to": "JAX",
+          "from": "ZJX"
+        }
+      ],
+      "OHDEA": [
+        {
+          "type": "route",
+          "to": "JAX",
+          "from": "ZJX"
+        }
+      ],
+      "BASSS": [
+        {
+          "type": "route",
+          "to": "JAX",
+          "from": "ZJX"
+        }
+      ],
+      "HILIS": [
+        {
+          "type": "route",
+          "to": "JAX",
+          "from": "ZJX"
+        }
+      ]
+    },
+    "coordination_lists": [
+      {
+        "name": "CRG",
+        "id": "A",
+        "airports": ["KCRG"]
+      },
+      {
+        "name": "SGJ",
+        "id": "B",
+        "airports": ["KSGJ"]
+      }
+    ],
+    "force_ql_self": true,
     "radar_sites": {
       "JAX": {
         "char": "J",
@@ -1882,26 +1896,26 @@
       "HABLE": null,
       "KENLL": null
     },
-      "significant_points": {
-          "ALLMA": { },
-          "AYS": { },
-          "BAXLY": { },
-          "CAPPS": { },
-          "EXBOX": { },
-          "FOXAM": { },
-          "GNV": { },
-          "HABLE": { },
-          "JAYJA": { },
-          "KENLL": { },
-          "MMKAY": { },
-          "OCF": { },
-          "OMN": { },
-          "SAWGY": { },
-          "SSI": { },
-          "TAY": { },
-          "VIYAP": { },
-          "WISPR": { }
-      },
+    "significant_points": {
+      "ALLMA": {},
+      "AYS": {},
+      "BAXLY": {},
+      "CAPPS": {},
+      "EXBOX": {},
+      "FOXAM": {},
+      "GNV": {},
+      "HABLE": {},
+      "JAYJA": {},
+      "KENLL": {},
+      "MMKAY": {},
+      "OCF": {},
+      "OMN": {},
+      "SAWGY": {},
+      "SSI": {},
+      "TAY": {},
+      "VIYAP": {},
+      "WISPR": {}
+    },
     "stars_maps": [
       "EAST FLOW",
       "CLASS C AIRSPACE",
