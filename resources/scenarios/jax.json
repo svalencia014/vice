@@ -879,85 +879,6 @@
       "hold_for_release": true
     }
   },
-  "airspace": {
-    "boundaries": {
-      "JAXS": [
-        "N29.22.49.948,W81.31.09.942",
-        "N29.22.49.939,W81.31.19.995",
-        "N29.24.03.081,W81.33.50.721",
-        "N29.24.09.067,W81.36.01.892",
-        "N29.23.31.800,W81.38.06.072",
-        "N29.22.54.939,W81.39.03.951",
-        "N29.23.00.450,W82.01.27.669",
-        "N29.22.00.451,W82.02.58.125",
-        "N29.43.45.966,W82.14.01.482",
-        "N30.02.59.758,W82.16.59.652",
-        "N29.47.59.933,W82.39.59.900",
-        "N29.47.59.553,W82.53.59.832",
-        "N29.12.13.881,W82.52.44.652",
-        "N28.44.29.965,W82.42.59.877",
-        "N28.37.59.661,W82.02.29.619",
-        "N28.43.47.254,W81.56.26.082",
-        "N28.51.35.837,W81.46.41.888",
-        "N28.59.59.200,W81.42.29.560",
-        "N28.59.59.087,W81.29.59.106",
-        "N29.12.29.051,W81.29.58.139"
-      ],
-      "JAXN": [
-        "N29.22.49.954,W81.31.09.954",
-        "N29.22.50.850,W81.31.18.929",
-        "N29.24.03.051,W81.33.50.417",
-        "N29.24.08.727,W81.36.01.318",
-        "N29.23.31.658,W81.38.06.099",
-        "N29.22.54.804,W81.39.03.901",
-        "N29.23.00.943,W82.01.28.079",
-        "N29.22.00.769,W82.02.58.867",
-        "N29.43.44.769,W82.14.01.295",
-        "N30.43.26.732,W82.22.57.833",
-        "N30.59.56.241,W82.10.55.798",
-        "N30.59.56.200,W81.36.04.455",
-        "N30.53.47.330,W81.19.17.903",
-        "N30.39.45.151,W81.12.55.263",
-        "N30.35.55.519,W80.57.36.685",
-        "N29.51.16.953,W81.01.40.132",
-        "N29.49.23.464,W81.33.57.401",
-        "N29.49.22.980,W81.33.58.657",
-        "N29.22.49.881,W81.31.09.924",
-        "N29.22.48.935,W81.31.17.479",
-        "N29.12.21.069,W81.29.53.802"
-      ]
-    },
-    "volumes": {
-      "JAX_N_APP": [
-        {
-          "airlines": [
-            {
-              "icao": "N"
-            }
-          ],
-          "destination": "KGPT",
-          "exit": "HEVVN",
-          "route": "HEVVN KOAST VARRE VICKR"
-        },
-        {
-          "airlines": [
-            {
-              "icao": "N",
-              "fleet": "fastGA"
-            }
-          ],
-          "destination": "KLEX",
-          "exit": "TAY",
-          "route": "TAY VXV"
-        }
-      ],
-      "exit_categories": {
-        "LAL": "South",
-        "HEVVN": "West",
-        "TAY": "North"
-      }
-    }
-  },
   "arrival_groups": {
     "ALLMA": [
       {
@@ -1232,16 +1153,6 @@
         "waypoints": "N029.42.01.224,W081.58.46.171 N029.46.14.336,W081.48.16.298/a5000/h72/ho SGJ"
       }
     ],
-    "ALCRN1": [
-      {
-        "airlines": {},
-        "initial_altitude": 15000,
-        "initial_speed": 250,
-        "initial_controller": "JAX_79_CTR",
-        "star": "ALCRN1",
-        "waypoints": "ALLMA/a23000- ALCRN/a12000-14000 SNKEM/a4000+"
-      }
-    ],
     "HOTAR1": [
       {
         "airlines": {
@@ -1501,23 +1412,6 @@
           }
         },
         "waypoints": "HILIS/a17000+/s280 FABES/a12000-15000/ho TEBOW/a9000-12000/s250"
-      }
-    ],
-    "HOTAR1": [
-      {
-        "airlines": {
-          "KSGJ": [
-            {
-              "airport": "KJPX",
-              "icao": "EJA"
-            }
-          ]
-        },
-        "initial_altitude": 40000,
-        "initial_controller": "JAX_54_CTR",
-        "initial_speed": 250,
-        "star": "BASLE.HOTAR1",
-        "waypoints": "BASLE WYTOK JABOR HOTAR HEBIN HABIK/h203"
       }
     ]
   },
@@ -1781,18 +1675,6 @@
             "arrivals": [
               "ORL"
             ]
-          },
-          "JAX_A_APP": {
-            "backup": "JAX_V_APP"
-          },
-          "JAX_G_APP": {
-            "backup": "JAX_V_APP"
-          },
-          "JAX_D_APP": {
-            "backup": "JAX_V_APP"
-          },
-          "JAX_V_APP": {
-            "backup": "JAX_W_APP"
           }
         }
       },
@@ -1812,15 +1694,13 @@
         "SGJ_TWR"
       ],
       "default_maps": [
-       
         "EAST FLOW"
-     
       ],
       "departure_runways": [
         {
-          "airport": "KGNV",
-          "rate": 6,
-          "runway": "11"
+          "airport": "KJAX",
+          "rate": 10,
+          "runway": "8"
         },
         {
           "airport": "KCRG",
@@ -1833,50 +1713,7 @@
           "runway": "13"
         }
       ],
-          "airport": "KOCF",
-          "rate": 6,
-          "runway": "36"
-        }
-      ],
-      "center": "N029.22.56.360,W082.10.21.084",
-      "solo_controller": "JAX_V_APP",
-      "multi_controllers": {
-        "default": {
-          "JAX_A_APP": {
-            "backup": "JAX_V_APP",
-            "arrivals": [
-              "OTK",
-              "JENDO",
-              "GNV"
-            ]
-          },
-          "JAX_D_APP": {
-            "backup": "JAX_V_APP",
-            "arrivals": [
-              "LAL",
-              "OMMNI"
-            ]
-          },
-          "JAX_G_APP": {
-            "backup": "JAX_A_APP",
-            "departures": [
-              "KGNV"
-            ],
-            "arrivals": [
-              "MMKAY"
-            ]
-          },
-          "JAX_V_APP": {
-            "primary": true,
-            "departures": [
-              "KOCF"
-            ],
-            "arrivals": [
-              "OCF"
-            ]
-          }
-        }
-      },
+      "center": "KJAX",
       "wind": {
         "direction": 90,
         "gust": 10,
