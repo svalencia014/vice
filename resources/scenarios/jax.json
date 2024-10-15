@@ -328,7 +328,10 @@
       },
       "approaches": {
         "I8": {
-          "cifp_id": "IY8",
+          "full_name": "ILS Y Runway 8",
+          "runway": "8",
+          "type": "ILS",
+          "waypoints": ["LIBBY/a2000+/if/iaf DINNS/a1900+/iaf KJAX-8/a30"],
           "tower_controller": "JAX_TWR"
         },
         "RZ8": {
